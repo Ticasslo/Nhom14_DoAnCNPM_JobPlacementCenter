@@ -1,0 +1,413 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\exceptions\\businessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\dbconnection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\exceptions\\dataaccessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\ungvien\\ungvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\ungvien\\ungtuyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\taichinh\\phidichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\taichinh\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\quantri\\vaitro_quyenhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\quantri\\vaitro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\quantri\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\quantri\\chucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\doanhnghiep\\tintuyendung_vitri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\doanhnghiep\\tintuyendung_kynang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\doanhnghiep\\tintuyendung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\doanhnghiep\\doanhnghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\danhmucnghe\\vitrichuyenmon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\danhmucnghe\\nhomnghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\danhmucnghe\\nghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\nhom14_doancnpm_jobplacementcenter_code\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\nhom14_doancnpm_jobplacementcenter_code\\forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\nhom14_doancnpm_jobplacementcenter_code\\forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\nhom14_doancnpm_jobplacementcenter_code\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|Nhom14_DoAnCNPM_JobPlacementCenter_Code.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\nhom14_doancnpm_jobplacementcenter_code\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|Nhom14_DoAnCNPM_JobPlacementCenter_Code.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\ute_congnghepm\\nhom14_doancnpm_jobplacementcenter\\nhom14_doancnpm_jobplacementcenter_code\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BusinessException.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Exceptions\\BusinessException.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Exceptions\\BusinessException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:59:55.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataAccessException.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:56:47.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:55:08.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "RelativeToolTip": "..\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:49:00.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VaiTro.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\QuanTri\\VaiTro.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro.cs",
+              "RelativeToolTip": "..\\JPC.Models\\QuanTri\\VaiTro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:49:25.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VaiTro_QuyenHan.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
+              "RelativeToolTip": "..\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:49:47.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "RelativeToolTip": "..\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:47:44.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PhiDichVu.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "RelativeToolTip": "..\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:48:05.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UngTuyen.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\UngVien\\UngTuyen.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
+              "RelativeToolTip": "..\\JPC.Models\\UngVien\\UngTuyen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:46:48.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UngVien.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\UngVien\\UngVien.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
+              "RelativeToolTip": "..\\JPC.Models\\UngVien\\UngVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:47:20.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChucNang.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\QuanTri\\ChucNang.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
+              "RelativeToolTip": "..\\JPC.Models\\QuanTri\\ChucNang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:48:33.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TinTuyenDung_ViTri.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:51:31.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TinTuyenDung_KyNang.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:51:15.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TinTuyenDung.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:50:33.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DoanhNghiep.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:50:21.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ViTriChuyenMon.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:52:40.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "NhomNghe.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:52:16.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Nghe.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\DanhMucNghe\\Nghe.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
+              "RelativeToolTip": "..\\JPC.Models\\DanhMucNghe\\Nghe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:52:02.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TraCuuDuLieu_Form.cs [Design]",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:43:57.47Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "QLQuyenHan_Form.cs [Design]",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\QLQuyenHan_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLQuyenHan_Form.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\QLQuyenHan_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\QLQuyenHan_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:43:38.096Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "QLTaiKhoanNhanVien_Form.cs [Design]",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:43:16.893Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "QLDanhMucNgheNghiep_Form.cs [Design]",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:43:00.371Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TrangChuSA_Form.cs [Design]",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\TrangChuSA_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\TrangChuSA_Form.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Forms\\SA\\TrangChuSA_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\TrangChuSA_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:40:58.609Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\Nhom14_DoAnCNPM_JobPlacementCenter_Code\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:38:50.251Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
