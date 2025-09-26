@@ -43,10 +43,9 @@
   <ItemGroup>
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Implementations\SA\Test.cs" />
+    <Compile Include="Services\Interfaces\SA\ITest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Implementations\SA\" />
-    <Folder Include="Services\Interfaces\SA\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

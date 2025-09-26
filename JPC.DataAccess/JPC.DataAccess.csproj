@@ -44,10 +44,9 @@
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="Exceptions\DataAccessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementations\SA\Test.cs" />
+    <Compile Include="Repositories\Interfaces\SA\ITest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\Implementations\SA\" />
-    <Folder Include="Repositories\Interfaces\SA\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
