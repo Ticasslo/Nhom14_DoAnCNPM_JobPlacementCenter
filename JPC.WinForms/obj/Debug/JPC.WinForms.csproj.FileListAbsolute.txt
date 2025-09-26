@@ -11,7 +11,6 @@ D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\Nhom
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.exe
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.pdb
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\JPC.WinForms.csproj.AssemblyReference.cache
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.exe.config
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA.TrangChuSA_Form.resources
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.resources
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\JPC.WinForms.csproj.GenerateResource.cache

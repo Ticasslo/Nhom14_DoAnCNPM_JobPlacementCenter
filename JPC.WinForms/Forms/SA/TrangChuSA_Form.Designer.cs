@@ -138,6 +138,7 @@
             this.Controls.Add(this.btnQLDanhMucNgheNghiep);
             this.Controls.Add(this.label4);
             this.Name = "TrangChuSA_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuSA_Form";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,7 +15,7 @@ namespace JPC.DataAccess.DBConnection
 
         public DBConnection()
         {
-            string strCnn = @"Data Source=WIN;Database=Skyline;Persist Security Info=True;User ID=sa;Password=thiendang;MultipleActiveResultSets=True;TrustServerCertificate=True;";
+            string strCnn = @"Data Source=WIN;Database=JobPlacementCenterHCM;Persist Security Info=True;User ID=sa;Password=thiendang;MultipleActiveResultSets=True;TrustServerCertificate=True;";
             this.sqlConn = new SqlConnection(strCnn);
         }
 
