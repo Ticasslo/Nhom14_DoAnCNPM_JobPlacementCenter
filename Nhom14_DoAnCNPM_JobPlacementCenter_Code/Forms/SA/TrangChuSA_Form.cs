@@ -16,5 +16,30 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         {
             InitializeComponent();
         }
+
+        private void btnQLDanhMucNgheNghiep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLTaiKhoanNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLQuyenHan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTraCuuDuLieu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
