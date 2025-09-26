@@ -39,6 +39,18 @@ GO
 
 
 
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TR_HoaDon_KiemTraSoTien]') AND type in (N'TR'))
+    DROP TRIGGER [dbo].[TR_HoaDon_KiemTraSoTien];
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TR_TinTuyenDung_KichHoatCanThanhToan]') AND type in (N'TR'))
+    DROP TRIGGER [dbo].[TR_TinTuyenDung_KichHoatCanThanhToan];
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TR_UngTuyen_XacNhanKetQuaCanThanhToan]') AND type in (N'TR'))
+    DROP TRIGGER [dbo].[TR_UngTuyen_XacNhanKetQuaCanThanhToan];
+GO
+
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HoaDon]') AND type in (N'U'))
     DROP TABLE [dbo].[HoaDon];
 GO
@@ -470,6 +482,7 @@ ON UngTuyen
 FOR INSERT, UPDATE
 AS
 BEGIN
+    SET NOCOUNT ON;
 
     -- Chỉ check khi INSERT (ứng tuyển mới)
     IF EXISTS (SELECT 1 FROM inserted) AND NOT EXISTS (SELECT 1 FROM deleted)
@@ -522,6 +535,8 @@ ON HoaDon
 FOR INSERT
 AS
 BEGIN
+    SET NOCOUNT ON;
+    
     -- Cập nhật tin tuyển dụng đã thanh toán và active khi có hóa đơn doanh nghiệp
     UPDATE TinTuyenDung 
     SET da_thanh_toan = 1, trang_thai = 'active'
@@ -541,11 +556,64 @@ BEGIN
     );
 END;
 
+
+-- Trigger: Chỉ cho phép chuyển sang trạng thái hiệu lực khi đáp ứng điều kiện thanh toán
+GO
+CREATE TRIGGER TR_TinTuyenDung_KichHoatCanThanhToan
+ON TinTuyenDung
+FOR UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN deleted d ON d.tin_id = i.tin_id
+        WHERE i.trang_thai = 'active' AND i.da_thanh_toan = 0
+    )
+    BEGIN
+        RAISERROR (N'Không thể chuyển trạng thái hiệu lực khi chưa đáp ứng điều kiện.', 16, 1);
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END
+END;
+
+-- Trigger: Chỉ cho phép xác nhận kết quả tuyển dụng khi đáp ứng điều kiện thanh toán liên quan
+GO
+CREATE TRIGGER TR_UngTuyen_XacNhanKetQuaCanThanhToan
+ON UngTuyen
+FOR UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN deleted d ON d.ut_id = i.ut_id
+        WHERE i.trang_thai = 'TRUNG_TUYEN' AND i.da_thanh_toan_phi = 0
+    )
+    BEGIN
+        RAISERROR (N'Không thể xác nhận kết quả khi chưa đáp ứng điều kiện thanh toán.', 16, 1);
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END
+END;
+
+
+
+
+
+
+
 -- Procedure đơn giản chỉ inactive tin hết hạn
 GO
 CREATE PROCEDURE SP_KiemTraTinHetHan
 AS
 BEGIN
+    SET NOCOUNT ON;
+
     UPDATE TinTuyenDung 
     SET trang_thai = 'inactive'
     WHERE han_nop_ho_so < CAST(GETDATE() AS DATE) 
@@ -553,6 +621,12 @@ BEGIN
       
     SELECT @@ROWCOUNT as SoTinDaInactive;
 END;
+
+
+
+
+
+
 
 -- =============================================
 -- FUNCTION TÍNH TỔNG TIỀN
@@ -628,4 +702,45 @@ BEGIN
         SET @so_tien = dbo.FN_TinhTongTienTinTuyenDung(@phi_id, @ngay_dang, @han_nop_ho_so);
     END
     RETURN @so_tien;
+END;
+
+
+
+
+
+-- Trigger: Kiểm tra số tiền hóa đơn theo quy định tính phí, đặt sau để sử dụng function FN_TinhTongTienHoaDon
+GO
+CREATE TRIGGER TR_HoaDon_KiemTraSoTien
+ON HoaDon
+FOR INSERT, UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    ;WITH chk AS (
+        -- Ứng viên: expected theo loại phí ứng tuyển (không cần tham số ngày)
+        SELECT i.ma_hoa_don,
+               so_tien_thuc_te = i.so_tien,
+               expected = dbo.FN_TinhTongTienHoaDon(i.loai_khach_hang, i.phi_id, NULL, NULL)
+        FROM inserted i
+        WHERE i.loai_khach_hang = 'ung_vien'
+
+        UNION ALL
+
+        -- Doanh nghiệp: expected theo ngày đăng và hạn nộp của tin tuyển dụng
+        SELECT i.ma_hoa_don,
+               so_tien_thuc_te = i.so_tien,
+               expected = dbo.FN_TinhTongTienHoaDon(i.loai_khach_hang, i.phi_id, t.ngay_dang, t.han_nop_ho_so)
+        FROM inserted i
+        JOIN TinTuyenDung t ON t.tin_id = i.tin_id
+        WHERE i.loai_khach_hang = 'doanh_nghiep'
+    )
+    IF EXISTS (
+        SELECT 1 FROM chk WHERE ISNULL(so_tien_thuc_te, -1) <> ISNULL(expected, -1)
+    )
+    BEGIN
+        RAISERROR (N'Số tiền hóa đơn không khớp giá tính theo quy định.', 16, 1);
+        ROLLBACK TRANSACTION; 
+        RETURN;
+    END
 END;
