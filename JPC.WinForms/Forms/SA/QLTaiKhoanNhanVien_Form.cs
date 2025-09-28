@@ -16,5 +16,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            TrangChuSA_Form next = new TrangChuSA_Form();
+            next.Show();
+            this.Hide();
+        }
     }
 }

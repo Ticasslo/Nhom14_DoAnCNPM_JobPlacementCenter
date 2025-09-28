@@ -717,29 +717,29 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    ;WITH chk AS (
-        -- Ứng viên: expected theo loại phí ứng tuyển (không cần tham số ngày)
-        SELECT i.ma_hoa_don,
-               so_tien_thuc_te = i.so_tien,
-               expected = dbo.FN_TinhTongTienHoaDon(i.loai_khach_hang, i.phi_id, NULL, NULL)
+    -- Kiểm tra số tiền cho ứng viên
+    IF EXISTS (
+        SELECT 1 
         FROM inserted i
         WHERE i.loai_khach_hang = 'ung_vien'
+          AND i.so_tien <> dbo.FN_TinhTongTienHoaDon(i.loai_khach_hang, i.phi_id, NULL, NULL)
+    )
+    BEGIN
+        RAISERROR (N'Số tiền hóa đơn ứng viên không khớp giá tính theo quy định.', 16, 1);
+        ROLLBACK TRANSACTION; 
+        RETURN;
+    END
 
-        UNION ALL
-
-        -- Doanh nghiệp: expected theo ngày đăng và hạn nộp của tin tuyển dụng
-        SELECT i.ma_hoa_don,
-               so_tien_thuc_te = i.so_tien,
-               expected = dbo.FN_TinhTongTienHoaDon(i.loai_khach_hang, i.phi_id, t.ngay_dang, t.han_nop_ho_so)
+    -- Kiểm tra số tiền cho doanh nghiệp
+    IF EXISTS (
+        SELECT 1 
         FROM inserted i
         JOIN TinTuyenDung t ON t.tin_id = i.tin_id
         WHERE i.loai_khach_hang = 'doanh_nghiep'
-    )
-    IF EXISTS (
-        SELECT 1 FROM chk WHERE ISNULL(so_tien_thuc_te, -1) <> ISNULL(expected, -1)
+          AND i.so_tien <> dbo.FN_TinhTongTienHoaDon(i.loai_khach_hang, i.phi_id, t.ngay_dang, t.han_nop_ho_so)
     )
     BEGIN
-        RAISERROR (N'Số tiền hóa đơn không khớp giá tính theo quy định.', 16, 1);
+        RAISERROR (N'Số tiền hóa đơn doanh nghiệp không khớp giá tính theo quy định.', 16, 1);
         ROLLBACK TRANSACTION; 
         RETURN;
     END

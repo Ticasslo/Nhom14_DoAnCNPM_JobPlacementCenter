@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 using JPC.DataAccess.Exceptions;
 
 namespace JPC.DataAccess.DBConnection
@@ -15,7 +16,8 @@ namespace JPC.DataAccess.DBConnection
 
         public DBConnection()
         {
-            string strCnn = @"Data Source=WIN;Database=JobPlacementCenterHCM;Persist Security Info=True;User ID=sa;Password=thiendang;MultipleActiveResultSets=True;TrustServerCertificate=True;";
+            string strCnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"]?.ConnectionString
+                ?? throw new InvalidOperationException("Missing connection string in App.config");
             this.sqlConn = new SqlConnection(strCnn);
         }
 

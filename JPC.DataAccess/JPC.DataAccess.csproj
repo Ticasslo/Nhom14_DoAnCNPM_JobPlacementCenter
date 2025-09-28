@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,11 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection\DBConnection.cs" />
+    <Compile Include="DBConnection\DBHelper.cs" />
     <Compile Include="Exceptions\DataAccessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Implementations\SA\Test.cs" />
-    <Compile Include="Repositories\Interfaces\SA\ITest.cs" />
+    <Compile Include="Repositories\Implementations\SA\NhomNgheRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SA\INhomNgheRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\JPC.Models\JPC.Models.csproj">
+      <Project>{26da18a7-acaf-47c4-89dd-ff2acb47dbbb}</Project>
+      <Name>JPC.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

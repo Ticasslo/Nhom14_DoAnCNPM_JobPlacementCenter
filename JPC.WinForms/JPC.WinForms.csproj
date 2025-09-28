@@ -78,6 +78,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\SA\QLDanhMucNgheNghiep_Form.resx">
+      <DependentUpon>QLDanhMucNgheNghiep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\QLQuyenHan_Form.resx">
+      <DependentUpon>QLQuyenHan_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\QLTaiKhoanNhanVien_Form.resx">
+      <DependentUpon>QLTaiKhoanNhanVien_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\TraCuuDuLieu_Form.resx">
+      <DependentUpon>TraCuuDuLieu_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SA\TrangChuSA_Form.resx">
       <DependentUpon>TrangChuSA_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +115,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TinTuyenDungIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhSachUngVienIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoSoUngVienIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuanTriVienIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JPC.Business\JPC.Business.csproj">
+      <Project>{e70c7373-6ad1-4ccb-9fd3-aeb33bb87470}</Project>
+      <Name>JPC.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JPC.Integrations\JPC.Integrations.csproj">
+      <Project>{dfe59a60-c203-454c-bff7-046c96570095}</Project>
+      <Name>JPC.Integrations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JPC.Models\JPC.Models.csproj">
+      <Project>{26da18a7-acaf-47c4-89dd-ff2acb47dbbb}</Project>
+      <Name>JPC.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

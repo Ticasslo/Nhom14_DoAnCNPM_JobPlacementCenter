@@ -1,6 +1,11 @@
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.dll
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.pdb
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.dll
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.dll
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.pdb
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.pdb
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.AssemblyReference.cache
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.CoreCompileInputs.cache
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb
