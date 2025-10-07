@@ -31,3 +31,4 @@ D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\JPC.
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\JPC.Models.pdb
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\JPC.DataAccess.pdb
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.exe.config
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\Guna.UI2.dll
