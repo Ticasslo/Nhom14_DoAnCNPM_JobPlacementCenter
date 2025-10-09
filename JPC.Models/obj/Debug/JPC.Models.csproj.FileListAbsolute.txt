@@ -4,3 +4,9 @@ D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Mo
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.csproj.CoreCompileInputs.cache
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.dll
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\bin\Debug\JPC.Models.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\bin\Debug\JPC.Models.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.csproj.AssemblyReference.cache
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.csproj.CoreCompileInputs.cache
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.pdb

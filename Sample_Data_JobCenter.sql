@@ -127,7 +127,7 @@ INSERT INTO NhanVien (ho_ten, email, so_dien_thoai, username, password_hash, vai
 (N'Lê Thị Hoa', 'hoa.le@jobcenter.com', '0901234569', 'ers001', 'hashed_password_3', 'ERS'),
 (N'Phạm Văn Đức', 'duc.pham@jobcenter.com', '0901234570', 'ers002', 'hashed_password_4', 'ERS'),
 (N'Võ Thị Mai', 'mai.vo@jobcenter.com', '0901234571', 'fo001', 'hashed_password_5', 'FO'),
-(N'Đặng Văn Nam', 'nam.dang@jobcenter.com', '0901234572', 'sa001', 'hashed_password_6', 'SA'),
+(N'Đặng Văn Nam', 'nam.dang@jobcenter.com', '0901234572', 'sa001', '0192023a7bbd73250516f069df18b500', 'SA'),
 (N'Bùi Thị Linh', 'linh.bui@jobcenter.com', '0901234573', 'cm001', 'hashed_password_7', 'CM');
 
 -- Dữ liệu mẫu cho bảng UngVien

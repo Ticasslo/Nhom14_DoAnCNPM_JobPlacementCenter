@@ -63,6 +63,16 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AnPasswordIcon {
+            get {
+                object obj = ResourceManager.GetObject("AnPasswordIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackIcon {
             get {
                 object obj = ResourceManager.GetObject("BackIcon", resourceCulture);
@@ -76,6 +86,16 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties {
         internal static System.Drawing.Bitmap DanhSachUngVienIcon {
             get {
                 object obj = ResourceManager.GetObject("DanhSachUngVienIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HienPasswordIcon {
+            get {
+                object obj = ResourceManager.GetObject("HienPasswordIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

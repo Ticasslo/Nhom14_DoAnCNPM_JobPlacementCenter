@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Login\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_Form.Designer.cs">
+      <DependentUpon>DoiMatKhau_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SA\QLDanhMucNgheNghiep_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Login\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoiMatKhau\DoiMatKhau_Form.resx">
+      <DependentUpon>DoiMatKhau_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SA\QLDanhMucNgheNghiep_Form.resx">
       <DependentUpon>QLDanhMucNgheNghiep_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +169,12 @@
       <Project>{26da18a7-acaf-47c4-89dd-ff2acb47dbbb}</Project>
       <Name>JPC.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HienPasswordIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnPasswordIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,3 +9,14 @@ D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
 D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.AssemblyReference.cache
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.CoreCompileInputs.cache
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb

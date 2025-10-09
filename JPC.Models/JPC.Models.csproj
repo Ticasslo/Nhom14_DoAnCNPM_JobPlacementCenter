@@ -57,6 +57,7 @@
     <Compile Include="TaiChinh\PhiDichVu.cs" />
     <Compile Include="UngVien\UngTuyen.cs" />
     <Compile Include="UngVien\UngVien.cs" />
+    <Compile Include="UserSession.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
