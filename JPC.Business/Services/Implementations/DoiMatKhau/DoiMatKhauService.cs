@@ -18,15 +18,18 @@ namespace JPC.Business.Services.Implementations.DoiMatKhau
 	public class DoiMatKhauService : IDoiMatKhauService
 	{
 		private readonly IDoiMatKhauRepository doiMatKhauRepository;
+		private readonly IDangNhapRepository dangNhapRepository;
 
 		public DoiMatKhauService()
 		{
 			this.doiMatKhauRepository = new DoiMatKhauRepository();
+			this.dangNhapRepository = new DangNhapRepository();
 		}
 
 		public DoiMatKhauService(IDoiMatKhauRepository doiMatKhauRepository)
 		{
 			this.doiMatKhauRepository = doiMatKhauRepository ?? throw new ArgumentNullException(nameof(doiMatKhauRepository));
+			this.dangNhapRepository = new DangNhapRepository();
 		}
 
 		public bool DoiMatKhau(string username, string oldPlainPassword, string newPlainPassword)
@@ -37,11 +40,13 @@ namespace JPC.Business.Services.Implementations.DoiMatKhau
 			if (UserSession.NhanVien == null || !string.Equals(UserSession.Username, username, StringComparison.OrdinalIgnoreCase))
 				throw new BusinessException("Không xác định được người dùng hiện tại. Vui lòng đăng nhập lại.");
 
-			string oldHash = ComputeMD5(oldPlainPassword);
-			if (!string.Equals(UserSession.NhanVien.PasswordHash, oldHash, StringComparison.Ordinal))
-				throw new BusinessException("Mật khẩu cũ không chính xác. Vui lòng thử lại");
+		// Xác thực mật khẩu cũ bằng cách thử đăng nhập với database
+		string oldHash = ComputeSHA256(oldPlainPassword);
+		var verifyUser = dangNhapRepository.DangNhap(username, oldHash, UserSession.NhanVien.VaiTroId);
+		if (verifyUser == null)
+			throw new BusinessException("Mật khẩu cũ không chính xác. Vui lòng thử lại");
 
-			string newHash = ComputeMD5(newPlainPassword);
+		string newHash = ComputeSHA256(newPlainPassword);
 			try
 			{
 				bool updated = doiMatKhauRepository.CapNhatMatKhau(username, newHash);
@@ -57,19 +62,19 @@ namespace JPC.Business.Services.Implementations.DoiMatKhau
 			}
 		}
 
-		private static string ComputeMD5(string input)
+	private static string ComputeSHA256(string input)
+	{
+		using (var sha256 = SHA256.Create())
 		{
-			using (var md5 = MD5.Create())
+			var bytes = Encoding.UTF8.GetBytes(input);
+			var hashBytes = sha256.ComputeHash(bytes);
+			var sb = new StringBuilder(hashBytes.Length * 2);
+			foreach (var b in hashBytes)
 			{
-				var bytes = Encoding.UTF8.GetBytes(input);
-				var hashBytes = md5.ComputeHash(bytes);
-				var sb = new StringBuilder(hashBytes.Length * 2);
-				foreach (var b in hashBytes)
-				{
-					sb.Append(b.ToString("x2"));
-				}
-				return sb.ToString();
+				sb.Append(b.ToString("x2"));
 			}
+			return sb.ToString();
 		}
+	}
 	}
 }

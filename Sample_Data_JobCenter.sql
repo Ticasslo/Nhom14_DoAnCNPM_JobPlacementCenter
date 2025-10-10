@@ -121,14 +121,16 @@ INSERT INTO ViTriChuyenMon (nghe_id, ten_vi_tri) VALUES
 (8, N'Nhân viên bán hàng');
 
 -- Dữ liệu mẫu cho bảng NhanVien
+-- Sử dụng HASHBYTES để tự động tính SHA256
+-- Mật khẩu: CSS/ERS/FO/CM = "123456", SA = "hello"
 INSERT INTO NhanVien (ho_ten, email, so_dien_thoai, username, password_hash, vai_tro_id) VALUES
-(N'Nguyễn Thị Lan', 'lan.nguyen@jobcenter.com', '0901234567', 'css001', 'hashed_password_1', 'CSS'),
-(N'Trần Văn Minh', 'minh.tran@jobcenter.com', '0901234568', 'css002', 'hashed_password_2', 'CSS'),
-(N'Lê Thị Hoa', 'hoa.le@jobcenter.com', '0901234569', 'ers001', 'hashed_password_3', 'ERS'),
-(N'Phạm Văn Đức', 'duc.pham@jobcenter.com', '0901234570', 'ers002', 'hashed_password_4', 'ERS'),
-(N'Võ Thị Mai', 'mai.vo@jobcenter.com', '0901234571', 'fo001', 'hashed_password_5', 'FO'),
-(N'Đặng Văn Nam', 'nam.dang@jobcenter.com', '0901234572', 'sa001', '0192023a7bbd73250516f069df18b500', 'SA'),
-(N'Bùi Thị Linh', 'linh.bui@jobcenter.com', '0901234573', 'cm001', 'hashed_password_7', 'CM');
+(N'Nguyễn Thị Lan', 'lan.nguyen@jobcenter.com', '0901234567', 'css001', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', '123456'), 2), 'CSS'),
+(N'Trần Văn Minh', 'minh.tran@jobcenter.com', '0901234568', 'css002', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', '123456'), 2), 'CSS'),
+(N'Lê Thị Hoa', 'hoa.le@jobcenter.com', '0901234569', 'ers001', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', '123456'), 2), 'ERS'),
+(N'Phạm Văn Đức', 'duc.pham@jobcenter.com', '0901234570', 'ers002', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', '123456'), 2), 'ERS'),
+(N'Võ Thị Mai', 'mai.vo@jobcenter.com', '0901234571', 'fo001', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', '123456'), 2), 'FO'),
+(N'Đặng Văn Nam', 'nam.dang@jobcenter.com', '0901234572', 'sa001', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', 'hello'), 2), 'SA'),
+(N'Bùi Thị Linh', 'linh.bui@jobcenter.com', '0901234573', 'cm001', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', '123456'), 2), 'CM');
 
 -- Dữ liệu mẫu cho bảng UngVien
 INSERT INTO UngVien (ho_ten, email, so_dien_thoai, cccd, ngay_sinh, que_quan, vt_id) VALUES

@@ -1,7 +1,6 @@
 ﻿using JPC.Business.Services.Interfaces.Login;
 using JPC.Business.Services.Implementations.Login;
 using JPC.Models.QuanTri;
-using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JPC.Business.Exceptions;
 using JPC.Models;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
+//using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 {
@@ -66,7 +67,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             {
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
-                if(isShowPassword)
+                if (isShowPassword)
                     txtPassword.PasswordChar = '\0'; // Hiện lại mật khẩu
                 else
                     txtPassword.PasswordChar = '*';
@@ -90,7 +91,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
         {
             picBoxShow.Visible = false;
             picBoxHide.Visible = true;
-            
+
             txtPassword.PasswordChar = '*'; // Ẩn mật khẩu
             isShowPassword = false;
         }
@@ -149,12 +150,40 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
                 {
                     this.Hide();
                     var main = new TrangChuSA_Form();
-                    main.FormClosed += (s, args) => this.Show();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                        {
+                            IsAppExiting = true;
+                            this.Close();
+                        }
+                    };
+
                     main.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "CSS", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Màn hình chính cho vai trò CSS đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    //var main = new TrangChuCSS_Form();
+                    //main.FormClosed += (s, args) =>
+                    //{
+                    //    // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                    //    if (Equals(main.Tag, "Logout"))
+                    //    {
+                    //        this.Show();
+                    //        Login_Form_Load(sender, e);
+                    //    }
+                    //    else
+                    //        this.Close();
+                    //};
+
+                    //main.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "ERS", StringComparison.OrdinalIgnoreCase))
                 {
@@ -185,7 +214,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             {
                 var result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No) e.Cancel = true;
+                if (result == DialogResult.No) 
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    IsAppExiting = true;
+                    Application.Exit(); // Đảm bảo thoát hoàn toàn
+                }
+            }
+            else if (IsAppExiting)
+            {
+                Application.Exit(); // Đảm bảo thoát hoàn toàn
             }
         }
     }

@@ -200,7 +200,7 @@ CREATE TABLE NhanVien (
     email NVARCHAR(100) UNIQUE NOT NULL, -- Email
     so_dien_thoai VARCHAR(20), -- Số điện thoại
     username VARCHAR(50) UNIQUE NOT NULL, -- Tên đăng nhập
-    password_hash VARCHAR(255) NOT NULL, -- Mã hóa MD5
+    password_hash VARCHAR(255) NOT NULL, -- Mã hóa SHA256
     vai_tro_id VARCHAR(20) NOT NULL, -- Mã vai trò (CSS, ERS, FO, SA, CM) tham chiếu VaiTro
     trang_thai VARCHAR(20) DEFAULT 'active', -- active, inactive
     FOREIGN KEY (vai_tro_id) REFERENCES VaiTro(vai_tro_id)

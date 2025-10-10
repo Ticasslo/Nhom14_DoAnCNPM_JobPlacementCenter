@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
@@ -48,9 +49,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            // FOR TESTING
-            var frm = new Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword.DoiMatKhau_Form();
-            frm.ShowDialog();
+            DoiMatKhau_Form next = new DoiMatKhau_Form();
+            next.ShowDialog(); // Dùng ShowDialog để form cha không bị ẩn
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -63,12 +63,22 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             );
 
             if (result == DialogResult.Yes)
-                Environment.Exit(0);
+            {
+                Application.Exit();
+            }
         }
 
         private void TrangChuSA_Form_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            JPC.Models.UserSession.Clear(); // Xóa session khi đăng xuất
+            this.Tag = "Logout";
+            this.Close();
         }
     }
 }

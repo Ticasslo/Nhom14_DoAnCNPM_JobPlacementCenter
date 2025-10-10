@@ -11,5 +11,11 @@ namespace JPC.Models
     {
         public static string Username { get; set; }
         public static NhanVien NhanVien { get; set; }
+
+        public static void Clear()
+        {
+            Username = null;
+            NhanVien = null;
+        }
     }
 }

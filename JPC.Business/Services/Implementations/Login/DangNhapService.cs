@@ -34,7 +34,7 @@ namespace JPC.Business.Services.Implementations.Login
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(plainPassword))
                 return null;
 
-            string passwordHash = ComputeMD5(plainPassword);
+            string passwordHash = ComputeSHA256(plainPassword);
 
             try
             {
@@ -50,12 +50,12 @@ namespace JPC.Business.Services.Implementations.Login
             }
         }
 
-        private static string ComputeMD5(string input)
+        private static string ComputeSHA256(string input)
         {
-            using (var md5 = MD5.Create())
+            using (var sha256 = SHA256.Create())
             {
                 var bytes = Encoding.UTF8.GetBytes(input);
-                var hashBytes = md5.ComputeHash(bytes);
+                var hashBytes = sha256.ComputeHash(bytes);
                 var sb = new StringBuilder(hashBytes.Length * 2);
                 foreach (var b in hashBytes)
                 {
