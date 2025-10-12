@@ -162,7 +162,6 @@
             this.btnLuuThayDoi.Size = new System.Drawing.Size(913, 166);
             this.btnLuuThayDoi.TabIndex = 92;
             this.btnLuuThayDoi.Text = "LƯU THAY ĐỔI";
-            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
             // DoiMatKhau_Form
             // 

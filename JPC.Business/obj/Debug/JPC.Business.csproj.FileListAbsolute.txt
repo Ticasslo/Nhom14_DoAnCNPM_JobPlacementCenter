@@ -31,3 +31,11 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busines
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\System.Threading.Tasks.Extensions.xml

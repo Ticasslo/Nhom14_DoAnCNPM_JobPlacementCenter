@@ -42,6 +42,12 @@
     <Reference Include="MailKit, Version=4.14.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>packages\MailKit.4.14.0\lib\net48\MailKit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.9, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.9\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.9, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.9.0.9\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="MimeKit, Version=4.14.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>packages\MimeKit.4.14.0\lib\net48\MimeKit.dll</HintPath>
     </Reference>
@@ -84,6 +90,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CSS\ChinhSuaThongTinUngVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\ChinhSuaThongTinUngVien_UC.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinUngVien_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\DKHoSoUngVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\DKHoSoUngVien_UC.Designer.cs">
+      <DependentUpon>DKHoSoUngVien_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\TrangChuCSS_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\TrangChuCSS_Form.Designer.cs">
+      <DependentUpon>TrangChuCSS_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_UC.Designer.cs">
+      <DependentUpon>DoiMatKhau_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +158,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CSS\ChinhSuaThongTinUngVien_UC.resx">
+      <DependentUpon>ChinhSuaThongTinUngVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSS\DKHoSoUngVien_UC.resx">
+      <DependentUpon>DKHoSoUngVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSS\TrangChuCSS_Form.resx">
+      <DependentUpon>TrangChuCSS_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoiMatKhau\DoiMatKhau_UC.resx">
+      <DependentUpon>DoiMatKhau_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using JPC.Business.Exceptions;
 using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 //using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
@@ -170,20 +171,20 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
                 else if (string.Equals(nv.VaiTroId, "CSS", StringComparison.OrdinalIgnoreCase))
                 {
                     this.Hide();
-                    //var main = new TrangChuCSS_Form();
-                    //main.FormClosed += (s, args) =>
-                    //{
-                    //    // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
-                    //    if (Equals(main.Tag, "Logout"))
-                    //    {
-                    //        this.Show();
-                    //        Login_Form_Load(sender, e);
-                    //    }
-                    //    else
-                    //        this.Close();
-                    //};
+                    var main = new TrangChuCSS_Form();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                            this.Close();
+                    };
 
-                    //main.Show();
+                    main.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "ERS", StringComparison.OrdinalIgnoreCase))
                 {

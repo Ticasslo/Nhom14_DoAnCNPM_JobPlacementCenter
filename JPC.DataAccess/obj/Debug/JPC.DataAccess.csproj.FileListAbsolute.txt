@@ -25,3 +25,11 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataA
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.Data.6EDEDE72.Up2Date
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.dll
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.pdb
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Threading.Tasks.Extensions.xml
