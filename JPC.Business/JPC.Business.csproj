@@ -45,10 +45,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Implementations\DoiMatKhau\DoiMatKhauService.cs" />
     <Compile Include="Services\Implementations\Login\DangNhapService.cs" />
+    <Compile Include="Services\Implementations\SA\NgheService.cs" />
+    <Compile Include="Services\Implementations\SA\NhanVienService.cs" />
     <Compile Include="Services\Implementations\SA\NhomNgheService.cs" />
+    <Compile Include="Services\Implementations\SA\ViTriChuyenMonService.cs" />
     <Compile Include="Services\Interfaces\DoiMatKhau\IDoiMatKhau.cs" />
     <Compile Include="Services\Interfaces\Login\IDangNhapService.cs" />
+    <Compile Include="Services\Interfaces\SA\INgheService.cs" />
+    <Compile Include="Services\Interfaces\SA\INhanVienService.cs" />
     <Compile Include="Services\Interfaces\SA\INhomNgheService.cs" />
+    <Compile Include="Services\Interfaces\SA\IViTriChuyenMonService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JPC.DataAccess\JPC.DataAccess.csproj">

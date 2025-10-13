@@ -26,6 +26,19 @@ namespace JPC.DataAccess.Repositories.Implementations.SA
             return ExecuteQuery(sql);
         }
 
+        public DataTable GetActiveNhomNghe()
+        {
+            string sql = @"
+                SELECT 
+                    nhom_id as 'ID',
+                    ten_nhom as 'Tên nhóm'
+                FROM NhomNghe 
+                WHERE trang_thai = 'active'
+                ORDER BY ten_nhom";
+            
+            return ExecuteQuery(sql);
+        }
+
         public DataTable SearchNhomNghe(string keyword)
         {
             string sql = @"
@@ -92,15 +105,35 @@ namespace JPC.DataAccess.Repositories.Implementations.SA
             return ExecuteNonQuery(sql, parameters) > 0;
         }
 
-        public bool DeleteNhomNghe(int id)
+        public int CountActiveNgheInNhomNghe(int nhomId)
         {
-            string sql = "DELETE FROM NhomNghe WHERE nhom_id = @id";
+            string sql = "SELECT COUNT(*) FROM Nghe WHERE nhom_id = @nhom_id AND trang_thai = 'active'";
             var parameters = new List<SqlParameter>
             {
-                new SqlParameter("@id", id)
+                new SqlParameter("@nhom_id", nhomId)
             };
 
-            return ExecuteNonQuery(sql, parameters) > 0;
+            object result = ExecuteScalar(sql, parameters);
+            return Convert.ToInt32(result);
+        }
+
+        public bool CheckDuplicateNhomNghe(string tenNhom, int excludeId = 0)
+        {
+            string sql = "SELECT COUNT(*) FROM NhomNghe WHERE ten_nhom = @ten_nhom";
+            var parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@ten_nhom", tenNhom)
+            };
+
+            // Nếu đang sửa, loại trừ ID hiện tại
+            if (excludeId > 0)
+            {
+                sql += " AND nhom_id != @exclude_id";
+                parameters.Add(new SqlParameter("@exclude_id", excludeId));
+            }
+
+            object result = ExecuteScalar(sql, parameters);
+            return Convert.ToInt32(result) > 0;
         }
     }
 }

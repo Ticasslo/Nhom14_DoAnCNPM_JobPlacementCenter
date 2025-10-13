@@ -72,7 +72,6 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\JPC.API.pdb
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\JPC.Models.pdb
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\JPC.DataAccess.pdb
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\JPC.WinForms.csproj.AssemblyReference.cache
-D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.exe.config
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login.Login_Form.resources
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword.DoiMatKhau_Form.resources
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA.QLDanhMucNgheNghiep_Form.resources
@@ -109,3 +108,5 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\System.Nume
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\bin\Debug\System.ValueTuple.xml
+D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA.Welcome_Form.resources
+D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.exe.config
