@@ -34,6 +34,11 @@ namespace JPC.Business.Services.Implementations.SA
             return _repo.GetAllVaiTro();
         }
 
+        public DataTable GetRoleDistribution()
+        {
+            return _repo.GetRoleDistribution();
+        }
+
         public bool InsertNhanVien(string hoTen, string email, string soDienThoai, string username, string passwordHash, string vaiTroId, string trangThai)
         {
             return _repo.InsertNhanVien(hoTen, email, soDienThoai, username, passwordHash, vaiTroId, trangThai);
@@ -42,6 +47,16 @@ namespace JPC.Business.Services.Implementations.SA
         public bool UpdateNhanVien(int maNhanVien, string hoTen, string email, string soDienThoai, string username, string passwordHash, string vaiTroId, string trangThai)
         {
             return _repo.UpdateNhanVien(maNhanVien, hoTen, email, soDienThoai, username, passwordHash, vaiTroId, trangThai);
+        }
+
+        public string GetPasswordHashById(int maNhanVien)
+        {
+            return _repo.GetPasswordHashById(maNhanVien);
+        }
+
+        public bool UpdatePassword(int maNhanVien, string newPasswordHash)
+        {
+            return _repo.UpdatePassword(maNhanVien, newPasswordHash);
         }
     }
 }

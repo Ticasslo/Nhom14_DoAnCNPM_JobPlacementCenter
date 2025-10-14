@@ -57,6 +57,41 @@ namespace JPC.DataAccess.Repositories.Implementations.SA
             return ExecuteQuery(sql);
         }
 
+        public DataTable GetRoleDistribution()
+        {
+            string sql = @"
+                SELECT 
+                    nv.vai_tro_id,
+                    COUNT(*) as so_luong
+                FROM NhanVien nv
+                GROUP BY nv.vai_tro_id
+                ORDER BY so_luong DESC";
+            return ExecuteQuery(sql);
+        }
+
+        public string GetPasswordHashById(int maNhanVien)
+        {
+            string sql = "SELECT password_hash FROM NhanVien WHERE ma_nhan_vien = @id";
+            var parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@id", maNhanVien)
+            };
+            var dt = ExecuteQuery(sql, parameters);
+            if (dt.Rows.Count == 0) return null;
+            return dt.Rows[0][0]?.ToString();
+        }
+
+        public bool UpdatePassword(int maNhanVien, string newPasswordHash)
+        {
+            string sql = @"UPDATE NhanVien SET password_hash = @hash WHERE ma_nhan_vien = @id";
+            var parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@hash", newPasswordHash),
+                new SqlParameter("@id", maNhanVien)
+            };
+            return ExecuteNonQuery(sql, parameters) > 0;
+        }
+
         public bool InsertNhanVien(string hoTen, string email, string soDienThoai, string username, string passwordHash, string vaiTroId, string trangThai)
         {
             string sql = @"
@@ -85,7 +120,7 @@ namespace JPC.DataAccess.Repositories.Implementations.SA
                     email = @email, 
                     so_dien_thoai = @soDienThoai, 
                     username = @username, 
-                    password_hash = @passwordHash, 
+                    password_hash = COALESCE(NULLIF(@passwordHash, ''), password_hash), 
                     vai_tro_id = @vaiTroId, 
                     trang_thai = @trangThai
                 WHERE ma_nhan_vien = @maNhanVien";

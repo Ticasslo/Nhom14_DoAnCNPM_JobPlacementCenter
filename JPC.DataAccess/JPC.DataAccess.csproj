@@ -51,12 +51,14 @@
     <Compile Include="Repositories\Implementations\SA\NgheRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NhanVienRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NhomNgheRepository.cs" />
+    <Compile Include="Repositories\Implementations\SA\QuyenHanChucNangRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\ViTriChuyenMonRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Interfaces\Login\IDangNhapRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INgheRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INhanVienRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INhomNgheRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SA\IQuyenHanChucNangRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\IViTriChuyenMonRepository.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -17,27 +17,40 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
     {
         private bool isLoggingOut = false;
         private Guna2Button activeButton = null;
+        // Bỏ cache form để luôn tạo mới mỗi lần chuyển chức năng
 
         public TrangChuSA_Form()
         {
             InitializeComponent();
+            // Tối ưu render để chuyển form mượt hơn
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);
+            this.UpdateStyles();
+
+            // DoubleBuffer cho panel content
+            try
+            {
+                typeof(Panel).InvokeMember("DoubleBuffered",
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.SetProperty,
+                    null, panelContent, new object[] { true });
+            }
+            catch { }
         }
 
         private void LoadFormIntoPanel(Form form)
         {
             panelContent.SuspendLayout();
 
-            if (panelContent.Controls.Count > 0)
+            // Hủy và gỡ toàn bộ form/controls cũ
+            foreach (Control c in panelContent.Controls)
             {
-                var old = panelContent.Controls[0];
-                panelContent.Controls.Clear();
-                old.Dispose();
+                c.Dispose();
             }
+            panelContent.Controls.Clear();
 
+            // Thêm form mới vào panel
             form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;    
+            form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-
             panelContent.Controls.Add(form);
             form.Show();
 
@@ -62,19 +75,24 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private void TrangChuSA_Form_Load(object sender, EventArgs e)
         {
             btnTrangChu_Click(btnTrangChu, null);
+
+            // Bỏ pre-warm: luôn tạo mới form khi chuyển chức năng
+            // (để tránh giữ trạng thái cũ giữa các lần mở)
         }
+
+        // Đã bỏ prewarm để luôn tạo mới form khi cần
 
         private void TrangChuSA_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing && !isLoggingOut)
             {
                 // Chỉ hỏi khi đóng bằng nút X
-                var result = MessageBox.Show(
-                    "Bạn có muốn thoát ứng dụng?",
-                    "Thoát ứng dụng",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning
-                );
+            var result = MessageBox.Show(
+            "Bạn có muốn thoát ứng dụng?",
+            "Thoát ứng dụng",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning
+            );
 
                 if (result == DialogResult.No)
                 {
@@ -125,7 +143,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         }
 
         private void btnBack_Click(object sender, EventArgs e)
-        {   
+        {
             // Hỏi xác nhận trước khi đăng xuất
             var result = MessageBox.Show(
                 "Bạn có muốn đăng xuất không?",

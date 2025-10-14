@@ -62,10 +62,10 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private void SetupResponsiveLayout()
         {
             // Title căn giữa và dock top
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            label4.Dock = DockStyle.Top;
-            label4.Height = 60;
-            label4.AutoSize = false;
+            lblTieuDe.TextAlign = ContentAlignment.MiddleCenter;
+            lblTieuDe.Dock = DockStyle.Top;
+            lblTieuDe.Height = 60;
+            lblTieuDe.AutoSize = false;
 
             // TabControl fill phần còn lại
             tabControlDanhMucNghe.Dock = DockStyle.Fill;
@@ -460,6 +460,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             // Vào edit mode: ẩn Sửa/Tải/Tìm kiếm, hiện Lưu/Hủy, đổi lblChiTiet
             SetPanelNhomNgheEnabled(true);
             txtNhomNghe1.Focus();
+            DGVNhomNghe.ClearSelection();
         }
 
         private void btnSuaNhomNghe_Click(object sender, EventArgs e)
@@ -669,6 +670,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
             SetPanelNgheEnabled(true);
             cbNhomNghe2.Focus();
+            DGVNghe.ClearSelection();
         }
 
         private void btnSuaNghe_Click(object sender, EventArgs e)

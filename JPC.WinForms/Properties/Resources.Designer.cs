@@ -123,6 +123,36 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SA01 {
+            get {
+                object obj = ResourceManager.GetObject("SA01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SA02 {
+            get {
+                object obj = ResourceManager.GetObject("SA02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SA03 {
+            get {
+                object obj = ResourceManager.GetObject("SA03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TinTuyenDungIcon {
             get {
                 object obj = ResourceManager.GetObject("TinTuyenDungIcon", resourceCulture);

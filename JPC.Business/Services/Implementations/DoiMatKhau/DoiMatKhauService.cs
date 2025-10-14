@@ -71,7 +71,7 @@ namespace JPC.Business.Services.Implementations.DoiMatKhau
 			var sb = new StringBuilder(hashBytes.Length * 2);
 			foreach (var b in hashBytes)
 			{
-				sb.Append(b.ToString("x2"));
+				sb.Append(b.ToString("X2")); // X2 = chữ hoa để đồng nhất với SQL Server HASHBYTES
 			}
 			return sb.ToString();
 		}

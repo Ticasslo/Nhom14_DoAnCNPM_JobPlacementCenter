@@ -42,11 +42,11 @@
             this.btnQLDanhMucNgheNghiep = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelRight.SuspendLayout();
@@ -59,7 +59,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(14, 19);
+            this.label4.Location = new System.Drawing.Point(23, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(416, 41);
             this.label4.TabIndex = 78;
@@ -277,14 +277,6 @@
             this.panelRight.Size = new System.Drawing.Size(1320, 900);
             this.panelRight.TabIndex = 104;
             // 
-            // panelContent
-            // 
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(20, 50);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1280, 830);
-            this.panelContent.TabIndex = 105;
-            // 
             // guna2ControlBoxMin
             // 
             this.guna2ControlBoxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -323,13 +315,22 @@
             this.guna2DragControl1.TargetControl = this.label4;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(20, 50);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1280, 830);
+            this.panelContent.TabIndex = 105;
+            // 
             // TrangChuSA_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1800, 900);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "TrangChuSA_Form";
@@ -365,7 +366,7 @@
         private Guna.UI2.WinForms.Guna2Button btnDoiMatKhau;
         private Guna.UI2.WinForms.Guna2Button btnTraCuuDuLieu;
         private Guna.UI2.WinForms.Guna2Button btnBack;
-        private Guna.UI2.WinForms.Guna2Panel panelContent;
         private Guna.UI2.WinForms.Guna2Button btnTrangChu;
+        private Guna.UI2.WinForms.Guna2Panel panelContent;
     }
 }

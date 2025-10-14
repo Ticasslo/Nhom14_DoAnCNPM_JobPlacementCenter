@@ -18,54 +18,38 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private bool _isAddMode = false;
         private bool _isEditMode = false;
         private int _selectedNhanVienId = -1;
+        private bool _isPasswordVisible = false;
+        private System.Windows.Forms.Timer _debounceSearch;
         public QLTaiKhoanNhanVien_Form()
         {
             InitializeComponent();
-            SetupResponsiveLayout();
-            _nhanVienService = new NhanVienService();
-            LoadComboBoxes();
-            LoadDataNhanVien();
-            ResetForm(); // Set initial state to view mode
-            // Căn header theo toolbar ngay khi mở và khi resize
+            SetupResponsiveLayout(); // Setup layout cho full màn hình
+            _nhanVienService = new NhanVienService(); // Khởi tạo service
+            LoadComboBoxes(); // Load dữ liệu cho các ComboBox
+            LoadDataNhanVien(); // Load dữ liệu nhân viên vào DataGridView
+            ResetForm(); // Đặt trạng thái ban đầu cho form
+
+            // Căn header ngay khi mở và khi resize
             AdjustHeaderLayout();
             panelHeader.Resize += (s, e) => AdjustHeaderLayout();
-        }
 
-        private void LoadComboBoxes()
-        {
-            try
-            {
-                // Load ComboBox Vai trò
-                DataTable dtVaiTro = _nhanVienService.GetAllVaiTro();
-                cbVaiTro.DataSource = dtVaiTro;
-                cbVaiTro.DisplayMember = "ten_vai_tro";
-                cbVaiTro.ValueMember = "vai_tro_id";
-                cbVaiTro.SelectedIndex = -1;
-
-                // Load ComboBox Trạng thái
-                cbTrangThai.Items.Clear();
-                cbTrangThai.Items.Add("active");
-                cbTrangThai.Items.Add("inactive");
-                cbTrangThai.SelectedIndex = -1;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi load ComboBox: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // Debounce tìm kiếm
+            _debounceSearch = new System.Windows.Forms.Timer { Interval = 300 };
+            _debounceSearch.Tick += (s, e) => { _debounceSearch.Stop(); ExecuteSearchNhanVien(); };
         }
 
         private void SetupResponsiveLayout()
         {
             panelHeader.Dock = DockStyle.Top;
-            label4.Dock = DockStyle.Top;
-            label4.AutoSize = false;
-            label4.Height = 56;
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            lblTieuDe.Dock = DockStyle.Top;
+            lblTieuDe.AutoSize = false;
+            lblTieuDe.Height = 56;
+            lblTieuDe.TextAlign = ContentAlignment.MiddleCenter;
 
             btnThem.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             btnSua.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             btnTaiLai.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 
             // Khu giữa: panelDGV Fill, DGV Fill trong panelDGV
@@ -94,11 +78,34 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             btnCapNhatMatKhau.Location = new Point(btnHienMatKhau.Right + 8, btnHienMatKhau.Top);
         }
 
+        private void LoadComboBoxes()
+        {
+            try
+            {
+                // Load ComboBox Vai trò
+                DataTable dtVaiTro = _nhanVienService.GetAllVaiTro();
+                cbVaiTro.DataSource = dtVaiTro;
+                cbVaiTro.DisplayMember = "ten_vai_tro";
+                cbVaiTro.ValueMember = "vai_tro_id";
+                cbVaiTro.SelectedIndex = -1;
+
+                // Load ComboBox Trạng thái
+                cbTrangThai.Items.Clear();
+                cbTrangThai.Items.Add("active");
+                cbTrangThai.Items.Add("inactive");
+                cbTrangThai.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi load ComboBox: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void AdjustHeaderLayout()
         {
-            if (panelHeader == null || label4 == null) return;
+            if (panelHeader == null || lblTieuDe == null) return;
             int padding = 12;
-            int toolbarTop = label4.Bottom + 6;
+            int toolbarTop = lblTieuDe.Bottom + 6;
             btnThem.Top = toolbarTop;
             btnSua.Top = toolbarTop;
             btnTaiLai.Top = toolbarTop;
@@ -107,8 +114,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             btnTaiLai.Left = btnSua.Right + 12;
             txtTimKiem.Top = toolbarTop + (btnThem.Height - txtTimKiem.Height) / 2;
             txtTimKiem.Left = panelHeader.ClientSize.Width - txtTimKiem.Width - padding;
-            label2.Top = toolbarTop + (btnThem.Height - label2.Height) / 2;
-            label2.Left = txtTimKiem.Left - label2.Width - 8;
+            lblTimKiem.Top = toolbarTop + (btnThem.Height - lblTimKiem.Height) / 2;
+            lblTimKiem.Left = txtTimKiem.Left - lblTimKiem.Width - 8;
             int desired = toolbarTop + btnThem.Height + padding;
             if (desired < 60) desired = 60;
             if (panelHeader.Height != desired) panelHeader.Height = desired;
@@ -166,14 +173,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             txtSDT.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
-            if (cbVaiTro.Items.Count > 0) cbVaiTro.SelectedIndex = 0;
+            if (cbVaiTro.Items.Count > 0) cbVaiTro.SelectedIndex = -1; // Trống ban đầu
             if (cbTrangThai.Items.Count > 0) cbTrangThai.SelectedIndex = 0;
             
             // Enable panel for editing
             SetPanelEnabled(true);
             
             // Đổi label thành "Thêm nhân viên mới"
-            label3.Text = "Thêm nhân viên mới";
+            lblChiTiet.Text = "Thêm nhân viên mới";
             
             // Focus vào field đầu tiên
             txtHoTen.Focus();
@@ -203,10 +210,27 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             SetPanelEnabled(true);
             
             // Đổi label thành "Sửa nhân viên"
-            label3.Text = $"Sửa nhân viên ID = {_selectedNhanVienId}";
+            lblChiTiet.Text = $"Sửa nhân viên ID = {_selectedNhanVienId}";
             
             // Focus vào field đầu tiên
             txtHoTen.Focus();
+
+            // Chế độ sửa: để trống và khóa ô mật khẩu; checkbox đổi mật khẩu hiện, chưa chọn; ẩn nút cập nhật mật khẩu
+            if (txtPassword != null)
+            {
+                txtPassword.Clear();
+                txtPassword.PasswordChar = '●';
+                txtPassword.Enabled = false;
+            }
+            if (checkDoiMatKhau != null)
+            {
+                checkDoiMatKhau.Visible = true;
+                checkDoiMatKhau.Checked = false;
+            }
+            if (btnCapNhatMatKhau != null)
+            {
+                btnCapNhatMatKhau.Visible = false;
+            }
         }
 
         private void btnTaiLai_Click(object sender, EventArgs e)
@@ -245,7 +269,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     txtUsername.Focus();
                     return;
                 }
-                if (string.IsNullOrWhiteSpace(txtPassword.Text))
+                // Mật khẩu chỉ bắt buộc khi THÊM mới
+                if (_isAddMode && string.IsNullOrWhiteSpace(txtPassword.Text))
                 {
                     MessageBox.Show("Vui lòng nhập mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPassword.Focus();
@@ -264,20 +289,80 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     return;
                 }
 
-                // Lấy dữ liệu từ form
-                string hoTen = txtHoTen.Text.Trim();
+                // Validation dữ liệu
                 string email = txtEmail.Text.Trim();
                 string soDienThoai = txtSDT.Text.Trim();
                 string username = txtUsername.Text.Trim();
                 string password = txtPassword.Text.Trim();
+
+                // Kiểm tra format email
+                if (!IsValidEmail(email))
+                {
+                    MessageBox.Show("Email không đúng định dạng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEmail.Focus();
+                    return;
+                }
+
+                // Kiểm tra số điện thoại (10-11 số)
+                if (!string.IsNullOrEmpty(soDienThoai) && !IsValidPhoneNumber(soDienThoai))
+                {
+                    MessageBox.Show("Số điện thoại phải có 10-11 chữ số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSDT.Focus();
+                    return;
+                }
+
+                // Kiểm tra username (3-20 ký tự, chỉ chữ và số)
+                if (!IsValidUsername(username))
+                {
+                    MessageBox.Show("Username phải có 3-20 ký tự, chỉ chứa chữ cái và số", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUsername.Focus();
+                    return;
+                }
+
+                // Kiểm tra mật khẩu (ít nhất 6 ký tự)
+                if (_isAddMode && password.Length < 6)
+                {
+                    MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPassword.Focus();
+                    return;
+                }
+
+                // Kiểm tra trùng email/username
+                int? excludeId = _isAddMode ? (int?)null : _selectedNhanVienId;
+                if (IsEmailDuplicate(email, excludeId))
+                {
+                    MessageBox.Show("Email đã tồn tại trong hệ thống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEmail.Focus();
+                    return;
+                }
+                if (IsUsernameDuplicate(username, excludeId))
+                {
+                    MessageBox.Show("Username đã tồn tại trong hệ thống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUsername.Focus();
+                    return;
+                }
+
+                // Lấy dữ liệu từ form
+                string hoTen = txtHoTen.Text.Trim();
                 string vaiTroId = cbVaiTro.SelectedValue.ToString();
                 string trangThai = cbTrangThai.Text;
 
-                // Hash password (SHA256)
-                string passwordHash = HashPassword(password);
+                // Hash password (SHA256) chỉ khi thêm mới; khi sửa không đổi mật khẩu
+                string passwordHash = _isAddMode ? HashPassword(password) : string.Empty;
 
                 bool success = false;
                 string message = "";
+
+                // Xác nhận đích gửi email trước khi lưu
+                if (!IsValidEmail(email))
+                {
+                    MessageBox.Show("Email không hợp lệ. Vui lòng kiểm tra lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEmail.Focus();
+                    return;
+                }
+
+                var confirmRecipient = MessageBox.Show($"Sau khi lưu, hệ thống sẽ gửi thông tin tài khoản đến: {email}.\nBạn có muốn tiếp tục?", "Xác nhận gửi email", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (confirmRecipient != DialogResult.OK) return;
 
                 string actionText = _isAddMode
                     ? "Bạn có chắc muốn THÊM nhân viên này?"
@@ -293,13 +378,27 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 }
                 else            // ĐANG SỬA
                 {
-                    success = _nhanVienService.UpdateNhanVien(_selectedNhanVienId, hoTen, email, soDienThoai, username, passwordHash, vaiTroId, trangThai);
+                    // Truyền passwordHash rỗng để repository giữ nguyên mật khẩu cũ
+                    success = _nhanVienService.UpdateNhanVien(_selectedNhanVienId, hoTen, email, soDienThoai, username, string.Empty, vaiTroId, trangThai);
                     message = success ? "Cập nhật nhân viên thành công" : "Cập nhật nhân viên thất bại";
                 }
 
                 if (success)
                 {
-                    MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"{message}\nEmail sẽ được gửi đến: {email}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Gửi email thông tin tài khoản: nếu THÊM thì gửi kèm mật khẩu, nếu SỬA thì không
+                    string roleName = cbVaiTro.Text?.Trim() ?? vaiTroId;
+                    string roleId = cbVaiTro.SelectedValue?.ToString() ?? vaiTroId;
+                    string statusText = cbTrangThai.Text?.Trim();
+                    string phoneToSend = soDienThoai;
+                    if (_isAddMode)
+                    {
+                        SendAccountInfoEmailAsync(email, hoTen, username, roleName, roleId, statusText, phoneToSend, password).ConfigureAwait(false);
+                    }
+                    else
+                    {
+                        SendAccountInfoEmailAsync(email, hoTen, username, roleName, roleId, statusText, phoneToSend, null).ConfigureAwait(false);
+                    }
                     LoadDataNhanVien();
                     ResetForm();
                 }
@@ -318,8 +417,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         {
             using (var sha256 = System.Security.Cryptography.SHA256.Create())
             {
-                var hashedBytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashedBytes);
+                var bytes = System.Text.Encoding.UTF8.GetBytes(password);
+                var hashBytes = sha256.ComputeHash(bytes);
+                var sb = new System.Text.StringBuilder(hashBytes.Length * 2);
+                foreach (var b in hashBytes)
+                {
+                    sb.Append(b.ToString("X2")); // X2 = chữ hoa, x2 = chữ thường
+                }
+                return sb.ToString();
             }
         }
 
@@ -330,18 +435,18 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
+            _debounceSearch.Stop();
+            _debounceSearch.Start();
+        }
+
+        private void ExecuteSearchNhanVien()
+        {
             try
             {
                 string keyword = txtTimKiem.Text.Trim();
-                DataTable dt;
-                if (string.IsNullOrEmpty(keyword))
-                {
-                    dt = _nhanVienService.GetAllNhanVien();
-                }
-                else
-                {
-                    dt = _nhanVienService.SearchNhanVien(keyword);
-                }
+                DataTable dt = string.IsNullOrEmpty(keyword)
+                    ? _nhanVienService.GetAllNhanVien()
+                    : _nhanVienService.SearchNhanVien(keyword);
                 DGVTaiKhoanNhanVien.DataSource = dt;
             }
             catch (Exception ex)
@@ -391,7 +496,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     txtPassword.Clear();
                     
                     // Cập nhật label thành "Chi tiết nhân viên"
-                    label3.Text = "Chi tiết nhân viên";
+                    lblChiTiet.Text = "Chi tiết nhân viên";
                     
                     // Set panel to view mode (disable editing)
                     SetPanelEnabled(false);
@@ -405,12 +510,162 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void btnCapNhatMatKhau_Click(object sender, EventArgs e)
         {
+			try
+            {
+                if (_selectedNhanVienId <= 0)
+                {
+                    MessageBox.Show("Vui lòng chọn nhân viên để cập nhật mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                string newPassword = txtPassword.Text.Trim();
+                if (string.IsNullOrWhiteSpace(newPassword) || newPassword.Length < 6)
+                {
+                    MessageBox.Show("Mật khẩu mới phải có ít nhất 6 ký tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPassword.Focus();
+                    return;
+                }
+
+                // Hash mật khẩu mới để cập nhật
+                string newHash = HashPassword(newPassword);
+
+				// Xác nhận kèm email người nhận
+				string toEmail = txtEmail.Text.Trim();
+				string fullName = txtHoTen.Text.Trim();
+				if (!IsValidEmail(toEmail))
+				{
+					MessageBox.Show("Email nhân viên không hợp lệ. Vui lòng kiểm tra lại trước khi gửi thông báo.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					txtEmail.Focus();
+					return;
+				}
+
+				var confirm = MessageBox.Show($"Xác nhận cập nhật mật khẩu và gửi email đến: {toEmail}?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (confirm != DialogResult.OK) return;
+
+                bool ok = _nhanVienService.UpdatePassword(_selectedNhanVienId, newHash);
+                if (!ok)
+                {
+                    MessageBox.Show("Cập nhật mật khẩu thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                SendPasswordChangedEmailAsync(toEmail, fullName, newPassword).ConfigureAwait(false);
+
+                MessageBox.Show("Cập nhật mật khẩu thành công và đã gửi email thông báo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Thoát chế độ đổi mật khẩu: clear nội dung, khóa ô, reset nút hiện/ẩn, hiện lại Lưu/Hủy
+                txtPassword.Clear();
+                txtPassword.Enabled = false;
+                _isPasswordVisible = false;
+                btnHienMatKhau.Text = "👁️ Hiện mật khẩu";
+                if (checkDoiMatKhau != null) checkDoiMatKhau.Checked = false;
+                SetPanelEnabled(true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Gửi email (MailKit)
+        private async Task SendPasswordChangedEmailAsync(string toEmail, string fullName, string newPassword)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(toEmail)) return;
+
+                var message = new MimeKit.MimeMessage();
+                message.From.Add(new MimeKit.MailboxAddress("Trung tâm giới thiệu việc làm JFC", "win2005thang@gmail.com"));
+                message.To.Add(MimeKit.MailboxAddress.Parse(toEmail));
+                message.Subject = "[JPC] Mật khẩu của bạn đã được cập nhật";
+
+                var bodyText = $"Chào {fullName},\n\nMật khẩu tài khoản của bạn đã được cập nhật thành công.\n\nThông tin đăng nhập:\n- Mật khẩu mới: {newPassword}\n\nVì lý do an toàn, vui lòng đăng nhập và ĐỔI MẬT KHẨU ngay sau khi đăng nhập lại.\nNếu bạn không thực hiện yêu cầu này, hãy liên hệ quản trị ngay.\n\nTrân trọng,\nJPC";
+                message.Body = new MimeKit.TextPart("plain") { Text = bodyText };
+
+                using (var smtp = new MailKit.Net.Smtp.SmtpClient())
+                {
+                    var security = MailKit.Security.SecureSocketOptions.StartTls;
+                    await smtp.ConnectAsync("smtp.gmail.com", 587, security);
+                    await smtp.AuthenticateAsync("win2005thang@gmail.com", "imwn mccd vnsh vofe");
+                    await smtp.SendAsync(message);
+                    await smtp.DisconnectAsync(true);
+                }
+            }
+            catch
+            {
+                // Im lặng: không chặn luồng cập nhật nếu email lỗi
+            }
+        }
+
+        // Gửi email thông tin tài khoản khi thêm/sửa
+        private async Task SendAccountInfoEmailAsync(string toEmail, string fullName, string username, string roleName, string roleId, string statusText, string phoneNumber, string passwordOrNull)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(toEmail)) return;
+
+                var message = new MimeKit.MimeMessage();
+                message.From.Add(new MimeKit.MailboxAddress("Trung tâm giới thiệu việc làm JFC", "win2005thang@gmail.com"));
+                message.To.Add(MimeKit.MailboxAddress.Parse(toEmail));
+
+                bool includePassword = !string.IsNullOrEmpty(passwordOrNull);
+                message.Subject = includePassword ? "[JPC] Tài khoản nhân viên của bạn đã được tạo" : "[JPC] Thông tin tài khoản nhân viên";
+
+                var sb = new System.Text.StringBuilder();
+                sb.AppendLine($"Chào {fullName},\n");
+                if (includePassword)
+                {
+                    sb.AppendLine("Tài khoản nhân viên của bạn đã được tạo thành công.");
+                }
+                else
+                {
+                    sb.AppendLine("Thông tin tài khoản của bạn đã được cập nhật.");
+                }
+                sb.AppendLine("\nThông tin đăng nhập:");
+                sb.AppendLine($"- Họ tên: {fullName}");
+                sb.AppendLine($"- Username: {username}");
+                sb.AppendLine($"- Vai trò: {roleName} ({roleId})");
+                sb.AppendLine($"- Trạng thái: {statusText}");
+                sb.AppendLine($"- Email: {toEmail}");
+                if (!string.IsNullOrWhiteSpace(phoneNumber)) sb.AppendLine($"- SĐT: {phoneNumber}");
+                if (includePassword)
+                {
+                    sb.AppendLine($"- Mật khẩu: {passwordOrNull}");
+                    sb.AppendLine("\nVì lý do an toàn, vui lòng đăng nhập và ĐỔI MẬT KHẨU ngay sau khi đăng nhập.");
+                }
+                sb.AppendLine("\nNếu bạn không thực hiện yêu cầu này, vui lòng liên hệ quản trị.");
+                sb.AppendLine("\nTrân trọng,\nJPC");
+
+                message.Body = new MimeKit.TextPart("plain") { Text = sb.ToString() };
+
+                using (var smtp = new MailKit.Net.Smtp.SmtpClient())
+                {
+                    var security = MailKit.Security.SecureSocketOptions.StartTls;
+                    await smtp.ConnectAsync("smtp.gmail.com", 587, security);
+                    await smtp.AuthenticateAsync("win2005thang@gmail.com", "imwn mccd vnsh vofe");
+                    await smtp.SendAsync(message);
+                    await smtp.DisconnectAsync(true);
+                }
+            }
+            catch
+            {
+                // không chặn luồng nếu gửi email thất bại
+            }
         }
 
         private void btnHienMatKhau_Click(object sender, EventArgs e)
         {
-
+            _isPasswordVisible = !_isPasswordVisible;
+            
+            if (_isPasswordVisible)
+            {
+                txtPassword.PasswordChar = '\0'; // Hiện mật khẩu
+                btnHienMatKhau.Text = "🔐 Ẩn mật khẩu";
+            }
+            else
+            {
+                txtPassword.PasswordChar = '●'; // Ẩn mật khẩu
+                btnHienMatKhau.Text = "👁️ Hiện mật khẩu";
+            }
         }
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -421,6 +676,61 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             }
         }
 
+        private void checkDoiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            bool changing = checkDoiMatKhau.Checked;
+            // Khi bật đổi mật khẩu: chỉ bật Email và Password; ẩn Lưu/Hủy, hiện nút Cập nhật
+            txtHoTen.Enabled = !changing && _isEditMode;
+            txtSDT.Enabled = !changing && _isEditMode;
+            txtUsername.Enabled = !changing && _isEditMode;
+            cbVaiTro.Enabled = !changing && _isEditMode;
+            cbTrangThai.Enabled = !changing && _isEditMode;
+
+            // Khi đổi mật khẩu: vô hiệu hóa email; chỉ cho nhập mật khẩu mới
+            txtEmail.Enabled = !changing && _isEditMode;
+            txtPassword.Enabled = changing;
+
+            btnLuu.Visible = !changing;
+            btnHuy.Visible = !changing;
+            btnCapNhatMatKhau.Visible = changing;
+            // Nút hiện mật khẩu chỉ hiện khi đang đổi mật khẩu
+            btnHienMatKhau.Visible = changing;
+
+            // Ẩn/hiện các label và control khác, chỉ giữ Email và Mật khẩu
+            try
+            {
+                // Các input khác
+                if (txtHoTen != null) txtHoTen.Visible = !changing;
+                if (txtSDT != null) txtSDT.Visible = !changing;
+                if (txtUsername != null) txtUsername.Visible = !changing;
+                if (cbVaiTro != null) cbVaiTro.Visible = !changing;
+                if (cbTrangThai != null) cbTrangThai.Visible = !changing;
+
+                // Email và Password luôn hiển thị
+                if (txtEmail != null) txtEmail.Visible = true;
+                if (txtPassword != null) txtPassword.Visible = true;
+
+                if (lblSDT != null) lblSDT.Visible = !changing;
+                if (lblHoten != null) lblHoten.Visible = !changing;
+                if (lblUsername != null) lblUsername.Visible = !changing;
+                if (lblVaiTro != null) lblVaiTro.Visible = !changing;
+                if (lblTrangThai != null) lblTrangThai.Visible = !changing;
+
+                if (lblEmail != null) lblEmail.Visible = true;
+                if (lblMatKhau != null) lblMatKhau.Visible = true;
+            }
+            catch { }
+
+            // Khi tắt chế độ đổi mật khẩu: clear ô password và reset trạng thái hiện/ẩn
+            if (!changing)
+            {
+                if (txtPassword != null) txtPassword.Clear();
+                _isPasswordVisible = false;
+                if (btnHienMatKhau != null) btnHienMatKhau.Text = "👁️ Hiện mật khẩu";
+                if (txtPassword != null) txtPassword.PasswordChar = '●';
+            }
+        }
+
         private void SetPanelEnabled(bool enabled)
         {
             // Enable/disable input fields
@@ -428,7 +738,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             txtEmail.Enabled = enabled;
             txtSDT.Enabled = enabled;
             txtUsername.Enabled = enabled;
-            txtPassword.Enabled = enabled;
+            // txtPassword: trong sửa sẽ bị khóa trừ khi tích đổi mật khẩu
+            txtPassword.Enabled = _isAddMode ? enabled : (checkDoiMatKhau != null && checkDoiMatKhau.Checked && enabled);
             cbVaiTro.Enabled = enabled;
             cbTrangThai.Enabled = enabled;
             
@@ -438,8 +749,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 // Khi đang edit: hiện nút Lưu, Hủy và các nút mật khẩu
                 btnLuu.Visible = true;
                 btnHuy.Visible = true;
-                btnHienMatKhau.Visible = true;
-                btnCapNhatMatKhau.Visible = true;
+                // Nút hiện mật khẩu: luôn hiện ở chế độ Thêm; ở chế độ Sửa chỉ hiện khi tick Đổi mật khẩu
+                btnHienMatKhau.Visible = _isAddMode || (checkDoiMatKhau != null && checkDoiMatKhau.Checked);
+                // Nút cập nhật mật khẩu chỉ hiện khi sửa và đã chọn đổi mật khẩu
+                btnCapNhatMatKhau.Visible = (!_isAddMode) && (checkDoiMatKhau != null && checkDoiMatKhau.Checked);
+                // Checkbox đổi mật khẩu chỉ hiện khi sửa
+                if (checkDoiMatKhau != null) checkDoiMatKhau.Visible = !_isAddMode;
                 
                 // Ẩn các nút không cần thiết khi edit
                 btnThem.Visible = false;
@@ -448,7 +763,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 
                 // Ẩn tìm kiếm khi edit (như QL danh mục)
                 txtTimKiem.Visible = false;
-                label2.Visible = false;
+                lblTimKiem.Visible = false;
                 
                 // Disable DGV selection khi đang edit để tránh conflict
                 DGVTaiKhoanNhanVien.Enabled = false;
@@ -460,6 +775,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 btnHuy.Visible = false;
                 btnHienMatKhau.Visible = false;
                 btnCapNhatMatKhau.Visible = false;
+                if (checkDoiMatKhau != null)
+                {
+                    checkDoiMatKhau.Visible = false;
+                    checkDoiMatKhau.Checked = false;
+                }
                 
                 // Hiện các nút chính khi xem
                 btnThem.Visible = true;
@@ -468,7 +788,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 
                 // Hiện tìm kiếm khi xem
                 txtTimKiem.Visible = true;
-                label2.Visible = true;
+                lblTimKiem.Visible = true;
                 
                 // Enable DGV selection khi đang xem
                 DGVTaiKhoanNhanVien.Enabled = true;
@@ -480,6 +800,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             _isAddMode = false;
             _isEditMode = false;
             _selectedNhanVienId = -1;
+            _isPasswordVisible = false; // Reset trạng thái hiện/ẩn mật khẩu
             
             // Clear input fields
             txtHoTen.Clear();
@@ -487,6 +808,13 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             txtSDT.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
+            txtPassword.PasswordChar = '●'; // Đảm bảo mật khẩu được ẩn
+            btnHienMatKhau.Text = "👁️ Hiện mật khẩu"; // Reset text nút
+            if (checkDoiMatKhau != null)
+            {
+                checkDoiMatKhau.Visible = false;
+                checkDoiMatKhau.Checked = false;
+            }
             if (cbVaiTro.Items.Count > 0) cbVaiTro.SelectedIndex = -1;
             if (cbTrangThai.Items.Count > 0) cbTrangThai.SelectedIndex = -1;
             
@@ -494,11 +822,153 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             DGVTaiKhoanNhanVien.ClearSelection();
             
             // Reset label về mặc định
-            label3.Text = "Chi tiết nhân viên";
+            lblChiTiet.Text = "Chi tiết nhân viên";
             
             // Set panel to view mode
             SetPanelEnabled(false);
         }
 
+
+
+
+
+        // VALIDATION
+        private bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email)) return false;
+            
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            if (string.IsNullOrEmpty(phoneNumber)) return true; // Cho phép để trống
+            
+            // Loại bỏ khoảng trắng và dấu gạch ngang
+            string cleanPhone = phoneNumber.Replace(" ", "").Replace("-", "");
+            
+            // Kiểm tra chỉ chứa số và có độ dài 10-11
+            return cleanPhone.Length >= 10 && cleanPhone.Length <= 11 && 
+                   cleanPhone.All(char.IsDigit);
+        }
+
+        private bool IsValidUsername(string username)
+        {
+            if (string.IsNullOrEmpty(username)) return false;
+            
+            // Kiểm tra độ dài 3-20 ký tự
+            if (username.Length < 3 || username.Length > 20) return false;
+            
+            // Kiểm tra chỉ chứa chữ cái và số
+            return username.All(c => char.IsLetterOrDigit(c));
+        }
+
+        // USERNAME TỰ ĐỘNG KHI THÊM NHÂN VIÊN MỚI
+
+        private void cbVaiTro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Chỉ tự động điền username khi đang thêm mới
+            if (!_isAddMode) return;
+
+            if (cbVaiTro.SelectedIndex >= 0)
+            {
+                string vaiTroId = cbVaiTro.SelectedValue.ToString();
+                string nextUsername = GetNextUsername(vaiTroId);
+                txtUsername.Text = nextUsername;
+            }
+        }
+
+        private string GetNextUsername(string vaiTroId)
+        {
+            try
+            {
+                // Lấy tất cả username hiện có của vai trò này
+                DataTable dt = _nhanVienService.GetAllNhanVien();
+                
+                // Tìm username có pattern {vaiTroId}{số}
+                var existingUsernames = new List<string>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    string username = row["Username"].ToString();
+                    if (username.StartsWith(vaiTroId.ToLower()))
+                    {
+                        existingUsernames.Add(username);
+                    }
+                }
+                
+                // Tìm số tiếp theo
+                int nextNumber = 1;
+                while (existingUsernames.Contains($"{vaiTroId.ToLower()}{nextNumber:D3}"))
+                {
+                    nextNumber++;
+                }
+                
+                return $"{vaiTroId.ToLower()}{nextNumber:D3}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tạo username: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return $"{vaiTroId.ToLower()}001";
+            }
+        }
+
+        // DUPLICATE: KIỂM TRA TRÙNG LẶP
+        private bool IsEmailDuplicate(string email, int? excludeNhanVienId)
+        {
+            try
+            {
+                DataTable dt = _nhanVienService.GetAllNhanVien();
+                foreach (DataRow row in dt.Rows)
+                {
+                    string rowEmail = row["Email"].ToString();
+                    int rowId = Convert.ToInt32(row["ID"]);
+                    if (string.Equals(rowEmail, email, StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (!excludeNhanVienId.HasValue || rowId != excludeNhanVienId.Value)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private bool IsUsernameDuplicate(string username, int? excludeNhanVienId)
+        {
+            try
+            {
+                DataTable dt = _nhanVienService.GetAllNhanVien();
+                foreach (DataRow row in dt.Rows)
+                {
+                    string rowUsername = row["Username"].ToString();
+                    int rowId = Convert.ToInt32(row["ID"]);
+                    if (string.Equals(rowUsername, username, StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (!excludeNhanVienId.HasValue || rowId != excludeNhanVienId.Value)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
