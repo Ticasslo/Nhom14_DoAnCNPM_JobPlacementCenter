@@ -66,7 +66,7 @@ namespace JPC.DataAccess.Repositories.Implementations.CSS
 			return result;
 		}
 
-		public IEnumerable<UngVien> SearchUngVien(string hoTen, string email, string soDienThoai, string cccd)
+		public IEnumerable<UngVien> SearchUngVien(string maUngVien, string hoTen, string email, string soDienThoai, string cccd)
 		{
 			var result = new List<UngVien>();
 			var parameters = new List<SqlParameter>();
@@ -74,6 +74,16 @@ namespace JPC.DataAccess.Repositories.Implementations.CSS
 
 			string sql = @"SELECT uv_id, ho_ten, email, so_dien_thoai, cccd, ngay_sinh, que_quan, vt_id, ngay_tao 
 						  FROM UngVien WHERE 1=1";
+
+			if (!string.IsNullOrWhiteSpace(maUngVien))
+			{
+				// Tìm kiếm chính xác theo mã ứng viên
+				if (int.TryParse(maUngVien, out int uvId))
+				{
+					conditions.Add("uv_id = @uvId");
+					parameters.Add(new SqlParameter("@uvId", SqlDbType.Int) { Value = uvId });
+				}
+			}
 
 			if (!string.IsNullOrWhiteSpace(hoTen))
 			{
@@ -95,8 +105,18 @@ namespace JPC.DataAccess.Repositories.Implementations.CSS
 
 			if (!string.IsNullOrWhiteSpace(cccd))
 			{
-				conditions.Add("cccd LIKE @cccd");
-				parameters.Add(new SqlParameter("@cccd", SqlDbType.VarChar, 12) { Value = "%" + cccd + "%" });
+				// Nếu nhập đúng 12 chữ số, tìm kiếm chính xác; nếu không, cho phép tìm kiếm tương đối
+				if (System.Text.RegularExpressions.Regex.IsMatch(cccd, @"^\d{12}$"))
+				{
+					conditions.Add("cccd = @cccd");
+					parameters.Add(new SqlParameter("@cccd", SqlDbType.VarChar, 12) { Value = cccd });
+				}
+				else
+				{
+					conditions.Add("cccd LIKE @cccd");
+					var cccdFilter = "%" + cccd + "%";
+					parameters.Add(new SqlParameter("@cccd", SqlDbType.VarChar, cccdFilter.Length) { Value = cccdFilter });
+				}
 			}
 
 			if (conditions.Count > 0)

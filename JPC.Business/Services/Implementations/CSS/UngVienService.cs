@@ -85,7 +85,7 @@ namespace JPC.Business.Services.Implementations.CSS
             if (!System.Text.RegularExpressions.Regex.IsMatch(ungVien.Cccd, @"^\d{12}$"))
                 throw new DomainValidationException("INVALID_CCCD", "CCCD phải gồm đúng 12 chữ số.");
 
-            // Ngày sinh: không ở tương lai, tuổi không “phi thực tế” (< 120)
+            // Ngày sinh: không ở tương lai, tuổi không “phi thực tế” (< 60)
             if (!IsValidDob(ungVien.NgaySinh))
                 throw new DomainValidationException("INVALID_DOB", "Ngày sinh không hợp lệ.");
 
@@ -101,9 +101,9 @@ namespace JPC.Business.Services.Implementations.CSS
             return repository.GetAllUngVien();
         }
 
-        public IEnumerable<UngVien> SearchUngVien(string hoTen, string email, string soDienThoai, string cccd)
+        public IEnumerable<UngVien> SearchUngVien(string maUngVien, string hoTen, string email, string soDienThoai, string cccd)
         {
-            return repository.SearchUngVien(hoTen, email, soDienThoai, cccd);
+            return repository.SearchUngVien(maUngVien, hoTen, email, soDienThoai, cccd);
         }
 
         public UngVien GetUngVienById(int uvId)

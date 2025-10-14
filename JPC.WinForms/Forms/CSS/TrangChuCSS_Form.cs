@@ -79,7 +79,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
 
         private void btnLoadGhiNhanUT_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new GhiNhanUngTuyen_UC());
         }
 
         private void btnLoadDoiMK_Click(object sender, EventArgs e)

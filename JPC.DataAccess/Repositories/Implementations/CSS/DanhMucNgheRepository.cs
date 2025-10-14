@@ -67,6 +67,52 @@ namespace JPC.DataAccess.Repositories.Implementations.CSS
 			}
 			return result;
 		}
+
+		public Nghe GetNgheById(int ngheId)
+		{
+			var parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@ngheId", SqlDbType.Int) { Value = ngheId }
+			};
+			var dt = ExecuteQuery(
+				"SELECT nghe_id, nhom_id, ten_nghe, trang_thai FROM Nghe WHERE nghe_id=@ngheId AND trang_thai='active'",
+				parameters
+			);
+			
+			if (dt.Rows.Count > 0)
+			{
+				var row = dt.Rows[0];
+				return new Nghe(
+					Convert.ToInt32(row["nghe_id"]),
+					Convert.ToInt32(row["nhom_id"]),
+					Convert.ToString(row["ten_nghe"]),
+					Convert.ToString(row["trang_thai"]));
+			}
+			return null;
+		}
+
+		public ViTriChuyenMon GetViTriChuyenMonById(int vtId)
+		{
+			var parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@vtId", SqlDbType.Int) { Value = vtId }
+			};
+			var dt = ExecuteQuery(
+				"SELECT vt_id, nghe_id, ten_vi_tri, trang_thai FROM ViTriChuyenMon WHERE vt_id=@vtId AND trang_thai='active'",
+				parameters
+			);
+			
+			if (dt.Rows.Count > 0)
+			{
+				var row = dt.Rows[0];
+				return new ViTriChuyenMon(
+					Convert.ToInt32(row["vt_id"]),
+					Convert.ToInt32(row["nghe_id"]),
+					Convert.ToString(row["ten_vi_tri"]),
+					Convert.ToString(row["trang_thai"]));
+			}
+			return null;
+		}
 	}
 }
 

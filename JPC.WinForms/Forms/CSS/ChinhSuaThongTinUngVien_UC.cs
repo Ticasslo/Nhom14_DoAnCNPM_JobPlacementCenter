@@ -227,6 +227,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
         {
             if (ungVien == null) return;
 
+            // Điền thông tin cơ bản
             txtMaUV.Text = ungVien.UvId.ToString();
             txtHoTen.Text = ungVien.HoTen;
             txtEmail.Text = ungVien.Email;
@@ -235,64 +236,48 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
             dtpNgaySinh.Value = ungVien.NgaySinh;
             txtQueQuan.Text = ungVien.QueQuan;
 
-            // Tìm và chọn vị trí chuyên môn
+            // Tìm và chọn vị trí chuyên môn - Tối ưu hóa
             if (ungVien.VtId.HasValue)
             {
                 try
                 {
-                    // Tìm vị trí chuyên môn từ tất cả các nghề
-                    var allNhomNghe = danhMucNgheService.GetAllNhomNghe();
-                    foreach (var nhom in allNhomNghe)
+                    // Sử dụng method mới để lấy thông tin trực tiếp
+                    var viTri = danhMucNgheService.GetViTriChuyenMonById(ungVien.VtId.Value);
+                    if (viTri != null)
                     {
-                        var ngheList = danhMucNgheService.GetNgheByNhom(nhom.NhomId);
-                        foreach (var nghe in ngheList)
+                        var nghe = danhMucNgheService.GetNgheById(viTri.NgheId);
+                        if (nghe != null)
                         {
-                            var viTriList = danhMucNgheService.GetViTriByNghe(nghe.NgheId);
-                            var viTri = viTriList.FirstOrDefault(v => v.VtId == ungVien.VtId.Value);
-                            if (viTri != null)
-                            {
-                                // Chọn nhóm nghề
-                                for (int i = 0; i < cbbNhomNghe.Items.Count; i++)
-                                {
-                                    var item = (ComboBoxItem)cbbNhomNghe.Items[i];
-                                    if (item.Value == nhom.NhomId)
-                                    {
-                                        cbbNhomNghe.SelectedIndex = i;
-                                        break;
-                                    }
-                                }
-                                
-                                // Load và chọn nghề
-                                LoadNghe(nhom.NhomId);
-                                for (int i = 0; i < cbbNghe.Items.Count; i++)
-                                {
-                                    var item = (ComboBoxItem)cbbNghe.Items[i];
-                                    if (item.Value == nghe.NgheId)
-                                    {
-                                        cbbNghe.SelectedIndex = i;
-                                        break;
-                                    }
-                                }
-                                
-                                // Load và chọn vị trí
-                                LoadViTri(nghe.NgheId);
-                                for (int i = 0; i < cbbVT.Items.Count; i++)
-                                {
-                                    var item = (ComboBoxItem)cbbVT.Items[i];
-                                    if (item.Value == viTri.VtId)
-                                    {
-                                        cbbVT.SelectedIndex = i;
-                                        break;
-                                    }
-                                }
-                                return;
-                            }
+                            // Chọn nhóm nghề
+                            SelectComboBoxItem(cbbNhomNghe, nghe.NhomId);
+                            
+                            // Load và chọn nghề
+                            LoadNghe(nghe.NhomId);
+                            SelectComboBoxItem(cbbNghe, nghe.NgheId);
+                            
+                            // Load và chọn vị trí
+                            LoadViTri(nghe.NgheId);
+                            SelectComboBoxItem(cbbVT, viTri.VtId);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Lỗi khi tải thông tin nghề nghiệp: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        // Helper method để chọn item trong ComboBox
+        private void SelectComboBoxItem(ComboBox comboBox, int value)
+        {
+            for (int i = 0; i < comboBox.Items.Count; i++)
+            {
+                var item = (ComboBoxItem)comboBox.Items[i];
+                if (item.Value == value)
+                {
+                    comboBox.SelectedIndex = i;
+                    return;
                 }
             }
         }
@@ -311,13 +296,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
         {
             try
             {
+                string maUngVien = txtMaUV.Text.Trim();
                 string hoTen = txtHoTen.Text.Trim();
                 string email = txtEmail.Text.Trim();
                 string soDienThoai = txtSDT.Text.Trim();
                 string cccd = txtCCCD.Text.Trim();
 
-                currentUngVienList = ungVienService.SearchUngVien(hoTen, email, soDienThoai, cccd).ToList();
+                currentUngVienList = ungVienService.SearchUngVien(maUngVien, hoTen, email, soDienThoai, cccd).ToList();
                 dgvDSHoSoUngVien.DataSource = currentUngVienList;
+
+                if (currentUngVienList.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy ứng viên nào phù hợp với điều kiện tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -413,7 +404,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
                     break;
 
                 case "INVALID_PHONE":
-                    MessageBox.Show("Số điện thoại chỉ được chứa chữ số.", "Không hợp lệ",
+                    MessageBox.Show("Số điện thoại phải gồm đúng 10 chữ số.", "Không hợp lệ",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtSDT.Focus();
                     txtSDT.SelectAll();
@@ -469,6 +460,22 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
             if (cbbNghe.SelectedItem is ComboBoxItem selectedItem)
             {
                 LoadViTri(selectedItem.Value);
+            }
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Chặn ký tự không phải số
+            }
+        }
+
+        private void txtCCCD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Chặn ký tự không phải số
             }
         }
     }

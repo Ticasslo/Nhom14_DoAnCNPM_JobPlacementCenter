@@ -174,7 +174,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
                     break;
 
                 case "INVALID_PHONE":
-                    MessageBox.Show("Số điện thoại chỉ được chứa chữ số.", "Không hợp lệ",
+                    MessageBox.Show("Số điện thoại phải gồm đúng 10 chữ số.", "Không hợp lệ",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtSDT.Focus();
                     txtSDT.SelectAll();

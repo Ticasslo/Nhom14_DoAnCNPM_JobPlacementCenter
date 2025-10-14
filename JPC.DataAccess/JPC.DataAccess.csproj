@@ -59,11 +59,17 @@
     <Compile Include="Exceptions\DataAccessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Implementations\CSS\DanhMucNgheRepository.cs" />
+    <Compile Include="Repositories\Implementations\CSS\DoanhNghiepRepository.cs" />
+    <Compile Include="Repositories\Implementations\CSS\TinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Implementations\CSS\UngTuyenRepository.cs" />
     <Compile Include="Repositories\Implementations\CSS\UngVienRepository.cs" />
     <Compile Include="Repositories\Implementations\DoiMatKhau\DoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Implementations\Login\DangNhapRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NhomNgheRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\IDanhMucNgheRepository.cs" />
+    <Compile Include="Repositories\Interfaces\CSS\IDoanhNghiepRepository.cs" />
+    <Compile Include="Repositories\Interfaces\CSS\ITinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Interfaces\CSS\IUngTuyenRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\IUngVienRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Interfaces\Login\IDangNhapRepository.cs" />

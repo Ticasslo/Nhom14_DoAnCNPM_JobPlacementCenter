@@ -8,6 +8,8 @@ namespace JPC.Business.Services.Interfaces.CSS
 		IEnumerable<NhomNghe> GetAllNhomNghe();
 		IEnumerable<Nghe> GetNgheByNhom(int nhomId);
 		IEnumerable<ViTriChuyenMon> GetViTriByNghe(int ngheId);
+		Nghe GetNgheById(int ngheId);
+		ViTriChuyenMon GetViTriChuyenMonById(int vtId);
 	}
 }
 

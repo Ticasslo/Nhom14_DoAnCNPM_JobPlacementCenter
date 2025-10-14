@@ -7,7 +7,7 @@ namespace JPC.Business.Services.Interfaces.CSS
 	{
 		void DangKyUngVien(UngVien ungVien);
 		IEnumerable<UngVien> GetAllUngVien();
-		IEnumerable<UngVien> SearchUngVien(string hoTen, string email, string soDienThoai, string cccd);
+		IEnumerable<UngVien> SearchUngVien(string maUngVien, string hoTen, string email, string soDienThoai, string cccd);
 		UngVien GetUngVienById(int uvId);
 		void CapNhatUngVien(UngVien ungVien);
 	}
