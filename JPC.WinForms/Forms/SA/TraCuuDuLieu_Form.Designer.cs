@@ -38,9 +38,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -147,13 +149,22 @@
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.BackIcon;
+            this.btnBack.Location = new System.Drawing.Point(1141, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(29, 37);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 87;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // TraCuuDuLieu_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 753);
-            this.ControlBox = false;
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -164,19 +175,23 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TraCuuDuLieu_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.TraCuuDuLieu_Form_Load);
+            this.Text = "TraCuuDuLieu_Form";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;

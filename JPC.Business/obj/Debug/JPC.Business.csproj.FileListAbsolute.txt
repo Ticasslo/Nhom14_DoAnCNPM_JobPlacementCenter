@@ -31,3 +31,14 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busines
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.AssemblyReference.cache
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.CoreCompileInputs.cache
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb

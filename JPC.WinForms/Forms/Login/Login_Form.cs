@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using JPC.Business.Exceptions;
 using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM;
 //using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
@@ -25,19 +26,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
         public Login_Form()
         {
             InitializeComponent();
-            this.ClientSize = new Size(340, 530);
+           // this.ClientSize = new Size(340, 530);
             this.AcceptButton = btnLogin;
         }
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
-            txtUsername.Text = "username";
-            txtUsername.ForeColor = Color.Gray;
-            txtPassword.Text = "password";
-            txtPassword.ForeColor = Color.Gray;
+            //txtUsername.Text = "username";
+            //txtUsername.ForeColor = Color.Gray;
+            //txtPassword.Text = "password";
+            //txtPassword.ForeColor = Color.Gray;
 
-            picBoxShow.BringToFront();
-            txtPassword.PasswordChar = '\0';
+            picBoxHide.BringToFront();
+           // txtPassword.PasswordChar = '*';
 
             radioBtnCSS.Checked = true;
             this.ActiveControl = txtUsername;
@@ -103,6 +104,30 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 
             txtPassword.PasswordChar = '\0'; // Hiện lại mật khẩu
             isShowPassword = true;
+        }
+
+
+
+        private void Login_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!IsAppExiting && e.CloseReason == CloseReason.UserClosing)
+            {
+                var result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No) 
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    IsAppExiting = true;
+                    Application.Exit(); // Đảm bảo thoát hoàn toàn
+                }
+            }
+            else if (IsAppExiting)
+            {
+                Application.Exit(); // Đảm bảo thoát hoàn toàn
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -195,7 +220,25 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
                 }
                 else if (string.Equals(nv.VaiTroId, "CM", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Màn hình chính cho vai trò CM đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+
+                    var main = new TrangChuCM_Form();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng do ĐĂNG XUẤT, form chính sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);   // reset UI đăng nhập (placeholder, clear text,…)
+                        }
+                        else
+                        {
+                            IsAppExiting = true;          // đánh dấu thoát hẳn app
+                            this.Close();
+                        }
+                    };
+
+                    main.Show();
                 }
                 else
                 {
@@ -208,26 +251,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             }
         }
 
-        private void Login_Form_FormClosing(object sender, FormClosingEventArgs e)
+        private void grBoxRole_Click(object sender, EventArgs e)
         {
-            if (!IsAppExiting && e.CloseReason == CloseReason.UserClosing)
-            {
-                var result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No) 
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    IsAppExiting = true;
-                    Application.Exit(); // Đảm bảo thoát hoàn toàn
-                }
-            }
-            else if (IsAppExiting)
-            {
-                Application.Exit(); // Đảm bảo thoát hoàn toàn
-            }
+
+        }
+
+        private void lbTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

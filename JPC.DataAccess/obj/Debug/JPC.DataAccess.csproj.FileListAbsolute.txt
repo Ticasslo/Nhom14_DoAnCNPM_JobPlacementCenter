@@ -25,3 +25,12 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataA
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.Data.6EDEDE72.Up2Date
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.dll
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.DataAccess.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.DataAccess.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.Models.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.Models.pdb
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.csproj.AssemblyReference.cache
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.csproj.CoreCompileInputs.cache
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.Data.6EDEDE72.Up2Date
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.dll
+D:\HCMUTE\I_25-26\BTCNPM\DoAn\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.pdb

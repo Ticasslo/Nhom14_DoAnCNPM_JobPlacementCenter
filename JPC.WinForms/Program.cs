@@ -1,4 +1,5 @@
-﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
+﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login_Form());
+            //Application.Run(new TrangChuCM_Form());
         }
     }
 }
