@@ -22,7 +22,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrangChuCSS_Form());
+            Application.Run(new Login_Form());
         }
     }
 }

@@ -41,6 +41,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
 
         private void ClearForm()
         {
+            txtMaUV.Enabled = true;
+
             txtMaUV.Text = "";
             txtHoTen.Text = "";
             txtEmail.Text = "";
