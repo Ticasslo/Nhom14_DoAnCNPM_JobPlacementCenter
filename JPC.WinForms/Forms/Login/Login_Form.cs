@@ -38,7 +38,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             //txtPassword.ForeColor = Color.Gray;
 
             picBoxHide.BringToFront();
-           // txtPassword.PasswordChar = '*';
+           txtPassword.PasswordChar = '*';
 
             radioBtnCSS.Checked = true;
             this.ActiveControl = txtUsername;
