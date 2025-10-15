@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
-using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
-
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 {
     public partial class TrangChuSA_Form : Form
@@ -49,8 +47,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            DoiMatKhau_Form next = new DoiMatKhau_Form();
-            next.ShowDialog(); // Dùng ShowDialog để form cha không bị ẩn
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)

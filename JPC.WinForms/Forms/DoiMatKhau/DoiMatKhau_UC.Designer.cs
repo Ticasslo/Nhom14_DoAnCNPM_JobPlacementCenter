@@ -67,6 +67,7 @@
             this.txtConfirm.Location = new System.Drawing.Point(943, 1084);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(6);
             this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.PasswordChar = '*';
             this.txtConfirm.PlaceholderText = "";
             this.txtConfirm.SelectedText = "";
             this.txtConfirm.Size = new System.Drawing.Size(1141, 97);
@@ -86,6 +87,7 @@
             this.txtNewPass.Location = new System.Drawing.Point(943, 762);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.PlaceholderText = "";
             this.txtNewPass.SelectedText = "";
             this.txtNewPass.Size = new System.Drawing.Size(1141, 97);
@@ -105,6 +107,7 @@
             this.txtOldPass.Location = new System.Drawing.Point(943, 447);
             this.txtOldPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.PasswordChar = '*';
             this.txtOldPass.PlaceholderText = "";
             this.txtOldPass.SelectedText = "";
             this.txtOldPass.Size = new System.Drawing.Size(1141, 97);

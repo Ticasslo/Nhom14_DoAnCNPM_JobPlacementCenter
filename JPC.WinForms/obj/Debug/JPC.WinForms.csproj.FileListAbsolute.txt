@@ -203,7 +203,6 @@ D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nho
 D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS.TrangChuCSS_Form.resources
 D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau.DoiMatKhau_UC.resources
 D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login.Login_Form.resources
-D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword.DoiMatKhau_Form.resources
 D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA.QLDanhMucNgheNghiep_Form.resources
 D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA.QLQuyenHan_Form.resources
 D:\DaiHoc\Software\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.WinForms\obj\Debug\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA.QLTaiKhoanNhanVien_Form.resources
