@@ -47,21 +47,33 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
         {
             try
             {
+                // 1) THỜI GIAN
                 string bucket = rdThang.Checked ? "THANG" : rdQuy.Checked ? "QUY" : "NAM";
                 int per = Convert.ToInt32(cbThangQuy.SelectedValue ?? 1);
                 int year = Convert.ToInt32(cbNam.SelectedValue ?? DateTime.Now.Year);
                 if (bucket == "NAM") per = 1;
 
                 var (from, to) = DateRangeHelper.Build(bucket, per, year);
-                string group = rdNhomNghe.Checked ? "NHOM" : rdNghe.Checked ? "NGHE" : "VITRI";
 
+                // 2) PHÂN TÍCH THEO
+                string group = rdNhomNghe.Checked ? "NHOM"
+                             : rdNghe.Checked ? "NGHE"
+                             : "VITRI";
+
+                // 3) TRUY VẤN
+                // 3) Truy vấn
                 var dt = _svc.ThongKeSoLuong(from, to, group);
                 _cache = dt;
+
+                // BIND LƯỚI (đã khai báo cột sẵn ở SetupGrid)
                 dgvThongKe.DataSource = dt;
 
+                // 4) Tổng quan
                 txtTongUngVien.Text = dt.Rows.Count == 0 ? "0"
                     : Convert.ToString(dt.Compute("SUM(SoLuong)", null));
-                txtNoiBatNhat.Text = dt.Rows.Count == 0 ? "" : dt.Rows[0]["DanhMuc"].ToString();
+                txtNoiBatNhat.Text = dt.Rows.Count == 0 ? ""
+                    : dt.Rows[0]["DanhMuc"].ToString();
+                
             }
             catch (Exception ex)
             {
@@ -203,8 +215,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                              : rdNghe.Checked ? "NGHE"
                              : "VITRI";
 
-                // 3) TRUY VẤN
-                // 3) Truy vấn
+                // 3) TRUY VẤN         
                 var dt = _svc.ThongKeSoLuong(from, to, group);
                 _cache = dt;
 
@@ -216,12 +227,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                     : Convert.ToString(dt.Compute("SUM(SoLuong)", null));
                 txtNoiBatNhat.Text = dt.Rows.Count == 0 ? ""
                     : dt.Rows[0]["DanhMuc"].ToString();
-
+                //checkmacdinh
+                rdOnDinh.Checked = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
             }
+      
 
         }
         private DataTable BuildReportTable(DataTable src)
@@ -266,7 +279,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             // 3) Khóa phân nhóm & xu hướng để truyền vào RDLC
             string groupKey = rdNhomNghe.Checked ? "NHOM"
                              : rdNghe.Checked ? "NGHE"
-                             : "VITRI";
+                             : "VITRI"; //mặc định
 
             string trendKey = rdTang.Checked ? "TANG"
                              : rdGiam.Checked ? "GIAM"
@@ -315,104 +328,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             var (from, to) = DateRangeHelper.Build(bucket, per, year);
             return _svc.ThongKeSoLuong(from, to, group);        // hoặc TyLeKetNoi(...) ở màn tỷ lệ
         }
-        private void ExportExcel(DataTable dt, string path, string title, string sub1, string sub2)
-        {
-            using (var wb = new XLWorkbook())
-            {
-                var ws = wb.Worksheets.Add("ThongKe");
-
-                int r = 1;
-
-                // Tiêu đề
-                ws.Cell(r, 1).Value = title;
-                ws.Range(r, 1, r, 4).Merge().Style
-                    .Font.SetBold().Font.SetFontSize(16)
-                    .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-                r++;
-
-                // Thông tin phụ
-                ws.Cell(r, 1).Value = sub1; ws.Range(r, 1, r, 4).Merge(); r++;
-                ws.Cell(r, 1).Value = sub2; ws.Range(r, 1, r, 4).Merge(); r += 2;
-
-                // Header bảng
-                ws.Cell(r, 1).Value = "STT";
-                ws.Cell(r, 2).Value = "Nhóm nghề / Nghề / Vị trí";
-                ws.Cell(r, 3).Value = "Số lượng";
-                ws.Cell(r, 4).Value = "Tỷ lệ (%)";
-                ws.Range(r, 1, r, 4).Style.Font.SetBold().Fill.SetBackgroundColor(XLColor.LightGray);
-                r++;
-
-                // Dữ liệu
-                foreach (DataRow row in dt.Rows)
-                {
-                    // STT
-                    int stt = 0;
-                    if (row.Table.Columns.Contains("STT") && row["STT"] != DBNull.Value)
-                        int.TryParse(row["STT"].ToString(), out stt);
-                    ws.Cell(r, 1).Value = stt;
-
-                    // Danh mục
-                    ws.Cell(r, 2).Value = row["DanhMuc"]?.ToString() ?? "";
-
-                    // Số lượng
-                    int soLuong = 0;
-                    if (row["SoLuong"] != DBNull.Value)
-                        int.TryParse(row["SoLuong"].ToString(), out soLuong);
-                    ws.Cell(r, 3).Value = soLuong;
-
-                    // Tỷ lệ (%)
-                    decimal tyle = 0m;
-                    var obj = row["TyLe"];
-                    if (obj != null && obj != DBNull.Value)
-                    {
-                        if (obj is decimal dec) tyle = dec;
-                        else if (obj is double dbl) tyle = (decimal)dbl;
-                        else
-                        {
-                            var s = obj.ToString().Replace("%", "").Trim();
-                            // thử parse theo CurrentCulture rồi đến InvariantCulture
-                            if (!decimal.TryParse(s, NumberStyles.Any, CultureInfo.CurrentCulture, out tyle))
-                                decimal.TryParse(s, NumberStyles.Any, CultureInfo.InvariantCulture, out tyle);
-                        }
-                    }
-                    ws.Cell(r, 4).Value = tyle;      // ghi số thuần
-                    r++;
-                }
-
-                // Định dạng
-                // Định dạng & căn lề
-                ws.Column(3).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
-                ws.Column(4).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
-                ws.Column(4).Style.NumberFormat.Format = "0.00\\ %";
-
-                // >>> KHẮC PHỤC: KHÔNG auto-fit, đặt width cố định
-                void SetSafeWidths()
-                {
-                    ws.Column(1).Width = 8;   // STT
-                    ws.Column(2).Width = 45;  // Nhóm nghề / Nghề / Vị trí
-                    ws.Column(3).Width = 12;  // Số lượng
-                    ws.Column(4).Width = 12;  // Tỷ lệ
-                }
-
-                // Nếu bạn vẫn muốn thử auto-fit, hãy bọc try/catch và fallback
-                try
-                {
-                    // Comment dòng sau để loại bỏ hoàn toàn lỗi:
-                    // ws.Columns(1, 4).AdjustToContents();
-
-                    // Khuyến nghị: dùng width cố định luôn
-                    SetSafeWidths();
-                }
-                catch (TypeInitializationException ex) when (
-                       ex.TypeName?.Contains("SixLabors.Fonts.Tables.TableLoader") == true)
-                {
-                    SetSafeWidths();
-                }
-
-                wb.SaveAs(path);
-            }
-        }
-
+       
 
         private void btnXuatBaoCao_Click(object sender, EventArgs e)
         {
@@ -456,7 +372,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             using (var sfd = new SaveFileDialog
             {
                 Title = "Xuất báo cáo",
-                Filter = "PDF (*.pdf)|*.pdf|Excel (*.xlsx)|*.xlsx",
+                Filter = "PDF (*.pdf)|*.pdf",
                 FileName = $"CM-BM1_{DateTime.Now:yyyyMMdd_HHmm}"
             })
             {
@@ -494,9 +410,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                     else                       // === Excel bằng ClosedXML ===
                     {
                         // Header phụ trong file Excel
-                        var sub1 = $"Kỳ: {PeriodText(bucket, per, year)}   |   Phân tích theo: {GroupText(group)}";
-                        var sub2 = $"Tổng: {dt.Compute("SUM(SoLuong)", null)}   |   Nổi bật: {dt.Rows[0]["DanhMuc"]}";
-                        ExportExcel(dtReport, sfd.FileName, "THỐNG KÊ SỐ LƯỢNG ỨNG VIÊN", sub1, sub2);
+                        //var sub1 = $"Kỳ: {PeriodText(bucket, per, year)}   |   Phân tích theo: {GroupText(group)}";
+                        //var sub2 = $"Tổng: {dt.Compute("SUM(SoLuong)", null)}   |   Nổi bật: {dt.Rows[0]["DanhMuc"]}";
+                        //ExportExcel(dtReport, sfd.FileName, "THỐNG KÊ SỐ LƯỢNG ỨNG VIÊN", sub1, sub2);
                     }
 
                     MessageBox.Show("Xuất báo cáo thành công!");

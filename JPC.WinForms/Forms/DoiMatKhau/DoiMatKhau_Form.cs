@@ -17,12 +17,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword
     {
         private readonly IDoiMatKhauService doiMatKhauService;
         private readonly string currentUsername;
+        //domanhmatkhau
+        private readonly Timer _debounce = new Timer { Interval = 300 }; // 300ms
+        private readonly IPasswordStrengthService _pwdStrengthSvc = new PasswordStrengthService();
+        private PasswordStrengthResult _lastStrength;
+      
         public DoiMatKhau_Form()
         {
             InitializeComponent();
             this.AcceptButton = btnLuuThayDoi;
             this.doiMatKhauService = new DoiMatKhauService();
             this.currentUsername = UserSession.Username;
+            _debounce.Tick += (s, e) => { _debounce.Stop(); UpdateStrengthFromDb(); };
+            txtNewPass.TextChanged += (s, e) => { _debounce.Stop(); _debounce.Start(); };
         }
 
         private void btnLuuThayDoi_Click(object sender, EventArgs e)
@@ -77,5 +84,34 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword
                 MessageBox.Show("Không thể đổi mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void DoiMatKhau_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+        private async void UpdateStrengthFromDb()
+        {
+            var pwd = txtNewPass.Text ?? string.Empty;
+            var username = UserSession.Username ?? string.Empty;
+            var fullName = UserSession.NhanVien?.HoTen ?? string.Empty;
+
+            _lastStrength = await Task.Run(() => _pwdStrengthSvc.Evaluate(pwd, username, fullName));
+
+            // Cập nhật duy nhất lblStrength
+            lblStrength.Text = _lastStrength.IsCommon
+                ? $"{_lastStrength.Label} (mật khẩu phổ biến)"
+                : _lastStrength.Label;
+            lblStrength.ForeColor = StrengthColor(_lastStrength.Score);
+        }
+
+        private Color StrengthColor(int score)
+        {
+            if (score >= 80) return Color.ForestGreen;
+            if (score >= 60) return Color.SeaGreen;
+            if (score >= 40) return Color.DarkOrange;
+            if (score >= 20) return Color.OrangeRed;
+            return Color.Firebrick;
+        }
+
     }
 }

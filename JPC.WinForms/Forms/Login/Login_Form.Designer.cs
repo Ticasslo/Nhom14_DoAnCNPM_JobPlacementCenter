@@ -48,6 +48,7 @@
             this.picBoxShow = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.grBoxRole.SuspendLayout();
             this.pnNen1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -59,11 +60,11 @@
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Font = new System.Drawing.Font("Segoe UI Black", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(60)))), ((int)(((byte)(85)))));
-            this.lbTitle.Location = new System.Drawing.Point(734, 58);
+            this.lbTitle.Location = new System.Drawing.Point(723, 71);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(237, 46);
+            this.lbTitle.Size = new System.Drawing.Size(257, 50);
             this.lbTitle.TabIndex = 86;
             this.lbTitle.Text = "ĐĂNG NHẬP";
             this.lbTitle.Click += new System.EventHandler(this.lbTitle_Click);
@@ -72,7 +73,7 @@
             // 
             this.lbWelcome.AutoSize = true;
             this.lbWelcome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcome.Location = new System.Drawing.Point(716, 113);
+            this.lbWelcome.Location = new System.Drawing.Point(712, 130);
             this.lbWelcome.Name = "lbWelcome";
             this.lbWelcome.Size = new System.Drawing.Size(279, 28);
             this.lbWelcome.TabIndex = 85;
@@ -137,12 +138,12 @@
             this.grBoxRole.Controls.Add(this.radioBtnCSS);
             this.grBoxRole.CustomBorderColor = System.Drawing.Color.Transparent;
             this.grBoxRole.FillColor = System.Drawing.Color.Transparent;
-            this.grBoxRole.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBoxRole.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grBoxRole.ForeColor = System.Drawing.Color.White;
-            this.grBoxRole.Location = new System.Drawing.Point(32, 121);
+            this.grBoxRole.Location = new System.Drawing.Point(23, 121);
             this.grBoxRole.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxRole.Name = "grBoxRole";
-            this.grBoxRole.Size = new System.Drawing.Size(375, 286);
+            this.grBoxRole.Size = new System.Drawing.Size(398, 286);
             this.grBoxRole.TabIndex = 89;
             this.grBoxRole.Text = "Vai trò";
             this.grBoxRole.Click += new System.EventHandler(this.grBoxRole_Click);
@@ -155,11 +156,12 @@
             this.radioBtnSA.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioBtnSA.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioBtnSA.CheckedState.InnerOffset = -4;
-            this.radioBtnSA.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnSA.Location = new System.Drawing.Point(11, 241);
+            this.radioBtnSA.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.radioBtnSA.Location = new System.Drawing.Point(11, 232);
             this.radioBtnSA.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnSA.Name = "radioBtnSA";
-            this.radioBtnSA.Size = new System.Drawing.Size(197, 32);
+            this.radioBtnSA.Size = new System.Drawing.Size(202, 32);
             this.radioBtnSA.TabIndex = 0;
             this.radioBtnSA.Text = "Quản trị hệ thống";
             this.radioBtnSA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -175,11 +177,12 @@
             this.radioBtnCM.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioBtnCM.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioBtnCM.CheckedState.InnerOffset = -4;
-            this.radioBtnCM.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnCM.Location = new System.Drawing.Point(11, 196);
+            this.radioBtnCM.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.radioBtnCM.Location = new System.Drawing.Point(11, 186);
             this.radioBtnCM.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnCM.Name = "radioBtnCM";
-            this.radioBtnCM.Size = new System.Drawing.Size(200, 32);
+            this.radioBtnCM.Size = new System.Drawing.Size(209, 32);
             this.radioBtnCM.TabIndex = 0;
             this.radioBtnCM.Text = "Quản lý trung tâm";
             this.radioBtnCM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -195,11 +198,12 @@
             this.radioBtnFO.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioBtnFO.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioBtnFO.CheckedState.InnerOffset = -4;
-            this.radioBtnFO.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnFO.Location = new System.Drawing.Point(11, 149);
+            this.radioBtnFO.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.radioBtnFO.Location = new System.Drawing.Point(11, 138);
             this.radioBtnFO.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnFO.Name = "radioBtnFO";
-            this.radioBtnFO.Size = new System.Drawing.Size(210, 32);
+            this.radioBtnFO.Size = new System.Drawing.Size(219, 32);
             this.radioBtnFO.TabIndex = 0;
             this.radioBtnFO.Text = "Nhân viên tài chính";
             this.radioBtnFO.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -215,11 +219,12 @@
             this.radioBtnERS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioBtnERS.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioBtnERS.CheckedState.InnerOffset = -4;
-            this.radioBtnERS.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnERS.Location = new System.Drawing.Point(11, 103);
+            this.radioBtnERS.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.radioBtnERS.Location = new System.Drawing.Point(11, 91);
             this.radioBtnERS.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnERS.Name = "radioBtnERS";
-            this.radioBtnERS.Size = new System.Drawing.Size(361, 32);
+            this.radioBtnERS.Size = new System.Drawing.Size(366, 32);
             this.radioBtnERS.TabIndex = 0;
             this.radioBtnERS.Text = "Chuyên viên quan hệ doanh nghiệp";
             this.radioBtnERS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -235,11 +240,12 @@
             this.radioBtnCSS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.radioBtnCSS.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioBtnCSS.CheckedState.InnerOffset = -4;
-            this.radioBtnCSS.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnCSS.Location = new System.Drawing.Point(11, 56);
+            this.radioBtnCSS.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.radioBtnCSS.Location = new System.Drawing.Point(11, 43);
             this.radioBtnCSS.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnCSS.Name = "radioBtnCSS";
-            this.radioBtnCSS.Size = new System.Drawing.Size(294, 32);
+            this.radioBtnCSS.Size = new System.Drawing.Size(300, 32);
             this.radioBtnCSS.TabIndex = 0;
             this.radioBtnCSS.Text = "Chuyên viên hỗ trợ ứng viên";
             this.radioBtnCSS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -276,7 +282,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Location = new System.Drawing.Point(51, 71);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(438, 467);
+            this.guna2Panel1.Size = new System.Drawing.Size(448, 467);
             this.guna2Panel1.TabIndex = 0;
             // 
             // label5
@@ -338,12 +344,12 @@
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(60)))), ((int)(((byte)(85)))));
             this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(222)))), ((int)(((byte)(231)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(727, 494);
+            this.btnLogin.Location = new System.Drawing.Point(741, 494);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(119)))), ((int)(((byte)(233)))));
-            this.btnLogin.Size = new System.Drawing.Size(214, 54);
+            this.btnLogin.Size = new System.Drawing.Size(230, 54);
             this.btnLogin.TabIndex = 92;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -360,6 +366,10 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(449, 250);
             this.guna2CustomGradientPanel1.TabIndex = 93;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 10;
             // 
             // Login_Form
             // 
@@ -411,5 +421,6 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

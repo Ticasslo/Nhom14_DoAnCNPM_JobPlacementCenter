@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
         public TrangChuCM_Form()
         {
             InitializeComponent();
+            pnlChinh.Controls.Clear();
+            pnlChinh.Controls.Add(new ThongKeSoLuongUngVien_UC());
         }
         bool isSidebarExpanded = false;
         private void timerMenu_Tick(object sender, EventArgs e)
@@ -47,24 +52,59 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
 
         private void btnDieuChinhGia_Click(object sender, EventArgs e)
         {
-            panelChinh.Controls.Clear();
-            panelChinh.Controls.Add(new DieuChinhGiaDV_UC());
-            panelChinh.Show();
+            pnlChinh.Controls.Clear();
+            pnlChinh.Controls.Add(new DieuChinhGiaDV_UC());
+            pnlChinh.Show();
 
         }
 
         private void btnThongKeSoLuongUV_Click(object sender, EventArgs e)
         {
-            panelChinh.Controls.Clear();
-            panelChinh.Controls.Add(new ThongKeSoLuongUngVien_UC());
-            panelChinh.Show();
+            pnlChinh.Controls.Clear();
+            pnlChinh.Controls.Add(new ThongKeSoLuongUngVien_UC());
+            pnlChinh.Show();
         }
 
         private void btnThongKeTyLeKetNoi_Click(object sender, EventArgs e)
         {
-            panelChinh.Controls.Clear();
-            panelChinh.Controls.Add(new ThongKeTyLeKetNoi_UC());
-            panelChinh.Show();
+            pnlChinh.Controls.Clear();
+            pnlChinh.Controls.Add(new ThongKeTyLeKetNoi_UC());
+            pnlChinh.Show();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            //hien thi form doi mat khau
+            this.Hide();
+            var main = new DoiMatKhau_Form();
+            main.FormClosed += (s, args) =>
+            {
+                this.Hide();
+                //hienthiform TrangChuCM
+                var trangchu = new TrangChuCM_Form();
+                trangchu.Show();
+
+            };
+
+            main.Show();
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            //hoi nguoi dung co muon dang xuat khong
+            var result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                var main = new Login_Form();
+                main.FormClosed += (s, args) => this.Close();
+                main.Show();
+            }
+            else
+            {
+                //khong lam gi ca
+            }
         }
     }
 }

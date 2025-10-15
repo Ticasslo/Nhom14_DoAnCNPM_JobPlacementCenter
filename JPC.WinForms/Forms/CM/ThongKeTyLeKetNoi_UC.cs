@@ -26,8 +26,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             // Lưới 5 cột: STT | Danh mục | Tổng ứng viên | Số trúng tuyển | Tỷ lệ (%)
             SetupGrid();
 
-            // Init bộ lọc
-            this.Load += (s, e) => InitFilters();
+            this.Load += (s, e) =>
+            {
+                InitFilters();   // set năm/tháng/quý mặc định
+                RefreshData();   // <-- tự tải dữ liệu ngay khi mở màn
+            };
 
             // Đổi THÁNG/QUÝ/NĂM -> bind lại cbThangQuy
             rdThang.CheckedChanged += (s, e) => { if (rdThang.Checked) BindMonths(); };
@@ -139,6 +142,45 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             cbThangQuy.DataSource = new[] { new { Value = 1, Text = "Cả năm" } };
             cbThangQuy.SelectedValue = 1;
         }
+        private void RefreshData()
+        {
+            try
+            {
+                // 1) Thời gian
+                string bucket = rdThang.Checked ? "THANG" : rdQuy.Checked ? "QUY" : "NAM";
+                int per = Convert.ToInt32(cbThangQuy.SelectedValue ?? 1);
+                int year = Convert.ToInt32(cbNam.SelectedValue ?? DateTime.Now.Year);
+                if (bucket == "NAM") per = 1;
+
+                var (from, to) = DateRangeHelper.Build(bucket, per, year);
+
+                // 2) Phân tích theo
+                string group = rdNhomNghe.Checked ? "NHOM"
+                             : rdNghe.Checked ? "NGHE"
+                             : "VITRI";
+
+                // 3) Truy vấn & bind
+                var dt = _svc.TyLeKetNoi(from, to, group);
+                _cache = dt;
+                dgvTyLe.DataSource = dt;
+
+                // 4) Tổng quan
+                int tong = dt.Rows.Count == 0 ? 0
+                    : Convert.ToInt32(dt.Compute("SUM(TongUngVien)", ""));
+                int ok = dt.Rows.Count == 0 ? 0
+                    : Convert.ToInt32(dt.Compute("SUM(SoTrungTuyen)", ""));
+                decimal tyle = tong == 0 ? 0 : Math.Round(100m * ok / tong, 2);
+
+                txtTongUngVien.Text = tong.ToString("N0");
+                txtCoViecLam.Text = ok.ToString("N0");
+                txtTyLeThanhCong.Text = $"{tyle:0.##} %";
+                //chua co chon danh gia
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
+            }
+        }
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
             try
@@ -170,12 +212,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
 
                 txtTongUngVien.Text = tong.ToString("N0");
                 txtCoViecLam.Text = ok.ToString("N0");
-                txtTyLeThanhCong.Text = $"{tyle:0.##}";
+                txtTyLeThanhCong.Text = $"{tyle:0.##} %";
 
                 // Nếu bạn có 3 radio đánh giá tổng thể (tuỳ form):
-                // rdoTot.Checked           = tyle >= 60;
-                // rdoKha.Checked           = tyle >= 30 && tyle < 60;
-                // rdoCanCaiThien.Checked   = tyle < 30;
+                rdoTot.Checked = tyle >= 60;
+                rdoKha.Checked = tyle >= 30 && tyle < 60;
+                rdoCanCaiThien.Checked = tyle < 30;
             }
             catch (Exception ex)
             {
