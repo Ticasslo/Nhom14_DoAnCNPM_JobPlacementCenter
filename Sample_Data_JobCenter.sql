@@ -24,46 +24,35 @@ INSERT INTO ChucNang (chuc_nang_id, ten_chuc_nang, mo_ta) VALUES
 ('CN008', N'Cập nhật kết quả tuyển dụng', N'Ghi nhận kết quả trúng/không trúng'),
 ('CN009', N'Thu phí ứng tuyển từ ứng viên', N'Thu phí ứng tuyển cho hồ sơ'),
 ('CN010', N'Thu phí đăng tin từ doanh nghiệp', N'Thu phí đăng tin tuyển dụng'),
- ('CN011', N'Lập hóa đơn', N'Phát hành hóa đơn thu phí'),
- ('CN012', N'Thống kê', N'Xem báo cáo thống kê tổng hợp'),
- ('CN013', N'Quản lý danh mục nghề nghiệp', N'Quản lý danh mục nhóm nghề/nghề/vị trí'),
- ('CN014', N'Tra cứu dữ liệu hệ thống', N'Tra cứu dữ liệu cho mục đích quản trị'),
- ('CN015', N'Quản lý tài khoản nhân viên', N'Tạo/sửa/tạm khóa tài khoản nhân viên'),
- ('CN016', N'Chỉnh sửa quyền hạn', N'Cấu hình quyền theo vai trò'),
- ('CN017', N'Thống kê và đánh giá', N'Báo cáo tổng hợp và đánh giá hiệu quả'),
- ('CN018', N'Đối giá dịch vụ', N'Điều chỉnh mức giá dịch vụ');
+('CN011', N'Lập hóa đơn', N'Phát hành hóa đơn thu phí'),
+('CN012', N'Thống kê', N'Xem báo cáo thống kê tổng hợp'),
+('CN013', N'Quản lý danh mục nghề nghiệp', N'Quản lý danh mục nhóm nghề/nghề/vị trí'),
+('CN014', N'Tra cứu dữ liệu hệ thống', N'Tra cứu dữ liệu cho mục đích quản trị'),
+('CN015', N'Quản lý tài khoản nhân viên', N'Tạo/sửa/tạm khóa tài khoản nhân viên'),
+('CN016', N'Chỉnh sửa quyền hạn', N'Cấu hình quyền theo vai trò'),
+('CN017', N'Thống kê và đánh giá', N'Báo cáo tổng hợp và đánh giá hiệu quả'),
+('CN018', N'Đổi giá dịch vụ', N'Điều chỉnh mức giá dịch vụ');
 
--- Phân quyền mẫu cho vai trò
--- Mapping quyền theo ma trận
--- CSS: Đổi mật khẩu; Quản lý hồ sơ ứng viên; Lọc tin tuyển dụng; Ghi nhận ứng tuyển ứng viên
-INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han)
-SELECT 'CSS', chuc_nang_id, CASE WHEN ten_chuc_nang IN (
-    N'Đổi mật khẩu', N'Quản lý hồ sơ ứng viên', N'Lọc tin tuyển dụng', N'Ghi nhận ứng tuyển ứng viên'
-) THEN 1 ELSE 0 END FROM ChucNang;
+-- Phân quyền mẫu cho vai trò (chỉ chèn những chức năng cần dùng)
+-- CSS: CN001, CN002, CN003, CN004
+INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han) VALUES
+('CSS','CN001',1),('CSS','CN002',1),('CSS','CN003',1),('CSS','CN004',1);
 
--- ERS: Đổi mật khẩu; Quản lý thông tin doanh nghiệp; Thêm tin tuyển dụng; Quản lý danh sách ứng viên; Cập nhật kết quả tuyển dụng
-INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han)
-SELECT 'ERS', chuc_nang_id, CASE WHEN ten_chuc_nang IN (
-    N'Đổi mật khẩu', N'Quản lý thông tin doanh nghiệp', N'Thêm tin tuyển dụng', N'Quản lý danh sách ứng viên', N'Cập nhật kết quả tuyển dụng'
-) THEN 1 ELSE 0 END FROM ChucNang;
+-- ERS: CN001, CN005, CN006, CN007, CN008
+INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han) VALUES
+('ERS','CN001',1),('ERS','CN005',1),('ERS','CN006',1),('ERS','CN007',1),('ERS','CN008',1);
 
--- FO: Đổi mật khẩu; Thu phí ứng tuyển từ ứng viên; Thu phí đăng tin từ doanh nghiệp; Lập hóa đơn; Thống kê
-INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han)
-SELECT 'FO', chuc_nang_id, CASE WHEN ten_chuc_nang IN (
-    N'Đổi mật khẩu', N'Thu phí ứng tuyển từ ứng viên', N'Thu phí đăng tin từ doanh nghiệp', N'Lập hóa đơn', N'Thống kê'
-) THEN 1 ELSE 0 END FROM ChucNang;
+-- FO: CN001, CN009, CN010, CN011, CN012
+INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han) VALUES
+('FO','CN001',1),('FO','CN009',1),('FO','CN010',1),('FO','CN011',1),('FO','CN012',1);
 
--- SA: Đổi mật khẩu; Quản lý danh mục nghề nghiệp; Tra cứu dữ liệu hệ thống; Quản lý tài khoản nhân viên; Chỉnh sửa quyền hạn
-INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han)
-SELECT 'SA', chuc_nang_id, CASE WHEN ten_chuc_nang IN (
-    N'Đổi mật khẩu', N'Quản lý danh mục nghề nghiệp', N'Tra cứu dữ liệu hệ thống', N'Quản lý tài khoản nhân viên', N'Chỉnh sửa quyền hạn'
-) THEN 1 ELSE 0 END FROM ChucNang;
+-- SA: CN001, CN013, CN014, CN015, CN016
+INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han) VALUES
+('SA','CN001',1),('SA','CN013',1),('SA','CN014',1),('SA','CN015',1),('SA','CN016',1);
 
--- CM: Đổi mật khẩu; Thống kê và đánh giá; Đối giá dịch vụ
-INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han)
-SELECT 'CM', chuc_nang_id, CASE WHEN ten_chuc_nang IN (
-    N'Đổi mật khẩu', N'Thống kê và đánh giá', N'Đối giá dịch vụ'
-) THEN 1 ELSE 0 END FROM ChucNang;
+-- CM: CN001, CN017, CN018
+INSERT INTO VaiTro_QuyenHan (vai_tro_id, chuc_nang_id, quyen_han) VALUES
+('CM','CN001',1),('CM','CN017',1),('CM','CN018',1);
 -- =============================================
 
 -- phi_id là INT (không tự tăng)

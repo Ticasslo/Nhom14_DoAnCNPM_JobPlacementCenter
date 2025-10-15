@@ -15,7 +15,6 @@ using JPC.Business.Exceptions;
 using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
-//using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 {

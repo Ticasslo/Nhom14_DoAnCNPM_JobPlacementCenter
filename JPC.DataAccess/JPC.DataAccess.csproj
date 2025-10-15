@@ -65,15 +65,23 @@
     <Compile Include="Repositories\Implementations\CSS\UngVienRepository.cs" />
     <Compile Include="Repositories\Implementations\DoiMatKhau\DoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Implementations\Login\DangNhapRepository.cs" />
+    <Compile Include="Repositories\Implementations\SA\NgheRepository.cs" />
+    <Compile Include="Repositories\Implementations\SA\NhanVienRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NhomNgheRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\IDanhMucNgheRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\IDoanhNghiepRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\ITinTuyenDungRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\IUngTuyenRepository.cs" />
     <Compile Include="Repositories\Interfaces\CSS\IUngVienRepository.cs" />
+    <Compile Include="Repositories\Implementations\SA\QuyenHanChucNangRepository.cs" />
+    <Compile Include="Repositories\Implementations\SA\ViTriChuyenMonRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Interfaces\Login\IDangNhapRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SA\INgheRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SA\INhanVienRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INhomNgheRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SA\IQuyenHanChucNangRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SA\IViTriChuyenMonRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JPC.Models\JPC.Models.csproj">

@@ -62,15 +62,23 @@
     <Compile Include="Services\Implementations\CSS\UngVienService.cs" />
     <Compile Include="Services\Implementations\DoiMatKhau\DoiMatKhauService.cs" />
     <Compile Include="Services\Implementations\Login\DangNhapService.cs" />
+    <Compile Include="Services\Implementations\SA\NgheService.cs" />
+    <Compile Include="Services\Implementations\SA\NhanVienService.cs" />
     <Compile Include="Services\Implementations\SA\NhomNgheService.cs" />
     <Compile Include="Services\Interfaces\CSS\IDanhMucNgheService.cs" />
     <Compile Include="Services\Interfaces\CSS\IDoanhNghiepService.cs" />
     <Compile Include="Services\Interfaces\CSS\ITinTuyenDungService.cs" />
     <Compile Include="Services\Interfaces\CSS\IUngTuyenService.cs" />
     <Compile Include="Services\Interfaces\CSS\IUngVienService.cs" />
+    <Compile Include="Services\Implementations\SA\QuyenHanChucNangService.cs" />
+    <Compile Include="Services\Implementations\SA\ViTriChuyenMonService.cs" />
     <Compile Include="Services\Interfaces\DoiMatKhau\IDoiMatKhau.cs" />
     <Compile Include="Services\Interfaces\Login\IDangNhapService.cs" />
+    <Compile Include="Services\Interfaces\SA\INgheService.cs" />
+    <Compile Include="Services\Interfaces\SA\INhanVienService.cs" />
     <Compile Include="Services\Interfaces\SA\INhomNgheService.cs" />
+    <Compile Include="Services\Interfaces\SA\IQuyenHanChucNangService.cs" />
+    <Compile Include="Services\Interfaces\SA\IViTriChuyenMonService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JPC.DataAccess\JPC.DataAccess.csproj">
