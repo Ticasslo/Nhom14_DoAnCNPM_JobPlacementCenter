@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCB4C427-1129-45A4-8269-4E2BE626BC8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Nhom14_DoAnCNPM_JobPlacementCenter_Code</RootNamespace>
+    <AssemblyName>Nhom14_DoAnCNPM_JobPlacementCenter_Code</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ERS\CapNhatKetQua_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\CapNhatKetQua_UC_Form.Designer.cs">
+      <DependentUpon>CapNhatKetQua_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\ChinhSuaHoSo_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\ChinhSuaHoSo_UC_Form.Designer.cs">
+      <DependentUpon>ChinhSuaHoSo_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\DangKyHoSo_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\DangKyHoSo_UC_Form.Designer.cs">
+      <DependentUpon>DangKyHoSo_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\DangTinTuyenDung_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\DangTinTuyenDung_UC_Form.Designer.cs">
+      <DependentUpon>DangTinTuyenDung_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\ResetPassword_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\ResetPassword_UC_Form.Designer.cs">
+      <DependentUpon>ResetPassword_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep1_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep1_UC_Form.Designer.cs">
+      <DependentUpon>SelectDoanhNghiep1_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep_UC_Form.Designer.cs">
+      <DependentUpon>SelectDoanhNghiep_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\TrangChuERS_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\TrangChuERS_Form.Designer.cs">
+      <DependentUpon>TrangChuERS_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SA\QLDanhMucNgheNghiep_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SA\QLDanhMucNgheNghiep_Form.Designer.cs">
+      <DependentUpon>QLDanhMucNgheNghiep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SA\QLQuyenHan_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SA\QLQuyenHan_Form.Designer.cs">
+      <DependentUpon>QLQuyenHan_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SA\QLTaiKhoanNhanVien_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SA\QLTaiKhoanNhanVien_Form.Designer.cs">
+      <DependentUpon>QLTaiKhoanNhanVien_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SA\TraCuuDuLieu_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SA\TraCuuDuLieu_Form.Designer.cs">
+      <DependentUpon>TraCuuDuLieu_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SA\TrangChuSA_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SA\TrangChuSA_Form.Designer.cs">
+      <DependentUpon>TrangChuSA_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ERS\CapNhatKetQua_UC_Form.resx">
+      <DependentUpon>CapNhatKetQua_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\ChinhSuaHoSo_UC_Form.resx">
+      <DependentUpon>ChinhSuaHoSo_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\DangKyHoSo_UC_Form.resx">
+      <DependentUpon>DangKyHoSo_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\DangTinTuyenDung_UC_Form.resx">
+      <DependentUpon>DangTinTuyenDung_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\ResetPassword_UC_Form.resx">
+      <DependentUpon>ResetPassword_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\SelectDoanhNghiep1_UC_Form.resx">
+      <DependentUpon>SelectDoanhNghiep1_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\SelectDoanhNghiep_UC_Form.resx">
+      <DependentUpon>SelectDoanhNghiep_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\TrangChuERS_Form.resx">
+      <DependentUpon>TrangChuERS_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\QLDanhMucNgheNghiep_Form.resx">
+      <DependentUpon>QLDanhMucNgheNghiep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\QLQuyenHan_Form.resx">
+      <DependentUpon>QLQuyenHan_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\QLTaiKhoanNhanVien_Form.resx">
+      <DependentUpon>QLTaiKhoanNhanVien_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\TraCuuDuLieu_Form.resx">
+      <DependentUpon>TraCuuDuLieu_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\TrangChuSA_Form.resx">
+      <DependentUpon>TrangChuSA_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TinTuyenDungIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhSachUngVienIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoSoUngVienIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuanTriVienIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JPC.Business\JPC.Business.csproj">
+      <Project>{e70c7373-6ad1-4ccb-9fd3-aeb33bb87470}</Project>
+      <Name>JPC.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JPC.DataAccess\JPC.DataAccess.csproj">
+      <Project>{b078ac9b-99cc-4a96-adf0-0fc82516fa5b}</Project>
+      <Name>JPC.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JPC.Models\JPC.Models.csproj">
+      <Project>{26da18a7-acaf-47c4-89dd-ff2acb47dbbb}</Project>
+      <Name>JPC.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\DoiMatKhau\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,22 @@
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.dll
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Business.pdb
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.dll
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.dll
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.DataAccess.pdb
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\bin\Debug\JPC.Models.pdb
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.AssemblyReference.cache
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.csproj.CoreCompileInputs.cache
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.dll
+D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\bin\Debug\JPC.Business.dll
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\bin\Debug\JPC.Business.pdb
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\bin\Debug\JPC.DataAccess.dll
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\bin\Debug\JPC.Models.dll
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\bin\Debug\JPC.DataAccess.pdb
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\bin\Debug\JPC.Models.pdb
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\obj\Debug\JPC.Business.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\obj\Debug\JPC.Business.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\obj\Debug\JPC.Business.dll
+C:\Users\HP\Downloads\Nhom14_DoAnCNPM_JobPlacementCenter-main (1)\Nhom14_DoAnCNPM_JobPlacementCenter-main\JPC.Business\obj\Debug\JPC.Business.pdb
