@@ -43,3 +43,17 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Integrations\obj\Debug\JPC.Int
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Integrations\obj\Debug\JPC.Inte.1D211788.Up2Date
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Integrations\obj\Debug\JPC.API.dll
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Integrations\obj\Debug\JPC.API.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.API.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.API.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.Business.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.Models.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.DataAccess.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.Business.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.Models.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\JPC.DataAccess.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\obj\Debug\JPC.Integrations.csproj.AssemblyReference.cache
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\obj\Debug\JPC.Integrations.csproj.CoreCompileInputs.cache
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\obj\Debug\JPC.Inte.1D211788.Up2Date
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\obj\Debug\JPC.API.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\obj\Debug\JPC.API.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Integrations\bin\Debug\FontAwesome.Sharp.dll

@@ -16,3 +16,11 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.cs
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.csproj.CoreCompileInputs.cache
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.dll
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Models\obj\Debug\JPC.Models.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\bin\Debug\JPC.Models.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\bin\Debug\JPC.Models.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\bin\Debug\FontAwesome.Sharp.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\obj\Debug\JPC.Models.csproj.AssemblyReference.cache
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\obj\Debug\JPC.Models.csproj.CoreCompileInputs.cache
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\obj\Debug\JPC.Models.csproj.Up2Date
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\obj\Debug\JPC.Models.dll
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Models\obj\Debug\JPC.Models.pdb
