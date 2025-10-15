@@ -133,6 +133,7 @@
     <Compile Include="Forms\SA\Welcome_Form.Designer.cs">
       <DependentUpon>Welcome_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PermissionGaurd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Login\Login_Form.resx">

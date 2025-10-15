@@ -818,7 +818,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             if (cbVaiTro.Items.Count > 0) cbVaiTro.SelectedIndex = -1;
             if (cbTrangThai.Items.Count > 0) cbTrangThai.SelectedIndex = -1;
             
-            // Clear DGV selection
             DGVTaiKhoanNhanVien.ClearSelection();
             
             // Reset label về mặc định
@@ -871,8 +870,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             return username.All(c => char.IsLetterOrDigit(c));
         }
 
-        // USERNAME TỰ ĐỘNG KHI THÊM NHÂN VIÊN MỚI
 
+
+        // USERNAME TỰ ĐỘNG KHI THÊM NHÂN VIÊN MỚI
         private void cbVaiTro_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Chỉ tự động điền username khi đang thêm mới
@@ -919,6 +919,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 return $"{vaiTroId.ToLower()}001";
             }
         }
+
+
+
 
         // DUPLICATE: KIỂM TRA TRÙNG LẶP
         private bool IsEmailDuplicate(string email, int? excludeNhanVienId)

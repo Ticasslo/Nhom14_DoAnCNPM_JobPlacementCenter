@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.lblXinChao = new System.Windows.Forms.Label();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
@@ -73,9 +73,9 @@
             this.lblTieuDe.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblTieuDe.Location = new System.Drawing.Point(365, 0);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(520, 41);
+            this.lblTieuDe.Size = new System.Drawing.Size(600, 41);
             this.lblTieuDe.TabIndex = 80;
-            this.lblTieuDe.Text = "CHÀO MỪNG ĐẾN VỚI HỆ THỐNG";
+            this.lblTieuDe.Text = "          CHÀO MỪNG ĐẾN VỚI HỆ THỐNG";
             // 
             // lblXinChao
             // 
@@ -280,18 +280,18 @@
             // chartPhanBoVaiTro
             // 
             this.chartPhanBoVaiTro.BackColor = System.Drawing.Color.AliceBlue;
-            chartArea3.Name = "ChartArea1";
-            this.chartPhanBoVaiTro.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chartPhanBoVaiTro.ChartAreas.Add(chartArea1);
             this.chartPhanBoVaiTro.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartPhanBoVaiTro.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chartPhanBoVaiTro.Legends.Add(legend1);
             this.chartPhanBoVaiTro.Location = new System.Drawing.Point(20, 0);
             this.chartPhanBoVaiTro.Name = "chartPhanBoVaiTro";
             this.chartPhanBoVaiTro.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartPhanBoVaiTro.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartPhanBoVaiTro.Series.Add(series1);
             this.chartPhanBoVaiTro.Size = new System.Drawing.Size(346, 412);
             this.chartPhanBoVaiTro.TabIndex = 96;
             this.chartPhanBoVaiTro.Text = "Phân bổ ";
