@@ -1,102 +1,225 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\",
+  "WorkspaceRootPath": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.winforms\\forms\\fo\\baocaodoanhthuthang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\baocaodoanhthuthang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\baocaodoanhthuthang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\baocaodoanhthuthang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\baocaodoanhthuthang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\baocaodoanhthuthang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\doanute\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|d:\\doanute\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\doimatkhau\\doimatkhau_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\doimatkhau\\doimatkhau_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|d:\\doanute\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\dbconnection\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|d:\\doanute\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\dbconnection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\doanute\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\doimatkhau\\doimatkhau_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\doimatkhau\\doimatkhau_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\danhsachhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\danhsachhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|Nhom14_DoAnCNPM_JobPlacementCenter_Code.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\danhsachhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\danhsachhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\danhsachhoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\danhsachhoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\thuphiungvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\thuphiungvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\thuphiungvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\thuphiungvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\thuphiungvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\thuphiungvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\reporthoadon_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\reporthoadon_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\reporthoadon.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\reporthoadon.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\reporthoadon_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\reporthoadon_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\thuphidoanhnghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\thuphidoanhnghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\thuphidoanhnghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\thuphidoanhnghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\fo\\idoanhnghieprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\ers\\itintuyendungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\fo\\hoadonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.business\\services\\implementations\\fo\\thuphidoanhnghiepservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\fo\\phidichvurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\fo\\doanhnghieprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\fo\\nhanvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\ers\\tintuyendungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\sa\\nhomngherepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\implementations\\login\\dangnhaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\exceptions\\dataaccessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\dbconnection\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\dbconnection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.business\\services\\interfaces\\fo\\ithuphidoanhnghiepservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\fo\\inhanvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\reporthoadon_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\reporthoadon_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\thuphidoanhnghiep.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\thuphidoanhnghiep.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.models\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\fo\\iphidichvurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\doimatkhau\\idoimatkhaurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\fo\\ihoadonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.models\\taichinh\\phidichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.models\\taichinh\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\fo\\trangchufo_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.dataaccess\\repositories\\interfaces\\login\\idangnhaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.models\\quantri\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFE59A60-C203-454C-BFF7-046C96570095}|..\\JPC.Integrations\\JPC.Integrations.csproj|e:\\documemtary\\congnghephanmem\\doan\\jpc.integrations\\testapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qlquyenhan_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|Nhom14_DoAnCNPM_JobPlacementCenter_Code.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|Nhom14_DoAnCNPM_JobPlacementCenter_Code.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\tracuudulieu_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\tracuudulieu_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qltaikhoannhanvien_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qlquyenhan_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qlquyenhan_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qlquyenhan_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qltaikhoannhanvien_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\forms\\sa\\qltaikhoannhanvien_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qltaikhoannhanvien_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -166,9 +289,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -197,6 +317,12 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -206,657 +332,966 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{778b5376-ad77-4751-acdc-f3d18343f8dd}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TrangChuSA_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\TrangChuSA_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\SA\\TrangChuSA_Form.cs [Design]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:40:58.609Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TrangChuSA_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\TrangChuSA_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
-              "RelativeToolTip": "Forms\\SA\\TrangChuSA_Form.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAuwEMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T00:38:48.982Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "WhenOpened": "2025-10-09T13:32:49.343Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "QLQuyenHan_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\QLQuyenHan_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\SA\\QLQuyenHan_Form.cs [Design]",
+              "Title": "BaoCaoDoanhThuThang.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\BaoCaoDoanhThuThang.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\BaoCaoDoanhThuThang.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\BaoCaoDoanhThuThang.cs",
+              "RelativeToolTip": "Forms\\FO\\BaoCaoDoanhThuThang.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswNAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:43:38.096Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-12T04:19:32.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaoCaoDoanhThuThang.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\BaoCaoDoanhThuThang.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\BaoCaoDoanhThuThang.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\BaoCaoDoanhThuThang.Designer.cs",
+              "RelativeToolTip": "Forms\\FO\\BaoCaoDoanhThuThang.Designer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwHoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:33:46.781Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QLDanhMucNgheNghiep_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
+              "Title": "TrangChuFO_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\TrangChuFO_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\FO\\TrangChuFO_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:43:00.371Z",
+              "WhenOpened": "2025-10-14T11:28:18.796Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "QLTaiKhoanNhanVien_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs [Design]",
+              "Title": "BaoCaoDoanhThuThang.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\BaoCaoDoanhThuThang.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\BaoCaoDoanhThuThang.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\BaoCaoDoanhThuThang.cs [Design]",
+              "RelativeToolTip": "Forms\\FO\\BaoCaoDoanhThuThang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:43:16.893Z",
+              "WhenOpened": "2025-10-12T04:27:25.971Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TraCuuDuLieu_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:43:57.47Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-10-08T13:13:39.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "packages.config",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\packages.config",
-              "RelativeDocumentMoniker": "packages.config",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\packages.config",
-              "RelativeToolTip": "packages.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-10-10T11:32:16.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserSession.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
-              "RelativeDocumentMoniker": "..\\JPC.Models\\UserSession.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
-              "RelativeToolTip": "..\\JPC.Models\\UserSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T14:37:42.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DoiMatKhau_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\DoiMatKhau\\DoiMatKhau_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\DoiMatKhau\\DoiMatKhau_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\DoiMatKhau\\DoiMatKhau_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\DoiMatKhau\\DoiMatKhau_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T13:26:40.691Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "QLQuyenHan_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\QLQuyenHan_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs",
-              "RelativeToolTip": "Forms\\SA\\QLQuyenHan_Form.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:38:18.07Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Login_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\Login\\Login_Form.cs [Design]",
+              "Title": "ThuPhiUngVien.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiUngVien.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ThuPhiUngVien.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiUngVien.cs",
+              "RelativeToolTip": "Forms\\FO\\ThuPhiUngVien.cs",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAQwAgBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T02:17:52.554Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-14T15:32:14.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DanhSachHoaDon.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\DanhSachHoaDon.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\DanhSachHoaDon.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\DanhSachHoaDon.cs",
+              "RelativeToolTip": "Forms\\FO\\DanhSachHoaDon.cs",
+              "ViewState": "AgIAAAMBAAAAAAAAAAAQwB8BAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:19:35.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DanhSachHoaDon.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\DanhSachHoaDon.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\DanhSachHoaDon.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\DanhSachHoaDon.cs [Design]",
+              "RelativeToolTip": "Forms\\FO\\DanhSachHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T16:37:25.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DanhSachHoaDon.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\DanhSachHoaDon.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\DanhSachHoaDon.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\DanhSachHoaDon.Designer.cs",
+              "RelativeToolTip": "Forms\\FO\\DanhSachHoaDon.Designer.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwKUBAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:33:37.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThuPhiUngVien.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiUngVien.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ThuPhiUngVien.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiUngVien.Designer.cs",
+              "RelativeToolTip": "Forms\\FO\\ThuPhiUngVien.Designer.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:32:04.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ThuPhiUngVien.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiUngVien.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ThuPhiUngVien.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiUngVien.cs [Design]",
+              "RelativeToolTip": "Forms\\FO\\ThuPhiUngVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T11:21:27.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReportHoaDon.rdlc [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon.rdlc",
+              "RelativeDocumentMoniker": "Forms\\FO\\ReportHoaDon.rdlc",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon.rdlc [Design]",
+              "RelativeToolTip": "Forms\\FO\\ReportHoaDon.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-10-12T04:19:41.96Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "QLDanhMucNgheNghiep_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA8wCUAAAAMAAAAAAAAAA==",
+              "Title": "ReportHoaDon_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ReportHoaDon_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon_Form.cs",
+              "RelativeToolTip": "Forms\\FO\\ReportHoaDon_Form.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T17:09:37.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T11:23:06.046Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Login_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
-              "RelativeToolTip": "Forms\\Login\\Login_Form.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAAG0AAAAMAAAAAAAAAA==",
+              "Title": "ReportHoaDon_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ReportHoaDon_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\FO\\ReportHoaDon_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T08:07:44.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T11:23:28.363Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "DBHelper.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABNAAAAAAAAAA==",
+              "Title": "ThuPhiDoanhNghiep.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiDoanhNghiep.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ThuPhiDoanhNghiep.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiDoanhNghiep.cs",
+              "RelativeToolTip": "Forms\\FO\\ThuPhiDoanhNghiep.cs",
+              "ViewState": "AgIAAAABAAAAAAAAAAA0wBQBAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T14:34:30.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T03:09:34.231Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Title": "ThuPhiDoanhNghiep.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiDoanhNghiep.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ThuPhiDoanhNghiep.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiDoanhNghiep.cs [Design]",
+              "RelativeToolTip": "Forms\\FO\\ThuPhiDoanhNghiep.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T14:34:27.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T15:32:45.873Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Title": "IDoanhNghiepRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IDoanhNghiepRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IDoanhNghiepRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IDoanhNghiepRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IDoanhNghiepRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T13:32:49.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T09:05:30.241Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "DoiMatKhau_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\DoiMatKhau\\DoiMatKhau_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\DoiMatKhau\\DoiMatKhau_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\DoiMatKhau\\DoiMatKhau_Form.cs",
-              "RelativeToolTip": "Forms\\DoiMatKhau\\DoiMatKhau_Form.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwCQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T13:33:56.468Z",
-              "EditorCaption": ""
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-08T13:13:39.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "DoiMatKhauService.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs",
+              "DocumentIndex": 18,
+              "Title": "ITinTuyenDungRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T14:47:38.895Z"
+              "WhenOpened": "2025-10-15T05:23:33.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "UserSession.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
+              "DocumentIndex": 19,
+              "Title": "HoaDonRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\HoaDonRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\HoaDonRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\HoaDonRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\HoaDonRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA3wA8AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T15:38:23.071Z"
+              "WhenOpened": "2025-10-15T05:06:46.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "DoiMatKhauRepository.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\DoiMatKhau\\DoiMatKhauRepository.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\DoiMatKhau\\DoiMatKhauRepository.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\DoiMatKhau\\DoiMatKhauRepository.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\DoiMatKhau\\DoiMatKhauRepository.cs",
+              "DocumentIndex": 20,
+              "Title": "ThuPhiDoanhNghiepService.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwBUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T15:20:34.656Z"
+              "WhenOpened": "2025-10-15T05:33:03.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "DangNhapService.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "DocumentIndex": 23,
+              "Title": "NhanVienRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\NhanVienRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\NhanVienRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\NhanVienRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\NhanVienRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIAwwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T15:30:28.116Z"
+              "WhenOpened": "2025-10-15T09:19:03.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "DangNhapRepository.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "DocumentIndex": 22,
+              "Title": "DoanhNghiepRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\DoanhNghiepRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\DoanhNghiepRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\DoanhNghiepRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\DoanhNghiepRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T09:05:40.939Z"
+              "WhenOpened": "2025-10-15T09:07:36.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "IDoiMatKhau.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\DoiMatKhau\\IDoiMatKhau.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\DoiMatKhau\\IDoiMatKhau.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\DoiMatKhau\\IDoiMatKhau.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\DoiMatKhau\\IDoiMatKhau.cs",
+              "DocumentIndex": 21,
+              "Title": "PhiDichVuRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\PhiDichVuRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\PhiDichVuRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\FO\\PhiDichVuRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\FO\\PhiDichVuRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T15:27:42.547Z"
+              "WhenOpened": "2025-10-15T05:29:24.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "IDoiMatKhauRepository.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
+              "DocumentIndex": 24,
+              "Title": "TinTuyenDungRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T15:19:51.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "IDangNhapService.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\Login\\IDangNhapService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\Login\\IDangNhapService.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\Login\\IDangNhapService.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\Login\\IDangNhapService.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T08:42:23.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "IDangNhapRepository.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T09:06:47.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T09:17:24.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "NhanVien.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
-              "RelativeToolTip": "..\\..\\..\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T08:37:20.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "INhomNgheRepository.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\SA\\INhomNgheRepository.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\SA\\INhomNgheRepository.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\SA\\INhomNgheRepository.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\SA\\INhomNgheRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T16:10:10.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "NhomNgheRepository.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T16:10:57.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "NhomNgheService.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T16:19:47.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "INhomNgheService.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\SA\\INhomNgheService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\SA\\INhomNgheService.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\SA\\INhomNgheService.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\SA\\INhomNgheService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T16:22:11.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DataAccessException.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:56:47.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T04:54:45.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "BusinessException.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T04:54:33.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "DBHelper.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T15:06:38.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Nghe.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:52:02.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T05:24:31.776Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "TestAPI.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.API\\TestAPI.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.API\\TestAPI.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.API\\TestAPI.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.API\\TestAPI.cs",
+              "Title": "NhomNgheRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T04:54:30.186Z"
+              "WhenOpened": "2025-10-12T04:12:01.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DangNhapRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:11:49.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DataAccessException.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:11:38.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAUwKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:01:20.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAUwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T03:43:55.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IThuPhiDoanhNghiepService.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Business\\Services\\Interfaces\\FO\\IThuPhiDoanhNghiepService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Interfaces\\FO\\IThuPhiDoanhNghiepService.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Business\\Services\\Interfaces\\FO\\IThuPhiDoanhNghiepService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Interfaces\\FO\\IThuPhiDoanhNghiepService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T05:31:50.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "INhanVienRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\INhanVienRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\INhanVienRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\INhanVienRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\INhanVienRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T09:06:00.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ReportHoaDon_Form.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ReportHoaDon_Form.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ReportHoaDon_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\FO\\ReportHoaDon_Form.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAADIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T11:23:32.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ThuPhiDoanhNghiep.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiDoanhNghiep.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\ThuPhiDoanhNghiep.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\ThuPhiDoanhNghiep.Designer.cs",
+              "RelativeToolTip": "Forms\\FO\\ThuPhiDoanhNghiep.Designer.cs",
+              "ViewState": "AgIAACgEAAAAAAAAAAAQwEkEAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T06:03:35.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\UserSession.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\UserSession.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\UserSession.cs",
+              "RelativeToolTip": "..\\JPC.Models\\UserSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T05:41:59.404Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "VaiTro_QuyenHan.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IPhiDichVuRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IPhiDichVuRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IPhiDichVuRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IPhiDichVuRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IPhiDichVuRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:49:47.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T05:05:20.86Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "HoaDon.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "Title": "IDoiMatKhauRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:47:44.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T05:04:50.668Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "PhiDichVu.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IHoaDonRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IHoaDonRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IHoaDonRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IHoaDonRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\FO\\IHoaDonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:48:05.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T05:03:30.637Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 38,
-              "Title": "UngTuyen.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PhiDichVu.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "RelativeToolTip": "..\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:46:48.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T03:25:53.447Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 39,
-              "Title": "UngVien.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "RelativeToolTip": "..\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:47:20.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T03:25:48.974Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 40,
-              "Title": "ChucNang.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TrangChuFO_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\TrangChuFO_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
+              "RelativeToolTip": "Forms\\FO\\TrangChuFO_Form.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAAOYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:48:33.683Z",
+              "WhenOpened": "2025-10-14T11:22:50.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 41,
-              "Title": "TinTuyenDung_ViTri.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Login_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\Login\\Login_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\Login\\Login_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:51:31.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T02:17:52.554Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 42,
-              "Title": "TinTuyenDung_KyNang.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Login_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
+              "RelativeToolTip": "Forms\\Login\\Login_Form.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAkwMcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:51:15.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T08:07:44.97Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 43,
-              "Title": "TinTuyenDung.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TrangChuFO_Form.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\TrangChuFO_Form.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\FO\\TrangChuFO_Form.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:50:33.552Z",
+              "WhenOpened": "2025-10-14T15:30:35.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 44,
-              "Title": "DoanhNghiep.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "QLDanhMucNgheNghiep_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:50:21.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T17:43:00.371Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 45,
-              "Title": "ViTriChuyenMon.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TraCuuDuLieu_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:52:40.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T17:43:57.47Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 46,
-              "Title": "NhomNghe.cs",
-              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
-              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
-              "RelativeToolTip": "..\\..\\..\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "QLTaiKhoanNhanVien_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:52:16.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T17:43:16.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 47,
+              "Title": "QLQuyenHan_Form.cs [Design]",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLQuyenHan_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\QLQuyenHan_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:43:38.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IDangNhapRepository.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:12:10.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "RelativeToolTip": "..\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:10:31.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TestAPI.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Integrations\\TestAPI.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Integrations\\TestAPI.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.Integrations\\TestAPI.cs",
+              "RelativeToolTip": "..\\JPC.Integrations\\TestAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:09:37.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "packages.config",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-10T11:32:16.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "QLQuyenHan_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLQuyenHan_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.cs",
+              "RelativeToolTip": "Forms\\SA\\QLQuyenHan_Form.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T13:38:18.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "QLDanhMucNgheNghiep_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA8wCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T17:09:37.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T14:34:30.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T14:34:27.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "DoiMatKhauService.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\DoiMatKhau\\DoiMatKhauService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:47:38.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "DoiMatKhauRepository.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\DoiMatKhau\\DoiMatKhauRepository.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\DoiMatKhau\\DoiMatKhauRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T15:20:34.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "DangNhapService.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T15:30:28.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "DangNhapRepository.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\Login\\DangNhapRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T09:05:40.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "IDoiMatKhau.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\DoiMatKhau\\IDoiMatKhau.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\DoiMatKhau\\IDoiMatKhau.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T15:27:42.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "IDoiMatKhauRepository.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\DoiMatKhau\\IDoiMatKhauRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T15:19:51.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "IDangNhapService.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\Login\\IDangNhapService.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\Login\\IDangNhapService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T08:42:23.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "IDangNhapRepository.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\Login\\IDangNhapRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T09:06:47.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T09:17:24.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\NhanVien.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T08:37:20.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "INhomNgheRepository.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\SA\\INhomNgheRepository.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\SA\\INhomNgheRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T16:10:10.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "NhomNgheRepository.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\SA\\NhomNgheRepository.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T16:10:57.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "NhomNgheService.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T16:19:47.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "INhomNgheService.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\SA\\INhomNgheService.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\SA\\INhomNgheService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T16:22:11.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "DataAccessException.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Exceptions\\DataAccessException.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:56:47.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T04:54:45.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "BusinessException.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Exceptions\\BusinessException.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T04:54:33.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T15:06:38.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Nghe.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\Nghe.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:52:02.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "TestAPI.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.API\\TestAPI.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.API\\TestAPI.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T04:54:30.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "VaiTro_QuyenHan.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\VaiTro_QuyenHan.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:49:47.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\HoaDon.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:47:44.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "PhiDichVu.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\TaiChinh\\PhiDichVu.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:48:05.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "UngTuyen.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngTuyen.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:46:48.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "UngVien.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UngVien\\UngVien.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:47:20.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ChucNang.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\QuanTri\\ChucNang.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:48:33.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "TinTuyenDung_ViTri.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_ViTri.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:51:31.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "TinTuyenDung_KyNang.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung_KyNang.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:51:15.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "TinTuyenDung.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\TinTuyenDung.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:50:33.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "DoanhNghiep.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DoanhNghiep\\DoanhNghiep.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:50:21.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "ViTriChuyenMon.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\ViTriChuyenMon.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:52:40.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "NhomNghe.cs",
+              "DocumentMoniker": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
+              "ToolTip": "D:\\UTE_CongNghePM\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\DanhMucNghe\\NhomNghe.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:52:16.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Program.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Program.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -864,81 +1299,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 55,
               "Title": "QLDanhMucNgheNghiep_Form.Designer.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.Designer.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.Designer.cs",
               "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.Designer.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAYwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T17:53:57.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-26T17:53:57.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 56,
               "Title": "TraCuuDuLieu_Form.Designer.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.Designer.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.Designer.cs",
               "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.Designer.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAYwJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T14:16:53.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T14:16:53.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 57,
               "Title": "TraCuuDuLieu_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
               "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T14:01:39.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T14:01:39.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 58,
               "Title": "QLTaiKhoanNhanVien_Form.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
               "RelativeToolTip": "Forms\\SA\\QLTaiKhoanNhanVien_Form.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAwBcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:17:59.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T13:17:59.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 59,
               "Title": "QLQuyenHan_Form.Designer.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\QLQuyenHan_Form.Designer.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLQuyenHan_Form.Designer.cs",
               "RelativeToolTip": "Forms\\SA\\QLQuyenHan_Form.Designer.cs",
               "ViewState": "AgIAAJgAAAAAAAAAAAAYwK0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:38:25.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T13:38:25.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 60,
               "Title": "QLTaiKhoanNhanVien_Form.Designer.cs",
-              "DocumentMoniker": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.Designer.cs",
+              "DocumentMoniker": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\QLTaiKhoanNhanVien_Form.Designer.cs",
-              "ToolTip": "D:\\DoAnUTE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.Designer.cs",
+              "ToolTip": "E:\\Documemtary\\CongNghePhanMem\\DoAn\\JPC.WinForms\\Forms\\SA\\QLTaiKhoanNhanVien_Form.Designer.cs",
               "RelativeToolTip": "Forms\\SA\\QLTaiKhoanNhanVien_Form.Designer.cs",
               "ViewState": "AgIAAK4AAAAAAAAAAAAYwCMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T13:18:13.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-27T13:18:13.313Z"
             }
           ]
         }
