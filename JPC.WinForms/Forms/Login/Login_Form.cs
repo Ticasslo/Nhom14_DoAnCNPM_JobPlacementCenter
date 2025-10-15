@@ -22,7 +22,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
     public partial class Login_Form : Form
     {
         public static bool IsAppExiting { get; set; } = false;
-        private bool isShowPassword = true;
+        private bool isShowPassword = false;
         public Login_Form()
         {
             InitializeComponent();
@@ -37,7 +37,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             txtPassword.Text = "password";
             txtPassword.ForeColor = Color.Gray;
 
-            picBoxHide.BringToFront();
+            picBoxHide.Visible = true;
+            picBoxShow.Visible = false;
             txtPassword.PasswordChar = '*';
 
             radioBtnCSS.Checked = true;
