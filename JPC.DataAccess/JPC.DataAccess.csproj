@@ -46,12 +46,23 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\JPC.WinForms\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\JPC.WinForms\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection\DBConnection.cs" />
@@ -66,6 +77,11 @@
     <Compile Include="Repositories\Implementations\CM\CMThongKeRepository.cs" />
     <Compile Include="Repositories\Implementations\CM\PhiDichVuRepository.cs" />
     <Compile Include="Repositories\Implementations\DoiMatKhau\DoiMatKhauRepository.cs" />
+    <Compile Include="Repositories\Implementations\ERS\TinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\DoanhNghiepRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\HoaDonRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\NhanVienRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\PhiDichVuRepository.cs" />
     <Compile Include="Repositories\Implementations\Login\DangNhapRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NgheRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NhanVienRepository.cs" />
@@ -80,6 +96,11 @@
     <Compile Include="Repositories\Interfaces\CM\ICMThongKeRepository.cs" />
     <Compile Include="Repositories\Interfaces\CM\IPhiDichVuRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ERS\ITinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\IDoanhNghiepRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\IHoaDonRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\INhanVienRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\IPhiDichVuRepository.cs" />
     <Compile Include="Repositories\Interfaces\Login\IDangNhapRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INgheRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INhanVienRepository.cs" />
@@ -96,5 +117,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

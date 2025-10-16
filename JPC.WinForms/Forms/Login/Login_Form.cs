@@ -16,6 +16,7 @@ using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 {
@@ -217,7 +218,24 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
                 }
                 else if (string.Equals(nv.VaiTroId, "FO", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Màn hình chính cho vai trò FO đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    var mainfo = new TrangChuFO_Form();
+                    mainfo.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(mainfo.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                        {
+                            IsAppExiting = true;
+                            this.Close();
+                        }
+                    };
+
+                    mainfo.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "CM", StringComparison.OrdinalIgnoreCase))
                 {
