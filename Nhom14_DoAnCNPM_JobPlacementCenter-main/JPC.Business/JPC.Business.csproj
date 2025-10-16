@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JPC.Business</RootNamespace>
+    <AssemblyName>JPC.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Implementations\DoiMatKhau\DoiMatKhauService.cs" />
+    <Compile Include="Services\Implementations\ERS\DoanhNghiepService.cs" />
+    <Compile Include="Services\Implementations\ERS\TinTuyenDungService.cs" />
+    <Compile Include="Services\Implementations\ERS\UngTuyenService.cs" />
+    <Compile Include="Services\Implementations\Login\DangNhapService.cs" />
+    <Compile Include="Services\Implementations\SA\NgheService.cs" />
+    <Compile Include="Services\Implementations\SA\NhomNgheService.cs" />
+    <Compile Include="Services\Implementations\SA\ViTriChuyenMonService.cs" />
+    <Compile Include="Services\Interfaces\DoiMatKhau\IDoiMatKhau.cs" />
+    <Compile Include="Services\Interfaces\ERS\IDoanhNghiepService.cs" />
+    <Compile Include="Services\Interfaces\ERS\ITinTuyenDungService.cs" />
+    <Compile Include="Services\Interfaces\Login\IDangNhapService.cs" />
+    <Compile Include="Services\Interfaces\SA\INgheService.cs" />
+    <Compile Include="Services\Interfaces\SA\INhomNgheService.cs" />
+    <Compile Include="Services\Interfaces\SA\IViTriChuyenMonService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JPC.DataAccess\JPC.DataAccess.csproj">
+      <Project>{b078ac9b-99cc-4a96-adf0-0fc82516fa5b}</Project>
+      <Name>JPC.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JPC.Models\JPC.Models.csproj">
+      <Project>{26da18a7-acaf-47c4-89dd-ff2acb47dbbb}</Project>
+      <Name>JPC.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
