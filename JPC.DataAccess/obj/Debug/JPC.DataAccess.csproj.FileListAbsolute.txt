@@ -1,0 +1,17 @@
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.DataAccess.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.DataAccess.pdb
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.Models.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\JPC.Models.pdb
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.csproj.AssemblyReference.cache
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.csproj.CoreCompileInputs.cache
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.Data.6EDEDE72.Up2Date
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.dll
+E:\GIT_MERGE\test08\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.pdb
