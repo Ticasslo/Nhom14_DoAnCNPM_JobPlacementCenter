@@ -157,9 +157,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void iconBtnExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form login = new Login_Form();
-            login.ShowDialog();            
+            JPC.Models.UserSession.Clear();
+            this.Tag = "Logout";
             this.Close();
         }
         private void iconBtnManimize_Click(object sender, EventArgs e)

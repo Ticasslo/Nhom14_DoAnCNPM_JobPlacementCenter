@@ -26,8 +26,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-CPJ5IEEE;Initial Catalog=JobPlacementCenter;User ID=sa;Encrypt" +
-            "=True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-DEJAVU;Initial Catalog=JobPlacementCenter;Integrated Security=" +
+            "True")]
         public string JobPlacementCenterConnectionString {
             get {
                 return ((string)(this["JobPlacementCenterConnectionString"]));

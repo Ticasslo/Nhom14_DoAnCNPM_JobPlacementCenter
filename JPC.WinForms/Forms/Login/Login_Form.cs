@@ -33,10 +33,10 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
-            //txtUsername.Text = "username";
-            //txtUsername.ForeColor = Color.Gray;
-            //txtPassword.Text = "password";
-            //txtPassword.ForeColor = Color.Gray;
+            txtUsername.Text = "username";
+            txtUsername.ForeColor = Color.Gray;
+            txtPassword.Text = "password";
+            txtPassword.ForeColor = Color.Gray;
 
             picBoxHide.Visible = true;
             picBoxShow.Visible = false;
