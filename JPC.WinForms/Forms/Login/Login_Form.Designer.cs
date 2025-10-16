@@ -67,7 +67,6 @@
             this.lbTitle.Size = new System.Drawing.Size(257, 50);
             this.lbTitle.TabIndex = 86;
             this.lbTitle.Text = "ĐĂNG NHẬP";
-            this.lbTitle.Click += new System.EventHandler(this.lbTitle_Click);
             // 
             // lbWelcome
             // 
@@ -146,7 +145,6 @@
             this.grBoxRole.Size = new System.Drawing.Size(398, 286);
             this.grBoxRole.TabIndex = 89;
             this.grBoxRole.Text = "Vai trò";
-            this.grBoxRole.Click += new System.EventHandler(this.grBoxRole_Click);
             // 
             // radioBtnSA
             // 

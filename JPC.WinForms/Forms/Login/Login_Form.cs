@@ -15,6 +15,7 @@ using JPC.Business.Exceptions;
 using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 {
@@ -249,16 +250,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             {
                 MessageBox.Show(dae.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void grBoxRole_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbTitle_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
