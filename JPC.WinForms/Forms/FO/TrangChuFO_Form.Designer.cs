@@ -47,6 +47,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelBoderR = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconBtnLogOut = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelBar.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.iconBtnLogOut);
             this.panelMenu.Controls.Add(this.iconBtnDoiMatKhau);
             this.panelMenu.Controls.Add(this.iconBtnBaoCaoDoanhThuThang);
             this.panelMenu.Controls.Add(this.iconBtnDanhSachHoaDon);
@@ -375,6 +377,33 @@
             this.panelBoderR.Size = new System.Drawing.Size(15, 587);
             this.panelBoderR.TabIndex = 3;
             // 
+            // iconBtnLogOut
+            // 
+            this.iconBtnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.iconBtnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconBtnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnLogOut.FlatAppearance.BorderSize = 0;
+            this.iconBtnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
+            this.iconBtnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
+            this.iconBtnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnLogOut.ForeColor = System.Drawing.Color.White;
+            this.iconBtnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.iconBtnLogOut.IconColor = System.Drawing.Color.White;
+            this.iconBtnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnLogOut.IconSize = 40;
+            this.iconBtnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnLogOut.Location = new System.Drawing.Point(0, 581);
+            this.iconBtnLogOut.Name = "iconBtnLogOut";
+            this.iconBtnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnLogOut.Size = new System.Drawing.Size(282, 60);
+            this.iconBtnLogOut.TabIndex = 11;
+            this.iconBtnLogOut.Tag = "Đổi mật khẩu";
+            this.iconBtnLogOut.Text = "  Đăng xuất";
+            this.iconBtnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnLogOut.UseVisualStyleBackColor = false;
+            this.iconBtnLogOut.Click += new System.EventHandler(this.iconBtnLogOut_Click);
+            // 
             // TrangChuFO_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -426,5 +455,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel panelBoderR;
+        private FontAwesome.Sharp.IconButton iconBtnLogOut;
     }
 }

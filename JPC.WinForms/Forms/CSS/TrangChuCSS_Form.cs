@@ -24,7 +24,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
             btnLoadTao.Tag = "CN_CSS01";         // Đăng kí hồ sơ ứng viên mới
             btnLoadChinhSua.Tag = "CN_CSS02";    // Chỉnh sửa thông tin ứng viên
             btnLoadGhiNhanUT.Tag = "CN_CSS03";   // Ghi nhận ứng tuyển
-            btnLoadDoiMK.Tag = "CN_CSS04";       // Đổi mật khẩu
+            btnLoadDoiMK.Tag = "CN_DMK";       // Đổi mật khẩu
         }
 
         private void ShowControl(UserControl control)

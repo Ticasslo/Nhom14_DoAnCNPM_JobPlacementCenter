@@ -42,11 +42,11 @@
             this.btnQLDanhMucNgheNghiep = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBoxMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBoxMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelRight.SuspendLayout();
@@ -277,6 +277,14 @@
             this.panelRight.Size = new System.Drawing.Size(1320, 900);
             this.panelRight.TabIndex = 104;
             // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(20, 50);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1280, 830);
+            this.panelContent.TabIndex = 105;
+            // 
             // guna2ControlBoxMin
             // 
             this.guna2ControlBoxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -314,14 +322,6 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.label4;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // panelContent
-            // 
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(20, 50);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1280, 830);
-            this.panelContent.TabIndex = 105;
             // 
             // TrangChuSA_Form
             // 

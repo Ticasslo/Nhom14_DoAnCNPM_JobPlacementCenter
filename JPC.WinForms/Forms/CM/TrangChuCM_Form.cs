@@ -25,7 +25,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             btnThongKeSoLuongUV.Tag = "CN_CM01";      // Thống kê số lượng ứng viên
             btnThongKeTyLeKetNoi.Tag = "CN_CM02";     // Thống kê tỷ lệ ứng tuyển thành công
             btnDieuChinhGia.Tag = "CN_CM03";          // Điều chỉnh giá dịch vụ
-            btnDoiMatKhau.Tag = "CN_CM04";            // Đổi mật khẩu
+            btnDoiMatKhau.Tag = "CN_DMK";            // Đổi mật khẩu
         }
         bool isSidebarExpanded = false;
         private void timerMenu_Tick(object sender, EventArgs e)

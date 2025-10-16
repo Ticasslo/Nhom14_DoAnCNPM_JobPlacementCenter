@@ -32,7 +32,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             iconBtnThuPhiDoanhNghiep.AccessibleDescription = "CN_FO02";   // Thu phí doanh nghiệp
             iconBtnDanhSachHoaDon.AccessibleDescription = "CN_FO03";      // Danh sách hoá đơn
             iconBtnBaoCaoDoanhThuThang.AccessibleDescription = "CN_FO04"; // Báo cáo doanh thu tháng
-            iconBtnDoiMatKhau.AccessibleDescription = "CN_FO05";          // Đổi mật khẩu
+            iconBtnDoiMatKhau.AccessibleDescription = "CN_DMK";          // Đổi mật khẩu
         }
         private void TrangChuFO_Form_Load(object sender, EventArgs e)
         {
@@ -164,10 +164,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void iconBtnExit_Click(object sender, EventArgs e)
         {
-            JPC.Models.UserSession.Clear();
-            this.Tag = "Logout";
-            this.Close();
+            var result = MessageBox.Show(
+                "Bạn có muốn thoát ứng dụng?",
+                "Thoát ứng dụng",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
+
         private void iconBtnManimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -261,6 +270,37 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         {
             if (!PermissionGuard.EnsureEnabled(iconBtnDoiMatKhau.AccessibleDescription)) return;
             ShowControl(new DoiMatKhau_UC());
+        }
+
+        private void iconBtnLogOut_Click(object sender, EventArgs e)
+        {
+            // Hỏi xác nhận trước khi đăng xuất
+            var result = MessageBox.Show(
+                "Bạn có muốn đăng xuất không?",
+                "Xác nhận đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.No)
+            {
+                return; // Hủy đăng xuất
+            }
+
+            JPC.Models.UserSession.Clear(); // Xóa session khi đăng xuất
+
+            Login_Form loginForm = new Login_Form();
+
+            // Set event để khi Login form đóng thì mới exit app
+            loginForm.FormClosed += (s, args) => {
+                if (!Equals(loginForm.Tag, "LoginSuccess"))
+                {
+                    Application.Exit();
+                }
+            };
+
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

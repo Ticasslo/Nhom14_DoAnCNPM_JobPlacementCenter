@@ -1,6 +1,7 @@
 ﻿using JPC.Business;
 using JPC.WinForms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
             guna2Button3.Tag = "CN_ERS03"; // Đăng tin tuyển dụng
             guna2Button4.Tag = "CN_ERS04"; // Danh sách ứng viên
             guna2Button5.Tag = "CN_ERS05"; // Cập nhật kết quả
-            guna2Button6.Tag = "CN_ERS06"; // Đổi mật khẩu
+            guna2Button6.Tag = "CN_DMK"; // Đổi mật khẩu
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
 
             Guna.UI2.WinForms.Guna2Button[] buttons =
-            { guna2Button1, guna2Button2, guna2Button3, guna2Button4, guna2Button5, guna2Button6 };
+            { guna2Button1, guna2Button2, guna2Button3, guna2Button4, guna2Button5, guna2Button6, btnLogout };
 
             foreach (var btn in buttons)
             {
@@ -125,6 +126,37 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
         {
             if (!PermissionGuard.EnsureEnabled((string)guna2Button6.Tag)) return;
             LoadUserControl(new DoiMatKhau_UC());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Hỏi xác nhận trước khi đăng xuất
+            var result = MessageBox.Show(
+                "Bạn có muốn đăng xuất không?",
+                "Xác nhận đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.No)
+            {
+                return; // Hủy đăng xuất
+            }
+
+            JPC.Models.UserSession.Clear(); // Xóa session khi đăng xuất
+
+            Login_Form loginForm = new Login_Form();
+
+            // Set event để khi Login form đóng thì mới exit app
+            loginForm.FormClosed += (s, args) => {
+                if (!Equals(loginForm.Tag, "LoginSuccess"))
+                {
+                    Application.Exit();
+                }
+            };
+
+            loginForm.Show();
+            this.Hide();
         }
     }
 }
