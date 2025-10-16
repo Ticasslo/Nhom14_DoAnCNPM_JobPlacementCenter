@@ -13,5 +13,6 @@ namespace JPC.Business.Services.Interfaces.SA
     {
         DataTable GetRolePermissionMatrix();
         bool UpsertPermission(string vaiTroId, string chucNangId, bool quyenHan);
+        bool IsFunctionEnabledForRole(string vaiTroId, string chucNangId);
     }
 }

@@ -69,17 +69,6 @@ namespace JPC.DataAccess.Repositories.Implementations.SA
             return ExecuteQuery(sql);
         }
 
-        public string GetPasswordHashById(int maNhanVien)
-        {
-            string sql = "SELECT password_hash FROM NhanVien WHERE ma_nhan_vien = @id";
-            var parameters = new List<SqlParameter>
-            {
-                new SqlParameter("@id", maNhanVien)
-            };
-            var dt = ExecuteQuery(sql, parameters);
-            if (dt.Rows.Count == 0) return null;
-            return dt.Rows[0][0]?.ToString();
-        }
 
         public bool UpdatePassword(int maNhanVien, string newPasswordHash)
         {

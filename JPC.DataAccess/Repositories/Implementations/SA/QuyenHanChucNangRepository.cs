@@ -30,12 +30,12 @@ namespace JPC.DataAccess.Repositories.Implementations.SA
         public bool UpsertPermission(string vaiTroId, string chucNangId, bool quyenHan)
         {
             string sql = @"
-MERGE VaiTro_QuyenHan AS target
-USING (SELECT @vaiTroId AS vai_tro_id, @chucNangId AS chuc_nang_id) AS src
-    ON target.vai_tro_id = src.vai_tro_id AND target.chuc_nang_id = src.chuc_nang_id
-WHEN MATCHED THEN UPDATE SET quyen_han = @quyenHan
-WHEN NOT MATCHED THEN INSERT (vai_tro_id, chuc_nang_id, quyen_han)
-VALUES (@vaiTroId, @chucNangId, @quyenHan);";
+                MERGE VaiTro_QuyenHan AS target
+                USING (SELECT @vaiTroId AS vai_tro_id, @chucNangId AS chuc_nang_id) AS src
+                    ON target.vai_tro_id = src.vai_tro_id AND target.chuc_nang_id = src.chuc_nang_id
+                WHEN MATCHED THEN UPDATE SET quyen_han = @quyenHan
+                WHEN NOT MATCHED THEN INSERT (vai_tro_id, chuc_nang_id, quyen_han)
+                VALUES (@vaiTroId, @chucNangId, @quyenHan);";
 
             var parameters = new List<SqlParameter>
             {
@@ -45,6 +45,26 @@ VALUES (@vaiTroId, @chucNangId, @quyenHan);";
             };
 
             return ExecuteNonQuery(sql, parameters) > 0;
+        }
+
+        public bool IsFunctionEnabledForRole(string vaiTroId, string chucNangId)
+        {
+            string sql = @"SELECT CASE WHEN EXISTS (
+                                SELECT 1 FROM VaiTro_QuyenHan 
+                                WHERE vai_tro_id = @vaiTroId 
+                                  AND chuc_nang_id = @chucNangId 
+                                  AND quyen_han = 1)
+                            THEN 1 ELSE 0 END";
+
+            var parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@vaiTroId", vaiTroId),
+                new SqlParameter("@chucNangId", chucNangId)
+            };
+
+            var dt = ExecuteQuery(sql, parameters);
+            if (dt.Rows.Count == 0) return false;
+            return dt.Rows[0][0] != DBNull.Value && Convert.ToInt32(dt.Rows[0][0]) == 1;
         }
     }
 }

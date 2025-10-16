@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using Guna.UI2.WinForms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
+using JPC.WinForms;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 {
@@ -17,7 +18,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
     {
         private bool isLoggingOut = false;
         private Guna2Button activeButton = null;
-        // Bỏ cache form để luôn tạo mới mỗi lần chuyển chức năng
 
         public TrangChuSA_Form()
         {
@@ -34,6 +34,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     null, panelContent, new object[] { true });
             }
             catch { }
+
+            // Gắn mã chức năng cho các nút (Tag)
+            btnQLDanhMucNgheNghiep.Tag = "CN_SA01";  // Quản lý danh mục nghề nghiệp
+            btnQLTaiKhoanNhanVien.Tag = "CN_SA02";   // Quản lý tài khoản nhân viên
+            btnQLQuyenHan.Tag = "CN_SA03";           // Quản lý quyền hạn chức năng
+            btnDoiMatKhau.Tag = "CN_DMK";            // Đổi mật khẩu
         }
 
         private void LoadFormIntoPanel(Form form)
@@ -91,24 +97,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private void TrangChuSA_Form_Load(object sender, EventArgs e)
         {
             btnTrangChu_Click(btnTrangChu, null);
-
-            // Bỏ pre-warm: luôn tạo mới form khi chuyển chức năng
-            // (để tránh giữ trạng thái cũ giữa các lần mở)
         }
-
-        // Đã bỏ prewarm để luôn tạo mới form khi cần
 
         private void TrangChuSA_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing && !isLoggingOut)
             {
                 // Chỉ hỏi khi đóng bằng nút X
-            var result = MessageBox.Show(
-            "Bạn có muốn thoát ứng dụng?",
-            "Thoát ứng dụng",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Warning
-            );
+                var result = MessageBox.Show(
+                "Bạn có muốn thoát ứng dụng?",
+                "Thoát ứng dụng",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+                );
 
                 if (result == DialogResult.No)
                 {
@@ -130,18 +131,24 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void btnQLDanhMucNgheNghiep_Click(object sender, EventArgs e)
         {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
             SetActiveButton(sender as Guna2Button); // Set active
             LoadFormIntoPanel(new QLDanhMucNgheNghiep_Form());
         }
 
         private void btnQLTaiKhoanNhanVien_Click(object sender, EventArgs e)
         {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
             SetActiveButton(sender as Guna2Button); // Set active
             LoadFormIntoPanel(new QLTaiKhoanNhanVien_Form());
         }
 
         private void btnQLQuyenHan_Click(object sender, EventArgs e)
         {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
             SetActiveButton(sender as Guna2Button); // Set active
             LoadFormIntoPanel(new QLQuyenHan_Form());
         }
@@ -154,6 +161,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
             SetActiveButton(sender as Guna2Button); // Set active
             ShowControl(new DoiMatKhau_UC());
         }

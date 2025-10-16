@@ -49,11 +49,6 @@ namespace JPC.Business.Services.Implementations.SA
             return _repo.UpdateNhanVien(maNhanVien, hoTen, email, soDienThoai, username, passwordHash, vaiTroId, trangThai);
         }
 
-        public string GetPasswordHashById(int maNhanVien)
-        {
-            return _repo.GetPasswordHashById(maNhanVien);
-        }
-
         public bool UpdatePassword(int maNhanVien, string newPasswordHash)
         {
             return _repo.UpdatePassword(maNhanVien, newPasswordHash);

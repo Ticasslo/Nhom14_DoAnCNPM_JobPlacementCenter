@@ -18,7 +18,6 @@ namespace JPC.Business.Services.Implementations.SA
 
         public NhomNgheService()
         {
-            // Tự tạo repository trong constructor
             _nhomNgheRepository = new NhomNgheRepository();
         }
 

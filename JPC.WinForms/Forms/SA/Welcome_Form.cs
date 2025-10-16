@@ -42,7 +42,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Height = 135;
 
-            // Setup anchors for responsive behavior - giữ nguyên vị trí trong Designer
+            // Setup panel
             panelTongNhomNghe.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             panelTongNghe.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             panelTongViTriChuyenMon.Anchor = AnchorStyles.Top | AnchorStyles.Left;
@@ -65,15 +65,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private void AdjustLayout()
         {
             if (this.Width < 1200) return; // Minimum width
-
             int padding = 12;
             int cardWidth = 394;
             int cardHeight = 150;
             int gap = 12;
-
             // Tính tổng chiều cao của 4 KPI cards
-            int totalLeftHeight = (cardHeight + gap) * 4 - gap; // 4 cards + 3 gaps
-
+            int totalLeftHeight = (cardHeight + gap) * 4 - gap;
             // Left column (4 KPI cards) - căn chỉnh đều
             panelTongNhomNghe.Location = new Point(padding, padding);
             panelTongNhomNghe.Size = new Size(cardWidth, cardHeight);
@@ -165,15 +162,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             }
         }
 
-
         private void LoadDashboardData()
         {
             try
             {
-                // Load KPI data
                 LoadKPIData();
-                
-                // Load role distribution chart
                 LoadRoleDistributionChart();
             }
             catch (Exception ex)
@@ -205,10 +198,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         {
             try
             {
-                // Sử dụng service để lấy dữ liệu phân bố vai trò
                 var roleDistributionData = _nhanVienService.GetRoleDistribution();
-                
-                // Đếm số lượng nhân viên theo vai trò
                 var roleCounts = new Dictionary<string, int>
                 {
                     { "SA", 0 },
@@ -238,7 +228,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 
                 if (totalEmployees > 0)
                 {
-                    // Chỉ tạo pie chart, bỏ text hiển thị
                     CreateRoleDistributionChart(roleCounts, totalEmployees);
                 }
             }
@@ -252,7 +241,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         {
             try
             {
-                // Giả sử có chart control tên là chartPhanBoVaiTro
                 if (chartPhanBoVaiTro != null)
                 {
                     // Xóa dữ liệu cũ
@@ -262,7 +250,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     var series = new Series("Phân bổ vai trò");
                     series.ChartType = SeriesChartType.Pie;
                     series.IsValueShownAsLabel = true;
-                    // Bỏ LabelFormat vì đã set label thủ công
                     
                     // Màu sắc cho từng vai trò - đảm bảo đồng nhất
                     var roleColors = new Dictionary<string, Color>
@@ -274,8 +261,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                         { "FO", Color.FromArgb(52, 152, 219) },   // Xanh dương
                         { "SSS", Color.FromArgb(155, 89, 182) }  // Tím
                     };
-                    
-                    // Đặt màu cho series để đồng nhất với legend
                     series.Palette = ChartColorPalette.None;
                     
                     // Thêm dữ liệu vào chart
@@ -287,21 +272,16 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                             dataPoint.SetValueXY(role.Key, role.Value);
                             dataPoint.Color = roleColors.ContainsKey(role.Key) ? roleColors[role.Key] : Color.Gray;
                             
-                            // Tính phần trăm và tạo label rõ ràng
+                            // Tính phần trăm
                             double percentage = (double)role.Value / totalEmployees * 100;
                             dataPoint.Label = $"{role.Key}: {role.Value} ({percentage:F1}%)";
                             
                             series.Points.Add(dataPoint);
                         }
                     }
-                    
-                    // Thêm series vào chart
                     chartPhanBoVaiTro.Series.Add(series);
-                    
-                    // Cấu hình chart
                     chartPhanBoVaiTro.ChartAreas[0].Area3DStyle.Enable3D = false;
                     
-                    // Thêm title cho chart
                     chartPhanBoVaiTro.Titles.Clear();
                     var title = new Title("Phân bổ vai trò nhân viên");
                     title.Font = new Font("Segoe UI", 12, FontStyle.Bold);
@@ -309,7 +289,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     title.Alignment = ContentAlignment.TopCenter;
                     chartPhanBoVaiTro.Titles.Add(title);
                     
-                    // Điều chỉnh kích thước chart để pie ở bên trái
                     chartPhanBoVaiTro.ChartAreas[0].Position.X = 0; // Vị trí X
                     chartPhanBoVaiTro.ChartAreas[0].Position.Y = 0; // Vị trí Y  
                     chartPhanBoVaiTro.ChartAreas[0].Position.Width = 60; // Chiều rộng (%) - để chỗ cho legend
@@ -325,7 +304,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                     // Tăng kích thước font cho label
                     series.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                     
-                    // Thêm legend ở bên phải
                     try
                     {
                         chartPhanBoVaiTro.Legends.Clear();

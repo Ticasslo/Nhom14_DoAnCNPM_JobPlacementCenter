@@ -16,8 +16,10 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
     {
         private const int HeaderMinHeight = 60;
         private const int HeaderPadding = 12;
+
         private bool _isEditMode = false;
         private IQuyenHanChucNangService _service = new QuyenHanChucNangService();
+
         private DataTable _rawMatrix; // VaiTroId, VaiTro, ChucNangId, ChucNang, MoTa, QuyenHan, MapExists
         private DataTable _pivotTable; // DGV bind
         private List<string> _roleIds = new List<string>();
@@ -26,6 +28,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private Dictionary<(string roleId, string funcId), bool> _changes = new Dictionary<(string, string), bool>();
         private Dictionary<string, string> _funcIdToDescription = new Dictionary<string, string>();
         private HashSet<(string roleId, string funcId)> _unavailable = new HashSet<(string, string)>();
+
         public QLQuyenHan_Form()
         {
             InitializeComponent();
@@ -469,6 +472,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
             btnLuu.Text = _changes.Count > 0 ? $"Lưu ({_changes.Count})" : "Lưu";
         }
+
 
         // Hủy các thay đổi: trả về giá trị gốc và bỏ màu vàng
         private void RevertChanges()

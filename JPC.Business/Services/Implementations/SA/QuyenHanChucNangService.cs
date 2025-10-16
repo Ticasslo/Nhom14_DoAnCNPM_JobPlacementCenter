@@ -30,5 +30,10 @@ namespace JPC.Business.Services.Implementations.SA
         {
             return _repo.UpsertPermission(vaiTroId, chucNangId, quyenHan);
         }
+
+        public bool IsFunctionEnabledForRole(string vaiTroId, string chucNangId)
+        {
+            return _repo.IsFunctionEnabledForRole(vaiTroId, chucNangId);
+        }
     }
 }

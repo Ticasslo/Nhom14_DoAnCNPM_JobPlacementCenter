@@ -15,8 +15,6 @@ namespace JPC.DataAccess.Repositories.Interfaces.SA
         DataTable GetRoleDistribution();
         bool InsertNhanVien(string hoTen, string email, string soDienThoai, string username, string passwordHash, string vaiTroId, string trangThai);
         bool UpdateNhanVien(int maNhanVien, string hoTen, string email, string soDienThoai, string username, string passwordHash, string vaiTroId, string trangThai);
-        // Password-only operations
-        string GetPasswordHashById(int maNhanVien);
         bool UpdatePassword(int maNhanVien, string newPasswordHash);
     }
 }
