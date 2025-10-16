@@ -1,6 +1,0 @@
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.API\bin\Debug\JPC.API.dll
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.API\bin\Debug\JPC.API.pdb
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.API\obj\Debug\JPC.API.csproj.AssemblyReference.cache
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.API\obj\Debug\JPC.API.csproj.CoreCompileInputs.cache
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.API\obj\Debug\JPC.API.dll
-D:\UTE_CongNghePM\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.API\obj\Debug\JPC.API.pdb

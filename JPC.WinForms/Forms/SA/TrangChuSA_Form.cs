@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
-using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
 using Guna.UI2.WinForms;
 using JPC.WinForms;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 {
@@ -61,6 +61,22 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             form.Show();
 
             panelContent.ResumeLayout(true);
+        }
+
+        private void ShowControl(UserControl control)
+        {
+            if (control == null) return;
+            control.Dock = DockStyle.Fill;
+            panelContent.SuspendLayout();
+            try
+            {
+                panelContent.Controls.Clear();
+                panelContent.Controls.Add(control);
+            }
+            finally
+            {
+                panelContent.ResumeLayout();
+            }
         }
 
         private void SetActiveButton(Guna2Button button)
@@ -148,7 +164,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             var code = (sender as Control)?.Tag?.ToString();
             if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
             SetActiveButton(sender as Guna2Button); // Set active
-            LoadFormIntoPanel(new DoiMatKhau_Form());
+            ShowControl(new DoiMatKhau_UC());
         }
 
         private void btnBack_Click(object sender, EventArgs e)

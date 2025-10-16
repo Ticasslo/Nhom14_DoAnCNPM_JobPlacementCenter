@@ -12,4 +12,17 @@ namespace JPC.Business.Exceptions
         public BusinessException(string message) : base(message) { }
         public BusinessException(string message, Exception inner) : base(message, inner) { }
     }
+
+    public class DomainValidationException : BusinessException
+    {
+        public string ErrorCode { get; }
+        public DomainValidationException(string errorCode, string message) : base(message)
+        {
+            ErrorCode = errorCode;
+        }
+        public DomainValidationException(string errorCode, string message, Exception inner) : base(message, inner)
+        {
+            ErrorCode = errorCode;
+        }
+    }
 }

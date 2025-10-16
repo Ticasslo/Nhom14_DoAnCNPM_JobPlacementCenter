@@ -14,14 +14,14 @@ using System.Windows.Forms;
 using JPC.Business.Exceptions;
 using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
-//using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 {
     public partial class Login_Form : Form
     {
         public static bool IsAppExiting { get; set; } = false;
-        private bool isShowPassword = true;
+        private bool isShowPassword = false;
         public Login_Form()
         {
             InitializeComponent();
@@ -36,8 +36,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             txtPassword.Text = "password";
             txtPassword.ForeColor = Color.Gray;
 
-            picBoxShow.BringToFront();
-            txtPassword.PasswordChar = '\0';
+            picBoxHide.Visible = true;
+            picBoxShow.Visible = false;
+            txtPassword.PasswordChar = '*';
 
             radioBtnCSS.Checked = true;
             this.ActiveControl = txtUsername;
@@ -170,20 +171,20 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
                 else if (string.Equals(nv.VaiTroId, "CSS", StringComparison.OrdinalIgnoreCase))
                 {
                     this.Hide();
-                    //var main = new TrangChuCSS_Form();
-                    //main.FormClosed += (s, args) =>
-                    //{
-                    //    // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
-                    //    if (Equals(main.Tag, "Logout"))
-                    //    {
-                    //        this.Show();
-                    //        Login_Form_Load(sender, e);
-                    //    }
-                    //    else
-                    //        this.Close();
-                    //};
+                    var main = new TrangChuCSS_Form();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                            this.Close();
+                    };
 
-                    //main.Show();
+                    main.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "ERS", StringComparison.OrdinalIgnoreCase))
                 {
