@@ -33,18 +33,6 @@ namespace JPC.Business.Services.Implementations.SA
             }
         }
 
-        public DataTable GetActiveNhomNghe()
-        {
-            try
-            {
-                return _nhomNgheRepository.GetActiveNhomNghe();
-            }
-            catch (Exception ex)
-            {
-                throw new BusinessException($"Lỗi khi lấy danh sách nhóm nghề active: {ex.Message}", ex);
-            }
-        }
-
         public DataTable SearchNhomNghe(string keyword)
         {
             try
@@ -79,12 +67,6 @@ namespace JPC.Business.Services.Implementations.SA
                     throw new BusinessException("Tên nhóm nghề không được để trống");
                 }
 
-                // Kiểm tra trùng tên
-                if (_nhomNgheRepository.CheckDuplicateNhomNghe(nhomNghe.TenNhom))
-                {
-                    throw new BusinessException("Tên nhóm nghề đã tồn tại");
-                }
-
                 return _nhomNgheRepository.InsertNhomNghe(nhomNghe);
             }
             catch (BusinessException)
@@ -107,22 +89,6 @@ namespace JPC.Business.Services.Implementations.SA
                     throw new BusinessException("Tên nhóm nghề không được để trống");
                 }
 
-                // Kiểm tra trùng tên (loại trừ ID hiện tại)
-                if (_nhomNgheRepository.CheckDuplicateNhomNghe(nhomNghe.TenNhom, nhomNghe.NhomId))
-                {
-                    throw new BusinessException("Tên nhóm nghề đã tồn tại");
-                }
-
-                // Kiểm tra nếu set thành Inactive mà có nghề con
-                if (nhomNghe.TrangThai.ToLower() == "inactive")
-                {
-                    int countNghe = _nhomNgheRepository.CountActiveNgheInNhomNghe(nhomNghe.NhomId);
-                    if (countNghe > 0)
-                    {
-                        throw new BusinessException($"Không thể vô hiệu hóa nhóm nghề này vì còn có {countNghe} nghề con đang sử dụng");
-                    }
-                }
-
                 return _nhomNgheRepository.UpdateNhomNghe(nhomNghe);
             }
             catch (BusinessException)
@@ -132,6 +98,18 @@ namespace JPC.Business.Services.Implementations.SA
             catch (Exception ex)
             {
                 throw new BusinessException($"Lỗi khi cập nhật nhóm nghề: {ex.Message}", ex);
+            }
+        }
+
+        public bool DeleteNhomNghe(int id)
+        {
+            try
+            {
+                return _nhomNgheRepository.DeleteNhomNghe(id);
+            }
+            catch (Exception ex)
+            {
+                throw new BusinessException($"Lỗi khi xóa nhóm nghề: {ex.Message}", ex);
             }
         }
     }

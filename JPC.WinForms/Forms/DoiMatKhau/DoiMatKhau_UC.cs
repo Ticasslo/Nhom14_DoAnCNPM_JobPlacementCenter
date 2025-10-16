@@ -22,6 +22,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau
             InitializeComponent();
             this.doiMatKhauService = new DoiMatKhauService();
             this.currentUsername = UserSession.Username;
+            _debounce.Tick += (s, e) => { _debounce.Stop(); UpdateStrengthFromDb(); };
+            txtNewPass.TextChanged += (s, e) => { _debounce.Stop(); _debounce.Start(); };
         }
 
         private void btnLuuThayDoi_Click(object sender, EventArgs e)
@@ -83,5 +85,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau
                 txtConfirm.Text = "";
             }
         }
+
     }
 }

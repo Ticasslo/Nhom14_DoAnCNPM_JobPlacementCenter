@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -63,6 +63,8 @@
     <Compile Include="Repositories\Implementations\CSS\TinTuyenDungRepository.cs" />
     <Compile Include="Repositories\Implementations\CSS\UngTuyenRepository.cs" />
     <Compile Include="Repositories\Implementations\CSS\UngVienRepository.cs" />
+    <Compile Include="Repositories\Implementations\CM\CMThongKeRepository.cs" />
+    <Compile Include="Repositories\Implementations\CM\PhiDichVuRepository.cs" />
     <Compile Include="Repositories\Implementations\DoiMatKhau\DoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Implementations\Login\DangNhapRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NgheRepository.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="Repositories\Interfaces\CSS\IUngVienRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\QuyenHanChucNangRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\ViTriChuyenMonRepository.cs" />
+    <Compile Include="Repositories\Interfaces\CM\ICMThongKeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\CM\IPhiDichVuRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
     <Compile Include="Repositories\Interfaces\Login\IDangNhapRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INgheRepository.cs" />
