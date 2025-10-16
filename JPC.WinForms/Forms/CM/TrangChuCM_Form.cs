@@ -1,4 +1,5 @@
-﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
+﻿using JPC.WinForms;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
 using System;
@@ -20,6 +21,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             InitializeComponent();
             pnlChinh.Controls.Clear();
             pnlChinh.Controls.Add(new ThongKeSoLuongUngVien_UC());
+
+            btnThongKeSoLuongUV.Tag = "CN_CM01";      // Thống kê số lượng ứng viên
+            btnThongKeTyLeKetNoi.Tag = "CN_CM02";     // Thống kê tỷ lệ ứng tuyển thành công
+            btnDieuChinhGia.Tag = "CN_CM03";          // Điều chỉnh giá dịch vụ
+            btnDoiMatKhau.Tag = "CN_CM04";            // Đổi mật khẩu
         }
         bool isSidebarExpanded = false;
         private void timerMenu_Tick(object sender, EventArgs e)
@@ -52,6 +58,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
 
         private void btnDieuChinhGia_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnDieuChinhGia.Tag)) return;
             pnlChinh.Controls.Clear();
             pnlChinh.Controls.Add(new DieuChinhGiaDV_UC());
             pnlChinh.Show();
@@ -60,6 +67,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
 
         private void btnThongKeSoLuongUV_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnThongKeSoLuongUV.Tag)) return;
             pnlChinh.Controls.Clear();
             pnlChinh.Controls.Add(new ThongKeSoLuongUngVien_UC());
             pnlChinh.Show();
@@ -67,6 +75,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
 
         private void btnThongKeTyLeKetNoi_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnThongKeTyLeKetNoi.Tag)) return;
             pnlChinh.Controls.Clear();
             pnlChinh.Controls.Add(new ThongKeTyLeKetNoi_UC());
             pnlChinh.Show();
@@ -74,6 +83,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnDoiMatKhau.Tag)) return;
             pnlChinh.Controls.Clear();
             pnlChinh.Controls.Add(new DoiMatKhau_UC());
             pnlChinh.Show();

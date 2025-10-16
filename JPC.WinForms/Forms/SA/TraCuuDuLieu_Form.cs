@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
@@ -17,9 +20,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private const int SectionSpacing = 10;
         private const int BottomButtonsHeight = 101;
 
-        public TraCuuDuLieu_Form()
+        private readonly TrangChuSA_Form _host;
+
+        public TraCuuDuLieu_Form(TrangChuSA_Form host)
         {
             InitializeComponent();
+            _host = host ?? throw new ArgumentNullException(nameof(host));
             SetupResponsiveLayout();
             this.Resize += (s, e) => AdjustLayout();
             AdjustLayout();
@@ -147,15 +153,23 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void btnTraCuuHoSoUV_Click(object sender, EventArgs e)
         {
-
+            var uc = new ChinhSuaThongTinUngVien_UC();
+            _host.LoadControlIntoPanelWithBack(uc, "Tra cứu hồ sơ ứng viên");
         }
 
         private void btnTimKiemTTD_Click(object sender, EventArgs e)
         {
-
+            var uc = new SelectDoanhNghiep_UC_Form();
+            _host.LoadControlIntoPanelWithBack(uc, "Tra cứu tin tuyển dụng");
         }
 
         private void btnTraCuuDanhSachUV_Click(object sender, EventArgs e)
+        {
+            var uc = new SelectDoanhNghiep1_UC_Form();
+            _host.LoadControlIntoPanelWithBack(uc, "Tra cứu danh sách ứng viên");
+        }
+
+        private void TraCuuDuLieu_Form_Load(object sender, EventArgs e)
         {
 
         }

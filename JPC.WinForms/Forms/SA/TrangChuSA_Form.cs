@@ -153,10 +153,93 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             LoadFormIntoPanel(new QLQuyenHan_Form());
         }
 
+        public void LoadControlIntoPanel(UserControl uc)
+        {
+            if (uc == null) return;
+
+            panelContent.SuspendLayout();
+            try
+            {
+                foreach (Control c in panelContent.Controls) c.Dispose();
+                panelContent.Controls.Clear();
+
+                uc.Dock = DockStyle.Fill;
+                panelContent.Controls.Add(uc);
+                uc.BringToFront();
+            }
+            finally
+            {
+                panelContent.ResumeLayout(true);
+            }
+        }
+
+        public void LoadControlIntoPanelWithBack(UserControl uc, string title)
+        {
+            if (uc == null) return;
+
+            var header = new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 44,
+                BackColor = Color.WhiteSmoke
+            };
+
+            var btnBack = new Button
+            {
+                Text = "← Quay lại",
+                AutoSize = true,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.Transparent,
+                ForeColor = Color.Black,
+                Padding = new Padding(6, 4, 6, 4),
+                Location = new Point(10, 8)
+            };
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.Click += (s, e) =>
+            {
+                // Quay về form tra cứu
+                LoadFormIntoPanel(new TraCuuDuLieu_Form(this));
+            };
+
+            var lblTitle = new Label
+            {
+                Text = string.IsNullOrWhiteSpace(title) ? "Tra cứu" : title,
+                AutoSize = true,
+                Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                ForeColor = Color.Black
+            };
+            // canh giữa theo chiều ngang
+            header.Controls.Add(btnBack);
+            header.Controls.Add(lblTitle);
+            header.Resize += (s, e) =>
+            {
+                lblTitle.Left = (header.Width - lblTitle.Width) / 2;
+                lblTitle.Top = (header.Height - lblTitle.Height) / 2;
+            };
+
+            var container = new Panel { Dock = DockStyle.Fill, BackColor = Color.White };
+            uc.Dock = DockStyle.Fill;
+            container.Controls.Add(uc);
+
+            panelContent.SuspendLayout();
+            try
+            {
+                foreach (Control c in panelContent.Controls) c.Dispose();
+                panelContent.Controls.Clear();
+
+                panelContent.Controls.Add(container);
+                panelContent.Controls.Add(header);
+            }
+            finally
+            {
+                panelContent.ResumeLayout(true);
+            }
+        }
+
         private void btnTraCuuDuLieu_Click(object sender, EventArgs e)
         {
-            SetActiveButton(sender as Guna2Button); // Set active
-            LoadFormIntoPanel(new TraCuuDuLieu_Form());
+            SetActiveButton(sender as Guna.UI2.WinForms.Guna2Button);
+            LoadFormIntoPanel(new TraCuuDuLieu_Form(this));
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)

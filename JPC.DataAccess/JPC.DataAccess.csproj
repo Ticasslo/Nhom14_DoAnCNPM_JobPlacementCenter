@@ -77,7 +77,10 @@
     <Compile Include="Repositories\Implementations\CM\CMThongKeRepository.cs" />
     <Compile Include="Repositories\Implementations\CM\PhiDichVuRepository.cs" />
     <Compile Include="Repositories\Implementations\DoiMatKhau\DoiMatKhauRepository.cs" />
-    <Compile Include="Repositories\Implementations\ERS\TinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Implementations\ERS\DoanhNghiepRepository_ERS.cs" />
+    <Compile Include="Repositories\Implementations\ERS\TinTuyenDungRepository_ERS.cs" />
+    <Compile Include="Repositories\Implementations\ERS\UngTuyenRepository_ERS.cs" />
+    <Compile Include="Repositories\Implementations\ERS_FO\TinTuyenDungRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\DoanhNghiepRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\HoaDonRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\NhanVienRepository.cs" />
@@ -96,7 +99,10 @@
     <Compile Include="Repositories\Interfaces\CM\ICMThongKeRepository.cs" />
     <Compile Include="Repositories\Interfaces\CM\IPhiDichVuRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
-    <Compile Include="Repositories\Interfaces\ERS\ITinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ERS\IDoanhNghiepRepository_ERS.cs" />
+    <Compile Include="Repositories\Interfaces\ERS\ITinTuyenDungRepository_ERS.cs" />
+    <Compile Include="Repositories\Interfaces\ERS\IUngTuyenRepository_ERS.cs" />
+    <Compile Include="Repositories\Interfaces\ERS_FO\ITinTuyenDungRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\IDoanhNghiepRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\IHoaDonRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\INhanVienRepository.cs" />

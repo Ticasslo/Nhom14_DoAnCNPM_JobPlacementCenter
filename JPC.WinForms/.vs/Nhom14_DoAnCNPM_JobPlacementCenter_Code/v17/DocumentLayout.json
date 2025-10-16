@@ -1,42 +1,263 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\",
+  "WorkspaceRootPath": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\trangchuers_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\trangchuers_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\trangchuers_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\trangchuers_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep1_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep1_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\css\\chinhsuathongtinungvien_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\css\\chinhsuathongtinungvien_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\css\\chinhsuathongtinungvien_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\css\\chinhsuathongtinungvien_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\tracuudulieu_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|d:\\daihoc\\software\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\ers\\chinhsuahoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\chinhsuahoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\chinhsuahoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\chinhsuahoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\dangkyhoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\dangkyhoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep1_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep1_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\login\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\trangchusa_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\capnhatketqua_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\capnhatketqua_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\dangtintuyendung_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\dangtintuyendung_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\fo\\trangchufo_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\css\\trangchucss_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\cm\\trangchucm_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\cm\\trangchucm_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\cm\\trangchucm_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\cm\\trangchucm_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\permissiongaurd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:permissiongaurd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\capnhatketqua_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\capnhatketqua_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\interfaces\\ers\\iungtuyenservice_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\ers\\ungtuyenservice_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\css\\ungvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\ers\\ungtuyenrepository_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\interfaces\\ers\\iungtuyenrepository_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DA18A7-ACAF-47C4-89DD-FF2ACB47DBBB}|..\\JPC.Models\\JPC.Models.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.models\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\sa\\quyenhanchucnangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\sa\\nhomngheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\sa\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\sa\\ngheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\ers\\tintuyendungrepository_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\css\\tintuyendungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\ers\\doanhnghieprepository_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\interfaces\\css\\itintuyendungservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\login\\dangnhapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\fo\\thuphidoanhnghiepservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\ers\\tintuyendungservice_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\ers\\servicefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\ers\\doanhnghiepservice_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\css\\ungvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\css\\ungtuyenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\implementations\\css\\tintuyendungservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\forms\\doimatkhau\\doimatkhau_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\doimatkhau\\doimatkhau_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\dangtintuyendung_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\dangtintuyendung_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\dangkyhoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\dangkyhoso_uc_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\css\\danhmucngherepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\interfaces\\ers\\idoanhnghieprepository_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\interfaces\\ers_fo\\itintuyendungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\implementations\\ers_fo\\tintuyendungrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\repositories\\interfaces\\ers\\itintuyendungrepository_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\interfaces\\ers\\idoanhnghiepservice_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E70C7373-6AD1-4CCB-9FD3-AEB33BB87470}|..\\JPC.Business\\JPC.Business.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.business\\services\\interfaces\\ers\\itintuyendungservice_ers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\capnhatketqua_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\capnhatketqua_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\chinhsuahoso_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\chinhsuahoso_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\dangkyhoso_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\dangkyhoso_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\dangtintuyendung_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\dangtintuyendung_uc_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep1_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep1_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\selectdoanhnghiep_form.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\selectdoanhnghiep_form.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\ers\\trangchuers_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\ers\\trangchuers_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\dbconnection\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B078AC9B-99CC-4A96-ADF0-0FC82516FA5B}|..\\JPC.DataAccess\\JPC.DataAccess.csproj|e:\\git_merge\\nhom14_doancnpm_jobplacementcenter\\jpc.dataaccess\\dbconnection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BCB4C427-1129-45A4-8269-4E2BE626BC8F}|JPC.WinForms.csproj|solutionrelative:forms\\sa\\qldanhmucnghenghiep_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,19 +267,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{778b5376-ad77-4751-acdc-f3d18343f8dd}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -66,98 +279,106 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{ba58fdf3-7af7-4b60-b69b-40ac68d83b75}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrangChuERS_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\TrangChuERS_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\TrangChuERS_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\TrangChuERS_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\TrangChuERS_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:54:49.209Z",
+              "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrangChuERS_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\TrangChuERS_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\TrangChuERS_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\TrangChuERS_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\TrangChuERS_Form.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:55:15.791Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SelectDoanhNghiep1_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep1_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep1_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep1_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep1_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:57:33.359Z",
+              "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChinhSuaThongTinUngVien_UC.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs",
+              "RelativeDocumentMoniker": "Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs",
+              "RelativeToolTip": "Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:10:01.738Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChinhSuaThongTinUngVien_UC.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs",
+              "RelativeDocumentMoniker": "Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs [Design]",
+              "RelativeToolTip": "Forms\\CSS\\ChinhSuaThongTinUngVien_UC.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:09:55.974Z",
+              "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TraCuuDuLieu_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAswKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:00:53.279Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login_Form.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
-              "RelativeToolTip": "Forms\\Login\\Login_Form.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAYwIsAAAARAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "TraCuuDuLieu_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\SA\\TraCuuDuLieu_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\SA\\TraCuuDuLieu_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:37:48.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\Login\\Login_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:37:46.428Z",
+              "WhenOpened": "2025-10-16T16:00:49.529Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TrangChuCSS_Form.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\CSS\\TrangChuCSS_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs",
-              "RelativeToolTip": "Forms\\CSS\\TrangChuCSS_Form.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwC0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:31:09.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrangChuFO_Form.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\FO\\TrangChuFO_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
-              "RelativeToolTip": "Forms\\FO\\TrangChuFO_Form.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAwwKAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:29:42.101Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "TrangChuSA_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\TrangChuSA_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs [Design]",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs [Design]",
               "RelativeToolTip": "Forms\\SA\\TrangChuSA_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:32:45.616Z",
@@ -166,35 +387,147 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "ChinhSuaHoSo_UC_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:59:54.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChinhSuaHoSo_UC_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\ChinhSuaHoSo_UC_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:59:49.571Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DangKyHoSo_UC_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangKyHoSo_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\DangKyHoSo_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangKyHoSo_UC_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\DangKyHoSo_UC_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:59:18.225Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SelectDoanhNghiep1_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep1_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep1_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep1_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep1_Form.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:57:35.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SelectDoanhNghiep_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:56:30.217Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SelectDoanhNghiep_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep_Form.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowGYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:56:34.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Login_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
+              "RelativeToolTip": "Forms\\Login\\Login_Form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:37:48.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\Login\\Login_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\Login\\Login_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\Login\\Login_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:37:46.428Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "TrangChuSA_Form.cs",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\TrangChuSA_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\TrangChuSA_Form.cs",
               "RelativeToolTip": "Forms\\SA\\TrangChuSA_Form.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAkwHoAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwH8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:32:47.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TrangChuCSS_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs",
-              "RelativeDocumentMoniker": "Forms\\CSS\\TrangChuCSS_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs [Design]",
-              "RelativeToolTip": "Forms\\CSS\\TrangChuCSS_Form.cs [Design]",
+              "DocumentIndex": 17,
+              "Title": "CapNhatKetQua_UC_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\CapNhatKetQua_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\CapNhatKetQua_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\CapNhatKetQua_UC_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\CapNhatKetQua_UC_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:31:07.704Z",
+              "WhenOpened": "2025-10-16T13:00:47.184Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
+              "Title": "DangTinTuyenDung_UC_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangTinTuyenDung_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\DangTinTuyenDung_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangTinTuyenDung_UC_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\ERS\\DangTinTuyenDung_UC_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:58:16.494Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "TrangChuFO_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
               "RelativeDocumentMoniker": "Forms\\FO\\TrangChuFO_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs [Design]",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs [Design]",
               "RelativeToolTip": "Forms\\FO\\TrangChuFO_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:29:19.719Z",
@@ -202,11 +535,670 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
+              "Title": "TrangChuFO_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\FO\\TrangChuFO_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\FO\\TrangChuFO_Form.cs",
+              "RelativeToolTip": "Forms\\FO\\TrangChuFO_Form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:29:42.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TrangChuCSS_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\CSS\\TrangChuCSS_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs",
+              "RelativeToolTip": "Forms\\CSS\\TrangChuCSS_Form.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAowFkAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:31:09.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TrangChuCSS_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\CSS\\TrangChuCSS_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CSS\\TrangChuCSS_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\CSS\\TrangChuCSS_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:31:07.704Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TrangChuCM_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CM\\TrangChuCM_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\CM\\TrangChuCM_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CM\\TrangChuCM_Form.cs",
+              "RelativeToolTip": "Forms\\CM\\TrangChuCM_Form.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:39:40.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TrangChuCM_Form.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CM\\TrangChuCM_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\CM\\TrangChuCM_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\CM\\TrangChuCM_Form.cs [Design]",
+              "RelativeToolTip": "Forms\\CM\\TrangChuCM_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:39:30.214Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PermissionGaurd.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\PermissionGaurd.cs",
+              "RelativeDocumentMoniker": "PermissionGaurd.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\PermissionGaurd.cs",
+              "RelativeToolTip": "PermissionGaurd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:17:38.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CapNhatKetQua_UC_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\CapNhatKetQua_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\CapNhatKetQua_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\CapNhatKetQua_UC_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\CapNhatKetQua_UC_Form.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAMMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:00:49.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UngTuyenService_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\UngTuyenService_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\ERS\\UngTuyenService_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\UngTuyenService_ERS.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\ERS\\UngTuyenService_ERS.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAuwE4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:44:43.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IUngTuyenService_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\ERS\\IUngTuyenService_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Interfaces\\ERS\\IUngTuyenService_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\ERS\\IUngTuyenService_ERS.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Interfaces\\ERS\\IUngTuyenService_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:43:57.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UngVienRepository.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\UngVienRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\UngVienRepository.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\UngVienRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\UngVienRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:31:49.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IUngTuyenRepository_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IUngTuyenRepository_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IUngTuyenRepository_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IUngTuyenRepository_ERS.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IUngTuyenRepository_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:50:02.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Models\\UserSession.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Models\\UserSession.cs",
+              "RelativeToolTip": "..\\JPC.Models\\UserSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:31:32.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "QuyenHanChucNangService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\QuyenHanChucNangService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\SA\\QuyenHanChucNangService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\QuyenHanChucNangService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\SA\\QuyenHanChucNangService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:30:34.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UngTuyenRepository_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\UngTuyenRepository_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\UngTuyenRepository_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\UngTuyenRepository_ERS.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\UngTuyenRepository_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:48:22.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "NhomNgheService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\SA\\NhomNgheService.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:30:28.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TinTuyenDungRepository.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\TinTuyenDungRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\TinTuyenDungRepository.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\TinTuyenDungRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\TinTuyenDungRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:50:31.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "TinTuyenDungRepository_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository_ERS.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\TinTuyenDungRepository_ERS.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:47:39.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "NgheService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NgheService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\SA\\NgheService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NgheService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\SA\\NgheService.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:26:58.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "NhanVienService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhanVienService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\SA\\NhanVienService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\SA\\NhanVienService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\SA\\NhanVienService.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:27:04.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DoanhNghiepRepository_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\DoanhNghiepRepository_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\DoanhNghiepRepository_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\DoanhNghiepRepository_ERS.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS\\DoanhNghiepRepository_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:48:00.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ITinTuyenDungService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\CSS\\ITinTuyenDungService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Interfaces\\CSS\\ITinTuyenDungService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\CSS\\ITinTuyenDungService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Interfaces\\CSS\\ITinTuyenDungService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:28:10.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DangNhapService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\Login\\DangNhapService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:26:51.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ServiceFactory.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\ServiceFactory.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\ERS\\ServiceFactory.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\ServiceFactory.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\ERS\\ServiceFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:26:25.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "TinTuyenDungService_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\TinTuyenDungService_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\ERS\\TinTuyenDungService_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\TinTuyenDungService_ERS.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\ERS\\TinTuyenDungService_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:44:35.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ThuPhiDoanhNghiepService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\FO\\ThuPhiDoanhNghiepService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:03:38.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UngVienService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\CSS\\UngVienService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\CSS\\UngVienService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\CSS\\UngVienService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\CSS\\UngVienService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:26:21.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "UngTuyenService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\CSS\\UngTuyenService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\CSS\\UngTuyenService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\CSS\\UngTuyenService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\CSS\\UngTuyenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:26:18.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "DoanhNghiepService_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\DoanhNghiepService_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\ERS\\DoanhNghiepService_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\ERS\\DoanhNghiepService_ERS.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\ERS\\DoanhNghiepService_ERS.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:44:25.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "TinTuyenDungService.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\CSS\\TinTuyenDungService.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Implementations\\CSS\\TinTuyenDungService.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Implementations\\CSS\\TinTuyenDungService.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Implementations\\CSS\\TinTuyenDungService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:38:10.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "DoiMatKhau_UC.cs [Design]",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\DoiMatKhau\\DoiMatKhau_UC.cs",
+              "RelativeDocumentMoniker": "Forms\\DoiMatKhau\\DoiMatKhau_UC.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\DoiMatKhau\\DoiMatKhau_UC.cs [Design]",
+              "RelativeToolTip": "Forms\\DoiMatKhau\\DoiMatKhau_UC.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T15:23:58.533Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "DangTinTuyenDung_UC_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangTinTuyenDung_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\DangTinTuyenDung_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangTinTuyenDung_UC_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\DangTinTuyenDung_UC_Form.cs",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAAABcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:58:23.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "DangKyHoSo_UC_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangKyHoSo_UC_Form.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\DangKyHoSo_UC_Form.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangKyHoSo_UC_Form.cs",
+              "RelativeToolTip": "Forms\\ERS\\DangKyHoSo_UC_Form.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAMwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:59:21.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:15:55.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "DanhMucNgheRepository.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\DanhMucNgheRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\DanhMucNgheRepository.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\DanhMucNgheRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\CSS\\DanhMucNgheRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T14:26:34.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "IDoanhNghiepRepository_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IDoanhNghiepRepository_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IDoanhNghiepRepository_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IDoanhNghiepRepository_ERS.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\IDoanhNghiepRepository_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:49:16.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ITinTuyenDungRepository.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS_FO\\ITinTuyenDungRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS_FO\\ITinTuyenDungRepository.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS_FO\\ITinTuyenDungRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS_FO\\ITinTuyenDungRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:51:08.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "TinTuyenDungRepository.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS_FO\\TinTuyenDungRepository.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS_FO\\TinTuyenDungRepository.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Implementations\\ERS_FO\\TinTuyenDungRepository.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Implementations\\ERS_FO\\TinTuyenDungRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:50:38.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ITinTuyenDungRepository_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository_ERS.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\Repositories\\Interfaces\\ERS\\ITinTuyenDungRepository_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:49:33.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "IDoanhNghiepService_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\ERS\\IDoanhNghiepService_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Interfaces\\ERS\\IDoanhNghiepService_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\ERS\\IDoanhNghiepService_ERS.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Interfaces\\ERS\\IDoanhNghiepService_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:43:26.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ITinTuyenDungService_ERS.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\ERS\\ITinTuyenDungService_ERS.cs",
+              "RelativeDocumentMoniker": "..\\JPC.Business\\Services\\Interfaces\\ERS\\ITinTuyenDungService_ERS.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.Business\\Services\\Interfaces\\ERS\\ITinTuyenDungService_ERS.cs",
+              "RelativeToolTip": "..\\JPC.Business\\Services\\Interfaces\\ERS\\ITinTuyenDungService_ERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:43:42.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "CapNhatKetQua_UC_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\CapNhatKetQua_UC_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\CapNhatKetQua_UC_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\CapNhatKetQua_UC_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\CapNhatKetQua_UC_Form.Designer.cs",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAIwFsBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T13:00:52.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ChinhSuaHoSo_UC_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\ChinhSuaHoSo_UC_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\ChinhSuaHoSo_UC_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\ChinhSuaHoSo_UC_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\ChinhSuaHoSo_UC_Form.Designer.cs",
+              "ViewState": "AgIAAK0BAAAAAAAAAAAIwMMBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:59:57.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "DangKyHoSo_UC_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangKyHoSo_UC_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\DangKyHoSo_UC_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangKyHoSo_UC_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\DangKyHoSo_UC_Form.Designer.cs",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAIwIoBAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:59:26.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "DangTinTuyenDung_UC_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangTinTuyenDung_UC_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\DangTinTuyenDung_UC_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\DangTinTuyenDung_UC_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\DangTinTuyenDung_UC_Form.Designer.cs",
+              "ViewState": "AgIAACwCAAAAAAAAAAAIwEoCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:58:26.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "SelectDoanhNghiep1_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep1_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep1_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep1_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep1_Form.Designer.cs",
+              "ViewState": "AgIAACgBAAAAAAAAAAAIwD4BAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:57:42.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "SelectDoanhNghiep_Form.resx",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.resx",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep_Form.resx",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.resx",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep_Form.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-16T12:56:54.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "SelectDoanhNghiep_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\SelectDoanhNghiep_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\SelectDoanhNghiep_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\SelectDoanhNghiep_Form.Designer.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAIwA8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:56:38.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "TrangChuERS_Form.Designer.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\TrangChuERS_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ERS\\TrangChuERS_Form.Designer.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\ERS\\TrangChuERS_Form.Designer.cs",
+              "RelativeToolTip": "Forms\\ERS\\TrangChuERS_Form.Designer.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAIwB4BAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:55:22.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:50:58.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "RelativeDocumentMoniker": "..\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "RelativeToolTip": "..\\JPC.DataAccess\\DBConnection\\DBHelper.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAIwKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T12:50:45.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-16T10:38:59.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
               "Title": "QLDanhMucNgheNghiep_Form.cs [Design]",
-              "DocumentMoniker": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
+              "DocumentMoniker": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
               "RelativeDocumentMoniker": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs",
-              "ToolTip": "D:\\DaiHoc\\Software\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
+              "ToolTip": "E:\\GIT_MERGE\\Nhom14_DoAnCNPM_JobPlacementCenter\\JPC.WinForms\\Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
               "RelativeToolTip": "Forms\\SA\\QLDanhMucNgheNghiep_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:08:41.774Z",

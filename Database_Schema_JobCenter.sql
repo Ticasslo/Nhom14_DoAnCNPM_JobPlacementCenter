@@ -4,8 +4,8 @@
 -- =============================================
 
 -- Tạo database
---CREATE DATABASE JobPlacementCenter;
---GO
+CREATE DATABASE JobPlacementCenter;
+GO
 
 USE JobPlacementCenter;
 GO

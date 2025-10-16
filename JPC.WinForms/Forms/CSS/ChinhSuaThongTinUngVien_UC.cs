@@ -13,6 +13,7 @@ using JPC.Business.Exceptions;
 using JPC.Models.UngVien;
 using JPC.Models.DanhMucNghe;
 using JPC.Models.Common;
+using JPC.Models; // UserSession
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
 {
@@ -31,6 +32,30 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
             LoadDanhSachUngVien();
             LoadNhomNghe();
             ClearForm();
+
+            if (UserSession.NhanVien != null && UserSession.NhanVien.VaiTroId == "SA")
+            {
+                ApplyReadOnlyForSA();
+            }
+        }
+
+        private void ApplyReadOnlyForSA()
+        {
+            // 1) Chặn cập nhật
+            if (btnUpdate != null) btnUpdate.Visible = false; // hoặc btnUpdate.Enabled = false;
+
+            // 2) DGV chỉ đọc (các cột hiện đã ReadOnly=true, nhưng set thêm cho chắc)
+            if (dgvDSHoSoUngVien != null)
+            {
+                dgvDSHoSoUngVien.ReadOnly = true;
+                dgvDSHoSoUngVien.AllowUserToAddRows = false;
+                dgvDSHoSoUngVien.AllowUserToDeleteRows = false;
+                dgvDSHoSoUngVien.MultiSelect = false;
+                dgvDSHoSoUngVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+
+            // 3) Giữ các ô tìm kiếm để người dùng SA nhập điều kiện (không khóa input)
+            if (label1 != null) label1.Text = "Tra cứu hồ sơ ứng viên (Chỉ đọc)";
         }
 
         private void InitializeServices()

@@ -61,7 +61,7 @@
             this.lblHoSo.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblHoSo.Location = new System.Drawing.Point(63, 121);
             this.lblHoSo.Name = "lblHoSo";
-            this.lblHoSo.Size = new System.Drawing.Size(258, 46);
+            this.lblHoSo.Size = new System.Drawing.Size(251, 45);
             this.lblHoSo.TabIndex = 89;
             this.lblHoSo.Text = "Hồ sơ ứng viên";
             // 
@@ -72,7 +72,7 @@
             this.lblTinTuyenDung.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblTinTuyenDung.Location = new System.Drawing.Point(466, 121);
             this.lblTinTuyenDung.Name = "lblTinTuyenDung";
-            this.lblTinTuyenDung.Size = new System.Drawing.Size(258, 46);
+            this.lblTinTuyenDung.Size = new System.Drawing.Size(254, 45);
             this.lblTinTuyenDung.TabIndex = 90;
             this.lblTinTuyenDung.Text = "Tin tuyển dụng";
             // 
@@ -83,7 +83,7 @@
             this.lblDanhSach.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblDanhSach.Location = new System.Drawing.Point(821, 121);
             this.lblDanhSach.Name = "lblDanhSach";
-            this.lblDanhSach.Size = new System.Drawing.Size(333, 46);
+            this.lblDanhSach.Size = new System.Drawing.Size(327, 45);
             this.lblDanhSach.TabIndex = 91;
             this.lblDanhSach.Text = "Danh sách ứng viên";
             // 
@@ -195,6 +195,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TraCuuDuLieu_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.TraCuuDuLieu_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picHoSo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTinTuyenDung)).EndInit();

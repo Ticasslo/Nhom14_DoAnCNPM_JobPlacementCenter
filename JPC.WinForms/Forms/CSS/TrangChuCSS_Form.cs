@@ -1,4 +1,5 @@
-﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
+﻿using JPC.WinForms;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
         {
             InitializeComponent();
             ShowControl(new DKHoSoUngVien_UC());
+
+            btnLoadTao.Tag = "CN_CSS01";         // Đăng kí hồ sơ ứng viên mới
+            btnLoadChinhSua.Tag = "CN_CSS02";    // Chỉnh sửa thông tin ứng viên
+            btnLoadGhiNhanUT.Tag = "CN_CSS03";   // Ghi nhận ứng tuyển
+            btnLoadDoiMK.Tag = "CN_CSS04";       // Đổi mật khẩu
         }
 
         private void ShowControl(UserControl control)
@@ -69,21 +75,25 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
 
         private void btnLoadTao_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnLoadTao.Tag)) return;
             ShowControl(new DKHoSoUngVien_UC());
         }
 
         private void btnLoadChinhSua_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnLoadChinhSua.Tag)) return;
             ShowControl(new ChinhSuaThongTinUngVien_UC());
         }
 
         private void btnLoadGhiNhanUT_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnLoadGhiNhanUT.Tag)) return;
             ShowControl(new GhiNhanUngTuyen_UC());
         }
 
         private void btnLoadDoiMK_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnLoadDoiMK.Tag)) return;
             ShowControl(new DoiMatKhau_UC());
         }
 

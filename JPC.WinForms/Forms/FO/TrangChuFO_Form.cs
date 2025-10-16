@@ -1,4 +1,6 @@
-﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
+﻿using JPC.WinForms;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +13,6 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using TheArtOfDevHtmlRenderer.Adapters.Entities;
-using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
@@ -26,6 +27,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             //CollapseMenu();
             this.Padding = new Padding(boderSize);//Border size
             this.BackColor = Color.FromArgb(50, 77, 168);//Border color
+
+            iconBtnThuPhiUngVien.AccessibleDescription = "CN_FO01";       // Thu phí ứng tuyển
+            iconBtnThuPhiDoanhNghiep.AccessibleDescription = "CN_FO02";   // Thu phí doanh nghiệp
+            iconBtnDanhSachHoaDon.AccessibleDescription = "CN_FO03";      // Danh sách hoá đơn
+            iconBtnBaoCaoDoanhThuThang.AccessibleDescription = "CN_FO04"; // Báo cáo doanh thu tháng
+            iconBtnDoiMatKhau.AccessibleDescription = "CN_FO05";          // Đổi mật khẩu
         }
         private void TrangChuFO_Form_Load(object sender, EventArgs e)
         {
@@ -228,26 +235,31 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void iconBtnThuPhiUngVien_Click(object sender, EventArgs e)
         {
-            ShowControl(new ThuPhiUngVien() );
+            if (!PermissionGuard.EnsureEnabled(iconBtnThuPhiUngVien.AccessibleDescription)) return;
+            ShowControl(new ThuPhiUngVien());
         }
 
         private void iconBtnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
         {
-            ShowControl(new ThuPhiDoanhNghiep() );
+            if (!PermissionGuard.EnsureEnabled(iconBtnThuPhiDoanhNghiep.AccessibleDescription)) return;
+            ShowControl(new ThuPhiDoanhNghiep());
         }
 
         private void iconBtnDanhSachHoaDon_Click(object sender, EventArgs e)
         {
-            ShowControl(new DanhSachHoaDon() );
+            if (!PermissionGuard.EnsureEnabled(iconBtnDanhSachHoaDon.AccessibleDescription)) return;
+            ShowControl(new DanhSachHoaDon());
         }
 
         private void iconBtnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
         {
-            ShowControl(new BaoCaoDoanhThuThang() );
+            if (!PermissionGuard.EnsureEnabled(iconBtnBaoCaoDoanhThuThang.AccessibleDescription)) return;
+            ShowControl(new BaoCaoDoanhThuThang());
         }
 
         private void iconBtnDoiMatKhau_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled(iconBtnDoiMatKhau.AccessibleDescription)) return;
             ShowControl(new DoiMatKhau_UC());
         }
     }

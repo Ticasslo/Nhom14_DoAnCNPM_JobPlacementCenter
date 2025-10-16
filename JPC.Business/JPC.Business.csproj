@@ -72,6 +72,10 @@
     <Compile Include="Services\Implementations\CM\CMFeesService.cs" />
     <Compile Include="Services\Implementations\CM\CMStatisticsService.cs" />
     <Compile Include="Services\Implementations\DoiMatKhau\DoiMatKhauService.cs" />
+    <Compile Include="Services\Implementations\ERS\DoanhNghiepService_ERS.cs" />
+    <Compile Include="Services\Implementations\ERS\ServiceFactory.cs" />
+    <Compile Include="Services\Implementations\ERS\TinTuyenDungService_ERS.cs" />
+    <Compile Include="Services\Implementations\ERS\UngTuyenService_ERS.cs" />
     <Compile Include="Services\Implementations\FO\ThuPhiDoanhNghiepService.cs" />
     <Compile Include="Services\Implementations\Login\DangNhapService.cs" />
     <Compile Include="Services\Implementations\SA\NgheService.cs" />
@@ -87,6 +91,9 @@
     <Compile Include="Services\Interfaces\CM\ICMFeesService.cs" />
     <Compile Include="Services\Interfaces\CM\ICMStatisticsService.cs" />
     <Compile Include="Services\Interfaces\DoiMatKhau\IDoiMatKhau.cs" />
+    <Compile Include="Services\Interfaces\ERS\IDoanhNghiepService_ERS.cs" />
+    <Compile Include="Services\Interfaces\ERS\ITinTuyenDungService_ERS.cs" />
+    <Compile Include="Services\Interfaces\ERS\IUngTuyenService_ERS.cs" />
     <Compile Include="Services\Interfaces\FO\IThuPhiDoanhNghiepService.cs" />
     <Compile Include="Services\Interfaces\Login\IDangNhapService.cs" />
     <Compile Include="Services\Interfaces\SA\INgheService.cs" />
