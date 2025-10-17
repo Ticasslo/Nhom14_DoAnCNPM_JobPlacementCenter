@@ -32,7 +32,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPhi = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTaiLai = new Guna.UI2.WinForms.Guna2Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -49,9 +48,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhi)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -76,18 +76,6 @@
             this.dgvPhi.Size = new System.Drawing.Size(827, 464);
             this.dgvPhi.TabIndex = 21;
             this.dgvPhi.SelectionChanged += new System.EventHandler(this.dgvPhi_SelectionChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnTaiLai);
-            this.groupBox1.Controls.Add(this.dgvPhi);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(61, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(921, 601);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DANH SÁCH GIÁ DỊCH VỤ";
             // 
             // btnTaiLai
             // 
@@ -292,6 +280,18 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "CHỈNH SỬA THÔNG TIN DỊCH VỤ";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnTaiLai);
+            this.groupBox1.Controls.Add(this.dgvPhi);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox1.Location = new System.Drawing.Point(61, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(921, 601);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "DANH SÁCH GIÁ DỊCH VỤ";
+            // 
             // DieuChinhGiaDV_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,9 +303,9 @@
             this.Size = new System.Drawing.Size(1764, 722);
             this.Load += new System.EventHandler(this.DieuChinhGiaDV_UC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhi)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,7 +315,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPhi;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btnSua;
@@ -332,5 +331,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTaiLai;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

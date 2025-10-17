@@ -28,403 +28,326 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconBtnDoiMatKhau = new FontAwesome.Sharp.IconButton();
-            this.iconBtnBaoCaoDoanhThuThang = new FontAwesome.Sharp.IconButton();
-            this.iconBtnDanhSachHoaDon = new FontAwesome.Sharp.IconButton();
-            this.iconBtnThuPhiDoanhNghiep = new FontAwesome.Sharp.IconButton();
-            this.iconBtnThuPhiUngVien = new FontAwesome.Sharp.IconButton();
-            this.panelBar = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblFOName = new System.Windows.Forms.Label();
-            this.iconBtnBar = new FontAwesome.Sharp.IconButton();
-            this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblFunctionName = new System.Windows.Forms.Label();
-            this.iconBtnMinimize = new FontAwesome.Sharp.IconButton();
-            this.iconBtnManimize = new FontAwesome.Sharp.IconButton();
-            this.iconBtnExit = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelBoderR = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelMenu.SuspendLayout();
-            this.panelBar.SuspendLayout();
-            this.panelTop.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.pnlMenudoc = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlChinh = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timerMenu = new System.Windows.Forms.Timer(this.components);
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDoiMatKhau = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBaoCaoDoanhThuThang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDanhSachHoaDon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThuPhiDoanhNghiep = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThuPhiUngVien = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlMenudoc.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelMenu
+            // pnlMenudoc
             // 
-            this.panelMenu.Controls.Add(this.iconBtnDoiMatKhau);
-            this.panelMenu.Controls.Add(this.iconBtnBaoCaoDoanhThuThang);
-            this.panelMenu.Controls.Add(this.iconBtnDanhSachHoaDon);
-            this.panelMenu.Controls.Add(this.iconBtnThuPhiDoanhNghiep);
-            this.panelMenu.Controls.Add(this.iconBtnThuPhiUngVien);
-            this.panelMenu.Controls.Add(this.panelBar);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(77)))), ((int)(((byte)(175)))));
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(327, 706);
-            this.panelMenu.TabIndex = 0;
+            this.pnlMenudoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(199)))), ((int)(((byte)(211)))));
+            this.pnlMenudoc.Controls.Add(this.btnDangXuat);
+            this.pnlMenudoc.Controls.Add(this.btnDoiMatKhau);
+            this.pnlMenudoc.Controls.Add(this.btnBaoCaoDoanhThuThang);
+            this.pnlMenudoc.Controls.Add(this.btnDanhSachHoaDon);
+            this.pnlMenudoc.Controls.Add(this.btnThuPhiDoanhNghiep);
+            this.pnlMenudoc.Controls.Add(this.btnThuPhiUngVien);
+            this.pnlMenudoc.Controls.Add(this.panel3);
+            this.pnlMenudoc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenudoc.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenudoc.Name = "pnlMenudoc";
+            this.pnlMenudoc.Size = new System.Drawing.Size(74, 929);
+            this.pnlMenudoc.TabIndex = 1;
             // 
-            // iconBtnDoiMatKhau
+            // panel3
             // 
-            this.iconBtnDoiMatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnDoiMatKhau.FlatAppearance.BorderSize = 0;
-            this.iconBtnDoiMatKhau.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnDoiMatKhau.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnDoiMatKhau.ForeColor = System.Drawing.Color.White;
-            this.iconBtnDoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.ArrowsSpin;
-            this.iconBtnDoiMatKhau.IconColor = System.Drawing.Color.White;
-            this.iconBtnDoiMatKhau.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnDoiMatKhau.IconSize = 40;
-            this.iconBtnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnDoiMatKhau.Location = new System.Drawing.Point(0, 521);
-            this.iconBtnDoiMatKhau.Name = "iconBtnDoiMatKhau";
-            this.iconBtnDoiMatKhau.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnDoiMatKhau.Size = new System.Drawing.Size(327, 60);
-            this.iconBtnDoiMatKhau.TabIndex = 6;
-            this.iconBtnDoiMatKhau.Tag = "ĐỔI MẬT KHẨU";
-            this.iconBtnDoiMatKhau.Text = "  ĐỔI MẬT KHẨU";
-            this.iconBtnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnDoiMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnDoiMatKhau.UseVisualStyleBackColor = false;
-            this.iconBtnDoiMatKhau.Click += new System.EventHandler(this.iconBtnDoiMatKhau_Click);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.btnMenu);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(74, 204);
+            this.panel3.TabIndex = 5;
             // 
-            // iconBtnBaoCaoDoanhThuThang
+            // label3
             // 
-            this.iconBtnBaoCaoDoanhThuThang.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnBaoCaoDoanhThuThang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnBaoCaoDoanhThuThang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnBaoCaoDoanhThuThang.FlatAppearance.BorderSize = 0;
-            this.iconBtnBaoCaoDoanhThuThang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnBaoCaoDoanhThuThang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnBaoCaoDoanhThuThang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnBaoCaoDoanhThuThang.ForeColor = System.Drawing.Color.White;
-            this.iconBtnBaoCaoDoanhThuThang.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.iconBtnBaoCaoDoanhThuThang.IconColor = System.Drawing.Color.White;
-            this.iconBtnBaoCaoDoanhThuThang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnBaoCaoDoanhThuThang.IconSize = 40;
-            this.iconBtnBaoCaoDoanhThuThang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnBaoCaoDoanhThuThang.Location = new System.Drawing.Point(0, 461);
-            this.iconBtnBaoCaoDoanhThuThang.Name = "iconBtnBaoCaoDoanhThuThang";
-            this.iconBtnBaoCaoDoanhThuThang.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnBaoCaoDoanhThuThang.Size = new System.Drawing.Size(327, 60);
-            this.iconBtnBaoCaoDoanhThuThang.TabIndex = 7;
-            this.iconBtnBaoCaoDoanhThuThang.Tag = "BÁO CÁO DOANH THU THÁNG";
-            this.iconBtnBaoCaoDoanhThuThang.Text = "  BÁO CÁO DOANH THU THÁNG";
-            this.iconBtnBaoCaoDoanhThuThang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnBaoCaoDoanhThuThang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnBaoCaoDoanhThuThang.UseVisualStyleBackColor = false;
-            this.iconBtnBaoCaoDoanhThuThang.Click += new System.EventHandler(this.iconBtnBaoCaoDoanhThuThang_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(102, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(257, 54);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "JOBCENTER";
             // 
-            // iconBtnDanhSachHoaDon
+            // label2
             // 
-            this.iconBtnDanhSachHoaDon.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnDanhSachHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnDanhSachHoaDon.FlatAppearance.BorderSize = 0;
-            this.iconBtnDanhSachHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnDanhSachHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnDanhSachHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnDanhSachHoaDon.ForeColor = System.Drawing.Color.White;
-            this.iconBtnDanhSachHoaDon.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.iconBtnDanhSachHoaDon.IconColor = System.Drawing.Color.White;
-            this.iconBtnDanhSachHoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnDanhSachHoaDon.IconSize = 40;
-            this.iconBtnDanhSachHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnDanhSachHoaDon.Location = new System.Drawing.Point(0, 401);
-            this.iconBtnDanhSachHoaDon.Name = "iconBtnDanhSachHoaDon";
-            this.iconBtnDanhSachHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnDanhSachHoaDon.Size = new System.Drawing.Size(327, 60);
-            this.iconBtnDanhSachHoaDon.TabIndex = 8;
-            this.iconBtnDanhSachHoaDon.Tag = "DANH SÁCH HÓA ĐƠN";
-            this.iconBtnDanhSachHoaDon.Text = "  DANH SÁCH HÓA ĐƠN";
-            this.iconBtnDanhSachHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnDanhSachHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnDanhSachHoaDon.UseVisualStyleBackColor = false;
-            this.iconBtnDanhSachHoaDon.Click += new System.EventHandler(this.iconBtnDanhSachHoaDon_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(84, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(292, 50);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "__________________";
             // 
-            // iconBtnThuPhiDoanhNghiep
+            // panel1
             // 
-            this.iconBtnThuPhiDoanhNghiep.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnThuPhiDoanhNghiep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnThuPhiDoanhNghiep.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnThuPhiDoanhNghiep.FlatAppearance.BorderSize = 0;
-            this.iconBtnThuPhiDoanhNghiep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnThuPhiDoanhNghiep.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnThuPhiDoanhNghiep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnThuPhiDoanhNghiep.ForeColor = System.Drawing.Color.White;
-            this.iconBtnThuPhiDoanhNghiep.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
-            this.iconBtnThuPhiDoanhNghiep.IconColor = System.Drawing.Color.White;
-            this.iconBtnThuPhiDoanhNghiep.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnThuPhiDoanhNghiep.IconSize = 40;
-            this.iconBtnThuPhiDoanhNghiep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnThuPhiDoanhNghiep.Location = new System.Drawing.Point(0, 341);
-            this.iconBtnThuPhiDoanhNghiep.Name = "iconBtnThuPhiDoanhNghiep";
-            this.iconBtnThuPhiDoanhNghiep.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnThuPhiDoanhNghiep.Size = new System.Drawing.Size(327, 60);
-            this.iconBtnThuPhiDoanhNghiep.TabIndex = 9;
-            this.iconBtnThuPhiDoanhNghiep.Tag = "THU PHÍ DOANH NGHIỆP";
-            this.iconBtnThuPhiDoanhNghiep.Text = "  THU PHÍ DOANH NGHIỆP";
-            this.iconBtnThuPhiDoanhNghiep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnThuPhiDoanhNghiep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnThuPhiDoanhNghiep.UseVisualStyleBackColor = false;
-            this.iconBtnThuPhiDoanhNghiep.Click += new System.EventHandler(this.iconBtnThuPhiDoanhNghiep_Click);
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.pnlChinh);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(74, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1850, 831);
+            this.panel1.TabIndex = 5;
             // 
-            // iconBtnThuPhiUngVien
+            // pnlChinh
             // 
-            this.iconBtnThuPhiUngVien.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnThuPhiUngVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnThuPhiUngVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnThuPhiUngVien.FlatAppearance.BorderSize = 0;
-            this.iconBtnThuPhiUngVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnThuPhiUngVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnThuPhiUngVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnThuPhiUngVien.ForeColor = System.Drawing.Color.White;
-            this.iconBtnThuPhiUngVien.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
-            this.iconBtnThuPhiUngVien.IconColor = System.Drawing.Color.White;
-            this.iconBtnThuPhiUngVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnThuPhiUngVien.IconSize = 40;
-            this.iconBtnThuPhiUngVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnThuPhiUngVien.Location = new System.Drawing.Point(0, 281);
-            this.iconBtnThuPhiUngVien.Name = "iconBtnThuPhiUngVien";
-            this.iconBtnThuPhiUngVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnThuPhiUngVien.Size = new System.Drawing.Size(327, 60);
-            this.iconBtnThuPhiUngVien.TabIndex = 10;
-            this.iconBtnThuPhiUngVien.Tag = "THU PHÍ ỨNG VIÊN";
-            this.iconBtnThuPhiUngVien.Text = "  THU PHÍ ỨNG VIÊN";
-            this.iconBtnThuPhiUngVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnThuPhiUngVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnThuPhiUngVien.UseVisualStyleBackColor = false;
-            this.iconBtnThuPhiUngVien.Click += new System.EventHandler(this.iconBtnThuPhiUngVien_Click);
+            this.pnlChinh.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlChinh.Location = new System.Drawing.Point(55, 28);
+            this.pnlChinh.Name = "pnlChinh";
+            this.pnlChinh.Size = new System.Drawing.Size(1848, 803);
+            this.pnlChinh.TabIndex = 4;
             // 
-            // panelBar
+            // panel2
             // 
-            this.panelBar.BackColor = System.Drawing.Color.Transparent;
-            this.panelBar.Controls.Add(this.lblFOName);
-            this.panelBar.Controls.Add(this.iconBtnBar);
-            this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBar.Location = new System.Drawing.Point(0, 0);
-            this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(327, 281);
-            this.panelBar.TabIndex = 1;
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(74, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1850, 98);
+            this.panel2.TabIndex = 4;
             // 
-            // lblFOName
+            // label1
             // 
-            this.lblFOName.AutoSize = true;
-            this.lblFOName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFOName.ForeColor = System.Drawing.Color.White;
-            this.lblFOName.Location = new System.Drawing.Point(12, 39);
-            this.lblFOName.Name = "lblFOName";
-            this.lblFOName.Size = new System.Drawing.Size(216, 70);
-            this.lblFOName.TabIndex = 1;
-            this.lblFOName.Text = "JOB PLACEMENT\r\nCENTER";
-            this.lblFOName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(722, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(482, 54);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "NHÂN VIÊN TÀI CHÍNH";
             // 
-            // iconBtnBar
+            // timerMenu
             // 
-            this.iconBtnBar.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnBar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnBar.FlatAppearance.BorderSize = 0;
-            this.iconBtnBar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnBar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnBar.ForeColor = System.Drawing.Color.White;
-            this.iconBtnBar.IconChar = FontAwesome.Sharp.IconChar.BarsProgress;
-            this.iconBtnBar.IconColor = System.Drawing.Color.White;
-            this.iconBtnBar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnBar.IconSize = 40;
-            this.iconBtnBar.Location = new System.Drawing.Point(222, 48);
-            this.iconBtnBar.Name = "iconBtnBar";
-            this.iconBtnBar.Size = new System.Drawing.Size(57, 60);
-            this.iconBtnBar.TabIndex = 0;
-            this.iconBtnBar.Tag = "Danh mục";
-            this.iconBtnBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconBtnBar.UseVisualStyleBackColor = false;
-            this.iconBtnBar.Click += new System.EventHandler(this.iconBtnBar_Click);
+            this.timerMenu.Interval = 1;
+            this.timerMenu.Tick += new System.EventHandler(this.timerMenu_Tick);
             // 
-            // panelTop
+            // btnDangXuat
             // 
-            this.panelTop.Controls.Add(this.lblFunctionName);
-            this.panelTop.Controls.Add(this.iconBtnMinimize);
-            this.panelTop.Controls.Add(this.iconBtnManimize);
-            this.panelTop.Controls.Add(this.iconBtnExit);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.FillColor = System.Drawing.Color.White;
-            this.panelTop.Location = new System.Drawing.Point(327, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1037, 89);
-            this.panelTop.TabIndex = 1;
-            this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnDangXuat.BorderRadius = 10;
+            this.btnDangXuat.BorderThickness = 3;
+            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDangXuat.FillColor = System.Drawing.Color.White;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnDangXuat.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.logout__1_;
+            this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 579);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(74, 75);
+            this.btnDangXuat.TabIndex = 15;
+            this.btnDangXuat.Text = "          ĐĂNG XUẤT";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // lblFunctionName
+            // btnDoiMatKhau
             // 
-            this.lblFunctionName.AutoSize = true;
-            this.lblFunctionName.BackColor = System.Drawing.Color.White;
-            this.lblFunctionName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFunctionName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblFunctionName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFunctionName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblFunctionName.Location = new System.Drawing.Point(51, 26);
-            this.lblFunctionName.Name = "lblFunctionName";
-            this.lblFunctionName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblFunctionName.Size = new System.Drawing.Size(304, 37);
-            this.lblFunctionName.TabIndex = 1;
-            this.lblFunctionName.Text = "NHÂN VIÊN TÀI CHÍNH";
-            this.lblFunctionName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDoiMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.btnDoiMatKhau.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnDoiMatKhau.BorderRadius = 10;
+            this.btnDoiMatKhau.BorderThickness = 3;
+            this.btnDoiMatKhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoiMatKhau.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoiMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDoiMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoiMatKhau.FillColor = System.Drawing.Color.White;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnDoiMatKhau.ForeColor = System.Drawing.Color.Black;
+            this.btnDoiMatKhau.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.padlock;
+            this.btnDoiMatKhau.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDoiMatKhau.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(0, 504);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(74, 75);
+            this.btnDoiMatKhau.TabIndex = 14;
+            this.btnDoiMatKhau.Text = "           ĐỔI MẬT KHẨU";
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
-            // iconBtnMinimize
+            // btnBaoCaoDoanhThuThang
             // 
-            this.iconBtnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconBtnMinimize.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconBtnMinimize.FlatAppearance.BorderSize = 0;
-            this.iconBtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconBtnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconBtnMinimize.IconColor = System.Drawing.Color.White;
-            this.iconBtnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnMinimize.IconSize = 15;
-            this.iconBtnMinimize.Location = new System.Drawing.Point(869, 3);
-            this.iconBtnMinimize.Name = "iconBtnMinimize";
-            this.iconBtnMinimize.Size = new System.Drawing.Size(56, 23);
-            this.iconBtnMinimize.TabIndex = 0;
-            this.iconBtnMinimize.UseVisualStyleBackColor = false;
-            this.iconBtnMinimize.Click += new System.EventHandler(this.iconBtnMinimize_Click);
+            this.btnBaoCaoDoanhThuThang.BackColor = System.Drawing.Color.Transparent;
+            this.btnBaoCaoDoanhThuThang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnBaoCaoDoanhThuThang.BorderRadius = 10;
+            this.btnBaoCaoDoanhThuThang.BorderThickness = 3;
+            this.btnBaoCaoDoanhThuThang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCaoDoanhThuThang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCaoDoanhThuThang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaoCaoDoanhThuThang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaoCaoDoanhThuThang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaoCaoDoanhThuThang.FillColor = System.Drawing.Color.White;
+            this.btnBaoCaoDoanhThuThang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnBaoCaoDoanhThuThang.ForeColor = System.Drawing.Color.Black;
+            this.btnBaoCaoDoanhThuThang.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.BaoCaoDoanhThuThang;
+            this.btnBaoCaoDoanhThuThang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBaoCaoDoanhThuThang.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBaoCaoDoanhThuThang.Location = new System.Drawing.Point(0, 429);
+            this.btnBaoCaoDoanhThuThang.Name = "btnBaoCaoDoanhThuThang";
+            this.btnBaoCaoDoanhThuThang.Size = new System.Drawing.Size(74, 75);
+            this.btnBaoCaoDoanhThuThang.TabIndex = 13;
+            this.btnBaoCaoDoanhThuThang.Text = "          BÁO CÁO DOANH THU THÁNG";
+            this.btnBaoCaoDoanhThuThang.Click += new System.EventHandler(this.btnBaoCaoDoanhThuThang_Click);
             // 
-            // iconBtnManimize
+            // btnDanhSachHoaDon
             // 
-            this.iconBtnManimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconBtnManimize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.iconBtnManimize.FlatAppearance.BorderSize = 0;
-            this.iconBtnManimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnManimize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.iconBtnManimize.IconColor = System.Drawing.Color.White;
-            this.iconBtnManimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnManimize.IconSize = 15;
-            this.iconBtnManimize.Location = new System.Drawing.Point(925, 3);
-            this.iconBtnManimize.Name = "iconBtnManimize";
-            this.iconBtnManimize.Size = new System.Drawing.Size(56, 23);
-            this.iconBtnManimize.TabIndex = 0;
-            this.iconBtnManimize.UseVisualStyleBackColor = false;
-            this.iconBtnManimize.Click += new System.EventHandler(this.iconBtnManimize_Click);
+            this.btnDanhSachHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnDanhSachHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnDanhSachHoaDon.BorderRadius = 10;
+            this.btnDanhSachHoaDon.BorderThickness = 3;
+            this.btnDanhSachHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDanhSachHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDanhSachHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDanhSachHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDanhSachHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDanhSachHoaDon.FillColor = System.Drawing.Color.White;
+            this.btnDanhSachHoaDon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnDanhSachHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.btnDanhSachHoaDon.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.DanhSachHoaDon;
+            this.btnDanhSachHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDanhSachHoaDon.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnDanhSachHoaDon.Location = new System.Drawing.Point(0, 354);
+            this.btnDanhSachHoaDon.Name = "btnDanhSachHoaDon";
+            this.btnDanhSachHoaDon.Size = new System.Drawing.Size(74, 75);
+            this.btnDanhSachHoaDon.TabIndex = 12;
+            this.btnDanhSachHoaDon.Text = "            DANH SÁCH HÓA ĐƠN";
+            this.btnDanhSachHoaDon.Click += new System.EventHandler(this.btnDanhSachHoaDon_Click);
             // 
-            // iconBtnExit
+            // btnThuPhiDoanhNghiep
             // 
-            this.iconBtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconBtnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.iconBtnExit.FlatAppearance.BorderSize = 0;
-            this.iconBtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnExit.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.iconBtnExit.IconColor = System.Drawing.Color.White;
-            this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnExit.IconSize = 15;
-            this.iconBtnExit.Location = new System.Drawing.Point(981, 3);
-            this.iconBtnExit.Name = "iconBtnExit";
-            this.iconBtnExit.Size = new System.Drawing.Size(56, 23);
-            this.iconBtnExit.TabIndex = 0;
-            this.iconBtnExit.UseVisualStyleBackColor = false;
-            this.iconBtnExit.Click += new System.EventHandler(this.iconBtnExit_Click);
+            this.btnThuPhiDoanhNghiep.BackColor = System.Drawing.Color.Transparent;
+            this.btnThuPhiDoanhNghiep.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnThuPhiDoanhNghiep.BorderRadius = 10;
+            this.btnThuPhiDoanhNghiep.BorderThickness = 3;
+            this.btnThuPhiDoanhNghiep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThuPhiDoanhNghiep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThuPhiDoanhNghiep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThuPhiDoanhNghiep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThuPhiDoanhNghiep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThuPhiDoanhNghiep.FillColor = System.Drawing.Color.White;
+            this.btnThuPhiDoanhNghiep.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnThuPhiDoanhNghiep.ForeColor = System.Drawing.Color.Black;
+            this.btnThuPhiDoanhNghiep.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.ThuPhiDoanhNghiep;
+            this.btnThuPhiDoanhNghiep.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThuPhiDoanhNghiep.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnThuPhiDoanhNghiep.Location = new System.Drawing.Point(0, 279);
+            this.btnThuPhiDoanhNghiep.Name = "btnThuPhiDoanhNghiep";
+            this.btnThuPhiDoanhNghiep.Size = new System.Drawing.Size(74, 75);
+            this.btnThuPhiDoanhNghiep.TabIndex = 11;
+            this.btnThuPhiDoanhNghiep.Text = "          THU PHÍ DOANH NGHIỆP";
+            this.btnThuPhiDoanhNghiep.Click += new System.EventHandler(this.btnThuPhiDoanhNghiep_Click);
             // 
-            // panelDesktop
+            // btnThuPhiUngVien
             // 
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.FillColor = System.Drawing.Color.White;
-            this.panelDesktop.Location = new System.Drawing.Point(327, 89);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1037, 617);
-            this.panelDesktop.TabIndex = 2;
+            this.btnThuPhiUngVien.BackColor = System.Drawing.Color.Transparent;
+            this.btnThuPhiUngVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnThuPhiUngVien.BorderRadius = 10;
+            this.btnThuPhiUngVien.BorderThickness = 3;
+            this.btnThuPhiUngVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThuPhiUngVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThuPhiUngVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThuPhiUngVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThuPhiUngVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThuPhiUngVien.FillColor = System.Drawing.Color.White;
+            this.btnThuPhiUngVien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnThuPhiUngVien.ForeColor = System.Drawing.Color.Black;
+            this.btnThuPhiUngVien.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.ThuPhiUngVien;
+            this.btnThuPhiUngVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThuPhiUngVien.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnThuPhiUngVien.Location = new System.Drawing.Point(0, 204);
+            this.btnThuPhiUngVien.Name = "btnThuPhiUngVien";
+            this.btnThuPhiUngVien.Size = new System.Drawing.Size(74, 75);
+            this.btnThuPhiUngVien.TabIndex = 10;
+            this.btnThuPhiUngVien.Text = "          THU PHÍ ỨNG VIÊN";
+            this.btnThuPhiUngVien.Click += new System.EventHandler(this.btnThuPhiUngVien_Click);
             // 
-            // guna2Panel1
+            // btnMenu
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel1.Location = new System.Drawing.Point(327, 89);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(15, 617);
-            this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(342, 691);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1022, 15);
-            this.guna2Panel2.TabIndex = 3;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.White;
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(342, 89);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1022, 15);
-            this.guna2Panel3.TabIndex = 3;
-            // 
-            // panelBoderR
-            // 
-            this.panelBoderR.BackColor = System.Drawing.Color.White;
-            this.panelBoderR.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBoderR.Location = new System.Drawing.Point(1349, 104);
-            this.panelBoderR.Name = "panelBoderR";
-            this.panelBoderR.Size = new System.Drawing.Size(15, 587);
-            this.panelBoderR.TabIndex = 3;
+            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.btnMenu.BorderRadius = 10;
+            this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu.FillColor = System.Drawing.Color.Transparent;
+            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnMenu.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.list;
+            this.btnMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMenu.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnMenu.Location = new System.Drawing.Point(-1, 3);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(75, 51);
+            this.btnMenu.TabIndex = 10;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // TrangChuFO_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1364, 706);
-            this.Controls.Add(this.panelBoderR);
-            this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.panelMenu);
-            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClientSize = new System.Drawing.Size(1924, 929);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlMenudoc);
             this.Name = "TrangChuFO_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuFO_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.TrangChuFO_Form_Load);
-            this.Resize += new System.EventHandler(this.TrangChuFO_Form_Resize);
-            this.panelMenu.ResumeLayout(false);
-            this.panelBar.ResumeLayout(false);
-            this.panelBar.PerformLayout();
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
+            this.pnlMenudoc.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel panelMenu;
-        private Guna.UI2.WinForms.Guna2Panel panelTop;
-        private Guna.UI2.WinForms.Guna2Panel panelDesktop;
-        private Guna.UI2.WinForms.Guna2Panel panelBar;
-        private FontAwesome.Sharp.IconButton iconBtnBar;
-        private System.Windows.Forms.Label lblFOName;
-        private FontAwesome.Sharp.IconButton iconBtnExit;
-        private FontAwesome.Sharp.IconButton iconBtnMinimize;
-        private FontAwesome.Sharp.IconButton iconBtnManimize;
-        private FontAwesome.Sharp.IconButton iconBtnDoiMatKhau;
-        private FontAwesome.Sharp.IconButton iconBtnBaoCaoDoanhThuThang;
-        private FontAwesome.Sharp.IconButton iconBtnDanhSachHoaDon;
-        private FontAwesome.Sharp.IconButton iconBtnThuPhiDoanhNghiep;
-        private FontAwesome.Sharp.IconButton iconBtnThuPhiUngVien;
-        private System.Windows.Forms.Label lblFunctionName;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel panelBoderR;
+        private System.Windows.Forms.Panel pnlMenudoc;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button btnMenu;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlChinh;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnDangXuat;
+        private Guna.UI2.WinForms.Guna2Button btnDoiMatKhau;
+        private Guna.UI2.WinForms.Guna2Button btnBaoCaoDoanhThuThang;
+        private Guna.UI2.WinForms.Guna2Button btnDanhSachHoaDon;
+        private Guna.UI2.WinForms.Guna2Button btnThuPhiDoanhNghiep;
+        private Guna.UI2.WinForms.Guna2Button btnThuPhiUngVien;
+        private System.Windows.Forms.Timer timerMenu;
     }
 }

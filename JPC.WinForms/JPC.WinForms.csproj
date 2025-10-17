@@ -372,6 +372,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <None Include="Resources\note.png" />
+    <None Include="Resources\personal-folder.png" />
+    <None Include="Resources\personal-folder1.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\padlock1.png" />
+    <None Include="Resources\logout %281%291.png" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\note1.png" />
+    <None Include="Resources\to-do-list.png" />
+    <None Include="Resources\updated.png" />
+    <None Include="Resources\padlock2.png" />
+    <None Include="Resources\logout %281%292.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\job-seeker.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\updated1.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\padlock3.png" />
+    <None Include="Resources\logout %281%293.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\data-analysis.png" />
+    <None Include="Resources\ThuPhiUngVien.png" />
+    <None Include="Resources\ThuPhiDoanhNghiep.png" />
+    <None Include="Resources\DanhSachHoaDon.png" />
+    <None Include="Resources\BaoCaoDoanhThuThang.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -482,6 +508,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SA\TrangChuSA_Form.resx">
       <DependentUpon>TrangChuSA_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SA\Welcome_Form.resx">
+      <DependentUpon>Welcome_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

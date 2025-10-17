@@ -38,7 +38,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             rdThang.CheckedChanged += (s, e) => { if (rdThang.Checked) BindMonths(); };
             rdQuy.CheckedChanged += (s, e) => { if (rdQuy.Checked) BindQuarters(); };
             rdNam.CheckedChanged += (s, e) => { if (rdNam.Checked) BindYearWhole(); };
-            btnTaiLai.Click += btnTaiLai_Click;
+            //btnTaiLai.Click += btnTaiLai_Click;
 
         }
         public string AuthorDisplayName { get; set; } = Environment.UserName;
@@ -218,17 +218,23 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                 // 3) TRUY VẤN         
                 var dt = _svc.ThongKeSoLuong(from, to, group);
                 _cache = dt;
+                //kiemtra du lieu
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu ứng viên cho kỳ đã chọn.");
+                   
+                }
 
                 // BIND LƯỚI (đã khai báo cột sẵn ở SetupGrid)
                 dgvThongKe.DataSource = dt;
-
+              
                 // 4) Tổng quan
                 txtTongUngVien.Text = dt.Rows.Count == 0 ? "0"
                     : Convert.ToString(dt.Compute("SUM(SoLuong)", null));
                 txtNoiBatNhat.Text = dt.Rows.Count == 0 ? ""
                     : dt.Rows[0]["DanhMuc"].ToString();
                 //checkmacdinh
-                rdOnDinh.Checked = true;
+                //rdOnDinh.Checked = true;
             }
             catch (Exception ex)
             {

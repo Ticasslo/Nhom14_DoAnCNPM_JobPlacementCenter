@@ -26,7 +26,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
         public SelectDoanhNghiep1_UC_Form()
         {
             InitializeComponent();
-            this.Resize += SelectTinTuyenDung1_UC_Form_Resize;
+          //  this.Resize += SelectTinTuyenDung1_UC_Form_Resize;
             _ungTuyenService = new UngTuyenService_ERS();
 
             if (UserSession.NhanVien != null && UserSession.NhanVien.VaiTroId == "SA")
@@ -66,45 +66,45 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
         }
 
-        private void SelectTinTuyenDung1_UC_Form_Resize(object sender, EventArgs e)
-        {
-            int centerX = guna2Panel1.Width / 2;
+        //private void SelectTinTuyenDung1_UC_Form_Resize(object sender, EventArgs e)
+        //{
+        //    int centerX = guna2Panel1.Width / 2;
 
-            // 🌟 Căn giữa tiêu đề và dòng phụ
-            lbTitle.Left = centerX - (lbTitle.Width / 2);
+        //    // 🌟 Căn giữa tiêu đề và dòng phụ
+        //    lbTitle.Left = centerX - (lbTitle.Width / 2);
 
-            // 🌟 Căn giữa label "Bảng Doanh nghiệp"
-            lbBangDN.AutoSize = true;
-            lbBangDN.Font = new System.Drawing.Font("Segoe UI", 12, System.Drawing.FontStyle.Bold);
+        //    // 🌟 Căn giữa label "Bảng Doanh nghiệp"
+        //    lbBangDN.AutoSize = true;
+        //    lbBangDN.Font = new System.Drawing.Font("Segoe UI", 12, System.Drawing.FontStyle.Bold);
 
-            lbBangDN.Left = centerX - (lbBangDN.Width / 2);
-            lbBangDN.Top = 230; // tuỳ chỉnh khoảng cách từ tiêu đề xuống
+        //    lbBangDN.Left = centerX - (lbBangDN.Width / 2);
+        //    lbBangDN.Top = 230; // tuỳ chỉnh khoảng cách từ tiêu đề xuống
 
-            // 🌟 Canh lại DataGridView
-            dgvUngVien.Top = lbBangDN.Bottom + 45; // cách label 15px
-            dgvUngVien.Left = this.Width * 10 / 100;  // cách trái 10% usercontrol
-            dgvUngVien.Width = this.Width * 80 / 100; // rộng 80% usercontrol
-            dgvUngVien.Height = this.Height * 45 / 100; // cao 45% usercontrol
-            dgvUngVien.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-
-
+        //    // 🌟 Canh lại DataGridView
+        //    dgvUngVien.Top = lbBangDN.Bottom + 45; // cách label 15px
+        //    dgvUngVien.Left = this.Width * 10 / 100;  // cách trái 10% usercontrol
+        //    dgvUngVien.Width = this.Width * 80 / 100; // rộng 80% usercontrol
+        //    dgvUngVien.Height = this.Height * 45 / 100; // cao 45% usercontrol
+        //    dgvUngVien.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 
 
-            // 🌟 Hai nút ngang hàng nhau
-            int spacing = 100; // khoảng cách giữa hai nút
-            int totalWidth = btnXuat.Width + btnXem.Width + spacing;
-
-            int startX = (this.Width - totalWidth) / 2;
-            int baseY = dgvUngVien.Bottom + 40; // khoảng cách dưới datagridview
-
-            btnXuat.Left = startX;
-            btnXuat.Top = baseY;
-
-            btnXem.Left = btnXuat.Right + spacing;
-            btnXem.Top = baseY;
 
 
-        }
+        //    // 🌟 Hai nút ngang hàng nhau
+        //    int spacing = 100; // khoảng cách giữa hai nút
+        //    int totalWidth = btnXuat.Width + btnXem.Width + spacing;
+
+        //    int startX = (this.Width - totalWidth) / 2;
+        //    int baseY = dgvUngVien.Bottom + 40; // khoảng cách dưới datagridview
+
+        //    btnXuat.Left = startX;
+        //    btnXuat.Top = baseY;
+
+        //    btnXem.Left = btnXuat.Right + spacing;
+        //    btnXem.Top = baseY;
+
+
+        //}
 
         private void btnluu_Click(object sender, EventArgs e)
         {

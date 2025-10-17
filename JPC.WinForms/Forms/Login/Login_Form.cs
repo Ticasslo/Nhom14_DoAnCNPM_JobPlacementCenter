@@ -42,7 +42,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 
             picBoxHide.Visible = true;
             picBoxShow.Visible = false;
-            txtPassword.PasswordChar = '*';
+            //txtPassword.PasswordChar = '*';
 
             radioBtnCSS.Checked = true;
             this.ActiveControl = txtUsername;

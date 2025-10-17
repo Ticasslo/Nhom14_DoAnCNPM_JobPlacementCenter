@@ -325,7 +325,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
-            this.label1.Location = new System.Drawing.Point(551, 16);
+            this.label1.Location = new System.Drawing.Point(543, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(693, 38);
             this.label1.TabIndex = 42;

@@ -26,7 +26,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
         public DangTinTuyenDung_UC_Form()
         {
             InitializeComponent();
-            this.Resize += DangTinTuyenDung_UC_Form_Resize;
+           // this.Resize += DangTinTuyenDung_UC_Form_Resize;
 
             _nhomNgheService = new NhomNgheService();
             _ngheService = new NgheService();
@@ -188,7 +188,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
         public DangTinTuyenDung_UC_Form(DoanhNghiep dn)
         {
             InitializeComponent();
-            this.Resize += DangTinTuyenDung_UC_Form_Resize;
+           // this.Resize += DangTinTuyenDung_UC_Form_Resize;
 
             _dn = dn ?? throw new ArgumentNullException(nameof(dn));
             _nhomNgheService = new NhomNgheService();
@@ -201,79 +201,81 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
             this.Load += DangTinTuyenDung_UC_Form_Load;
         }
 
+
+        //TROII OI LA TROI 
         // ================== (CÁC PHẦN CÒN LẠI GIỮ NGUYÊN) ==================
 
-        private void DangTinTuyenDung_UC_Form_Resize(object sender, EventArgs e)
-        {
-            int centerX = guna2Panel1.Width / 2;
+        //private void DangTinTuyenDung_UC_Form_Resize(object sender, EventArgs e)
+        //{
+        //    int centerX = guna2Panel1.Width / 2;
 
-            lbTitle.Left = centerX - (lbTitle.Width / 2);
-            lbWelcome.Left = centerX - (lbWelcome.Width / 2);
+        //    lbTitle.Left = centerX - (lbTitle.Width / 2);
+        //    lbWelcome.Left = centerX - (lbWelcome.Width / 2);
 
-            int marginLeft = 200;
-            int columnSpacing = 500;
-            int rowSpacing = 60;
-            int startY = 160;
-            int labelWidth = 160;
-            int controlWidth = 230;
-            int controlHeight = 35;
+        //    int marginLeft = 200;
+        //    int columnSpacing = 500;
+        //    int rowSpacing = 60;
+        //    int startY = 160;
+        //    int labelWidth = 160;
+        //    int controlWidth = 230;
+        //    int controlHeight = 35;
 
-            Label[] leftLabels = { label3, label1, label2, label4 };
-            Control[] leftControls = { txttieude, txtmota, numsoluong, txtmucluong };
-            Label[] rightLabels = { label5, label6, label7, label8 };
-            Control[] rightControls = { txtkynang, txtkhuvuc, cbohinhthuc, numkinhnghiem };
+        //    Label[] leftLabels = { label3, label1, label2, label4 };
+        //    Control[] leftControls = { txttieude, txtmota, numsoluong, txtmucluong };
+        //    Label[] rightLabels = { label5, label6, label7, label8 };
+        //    Control[] rightControls = { txtkynang, txtkhuvuc, cbohinhthuc, numkinhnghiem };
 
-            for (int i = 0; i < leftLabels.Length; i++)
-            {
-                leftLabels[i].AutoSize = true;
-                leftLabels[i].Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-                leftLabels[i].Location = new Point(marginLeft, startY + i * rowSpacing);
+        //    for (int i = 0; i < leftLabels.Length; i++)
+        //    {
+        //        leftLabels[i].AutoSize = true;
+        //        leftLabels[i].Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+        //        leftLabels[i].Location = new Point(marginLeft, startY + i * rowSpacing);
 
-                leftControls[i].Size = new Size(controlWidth, controlHeight);
-                leftControls[i].Location = new Point(marginLeft + labelWidth + 10, startY + i * rowSpacing - 3);
-            }
+        //        leftControls[i].Size = new Size(controlWidth, controlHeight);
+        //        leftControls[i].Location = new Point(marginLeft + labelWidth + 10, startY + i * rowSpacing - 3);
+        //    }
 
-            for (int i = 0; i < rightLabels.Length; i++)
-            {
-                rightLabels[i].AutoSize = true;
-                rightLabels[i].Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-                rightLabels[i].Location = new Point(marginLeft + columnSpacing, startY + i * rowSpacing);
+        //    for (int i = 0; i < rightLabels.Length; i++)
+        //    {
+        //        rightLabels[i].AutoSize = true;
+        //        rightLabels[i].Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+        //        rightLabels[i].Location = new Point(marginLeft + columnSpacing, startY + i * rowSpacing);
 
-                rightControls[i].Size = new Size(controlWidth, controlHeight);
-                rightControls[i].Location = new Point(marginLeft + columnSpacing + labelWidth + 10, startY + i * rowSpacing - 3);
-            }
+        //        rightControls[i].Size = new Size(controlWidth, controlHeight);
+        //        rightControls[i].Location = new Point(marginLeft + columnSpacing + labelWidth + 10, startY + i * rowSpacing - 3);
+        //    }
 
-            int lastRowY = startY + leftLabels.Length * rowSpacing + 10;
-            int lastRowOffsetX = -150;
+        //    int lastRowY = startY + leftLabels.Length * rowSpacing + 10;
+        //    int lastRowOffsetX = -150;
 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-            label9.Location = new Point(marginLeft + lastRowOffsetX, lastRowY);
+        //    label9.AutoSize = true;
+        //    label9.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+        //    label9.Location = new Point(marginLeft + lastRowOffsetX, lastRowY);
 
-            cbonhomnghe.Size = new Size(controlWidth, controlHeight);
-            cbonhomnghe.Location = new Point(marginLeft + labelWidth - 60 + lastRowOffsetX, lastRowY - 3);
+        //    cbonhomnghe.Size = new Size(controlWidth, controlHeight);
+        //    cbonhomnghe.Location = new Point(marginLeft + labelWidth - 60 + lastRowOffsetX, lastRowY - 3);
 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-            label10.Location = new Point(marginLeft + labelWidth + controlWidth + 20 + lastRowOffsetX, lastRowY);
+        //    label10.AutoSize = true;
+        //    label10.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+        //    label10.Location = new Point(marginLeft + labelWidth + controlWidth + 20 + lastRowOffsetX, lastRowY);
 
-            cbonghe.Size = new Size(controlWidth, controlHeight);
-            cbonghe.Location = new Point(marginLeft + labelWidth + controlWidth + 70 + lastRowOffsetX, lastRowY - 3);
+        //    cbonghe.Size = new Size(controlWidth, controlHeight);
+        //    cbonghe.Location = new Point(marginLeft + labelWidth + controlWidth + 70 + lastRowOffsetX, lastRowY - 3);
 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-            label11.Location = new Point(marginLeft + labelWidth + controlWidth * 2 + 170 + lastRowOffsetX, lastRowY);
+        //    label11.AutoSize = true;
+        //    label11.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+        //    label11.Location = new Point(marginLeft + labelWidth + controlWidth * 2 + 170 + lastRowOffsetX, lastRowY);
 
-            cbovitrichuyenmon.Size = new Size(controlWidth, controlHeight);
-            cbovitrichuyenmon.Location = new Point(marginLeft + labelWidth + controlWidth * 2 + 300 + lastRowOffsetX, lastRowY - 3);
+        //    cbovitrichuyenmon.Size = new Size(controlWidth, controlHeight);
+        //    cbovitrichuyenmon.Location = new Point(marginLeft + labelWidth + controlWidth * 2 + 300 + lastRowOffsetX, lastRowY - 3);
 
-            dgvTinTuyenDung.Top = btndangtin.Bottom - 30;
+        //    dgvTinTuyenDung.Top = btndangtin.Bottom - 30;
 
-            btndangtin.Width = 130;
-            btndangtin.Height = 40;
-            btndangtin.Left = (100 + this.Width - btndangtin.Width) / 2;
-            btndangtin.Top = lastRowY + 70;
-        }
+        //    btndangtin.Width = 130;
+        //    btndangtin.Height = 40;
+        //    btndangtin.Left = (100 + this.Width - btndangtin.Width) / 2;
+        //    btndangtin.Top = lastRowY + 70;
+        //}
 
         private void btndangtin_Click(object sender, EventArgs e)
         {

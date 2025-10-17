@@ -51,7 +51,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
         private void DanhSachHoaDon_Load(object sender, EventArgs e)
         {
-            if (_svc == null) { MessageBox.Show("Chưa gán service cho Danh sách hóa đơn."); return; }
 
             LoadCombos();
             LoadAllHoaDon();
@@ -291,6 +290,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                     c.FillWeight *= factor;
                 }
             }
+        }
+
+        private void dgvBangDanhSachHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

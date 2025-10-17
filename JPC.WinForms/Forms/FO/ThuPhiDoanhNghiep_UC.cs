@@ -229,5 +229,10 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 txtVietBangChu.Text = VietnameseNumber.ToCurrencyWords(v) + " đồng";
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

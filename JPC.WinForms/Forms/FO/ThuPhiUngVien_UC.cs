@@ -48,11 +48,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
         private void ThuPhiUngVien_Load(object sender, EventArgs e)
         {
-            if (_service == null)
-            {
-                MessageBox.Show("Chưa BindService cho ThuPhiUngVien.");
-                return;
-            }
 
             try
             {

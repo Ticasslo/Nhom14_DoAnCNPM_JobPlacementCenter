@@ -41,9 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.timerMenu = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlChinh = new System.Windows.Forms.Panel();
+            this.timerMenu = new System.Windows.Forms.Timer(this.components);
             this.pnlMenudoc.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -147,7 +147,7 @@
             this.btnThongKeTyLeKetNoi.FillColor = System.Drawing.Color.White;
             this.btnThongKeTyLeKetNoi.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnThongKeTyLeKetNoi.ForeColor = System.Drawing.Color.Black;
-            this.btnThongKeTyLeKetNoi.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.bar_chart1;
+            this.btnThongKeTyLeKetNoi.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.data_analysis;
             this.btnThongKeTyLeKetNoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongKeTyLeKetNoi.ImageSize = new System.Drawing.Size(40, 40);
             this.btnThongKeTyLeKetNoi.Location = new System.Drawing.Point(0, 279);
@@ -238,11 +238,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(523, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(833, 50);
+            this.label1.Size = new System.Drawing.Size(900, 54);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ TRUNG TÂM GIỚI THIỆU VIỆC LÀM";
             // 
@@ -255,11 +255,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1850, 98);
             this.panel2.TabIndex = 2;
-            // 
-            // timerMenu
-            // 
-            this.timerMenu.Interval = 10;
-            this.timerMenu.Tick += new System.EventHandler(this.timerMenu_Tick);
             // 
             // panel1
             // 
@@ -278,6 +273,11 @@
             this.pnlChinh.Name = "pnlChinh";
             this.pnlChinh.Size = new System.Drawing.Size(1815, 803);
             this.pnlChinh.TabIndex = 4;
+            // 
+            // timerMenu
+            // 
+            this.timerMenu.Interval = 1;
+            this.timerMenu.Tick += new System.EventHandler(this.timerMenu_Tick_1);
             // 
             // TrangChuCM_Form
             // 
@@ -314,8 +314,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnMenu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Timer timerMenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlChinh;
+        private System.Windows.Forms.Timer timerMenu;
     }
 }

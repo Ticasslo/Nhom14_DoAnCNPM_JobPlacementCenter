@@ -28,28 +28,28 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             btnDoiMatKhau.Tag = "CN_DMK";            // Đổi mật khẩu
         }
         bool isSidebarExpanded = false;
-        private void timerMenu_Tick(object sender, EventArgs e)
-        {
-            if (isSidebarExpanded)
-            {
-                pnlMenudoc.Width -= 38;
-                if (pnlMenudoc.Width <= 77)
-                {
-                    timerMenu.Stop();
-                    isSidebarExpanded = false;
-                }
-            }
-            else
-            {
-                pnlMenudoc.Width += 38;
-                if (pnlMenudoc.Width >= 340)
-                {
-                    timerMenu.Stop();
-                    isSidebarExpanded = true;
-                    // Optionally: show label/text/icon
-                }
-            }
-        }
+        //private void timerMenu_Tick(object sender, EventArgs e)
+        //{
+        //    if (isSidebarExpanded)
+        //    {
+        //        pnlMenudoc.Width -= 76;
+        //        if (pnlMenudoc.Width <= 77)
+        //        {
+        //            timerMenu.Stop();
+        //            isSidebarExpanded = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        pnlMenudoc.Width += 38;
+        //        if (pnlMenudoc.Width >= 340)
+        //        {
+        //            timerMenu.Stop();
+        //            isSidebarExpanded = true;
+        //            // Optionally: show label/text/icon
+        //        }
+        //    }
+        //}
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -104,6 +104,29 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             else
             {
                 //khong lam gi ca
+            }
+        }
+
+        private void timerMenu_Tick_1(object sender, EventArgs e)
+        {
+            if (isSidebarExpanded)
+            {
+                pnlMenudoc.Width -= 38;
+                if (pnlMenudoc.Width <= 77)
+                {
+                    timerMenu.Stop();
+                    isSidebarExpanded = false;
+                }
+            }
+            else
+            {
+                pnlMenudoc.Width += 38;
+                if (pnlMenudoc.Width >= 340)
+                {
+                    timerMenu.Stop();
+                    isSidebarExpanded = true;
+                    // Optionally: show label/text/icon
+                }
             }
         }
     }

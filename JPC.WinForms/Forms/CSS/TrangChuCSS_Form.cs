@@ -73,22 +73,53 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
             }
         }
 
+        //phanchinhgiaodien - them timerMenu+dieuhuong
+        bool isSidebarExpanded = false;
+        private void timerMenu_Tick(object sender, EventArgs e)
+        {
+            if(isSidebarExpanded)
+            {
+                pnlMenudoc.Width -= 38;
+                if (pnlMenudoc.Width <= 77)
+                {
+                    timerMenu.Stop();
+                    isSidebarExpanded = false;
+                }
+            }
+            else
+            {
+                pnlMenudoc.Width += 38;
+                if (pnlMenudoc.Width >= 340)
+                {
+                    timerMenu.Stop();
+                    isSidebarExpanded = true;
+                    // Optionally: show label/text/icon
+                }
+            }
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            timerMenu.Start();
+        }
+
         private void btnLoadTao_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled((string)btnLoadTao.Tag)) return;
             ShowControl(new DKHoSoUngVien_UC());
         }
 
-        private void btnLoadChinhSua_Click(object sender, EventArgs e)
-        {
-            if (!PermissionGuard.EnsureEnabled((string)btnLoadChinhSua.Tag)) return;
-            ShowControl(new ChinhSuaThongTinUngVien_UC());
-        }
-
         private void btnLoadGhiNhanUT_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled((string)btnLoadGhiNhanUT.Tag)) return;
             ShowControl(new GhiNhanUngTuyen_UC());
+        }
+
+        private void btnLoadChinhSua_Click(object sender, EventArgs e)
+        {
+            if (!PermissionGuard.EnsureEnabled((string)btnLoadChinhSua.Tag)) return;
+            ShowControl(new ChinhSuaThongTinUngVien_UC());
+
         }
 
         private void btnLoadDoiMK_Click(object sender, EventArgs e)
@@ -99,10 +130,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            isExit = false;
-            JPC.Models.UserSession.Clear();
-            this.Tag = "Logout";
-            this.Close();
+            var result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                isExit = false;
+                JPC.Models.UserSession.Clear();
+                this.Tag = "Logout";
+                this.Close();
+            }
+            else
+            {
+                //khong lam gi ca
+            }
+            
         }
     }
 }

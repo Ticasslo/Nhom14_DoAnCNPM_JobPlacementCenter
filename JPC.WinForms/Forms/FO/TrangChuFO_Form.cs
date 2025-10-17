@@ -1,242 +1,67 @@
 ﻿using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
 using JPC.DataAccess.Repositories.Implementations.FO;
+using JPC.WinForms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters.Entities;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
     public partial class TrangChuFO_Form : Form
     {
-        private int boderSize = 2;
-        private Size formSize;
-
+        bool isSidebarExpanded = false;
         public TrangChuFO_Form()
         {
             InitializeComponent();
-            //CollapseMenu();
-            this.Padding = new Padding(boderSize);//Border size
-            this.BackColor = Color.FromArgb(50, 77, 168);//Border color
-            var uc = new ThuPhiUngVien_UC();
-            uc.BindService(BuildThuPhiUngVienService());
-            ShowControl(uc);
-        }
-        private void TrangChuFO_Form_Load(object sender, EventArgs e)
-        {
-            formSize = this.ClientSize;
-        }
 
-        //Drag Form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+            btnThuPhiUngVien.Tag = "CN_FO01";
+            btnThuPhiDoanhNghiep.Tag = "CN_FO02";
+            btnDanhSachHoaDon.Tag = "CN_FO03";
+            btnBaoCaoDoanhThuThang.Tag = "CN_FO04";
+            btnDoiMatKhau.Tag = "CN_DMK";
 
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void panelTop_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            //var uc = new ThuPhiUngVien_UC();
+            //uc.BindService(BuildThuPhiUngVienService());
+            //ShowControl(uc);
         }
 
-
-        //Overiden methods
-        protected override void WndProc(ref Message m)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-            const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
-            const int WM_SYSCOMMAND = 0x0112;
-            const int SC_MINIMIZE = 0xF020; //Minimize form (Before)
-            const int SC_RESTORE = 0xF120; //Restore form (Before)Window resizing software
-            const int WM_NCHITTEST = 0x0084;//Win32, Mouse Input Notification: Determine what part of the window corresponds to a point, allows to resize the form.
-            const int resizeAreaSize = 10;
-            #region Form Resize
-            // Resize/WM_NCHITTEST values
-            const int HTCLIENT = 1; //Represents the client area of the window
-            const int HTLEFT = 10;  //Left border of a window, allows resize horizontally to the left
-            const int HTRIGHT = 11; //Right border of a window, allows resize horizontally to the right
-            const int HTTOP = 12;   //Upper-horizontal border of a window, allows resize vertically up
-            const int HTTOPLEFT = 13;//Upper-left corner of a window border, allows resize diagonally to the left
-            const int HTTOPRIGHT = 14;//Upper-right corner of a window border, allows resize diagonally to the right
-            const int HTBOTTOM = 15; //Lower-horizontal border of a window, allows resize vertically down
-            const int HTBOTTOMLEFT = 16;//Lower-left corner of a window border, allows resize diagonally to the left
-            const int HTBOTTOMRIGHT = 17;//Lower-right corner of a window border, allows resize diagonally to the right
-            ///<Doc> More Information: https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-nchittest </Doc>
-            if (m.Msg == WM_NCHITTEST)
-            { //If the windows m is WM_NCHITTEST
-                base.WndProc(ref m);
-                if (this.WindowState == FormWindowState.Normal)//Resize the form if it is in normal state
+
+            timerMenu.Start();
+        }
+
+        private void timerMenu_Tick(object sender, EventArgs e)
+        {
+            if (isSidebarExpanded)
+            {
+                pnlMenudoc.Width -= 38;
+                if (pnlMenudoc.Width <= 77)
                 {
-                    if ((int)m.Result == HTCLIENT)//If the result of the m (mouse pointer) is in the client area of the window
-                    {
-                        Point screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)                           
-                        Point clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates                          
-                        if (clientPoint.Y <= resizeAreaSize)//If the pointer is at the top of the form (within the resize area- X coordinate)
-                        {
-                            if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in 
-                                m.Result = (IntPtr)HTTOPLEFT; //Resize diagonally to the left
-                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize))//If the pointer is at the coordinate X=11 or less than the width of the form(X=Form.Width-resizeArea)
-                                m.Result = (IntPtr)HTTOP; //Resize vertically up
-                            else //Resize diagonally to the right
-                                m.Result = (IntPtr)HTTOPRIGHT;
-                        }
-                        else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize)) //If the pointer is inside the form at the Y coordinate(discounting the resize area size)
-                        {
-                            if (clientPoint.X <= resizeAreaSize)//Resize horizontally to the left
-                                m.Result = (IntPtr)HTLEFT;
-                            else if (clientPoint.X > (this.Width - resizeAreaSize))//Resize horizontally to the right
-                                m.Result = (IntPtr)HTRIGHT;
-                        }
-                        else
-                        {
-                            if (clientPoint.X <= resizeAreaSize)//Resize diagonally to the left
-                                m.Result = (IntPtr)HTBOTTOMLEFT;
-                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize)) //Resize vertically down
-                                m.Result = (IntPtr)HTBOTTOM;
-                            else //Resize diagonally to the right
-                                m.Result = (IntPtr)HTBOTTOMRIGHT;
-                        }
-                    }
+                    timerMenu.Stop();
+                    isSidebarExpanded = false;
                 }
-                return;
-            }
-            #endregion
-
-            if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
-            {
-                return;
-            }
-            // Keep form size when it is minimized and restored.Since the form is resized because it takes into account the size of the title bar and borders.
-            if (m.Msg == WM_SYSCOMMAND)
-            {
-                /// <see cref="https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand"/>
-                /// Quote:
-                /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter 
-                /// are used internally by the system.To obtain the correct result when testing 
-                /// the value of wParam, an application must combine the value 0xFFF0 with the 
-                /// wParam value by using the bitwise AND operator.
-                int wParam = (m.WParam.ToInt32() & 0xFFF0);
-                if (wParam == SC_MINIMIZE)  //Before
-                    formSize = this.ClientSize;
-                if (wParam == SC_RESTORE)// Restored form(Before)
-                    this.Size = formSize;
-            }
-            base.WndProc(ref m);
-        }
-        
-
-        //Private methods
-        private void AdjustForm()
-        {
-            switch (this.WindowState)
-            {
-                case FormWindowState.Minimized:
-                    this.Padding = new Padding(0,8,8,0);
-                    break;
-                case FormWindowState.Normal:
-                    if (this.Padding.Top != boderSize)
-                        this.Padding = new Padding(boderSize);//Border size
-                    break;
-
-            }
-        }
-        private void TrangChuFO_Form_Resize(object sender, EventArgs e)
-        {
-            AdjustForm();
-        }
-
-        private void iconBtnMinimize_Click(object sender, EventArgs e)
-        {
-            formSize = this.ClientSize;
-            this.WindowState = FormWindowState.Minimized;
-        }
-        private void iconBtnExit_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                return;
-            this.Hide();
-            Form login = new Login_Form();
-            login.ShowDialog();            
-            this.Close();
-        }
-        private void iconBtnManimize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                formSize = this.ClientSize;
-                this.WindowState = FormWindowState.Maximized;
             }
             else
             {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = formSize;
-            }
-        }
-
-        private void iconBtnBar_Click(object sender, EventArgs e)
-        {
-            CollapseMenu();
-        }
-        
-        private void CollapseMenu()
-        {
-            if (this.panelMenu.Width > 200) //Collapse menu
-            {
-                panelMenu.Width = 80;
-                lblFOName.Visible = false;
-                iconBtnBar.Padding = new Padding(0, 10, 0, 0);
-                iconBtnBar.Dock = DockStyle.Top;
-                foreach (System.Windows.Forms.Button menuButton in panelMenu.Controls.OfType<System.Windows.Forms.Button>())
+                pnlMenudoc.Width += 38;
+                if (pnlMenudoc.Width >= 340)
                 {
-                    menuButton.Text = "";
-                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
-                    menuButton.Padding = new Padding(0);
-                }
-            }
-            else //Expand menu
-            {
-                panelMenu.Width = 327;
-                lblFOName.Visible = true;
-                iconBtnBar.Dock = DockStyle.None;
-                foreach (System.Windows.Forms.Button menuButton in panelMenu.Controls.OfType<System.Windows.Forms.Button>())
-                {
-                    menuButton.Text = " " + menuButton.Tag.ToString();
-                    menuButton.TextImageRelation = TextImageRelation.ImageBeforeText;
-                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
-                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
-                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                    timerMenu.Stop();
+                    isSidebarExpanded = true;
+                    // Optionally: show label/text/icon
                 }
             }
         }
-
-        private void ShowControl(UserControl uc)
-        {
-            // dọn panel trước khi nạp UC mới
-            panelDesktop.SuspendLayout();
-            panelDesktop.Controls.Clear();
-
-            // cấu hình UC để chiếm toàn vùng panel
-            uc.Dock = DockStyle.Fill;
-
-            // nạp vào panel
-            panelDesktop.Controls.Add(uc);
-            uc.BringToFront();
-
-            panelDesktop.ResumeLayout();
-        }
-
         private IThuPhiUngVienService BuildThuPhiUngVienService()
             => new ThuPhiUngVienService(
                 new UngVienRepository(),
@@ -252,8 +77,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 new PhiDichVuRepository(),
                 new DoanhNghiepRepository(),
                 new NhanVienRepository());
-                
-                
+
+
 
         private IQuanLyHoaDonService BuildQuanLyHoaDonService()
             => new QuanLyHoaDonService(
@@ -262,44 +87,78 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 new DoanhNghiepRepository(),
                 new UngVienRepository());
 
-
-        private void iconBtnThuPhiUngVien_Click(object sender, EventArgs e)
+        private void ShowControl(UserControl uc)
         {
+            // dọn panel trước khi nạp UC mới
+            pnlChinh.SuspendLayout();
+            pnlChinh.Controls.Clear();
+
+            // cấu hình UC để chiếm toàn vùng panel
+            uc.Dock = DockStyle.Fill;
+
+            // nạp vào panel
+            pnlChinh.Controls.Add(uc);
+            uc.BringToFront();
+                
+            pnlChinh.ResumeLayout();
+        }
+        private void btnThuPhiUngVien_Click(object sender, EventArgs e)
+        {
+            if (!PermissionGuard.EnsureEnabled(btnThuPhiUngVien.AccessibleDescription)) return;
             var uc = new ThuPhiUngVien_UC();
             uc.BindService(BuildThuPhiUngVienService());
             ShowControl(uc);
         }
 
-        private void iconBtnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
+        private void btnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnThuPhiDoanhNghiep.Tag)) return;
             var uc = new ThuPhiDoanhNghiep_UC();
             uc.BindService(BuildThuPhiDoanhNghiepService());
             ShowControl(uc);
         }
 
-        private void iconBtnDanhSachHoaDon_Click(object sender, EventArgs e)
+        private void btnDanhSachHoaDon_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnDanhSachHoaDon.Tag)) return;
             var uc = new DanhSachHoaDon_UC();
             uc.BindService(BuildQuanLyHoaDonService());
             ShowControl(uc);
         }
 
-        private void iconBtnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
+        private void btnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
         {
+            if (!PermissionGuard.EnsureEnabled((string)btnBaoCaoDoanhThuThang.Tag)) return;
             var uc = new BaoCaoDoanhThuThang_UC();
-            
+
             var svc = new ThongKeService(new HoaDonRepository());
             uc.BindService(svc);
 
             ShowControl(uc);
         }
 
-        private void iconBtnDoiMatKhau_Click(object sender, EventArgs e)
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-
-            ShowControl(new DoiMatKhau_UC());
-            
+            if (!PermissionGuard.EnsureEnabled((string)btnDoiMatKhau.Tag)) return;
+            pnlChinh.Controls.Clear();
+            pnlChinh.Controls.Add(new DoiMatKhau_UC());
+            pnlChinh.Show();
         }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                var main = new Login_Form();
+                main.FormClosed += (s, args) => this.Close();
+                main.Show();
+            }
+            else
+            {
+                //khong lam gi ca
+            }
+        }
     }
 }

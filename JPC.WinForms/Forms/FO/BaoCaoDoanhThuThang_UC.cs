@@ -104,11 +104,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void BaoCaoDoanhThuThang_Load(object sender, EventArgs e)
         {
-            if (_svc == null)
-            {
-                MessageBox.Show("Chưa gán service cho báo cáo doanh thu.");
-                return;
-            }
 
             _isInit = true;
             var now = DateTime.Now;
@@ -270,6 +265,16 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             dgv.PerformLayout();
             dgv.Invalidate();   // vẽ lại
             dgv.Refresh();      // force repaint
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BaoCaoDoanhThuThang_UC_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -96,7 +96,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void TrangChuSA_Form_Load(object sender, EventArgs e)
         {
-            btnTrangChu_Click(btnTrangChu, null);
+            btnTrangChu_Click_1(btnTrangChu, null);
         }
 
         private void TrangChuSA_Form_FormClosing(object sender, FormClosingEventArgs e)
@@ -123,35 +123,35 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             // Nếu isLoggingOut = true, không làm gì cả
         }
 
-        private void btnTrangChu_Click(object sender, EventArgs e)
-        {
-            SetActiveButton(sender as Guna2Button);
-            LoadFormIntoPanel(new Welcome_Form());
-        }
+        //private void btnTrangChu_Click(object sender, EventArgs e)
+        //{
+        //    SetActiveButton(sender as Guna2Button);
+        //    LoadFormIntoPanel(new Welcome_Form());
+        //}
 
-        private void btnQLDanhMucNgheNghiep_Click(object sender, EventArgs e)
-        {
-            var code = (sender as Control)?.Tag?.ToString();
-            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
-            SetActiveButton(sender as Guna2Button); // Set active
-            LoadFormIntoPanel(new QLDanhMucNgheNghiep_Form());
-        }
+        //private void btnQLDanhMucNgheNghiep_Click(object sender, EventArgs e)
+        //{
+        //    var code = (sender as Control)?.Tag?.ToString();
+        //    if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+        //    SetActiveButton(sender as Guna2Button); // Set active
+        //    LoadFormIntoPanel(new QLDanhMucNgheNghiep_Form());
+        //}
 
-        private void btnQLTaiKhoanNhanVien_Click(object sender, EventArgs e)
-        {
-            var code = (sender as Control)?.Tag?.ToString();
-            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
-            SetActiveButton(sender as Guna2Button); // Set active
-            LoadFormIntoPanel(new QLTaiKhoanNhanVien_Form());
-        }
+        //private void btnQLTaiKhoanNhanVien_Click(object sender, EventArgs e)
+        //{
+        //    var code = (sender as Control)?.Tag?.ToString();
+        //    if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+        //    SetActiveButton(sender as Guna2Button); // Set active
+        //    LoadFormIntoPanel(new QLTaiKhoanNhanVien_Form());
+        //}
 
-        private void btnQLQuyenHan_Click(object sender, EventArgs e)
-        {
-            var code = (sender as Control)?.Tag?.ToString();
-            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
-            SetActiveButton(sender as Guna2Button); // Set active
-            LoadFormIntoPanel(new QLQuyenHan_Form());
-        }
+        //private void btnQLQuyenHan_Click(object sender, EventArgs e)
+        //{
+        //    var code = (sender as Control)?.Tag?.ToString();
+        //    if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+        //    SetActiveButton(sender as Guna2Button); // Set active
+        //    LoadFormIntoPanel(new QLQuyenHan_Form());
+        //}
 
         public void LoadControlIntoPanel(UserControl uc)
         {
@@ -236,13 +236,104 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             }
         }
 
-        private void btnTraCuuDuLieu_Click(object sender, EventArgs e)
+        //private void btnTraCuuDuLieu_Click(object sender, EventArgs e)
+        //{
+        //    SetActiveButton(sender as Guna.UI2.WinForms.Guna2Button);
+        //    LoadFormIntoPanel(new TraCuuDuLieu_Form(this));
+        //}
+
+        //private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        //{
+        //    var code = (sender as Control)?.Tag?.ToString();
+        //    if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+        //    SetActiveButton(sender as Guna2Button); // Set active
+        //    ShowControl(new DoiMatKhau_UC());
+        //}
+
+        //private void btnBack_Click(object sender, EventArgs e)
+        //{
+        //    // Hỏi xác nhận trước khi đăng xuất
+        //    var result = MessageBox.Show(
+        //        "Bạn có muốn đăng xuất không?",
+        //        "Xác nhận đăng xuất",
+        //        MessageBoxButtons.YesNo,
+        //        MessageBoxIcon.Question
+        //    );
+
+        //    if (result == DialogResult.No)
+        //    {
+        //        return; // Hủy đăng xuất
+        //    }
+
+        //    isLoggingOut = true;
+        //    JPC.Models.UserSession.Clear(); // Xóa session khi đăng xuất
+
+        //    Login_Form loginForm = new Login_Form();
+
+        //    // Set event để khi Login form đóng thì mới exit app
+        //    loginForm.FormClosed += (s, args) => {
+        //        if (!Equals(loginForm.Tag, "LoginSuccess"))
+        //        {
+        //            Application.Exit();
+        //        }
+        //    };
+
+        //    loginForm.Show();
+        //    this.Hide();
+        //}
+
+        private void TrangChuSA_Form_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                guna2Elipse1.BorderRadius = 0;
+            }
+            else
+            {
+                guna2Elipse1.BorderRadius = 20;
+            }
+        }
+
+        private void btnTrangChu_Click_1(object sender, EventArgs e)
+
+        {
+            SetActiveButton(sender as Guna2Button);
+            LoadFormIntoPanel(new Welcome_Form());
+
+        }
+
+        private void btnQLDanhMucNgheNghiep_Click_1(object sender, EventArgs e)
+        {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+            SetActiveButton(sender as Guna2Button); // Set active
+            LoadFormIntoPanel(new QLDanhMucNgheNghiep_Form());
+        }
+
+        private void btnQLTaiKhoanNhanVien_Click_1(object sender, EventArgs e)
+        {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+            SetActiveButton(sender as Guna2Button); // Set active
+            LoadFormIntoPanel(new QLTaiKhoanNhanVien_Form());
+        }
+    
+
+        private void btnQLQuyenHan_Click_1(object sender, EventArgs e)
+        {
+            var code = (sender as Control)?.Tag?.ToString();
+            if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
+            SetActiveButton(sender as Guna2Button); // Set active
+            LoadFormIntoPanel(new QLQuyenHan_Form());
+        }
+
+        private void btnTraCuuDuLieu_Click_1(object sender, EventArgs e)
         {
             SetActiveButton(sender as Guna.UI2.WinForms.Guna2Button);
             LoadFormIntoPanel(new TraCuuDuLieu_Form(this));
         }
 
-        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        private void btnDoiMatKhau_Click_1(object sender, EventArgs e)
         {
             var code = (sender as Control)?.Tag?.ToString();
             if (!string.IsNullOrWhiteSpace(code) && !PermissionGuard.EnsureEnabled(code)) return;
@@ -250,7 +341,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             ShowControl(new DoiMatKhau_UC());
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             // Hỏi xác nhận trước khi đăng xuất
             var result = MessageBox.Show(
@@ -281,17 +372,33 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             loginForm.Show();
             this.Hide();
         }
-
-        private void TrangChuSA_Form_Resize(object sender, EventArgs e)
+        bool isSidebarExpanded = false;
+        private void timerMenu_Tick(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
+            if (isSidebarExpanded)
             {
-                guna2Elipse1.BorderRadius = 0;
+                panelLeft.Width -= 76;
+                if (panelLeft.Width <= 77)
+                {
+                    timerMenu.Stop();
+                    isSidebarExpanded = false;
+                }
             }
             else
             {
-                guna2Elipse1.BorderRadius = 20;
+                panelLeft.Width += 38;
+                if (panelLeft.Width >= 340)
+                {
+                    timerMenu.Stop();
+                    isSidebarExpanded = true;
+                    // Optionally: show label/text/icon
+                }
             }
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            timerMenu.Start();
         }
     }
 }
