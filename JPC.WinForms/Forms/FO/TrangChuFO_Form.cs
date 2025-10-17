@@ -245,25 +245,25 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private void iconBtnThuPhiUngVien_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled(iconBtnThuPhiUngVien.AccessibleDescription)) return;
-            ShowControl(new ThuPhiUngVien());
+            ShowControl(new ThuPhiUngVien_UC());
         }
 
         private void iconBtnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled(iconBtnThuPhiDoanhNghiep.AccessibleDescription)) return;
-            ShowControl(new ThuPhiDoanhNghiep());
+            ShowControl(new ThuPhiDoanhNghiep_UC());
         }
 
         private void iconBtnDanhSachHoaDon_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled(iconBtnDanhSachHoaDon.AccessibleDescription)) return;
-            ShowControl(new DanhSachHoaDon());
+            ShowControl(new DanhSachHoaDon_UC());
         }
 
         private void iconBtnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled(iconBtnBaoCaoDoanhThuThang.AccessibleDescription)) return;
-            ShowControl(new BaoCaoDoanhThuThang());
+            ShowControl(new BaoCaoDoanhThuThang_UC());
         }
 
         private void iconBtnDoiMatKhau_Click(object sender, EventArgs e)

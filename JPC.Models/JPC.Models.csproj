@@ -78,6 +78,7 @@
     <Compile Include="QuanTri\VaiTro_QuyenHan.cs" />
     <Compile Include="TaiChinh\HoaDon.cs" />
     <Compile Include="TaiChinh\PhiDichVu.cs" />
+    <Compile Include="TaiChinh\TinTuyenDungDTO.cs" />
     <Compile Include="UngVien\UngTuyen.cs" />
     <Compile Include="UngVien\UngVien.cs" />
     <Compile Include="UserSession.cs" />

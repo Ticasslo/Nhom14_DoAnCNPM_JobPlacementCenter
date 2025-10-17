@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JPC.DataAccess.Repositories.Interfaces.ERS
+namespace JPC.DataAccess.Repositories.Interfaces.FO
 {
     public interface ITinTuyenDungRepository
     {

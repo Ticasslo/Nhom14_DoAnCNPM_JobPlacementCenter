@@ -1,5 +1,8 @@
-﻿using System;
+﻿using JPC.Models.DoanhNghiep;
+using JPC.Models.TaiChinh;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +11,15 @@ namespace JPC.Business.Services.Interfaces.FO
 {
     public interface IThuPhiDoanhNghiepService
     {
-        // combobox nguồn
-        IEnumerable<(int dn_id, string ten_doanh_nghiep, string dia_chi)> GetDoanhNghieps();
-        IEnumerable<(int tin_id, string display)> GetUnpaidPostsByDn(int dnId);
-        IEnumerable<(int ma_nhan_vien, string ho_ten)> GetNhanViens();
+        IEnumerable<(int tin_id, string display, DateTime ngay_dang, DateTime han_nop_ho_so)> GetTinChuaThanhToanByDoanhNghiep(int dnId);
+        DataTable GetDoanhNghieps();
+        DataTable GetNhanViens();
+        DataTable GetTinByDoanhNghiep_ForCbb(int dnId);
+        TinTuyenDung GetTinById(int tinId);
+        HoaDon GetHoaDonGanNhatCuaTin(int tinId);
 
-        // xem trước số ngày & số tiền mặc định
-        (int soNgay, decimal soTienMacDinh, string tenDoanhNghiep) PreviewAmount(int tinId);
+        decimal GetDonGiaNgay(); // phi_id=2
 
-        // tạo hóa đơn + kích hoạt tin
-        (int maHoaDon, int soNgay, decimal soTien) LapHoaDonThuPhiDN(int tinId, int maNhanVienLap, decimal? soTienOverride = null);
+        (int maHoaDon, int soNgay, decimal soTien) LapHoaDonThuPhiDN(int tinId, int maNhanVienLap, decimal? soTienOverride);
     }
 }

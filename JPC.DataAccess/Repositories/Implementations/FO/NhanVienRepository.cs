@@ -1,6 +1,8 @@
 ﻿using JPC.DataAccess.Repositories.Interfaces.FO;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,8 +13,7 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
     public class NhanVienRepository : INhanVienRepository
     {
 
-        private readonly string _cnn;
-        public NhanVienRepository(string connectionString) => _cnn = connectionString;
+        private static readonly string _cnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
 
         public IEnumerable<(int ma_nhan_vien, string ho_ten)> GetAllBasic()
         {
@@ -31,6 +32,12 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
                 }
             }
             return list;
+        }
+        public DataTable GetNhanViensActive()
+        {
+            const string sql = "SELECT ma_nhan_vien, ho_ten FROM NhanVien WHERE trang_thai='active' ORDER BY ho_ten";
+            var db = new JPC.DataAccess.DBConnection.DBConnection();
+            return db.ExecuteQuery(sql);
         }
     }
 }

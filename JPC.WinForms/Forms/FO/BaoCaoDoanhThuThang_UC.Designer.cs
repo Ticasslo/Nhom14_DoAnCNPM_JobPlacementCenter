@@ -1,6 +1,6 @@
 ﻿namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
-    partial class BaoCaoDoanhThuThang
+    partial class BaoCaoDoanhThuThang_UC
     {
         /// <summary> 
         /// Required designer variable.

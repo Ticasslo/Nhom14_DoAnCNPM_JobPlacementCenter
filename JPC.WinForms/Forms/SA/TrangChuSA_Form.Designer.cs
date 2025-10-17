@@ -54,7 +54,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,7 +91,7 @@
             // 
             // btnTrangChu
             // 
-            this.btnTrangChu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnTrangChu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTrangChu.BorderRadius = 10;
             this.btnTrangChu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -114,7 +114,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BorderRadius = 10;
@@ -138,7 +138,7 @@
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnDoiMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDoiMatKhau.BorderRadius = 10;
             this.btnDoiMatKhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -161,7 +161,7 @@
             // 
             // btnTraCuuDuLieu
             // 
-            this.btnTraCuuDuLieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnTraCuuDuLieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTraCuuDuLieu.BorderRadius = 10;
             this.btnTraCuuDuLieu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -184,7 +184,7 @@
             // 
             // btnQLQuyenHan
             // 
-            this.btnQLQuyenHan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnQLQuyenHan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQLQuyenHan.BorderRadius = 10;
             this.btnQLQuyenHan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -207,7 +207,7 @@
             // 
             // btnQLTaiKhoanNhanVien
             // 
-            this.btnQLTaiKhoanNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnQLTaiKhoanNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQLTaiKhoanNhanVien.BorderRadius = 10;
             this.btnQLTaiKhoanNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -230,7 +230,7 @@
             // 
             // btnQLDanhMucNgheNghiep
             // 
-            this.btnQLDanhMucNgheNghiep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnQLDanhMucNgheNghiep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQLDanhMucNgheNghiep.BorderRadius = 10;
             this.btnQLDanhMucNgheNghiep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -253,7 +253,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.QuanTriVienIcon;
             this.pictureBox3.Location = new System.Drawing.Point(127, 73);

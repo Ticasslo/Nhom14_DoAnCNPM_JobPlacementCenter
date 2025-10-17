@@ -47,7 +47,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelBoderR = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconBtnLogOut = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelBar.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -55,7 +54,6 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.iconBtnLogOut);
             this.panelMenu.Controls.Add(this.iconBtnDoiMatKhau);
             this.panelMenu.Controls.Add(this.iconBtnBaoCaoDoanhThuThang);
             this.panelMenu.Controls.Add(this.iconBtnDanhSachHoaDon);
@@ -67,7 +65,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(282, 706);
+            this.panelMenu.Size = new System.Drawing.Size(327, 706);
             this.panelMenu.TabIndex = 0;
             // 
             // iconBtnDoiMatKhau
@@ -88,10 +86,10 @@
             this.iconBtnDoiMatKhau.Location = new System.Drawing.Point(0, 521);
             this.iconBtnDoiMatKhau.Name = "iconBtnDoiMatKhau";
             this.iconBtnDoiMatKhau.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnDoiMatKhau.Size = new System.Drawing.Size(282, 60);
+            this.iconBtnDoiMatKhau.Size = new System.Drawing.Size(327, 60);
             this.iconBtnDoiMatKhau.TabIndex = 6;
-            this.iconBtnDoiMatKhau.Tag = "Đổi mật khẩu";
-            this.iconBtnDoiMatKhau.Text = "  Đổi mật khẩu";
+            this.iconBtnDoiMatKhau.Tag = "ĐỔI MẬT KHẨU";
+            this.iconBtnDoiMatKhau.Text = "  ĐỔI MẬT KHẨU";
             this.iconBtnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnDoiMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnDoiMatKhau.UseVisualStyleBackColor = false;
@@ -115,10 +113,10 @@
             this.iconBtnBaoCaoDoanhThuThang.Location = new System.Drawing.Point(0, 461);
             this.iconBtnBaoCaoDoanhThuThang.Name = "iconBtnBaoCaoDoanhThuThang";
             this.iconBtnBaoCaoDoanhThuThang.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnBaoCaoDoanhThuThang.Size = new System.Drawing.Size(282, 60);
+            this.iconBtnBaoCaoDoanhThuThang.Size = new System.Drawing.Size(327, 60);
             this.iconBtnBaoCaoDoanhThuThang.TabIndex = 7;
-            this.iconBtnBaoCaoDoanhThuThang.Tag = "Báo cáo Doanh thu tháng";
-            this.iconBtnBaoCaoDoanhThuThang.Text = "  Báo cáo Doanh thu tháng";
+            this.iconBtnBaoCaoDoanhThuThang.Tag = "BÁO CÁO DOANH THU THÁNG";
+            this.iconBtnBaoCaoDoanhThuThang.Text = "  BÁO CÁO DOANH THU THÁNG";
             this.iconBtnBaoCaoDoanhThuThang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnBaoCaoDoanhThuThang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnBaoCaoDoanhThuThang.UseVisualStyleBackColor = false;
@@ -142,10 +140,10 @@
             this.iconBtnDanhSachHoaDon.Location = new System.Drawing.Point(0, 401);
             this.iconBtnDanhSachHoaDon.Name = "iconBtnDanhSachHoaDon";
             this.iconBtnDanhSachHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnDanhSachHoaDon.Size = new System.Drawing.Size(282, 60);
+            this.iconBtnDanhSachHoaDon.Size = new System.Drawing.Size(327, 60);
             this.iconBtnDanhSachHoaDon.TabIndex = 8;
-            this.iconBtnDanhSachHoaDon.Tag = "Danh sách Hóa đơn";
-            this.iconBtnDanhSachHoaDon.Text = "  Danh sách Hóa đơn";
+            this.iconBtnDanhSachHoaDon.Tag = "DANH SÁCH HÓA ĐƠN";
+            this.iconBtnDanhSachHoaDon.Text = "  DANH SÁCH HÓA ĐƠN";
             this.iconBtnDanhSachHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnDanhSachHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnDanhSachHoaDon.UseVisualStyleBackColor = false;
@@ -169,10 +167,10 @@
             this.iconBtnThuPhiDoanhNghiep.Location = new System.Drawing.Point(0, 341);
             this.iconBtnThuPhiDoanhNghiep.Name = "iconBtnThuPhiDoanhNghiep";
             this.iconBtnThuPhiDoanhNghiep.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnThuPhiDoanhNghiep.Size = new System.Drawing.Size(282, 60);
+            this.iconBtnThuPhiDoanhNghiep.Size = new System.Drawing.Size(327, 60);
             this.iconBtnThuPhiDoanhNghiep.TabIndex = 9;
-            this.iconBtnThuPhiDoanhNghiep.Tag = "Thu phí Doanh nghiệp";
-            this.iconBtnThuPhiDoanhNghiep.Text = "  Thu phí Doanh nghiệp";
+            this.iconBtnThuPhiDoanhNghiep.Tag = "THU PHÍ DOANH NGHIỆP";
+            this.iconBtnThuPhiDoanhNghiep.Text = "  THU PHÍ DOANH NGHIỆP";
             this.iconBtnThuPhiDoanhNghiep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnThuPhiDoanhNghiep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnThuPhiDoanhNghiep.UseVisualStyleBackColor = false;
@@ -196,10 +194,10 @@
             this.iconBtnThuPhiUngVien.Location = new System.Drawing.Point(0, 281);
             this.iconBtnThuPhiUngVien.Name = "iconBtnThuPhiUngVien";
             this.iconBtnThuPhiUngVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnThuPhiUngVien.Size = new System.Drawing.Size(282, 60);
+            this.iconBtnThuPhiUngVien.Size = new System.Drawing.Size(327, 60);
             this.iconBtnThuPhiUngVien.TabIndex = 10;
-            this.iconBtnThuPhiUngVien.Tag = "Thu phí Ứng viên";
-            this.iconBtnThuPhiUngVien.Text = "  Thu phí Ứng viên";
+            this.iconBtnThuPhiUngVien.Tag = "THU PHÍ ỨNG VIÊN";
+            this.iconBtnThuPhiUngVien.Text = "  THU PHÍ ỨNG VIÊN";
             this.iconBtnThuPhiUngVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnThuPhiUngVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnThuPhiUngVien.UseVisualStyleBackColor = false;
@@ -213,7 +211,7 @@
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(282, 281);
+            this.panelBar.Size = new System.Drawing.Size(327, 281);
             this.panelBar.TabIndex = 1;
             // 
             // lblFOName
@@ -258,9 +256,9 @@
             this.panelTop.Controls.Add(this.iconBtnExit);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.FillColor = System.Drawing.Color.White;
-            this.panelTop.Location = new System.Drawing.Point(282, 0);
+            this.panelTop.Location = new System.Drawing.Point(327, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1082, 89);
+            this.panelTop.Size = new System.Drawing.Size(1037, 89);
             this.panelTop.TabIndex = 1;
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
             // 
@@ -291,7 +289,7 @@
             this.iconBtnMinimize.IconColor = System.Drawing.Color.White;
             this.iconBtnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnMinimize.IconSize = 15;
-            this.iconBtnMinimize.Location = new System.Drawing.Point(914, 3);
+            this.iconBtnMinimize.Location = new System.Drawing.Point(869, 3);
             this.iconBtnMinimize.Name = "iconBtnMinimize";
             this.iconBtnMinimize.Size = new System.Drawing.Size(56, 23);
             this.iconBtnMinimize.TabIndex = 0;
@@ -308,7 +306,7 @@
             this.iconBtnManimize.IconColor = System.Drawing.Color.White;
             this.iconBtnManimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnManimize.IconSize = 15;
-            this.iconBtnManimize.Location = new System.Drawing.Point(970, 3);
+            this.iconBtnManimize.Location = new System.Drawing.Point(925, 3);
             this.iconBtnManimize.Name = "iconBtnManimize";
             this.iconBtnManimize.Size = new System.Drawing.Size(56, 23);
             this.iconBtnManimize.TabIndex = 0;
@@ -325,7 +323,7 @@
             this.iconBtnExit.IconColor = System.Drawing.Color.White;
             this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnExit.IconSize = 15;
-            this.iconBtnExit.Location = new System.Drawing.Point(1026, 3);
+            this.iconBtnExit.Location = new System.Drawing.Point(981, 3);
             this.iconBtnExit.Name = "iconBtnExit";
             this.iconBtnExit.Size = new System.Drawing.Size(56, 23);
             this.iconBtnExit.TabIndex = 0;
@@ -336,16 +334,16 @@
             // 
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.FillColor = System.Drawing.Color.White;
-            this.panelDesktop.Location = new System.Drawing.Point(282, 89);
+            this.panelDesktop.Location = new System.Drawing.Point(327, 89);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1082, 617);
+            this.panelDesktop.Size = new System.Drawing.Size(1037, 617);
             this.panelDesktop.TabIndex = 2;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel1.Location = new System.Drawing.Point(282, 89);
+            this.guna2Panel1.Location = new System.Drawing.Point(327, 89);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(15, 617);
             this.guna2Panel1.TabIndex = 0;
@@ -354,18 +352,18 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(297, 691);
+            this.guna2Panel2.Location = new System.Drawing.Point(342, 691);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1067, 15);
+            this.guna2Panel2.Size = new System.Drawing.Size(1022, 15);
             this.guna2Panel2.TabIndex = 3;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.White;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(297, 89);
+            this.guna2Panel3.Location = new System.Drawing.Point(342, 89);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1067, 15);
+            this.guna2Panel3.Size = new System.Drawing.Size(1022, 15);
             this.guna2Panel3.TabIndex = 3;
             // 
             // panelBoderR
@@ -376,33 +374,6 @@
             this.panelBoderR.Name = "panelBoderR";
             this.panelBoderR.Size = new System.Drawing.Size(15, 587);
             this.panelBoderR.TabIndex = 3;
-            // 
-            // iconBtnLogOut
-            // 
-            this.iconBtnLogOut.BackColor = System.Drawing.Color.Transparent;
-            this.iconBtnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconBtnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnLogOut.FlatAppearance.BorderSize = 0;
-            this.iconBtnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(95)))), ((int)(((byte)(132)))));
-            this.iconBtnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(150)))), ((int)(((byte)(209)))));
-            this.iconBtnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnLogOut.ForeColor = System.Drawing.Color.White;
-            this.iconBtnLogOut.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.iconBtnLogOut.IconColor = System.Drawing.Color.White;
-            this.iconBtnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnLogOut.IconSize = 40;
-            this.iconBtnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnLogOut.Location = new System.Drawing.Point(0, 581);
-            this.iconBtnLogOut.Name = "iconBtnLogOut";
-            this.iconBtnLogOut.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnLogOut.Size = new System.Drawing.Size(282, 60);
-            this.iconBtnLogOut.TabIndex = 11;
-            this.iconBtnLogOut.Tag = "Đổi mật khẩu";
-            this.iconBtnLogOut.Text = "  Đăng xuất";
-            this.iconBtnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnLogOut.UseVisualStyleBackColor = false;
-            this.iconBtnLogOut.Click += new System.EventHandler(this.iconBtnLogOut_Click);
             // 
             // TrangChuFO_Form
             // 
@@ -455,6 +426,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel panelBoderR;
-        private FontAwesome.Sharp.IconButton iconBtnLogOut;
     }
 }

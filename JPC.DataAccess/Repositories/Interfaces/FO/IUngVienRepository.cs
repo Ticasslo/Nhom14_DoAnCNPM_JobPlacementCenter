@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace JPC.DataAccess.Repositories.Interfaces.FO
 {
-    public interface INhanVienRepository
+    public interface IUngVienRepository
     {
-        IEnumerable<(int ma_nhan_vien, string ho_ten)> GetAllBasic();
-        DataTable GetNhanViensActive();
+        DataTable GetAllUngVienBasic(); // uv_id, ho_ten, dia_chi (alias)
+        string GetDiaChiById(int uvId);
     }
 }

@@ -283,17 +283,17 @@
     <Compile Include="Forms\ERS\TrangChuERS_Form.Designer.cs">
       <DependentUpon>TrangChuERS_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FO\BaoCaoDoanhThuThang.cs">
+    <Compile Include="Forms\FO\BaoCaoDoanhThuThang_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FO\BaoCaoDoanhThuThang.Designer.cs">
-      <DependentUpon>BaoCaoDoanhThuThang.cs</DependentUpon>
+    <Compile Include="Forms\FO\BaoCaoDoanhThuThang_UC.Designer.cs">
+      <DependentUpon>BaoCaoDoanhThuThang_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FO\DanhSachHoaDon.cs">
+    <Compile Include="Forms\FO\DanhSachHoaDon_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FO\DanhSachHoaDon.Designer.cs">
-      <DependentUpon>DanhSachHoaDon.cs</DependentUpon>
+    <Compile Include="Forms\FO\DanhSachHoaDon_UC.Designer.cs">
+      <DependentUpon>DanhSachHoaDon_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FO\ReportHoaDon_Form.cs">
       <SubType>Form</SubType>
@@ -301,17 +301,17 @@
     <Compile Include="Forms\FO\ReportHoaDon_Form.Designer.cs">
       <DependentUpon>ReportHoaDon_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FO\ThuPhiDoanhNghiep.cs">
+    <Compile Include="Forms\FO\ThuPhiDoanhNghiep_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FO\ThuPhiDoanhNghiep.Designer.cs">
-      <DependentUpon>ThuPhiDoanhNghiep.cs</DependentUpon>
+    <Compile Include="Forms\FO\ThuPhiDoanhNghiep_UC.Designer.cs">
+      <DependentUpon>ThuPhiDoanhNghiep_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FO\ThuPhiUngVien.cs">
+    <Compile Include="Forms\FO\ThuPhiUngVien_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FO\ThuPhiUngVien.Designer.cs">
-      <DependentUpon>ThuPhiUngVien.cs</DependentUpon>
+    <Compile Include="Forms\FO\ThuPhiUngVien_UC.Designer.cs">
+      <DependentUpon>ThuPhiUngVien_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FO\TrangChuFO_Form.cs">
       <SubType>Form</SubType>
@@ -319,6 +319,7 @@
     <Compile Include="Forms\FO\TrangChuFO_Form.Designer.cs">
       <DependentUpon>TrangChuFO_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FO\VietnameseNumber.cs" />
     <Compile Include="Forms\Login\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,11 +442,11 @@
     <EmbeddedResource Include="Forms\ERS\TrangChuERS_Form.resx">
       <DependentUpon>TrangChuERS_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FO\BaoCaoDoanhThuThang.resx">
-      <DependentUpon>BaoCaoDoanhThuThang.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FO\BaoCaoDoanhThuThang_UC.resx">
+      <DependentUpon>BaoCaoDoanhThuThang_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FO\DanhSachHoaDon.resx">
-      <DependentUpon>DanhSachHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FO\DanhSachHoaDon_UC.resx">
+      <DependentUpon>DanhSachHoaDon_UC.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="Forms\FO\ReportHoaDon.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -453,11 +454,11 @@
     <EmbeddedResource Include="Forms\FO\ReportHoaDon_Form.resx">
       <DependentUpon>ReportHoaDon_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FO\ThuPhiDoanhNghiep.resx">
-      <DependentUpon>ThuPhiDoanhNghiep.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FO\ThuPhiDoanhNghiep_UC.resx">
+      <DependentUpon>ThuPhiDoanhNghiep_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FO\ThuPhiUngVien.resx">
-      <DependentUpon>ThuPhiUngVien.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FO\ThuPhiUngVien_UC.resx">
+      <DependentUpon>ThuPhiUngVien_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FO\TrangChuFO_Form.resx">
       <DependentUpon>TrangChuFO_Form.cs</DependentUpon>
