@@ -27,6 +27,7 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataA
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.DataAccess\obj\Debug\JPC.DataAccess.pdb
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\bin\Debug\JPC.DataAccess.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\bin\Debug\JPC.DataAccess.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\bin\Debug\FontAwesome.Sharp.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\bin\Debug\JPC.Models.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\bin\Debug\JPC.Models.pdb
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\obj\Debug\JPC.DataAccess.csproj.AssemblyReference.cache
@@ -34,4 +35,3 @@ E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\obj\Debug\JPC.DataAccess.cspr
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\obj\Debug\JPC.Data.6EDEDE72.Up2Date
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\obj\Debug\JPC.DataAccess.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\obj\Debug\JPC.DataAccess.pdb
-E:\Documemtary\CongNghePhanMem\DoAn\JPC.DataAccess\bin\Debug\FontAwesome.Sharp.dll

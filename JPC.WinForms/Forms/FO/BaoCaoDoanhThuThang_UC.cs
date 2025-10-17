@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using JPC.Business.Services.Interfaces.FO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -10,16 +12,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClosedXML.Excel;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
-    public partial class BaoCaoDoanhThuThang : UserControl
+    public partial class BaoCaoDoanhThuThang_UC : UserControl
     {
-        private static string Cnn => ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
+        private bool _isInit = true;
         private DataTable _dtInvoices = new DataTable();
-
-        public BaoCaoDoanhThuThang()
+        private IThongKeService _svc;
+        public BaoCaoDoanhThuThang_UC()
         {
             InitializeComponent();
             this.Load += BaoCaoDoanhThuThang_Load;
@@ -29,19 +30,10 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
 
         #region Helpers
-        private DataTable Query(string sql, params SqlParameter[] prms)
+        public void BindService(IThongKeService service)
         {
-            var dt = new DataTable();
-            using (var con = new SqlConnection(Cnn))
-            using (var cmd = new SqlCommand(sql, con))
-            using (var da = new SqlDataAdapter(cmd))
-            {
-                if (prms != null && prms.Length > 0) cmd.Parameters.AddRange(prms);
-                da.Fill(dt);
-            }
-            return dt;
+            _svc = service ?? throw new ArgumentNullException(nameof(service));
         }
-
         private static DateTime FirstDayOfMonth(DateTime d) => new DateTime(d.Year, d.Month, 1);
         private static DateTime LastDayOfMonth(DateTime d) => new DateTime(d.Year, d.Month, DateTime.DaysInMonth(d.Year, d.Month));
 
@@ -90,16 +82,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
 
             dgvBangCaoDoanhThuThang.DataSource = _dtInvoices;
+
+            if (dgvBangCaoDoanhThuThang.Columns["so_tien"] != null)
+            {
+                dgvBangCaoDoanhThuThang.Columns["so_tien"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleRight;
+            }
         }
 
-        private void RecalcTotal()
-        {
-            decimal total = 0m;
-            if (_dtInvoices != null && _dtInvoices.Rows.Count > 0)
-                total = _dtInvoices.AsEnumerable().Sum(r => r.Field<decimal>("so_tien"));
-
-            txtTongTien.Text = string.Format(CultureInfo.InvariantCulture, "{0:#,0}", total);
-        }
         #endregion
         private static string CurrentUserName()
         {
@@ -113,39 +103,36 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void BaoCaoDoanhThuThang_Load(object sender, EventArgs e)
         {
-            // mặc định đầu/cuối tháng hiện tại
+            if (_svc == null) 
+            { 
+                MessageBox.Show("Chưa gán service cho báo cáo doanh thu."); 
+                return; 
+            }
+
+            _isInit = true;
             var now = DateTime.Now;
             dtpTuNgay.Value = FirstDayOfMonth(now);
             dtpDenNgay.Value = LastDayOfMonth(now);
-
-            // tên người lập lấy từ phiên đăng nhập
             txtNguoiLapBaoCao.Text = CurrentUserName();
+            _isInit = false;
 
             LoadInvoices();
         }
 
         private void LoadInvoices()
         {
-            var from = dtpTuNgay.Value.Date;
-            var to = dtpDenNgay.Value.Date;
+            if (_svc == null || _isInit) return;
+            if (dtpTuNgay.Value.Date > dtpDenNgay.Value.Date)
+            {
+                MessageBox.Show("Từ ngày không được lớn hơn Đến ngày.");
+                return;
+            }
 
-            const string sql = @"
-SELECT 
-    h.ma_hoa_don,
-    h.ten_khach_hang,
-    CASE WHEN h.loai_khach_hang='ung_vien' THEN N'Ứng viên' ELSE N'Doanh nghiệp' END AS doi_tuong,
-    h.so_tien,
-    CAST(h.ngay_lap_hoa_don AS date) AS ngay_thu
-FROM HoaDon h
-WHERE CAST(h.ngay_lap_hoa_don AS date) BETWEEN @from AND @to
-ORDER BY h.ngay_lap_hoa_don DESC, h.ma_hoa_don DESC;";
-
-            _dtInvoices = Query(sql,
-                new SqlParameter("@from", SqlDbType.Date) { Value = from },
-                new SqlParameter("@to", SqlDbType.Date) { Value = to });
-
+            _dtInvoices = _svc.LayHoaDon(dtpTuNgay.Value.Date, dtpDenNgay.Value.Date);
             BindGrid();
-            RecalcTotal();
+
+            var tong = _svc.TinhTongTien(_dtInvoices);
+            txtTongTien.Text = string.Format("{0:#,0}", tong);
         }
 
         private void ExportExcel()

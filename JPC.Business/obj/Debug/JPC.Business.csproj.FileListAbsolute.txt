@@ -33,6 +33,7 @@ D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Busines
 D:\DoAnUTE\Nhom14_DoAnCNPM_JobPlacementCenter\JPC.Business\obj\Debug\JPC.Business.pdb
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\JPC.Business.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\JPC.Business.pdb
+E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\FontAwesome.Sharp.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\JPC.DataAccess.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\JPC.Models.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\JPC.DataAccess.pdb
@@ -42,4 +43,3 @@ E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\obj\Debug\JPC.Business.csproj.C
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\obj\Debug\JPC.Busi.ACF37AF2.Up2Date
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\obj\Debug\JPC.Business.dll
 E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\obj\Debug\JPC.Business.pdb
-E:\Documemtary\CongNghePhanMem\DoAn\JPC.Business\bin\Debug\FontAwesome.Sharp.dll

@@ -1,18 +1,18 @@
 ﻿using JPC.DataAccess.Repositories.Interfaces.FO;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JPC.DataAccess.DBConnection;
 
 namespace JPC.DataAccess.Repositories.Implementations.FO
 {
-    public class DoanhNghiepRepository : IDoanhNghiepRepository
+    public class DoanhNghiepRepository : DBConnection.DBConnection, IDoanhNghiepRepository
     {
-        private readonly string _cnn;
-        public DoanhNghiepRepository(string connectionString) => _cnn = connectionString;
+        
+        private static readonly string _cnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
 
         public IEnumerable<(int dn_id, string ten_doanh_nghiep, string dia_chi)> GetAllBasic()
         {
@@ -49,6 +49,14 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
                     }
                 }
             }
+        }
+
+        // giữ nguyên GetAllBasic, GetById (viết lại bằng ExecuteQuery nếu muốn)
+        public string GetDiaChiById(int dnId)
+        {
+            const string sql = "SELECT ISNULL(dia_chi,'') FROM DoanhNghiep WHERE dn_id=@id";
+            var o = ExecuteScalar(sql, new List<SqlParameter> { new SqlParameter("@id", dnId) });
+            return o == null ? string.Empty : o.ToString();
         }
     }
 }

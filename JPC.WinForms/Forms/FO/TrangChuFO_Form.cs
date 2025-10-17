@@ -1,7 +1,13 @@
-﻿using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
+﻿using JPC.Business.Services.Implementations.FO;
+using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
+using JPC.DataAccess.Repositories.Interfaces.FO;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -11,12 +17,13 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using TheArtOfDevHtmlRenderer.Adapters.Entities;
-using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ResetPassword;
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
     public partial class TrangChuFO_Form : Form
     {
+        private string Cnn => ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
+
         private int boderSize = 2;
         private Size formSize;
 
@@ -26,6 +33,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             //CollapseMenu();
             this.Padding = new Padding(boderSize);//Border size
             this.BackColor = Color.FromArgb(50, 77, 168);//Border color
+            var uc = new ThuPhiUngVien_UC();
+            uc.BindService(BuildThuPhiUngVienService());
+            ShowControl(uc);
         }
         private void TrangChuFO_Form_Load(object sender, EventArgs e)
         {
@@ -198,7 +208,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
             else //Expand menu
             {
-                panelMenu.Width = 282;
+                panelMenu.Width = 327;
                 lblFOName.Visible = true;
                 iconBtnBar.Dock = DockStyle.None;
                 foreach (System.Windows.Forms.Button menuButton in panelMenu.Controls.OfType<System.Windows.Forms.Button>())
@@ -227,24 +237,62 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
             panelDesktop.ResumeLayout();
         }
+
+        private IThuPhiUngVienService BuildThuPhiUngVienService()
+            => new ThuPhiUngVienService(
+                new UngVienRepository(),
+                new UngTuyenRepository(),
+                new PhiDichVuRepository(),
+                new NhanVienRepository(),
+                new HoaDonRepository());
+
+        private IThuPhiDoanhNghiepService BuildThuPhiDoanhNghiepService()
+            => new ThuPhiDoanhNghiepService(
+                new TinTuyenDungRepository(),
+                new HoaDonRepository(),
+                new PhiDichVuRepository(),
+                new DoanhNghiepRepository(),
+                new NhanVienRepository());
+                
+                
+
+        private IQuanLyHoaDonService BuildQuanLyHoaDonService()
+            => new QuanLyHoaDonService(
+                new HoaDonRepository(),
+                new NhanVienRepository(),
+                new DoanhNghiepRepository(),
+                new UngVienRepository());
+
+
         private void iconBtnThuPhiUngVien_Click(object sender, EventArgs e)
         {
-            ShowControl(new ThuPhiUngVien() );
+            var uc = new ThuPhiUngVien_UC();
+            uc.BindService(BuildThuPhiUngVienService());
+            ShowControl(uc);
         }
 
         private void iconBtnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
         {
-            ShowControl(new ThuPhiDoanhNghiep() );
+            var uc = new ThuPhiDoanhNghiep_UC();
+            uc.BindService(BuildThuPhiDoanhNghiepService());
+            ShowControl(uc);
         }
 
         private void iconBtnDanhSachHoaDon_Click(object sender, EventArgs e)
         {
-            ShowControl(new DanhSachHoaDon() );
+            var uc = new DanhSachHoaDon_UC();
+            uc.BindService(BuildQuanLyHoaDonService());
+            ShowControl(uc);
         }
 
         private void iconBtnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
         {
-            ShowControl(new BaoCaoDoanhThuThang() );
+            var uc = new BaoCaoDoanhThuThang_UC();
+            
+            var svc = new ThongKeService(new HoaDonRepository());
+            uc.BindService(svc);
+
+            ShowControl(uc);
         }
 
         private void iconBtnDoiMatKhau_Click(object sender, EventArgs e)

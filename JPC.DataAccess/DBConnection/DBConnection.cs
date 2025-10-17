@@ -107,5 +107,10 @@ namespace JPC.DataAccess.DBConnection
                     this.sqlConn.Close();
             }
         }
+        // Add this constructor to your DBConnection class
+        public DBConnection(string connectionString)
+        {
+            sqlConn = new SqlConnection(connectionString);
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace JPC.DataAccess.Repositories.Interfaces.FO
     public interface IPhiDichVuRepository
     {
         PhiDichVu GetById(int phiId);
+        decimal GetSoTienById(int phiId); // trả 0 nếu không có
     }
 }

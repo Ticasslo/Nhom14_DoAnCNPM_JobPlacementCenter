@@ -55,19 +55,25 @@
     <Compile Include="Exceptions\DataAccessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Implementations\DoiMatKhau\DoiMatKhauRepository.cs" />
-    <Compile Include="Repositories\Implementations\ERS\TinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\ThongKeRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\TinTuyenDungRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\DoanhNghiepRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\HoaDonRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\NhanVienRepository.cs" />
     <Compile Include="Repositories\Implementations\FO\PhiDichVuRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\UngTuyenRepository.cs" />
+    <Compile Include="Repositories\Implementations\FO\UngVienRepository.cs" />
     <Compile Include="Repositories\Implementations\Login\DangNhapRepository.cs" />
     <Compile Include="Repositories\Implementations\SA\NhomNgheRepository.cs" />
     <Compile Include="Repositories\Interfaces\DoiMatKhau\IDoiMatKhauRepository.cs" />
-    <Compile Include="Repositories\Interfaces\ERS\ITinTuyenDungRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\IThongKeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\ITinTuyenDungRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\IDoanhNghiepRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\IHoaDonRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\INhanVienRepository.cs" />
     <Compile Include="Repositories\Interfaces\FO\IPhiDichVuRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\IUngTuyenRepository.cs" />
+    <Compile Include="Repositories\Interfaces\FO\IUngVienRepository.cs" />
     <Compile Include="Repositories\Interfaces\Login\IDangNhapRepository.cs" />
     <Compile Include="Repositories\Interfaces\SA\INhomNgheRepository.cs" />
   </ItemGroup>

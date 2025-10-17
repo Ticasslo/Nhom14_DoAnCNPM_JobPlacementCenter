@@ -1,0 +1,12 @@
+**/.vs/
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+*.user
+*.suo
+*.cache
+*.log
+.vscode/
+.idea/
+packages/

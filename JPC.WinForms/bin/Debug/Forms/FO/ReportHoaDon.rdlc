@@ -15,7 +15,7 @@
                     <Value>Đơn vị¹:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -23,10 +23,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.19803cm</Top>
-            <Left>2.8067cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.0555cm</Width>
+            <Width>1.58277cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -50,7 +48,7 @@
 Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -60,10 +58,9 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.19803cm</Top>
-            <Left>8.86037cm</Left>
-            <Height>1.91967cm</Height>
-            <Width>9.65667cm</Width>
+            <Left>8.20089cm</Left>
+            <Height>1.96915cm</Height>
+            <Width>8.3832cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -86,7 +83,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Địa chỉ:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -94,10 +91,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.84cm</Top>
-            <Left>2.8067cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.0555cm</Width>
+            <Top>1.39701cm</Top>
+            <Left>0.04233cm</Left>
+            <Height>0.57883cm</Height>
+            <Width>1.54044cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -120,19 +117,21 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>PHIẾU THU²</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>3.66014cm</Top>
-            <Left>8.86037cm</Left>
+            <Top>2.58215cm</Top>
+            <Left>6.26767cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.17733cm</Width>
+            <Width>3.15616cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -155,7 +154,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Quyển số:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -163,10 +162,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>3.29409cm</Top>
-            <Left>15.52787cm</Left>
+            <Top>2.14554cm</Top>
+            <Left>11.12189cm</Left>
             <Height>0.7cm</Height>
-            <Width>2.1825cm</Width>
+            <Width>1.95672cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -189,7 +188,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Số:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -197,10 +196,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>4.04409cm</Top>
-            <Left>15.52787cm</Left>
+            <Top>2.89554cm</Top>
+            <Left>11.12189cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.1825cm</Width>
+            <Width>0.78316cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -223,7 +222,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Nợ:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -231,10 +230,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>4.69409cm</Top>
-            <Left>15.52787cm</Left>
+            <Top>3.54554cm</Top>
+            <Left>11.12189cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.1825cm</Width>
+            <Width>0.86077cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -257,7 +256,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Có:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -265,10 +264,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>5.34409cm</Top>
-            <Left>15.52787cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.1825cm</Width>
+            <Top>4.14554cm</Top>
+            <Left>11.12189cm</Left>
+            <Height>0.65cm</Height>
+            <Width>0.89605cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -291,7 +290,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Họ và tên người nộp tiền:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -299,10 +298,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>6.11575cm</Top>
-            <Left>2.8067cm</Left>
+            <Top>5.03776cm</Top>
+            <Left>0.04233cm</Left>
             <Height>0.7cm</Height>
-            <Width>5.25166cm</Width>
+            <Width>4.62372cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -325,7 +324,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Địa chỉ:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -333,10 +332,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox13</rd:DefaultName>
-            <Top>6.85103cm</Top>
-            <Left>2.8067cm</Left>
-            <Height>0.76933cm</Height>
-            <Width>2.5cm</Width>
+            <Top>5.77304cm</Top>
+            <Left>0.04233cm</Left>
+            <Height>0.7cm</Height>
+            <Width>1.54044cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -359,7 +358,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Lý do nộp³:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -367,9 +366,9 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>7.62037cm</Top>
-            <Left>2.8067cm</Left>
-            <Height>0.76933cm</Height>
+            <Top>6.47304cm</Top>
+            <Left>0.04233cm</Left>
+            <Height>0.7cm</Height>
             <Width>2.35889cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
@@ -393,7 +392,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Số tiền⁴:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -401,9 +400,9 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>8.3897cm</Top>
-            <Left>2.8067cm</Left>
-            <Height>0.76933cm</Height>
+            <Top>7.17304cm</Top>
+            <Left>0.04233cm</Left>
+            <Height>0.7cm</Height>
             <Width>2.28833cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
@@ -427,7 +426,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>(Viết bằng chữ):</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -435,10 +434,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>8.3897cm</Top>
-            <Left>8.86037cm</Left>
-            <Height>0.76933cm</Height>
-            <Width>3.87583cm</Width>
+            <Top>7.87304cm</Top>
+            <Left>0.04233cm</Left>
+            <Height>0.7cm</Height>
+            <Width>2.97744cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -461,7 +460,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Kèm theo⁵:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -469,9 +468,9 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox17</rd:DefaultName>
-            <Top>9.98453cm</Top>
-            <Left>2.8067cm</Left>
-            <Height>0.76933cm</Height>
+            <Top>8.57304cm</Top>
+            <Left>0.04233cm</Left>
+            <Height>0.7cm</Height>
             <Width>2.35889cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
@@ -495,7 +494,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Chứng từ gốc:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -503,10 +502,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox18</rd:DefaultName>
-            <Top>9.98453cm</Top>
-            <Left>11.5062cm</Left>
-            <Height>0.81167cm</Height>
-            <Width>2.96567cm</Width>
+            <Top>8.57304cm</Top>
+            <Left>8.636cm</Left>
+            <Height>0.7cm</Height>
+            <Width>2.73989cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -530,7 +529,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -538,9 +537,9 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox5</rd:DefaultName>
-            <Top>10.88817cm</Top>
-            <Left>11.92953cm</Left>
-            <Height>0.89633cm</Height>
+            <Top>9.49268cm</Top>
+            <Left>10.39283cm</Left>
+            <Height>0.6cm</Height>
             <Width>1.39933cm</Width>
             <ZIndex>15</ZIndex>
             <Style>
@@ -565,7 +564,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -573,10 +572,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>10.90933cm</Top>
-            <Left>14.02503cm</Left>
-            <Height>0.89633cm</Height>
-            <Width>1.63217cm</Width>
+            <Top>9.51384cm</Top>
+            <Left>12.40366cm</Left>
+            <Height>0.6cm</Height>
+            <Width>1.5475cm</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
@@ -600,7 +599,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -608,9 +607,9 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>10.90933cm</Top>
-            <Left>16.31103cm</Left>
-            <Height>0.89633cm</Height>
+            <Top>9.51384cm</Top>
+            <Left>14.45683cm</Left>
+            <Height>0.6cm</Height>
             <Width>1.14534cm</Width>
             <ZIndex>17</ZIndex>
             <Style>
@@ -634,7 +633,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Giám đốc</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -645,10 +644,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
-            <Top>11.87622cm</Top>
-            <Left>2.08703cm</Left>
+            <Top>10.16323cm</Top>
+            <Left>0.35983cm</Left>
             <Height>0.87517cm</Height>
-            <Width>2.53528cm</Width>
+            <Width>2.93511cm</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -671,7 +670,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Kế toán trưởng</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -682,10 +681,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox29</rd:DefaultName>
-            <Top>11.87622cm</Top>
-            <Left>5.07387cm</Left>
+            <Top>10.16323cm</Top>
+            <Left>3.59596cm</Left>
             <Height>0.87517cm</Height>
-            <Width>2.9845cm</Width>
+            <Width>3.14444cm</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -708,7 +707,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Người nộp tiền</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -719,8 +718,8 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox30</rd:DefaultName>
-            <Top>11.87622cm</Top>
-            <Left>8.34298cm</Left>
+            <Top>10.16323cm</Top>
+            <Left>6.88151cm</Left>
             <Height>0.87517cm</Height>
             <Width>3.17733cm</Width>
             <ZIndex>20</ZIndex>
@@ -745,7 +744,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Người lập phiếu</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -756,10 +755,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox31</rd:DefaultName>
-            <Top>11.87622cm</Top>
-            <Left>12.0142cm</Left>
+            <Top>10.16323cm</Top>
+            <Left>10.16467cm</Left>
             <Height>0.87517cm</Height>
-            <Width>3.74537cm</Width>
+            <Width>3.19742cm</Width>
             <ZIndex>21</ZIndex>
             <Style>
               <Border>
@@ -782,7 +781,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Thủ quỹ</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -793,10 +792,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox32</rd:DefaultName>
-            <Top>11.87622cm</Top>
-            <Left>16.1829cm</Left>
-            <Height>0.87517cm</Height>
-            <Width>2.56583cm</Width>
+            <Top>10.16323cm</Top>
+            <Left>13.5032cm</Left>
+            <Height>0.83989cm</Height>
+            <Width>2.70462cm</Width>
             <ZIndex>22</ZIndex>
             <Style>
               <Border>
@@ -820,7 +819,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -830,10 +829,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>12.75139cm</Top>
-            <Left>2.08703cm</Left>
-            <Height>1.39387cm</Height>
-            <Width>2.53528cm</Width>
+            <Top>11.0384cm</Top>
+            <Left>0.3175cm</Left>
+            <Height>1.03404cm</Height>
+            <Width>2.97744cm</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
@@ -856,7 +855,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>Đã nhận đủ số tiền (viết bằng chữ):</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -864,10 +863,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox34</rd:DefaultName>
-            <Top>17.08714cm</Top>
-            <Left>2.8067cm</Left>
+            <Top>15.2527cm</Top>
+            <Left>0.04233cm</Left>
             <Height>0.727cm</Height>
-            <Width>6.818cm</Width>
+            <Width>7.69289cm</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
@@ -890,7 +889,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>+ Tỷ giá ngoại tệ⁶ (vàng bạc, đá quý):</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -898,10 +897,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox35</rd:DefaultName>
-            <Top>17.84942cm</Top>
-            <Left>2.8067cm</Left>
+            <Top>16.01498cm</Top>
+            <Left>0.04233cm</Left>
             <Height>0.76933cm</Height>
-            <Width>7.5165cm</Width>
+            <Width>8.39139cm</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
@@ -924,7 +923,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>+ Số tiền quy đổi:</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -932,10 +931,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>18.65403cm</Top>
-            <Left>2.8067cm</Left>
+            <Top>16.81959cm</Top>
+            <Left>0.04233cm</Left>
             <Height>0.68467cm</Height>
-            <Width>3.74883cm</Width>
+            <Width>4.62372cm</Width>
             <ZIndex>26</ZIndex>
             <Style>
               <Border>
@@ -958,7 +957,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>(Liên gửi ra ngoài phải đóng dấu)</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -966,10 +965,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox37</rd:DefaultName>
-            <Top>19.37398cm</Top>
-            <Left>2.8067cm</Left>
+            <Top>17.53954cm</Top>
+            <Left>0.04233cm</Left>
             <Height>0.6635cm</Height>
-            <Width>6.41583cm</Width>
+            <Width>7.29072cm</Width>
             <ZIndex>27</ZIndex>
             <Style>
               <Border>
@@ -1009,10 +1008,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox38</rd:DefaultName>
-            <Top>20.42553cm</Top>
-            <Left>2.8067cm</Left>
-            <Height>8.30467cm</Height>
-            <Width>16.04667cm</Width>
+            <Top>18.59109cm</Top>
+            <Left>0cm</Left>
+            <Height>6.6325cm</Height>
+            <Width>16.45238cm</Width>
             <ZIndex>28</ZIndex>
             <Style>
               <Border>
@@ -1036,7 +1035,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1046,10 +1045,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>12.75139cm</Top>
-            <Left>5.07387cm</Left>
-            <Height>1.39387cm</Height>
-            <Width>2.9845cm</Width>
+            <Top>11.0384cm</Top>
+            <Left>3.59596cm</Left>
+            <Height>1.03404cm</Height>
+            <Width>3.14914cm</Width>
             <ZIndex>29</ZIndex>
             <Style>
               <Border>
@@ -1073,7 +1072,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1083,10 +1082,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>12.75139cm</Top>
-            <Left>8.34298cm</Left>
-            <Height>1.39387cm</Height>
-            <Width>3.17733cm</Width>
+            <Top>11.0384cm</Top>
+            <Left>6.90267cm</Left>
+            <Height>1.03404cm</Height>
+            <Width>3.15616cm</Width>
             <ZIndex>30</ZIndex>
             <Style>
               <Border>
@@ -1110,7 +1109,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1120,10 +1119,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>12.75139cm</Top>
-            <Left>12.0142cm</Left>
-            <Height>1.39387cm</Height>
-            <Width>3.74537cm</Width>
+            <Top>11.0384cm</Top>
+            <Left>10.16467cm</Left>
+            <Height>1.03404cm</Height>
+            <Width>3.19742cm</Width>
             <ZIndex>31</ZIndex>
             <Style>
               <Border>
@@ -1147,7 +1146,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1157,10 +1156,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>12.75139cm</Top>
-            <Left>16.1829cm</Left>
-            <Height>1.39387cm</Height>
-            <Width>2.56583cm</Width>
+            <Top>11.0384cm</Top>
+            <Left>13.5032cm</Left>
+            <Height>1.03404cm</Height>
+            <Width>2.70929cm</Width>
             <ZIndex>32</ZIndex>
             <Style>
               <Border>
@@ -1174,10 +1173,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>20.21387cm</Top>
-            <Left>2.8067cm</Left>
+            <Top>18.37943cm</Top>
+            <Left>0.04233cm</Left>
             <Height>0cm</Height>
-            <Width>5.56917cm</Width>
+            <Width>6.44406cm</Width>
             <ZIndex>33</ZIndex>
             <Style>
               <Border>
@@ -1195,17 +1194,16 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!DonVi.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.19803cm</Top>
-            <Left>4.55881cm</Left>
-            <Height>0.6cm</Height>
-            <Width>4.16045cm</Width>
+            <Left>1.58277cm</Left>
+            <Height>1.39701cm</Height>
+            <Width>6.58284cm</Width>
             <ZIndex>34</ZIndex>
             <Style>
               <Border>
@@ -1227,17 +1225,17 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!DiaChiDonVi.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.79803cm</Top>
-            <Left>4.52353cm</Left>
-            <Height>0.6cm</Height>
-            <Width>4.16045cm</Width>
+            <Top>1.39701cm</Top>
+            <Left>1.58277cm</Left>
+            <Height>1.18514cm</Height>
+            <Width>6.58284cm</Width>
             <ZIndex>35</ZIndex>
             <Style>
               <Border>
@@ -1259,22 +1257,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!QuyenSo.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.29409cm</Top>
-            <Left>17.74565cm</Left>
+            <Top>2.14554cm</Top>
+            <Left>13.07861cm</Left>
             <Height>0.7cm</Height>
-            <Width>2.46472cm</Width>
+            <Width>3.50547cm</Width>
             <ZIndex>36</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1291,22 +1290,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!SoPhieu.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.98826cm</Top>
-            <Left>17.71037cm</Left>
-            <Height>0.65583cm</Height>
-            <Width>2.5cm</Width>
+            <Top>2.89554cm</Top>
+            <Left>11.90505cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.67903cm</Width>
             <ZIndex>37</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1324,7 +1324,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1333,10 +1333,10 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>4.43653cm</Top>
-            <Left>6.5273cm</Left>
+            <Top>3.21742cm</Top>
+            <Left>4.40499cm</Left>
             <Height>0.70611cm</Height>
-            <Width>7.94457cm</Width>
+            <Width>6.7169cm</Width>
             <ZIndex>38</ZIndex>
             <Style>
               <Border>
@@ -1358,22 +1358,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!TenNguoiNop.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>6.11575cm</Top>
-            <Left>7.81847cm</Left>
+            <Top>5.03776cm</Top>
+            <Left>4.66605cm</Left>
             <Height>0.7cm</Height>
-            <Width>10.69857cm</Width>
+            <Width>11.91804cm</Width>
             <ZIndex>39</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1390,22 +1391,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!DiaChiNguoiNop.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>6.85103cm</Top>
-            <Left>4.52353cm</Left>
-            <Height>0.76933cm</Height>
-            <Width>13.99351cm</Width>
+            <Top>5.77304cm</Top>
+            <Left>1.58277cm</Left>
+            <Height>0.7cm</Height>
+            <Width>15.00131cm</Width>
             <ZIndex>40</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1422,22 +1424,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!LyDoNop.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>7.65564cm</Top>
-            <Left>5.20087cm</Left>
-            <Height>0.73406cm</Height>
-            <Width>13.31617cm</Width>
+            <Top>6.47304cm</Top>
+            <Left>2.14017cm</Left>
+            <Height>0.7cm</Height>
+            <Width>14.44392cm</Width>
             <ZIndex>41</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1454,22 +1457,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!SoTien.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>8.3897cm</Top>
-            <Left>4.52353cm</Left>
-            <Height>0.73405cm</Height>
-            <Width>4.231cm</Width>
+            <Top>7.13776cm</Top>
+            <Left>1.71683cm</Left>
+            <Height>0.7cm</Height>
+            <Width>14.86726cm</Width>
             <ZIndex>42</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1486,22 +1490,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!SoTienBangChu.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>8.42498cm</Top>
-            <Left>12.0142cm</Left>
-            <Height>0.69672cm</Height>
-            <Width>6.50284cm</Width>
+            <Top>7.87304cm</Top>
+            <Left>3.01977cm</Left>
+            <Height>0.7cm</Height>
+            <Width>13.56431cm</Width>
             <ZIndex>43</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1518,22 +1523,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!KemTheo.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>9.98453cm</Top>
-            <Left>5.20087cm</Left>
-            <Height>0.76933cm</Height>
+            <Top>8.57304cm</Top>
+            <Left>2.4365cm</Left>
+            <Height>0.7cm</Height>
             <Width>6.12894cm</Width>
             <ZIndex>44</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1550,7 +1556,7 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!ChungTuGoc.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1558,15 +1564,16 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox50</rd:DefaultName>
-            <Top>9.98453cm</Top>
-            <Left>14.47187cm</Left>
-            <Height>0.76933cm</Height>
-            <Width>2.9845cm</Width>
+            <Top>8.57304cm</Top>
+            <Left>11.37589cm</Left>
+            <Height>0.7cm</Height>
+            <Width>5.20819cm</Width>
             <ZIndex>45</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1583,22 +1590,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!No.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.7117cm</Top>
-            <Left>17.71037cm</Left>
+            <Top>3.54554cm</Top>
+            <Left>11.98266cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.60142cm</Width>
             <ZIndex>46</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1615,22 +1623,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!Co.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>5.34698cm</Top>
-            <Left>17.74565cm</Left>
-            <Height>0.59711cm</Height>
-            <Width>2.46472cm</Width>
+            <Top>4.16315cm</Top>
+            <Left>12.01794cm</Left>
+            <Height>0.63239cm</Height>
+            <Width>4.56614cm</Width>
             <ZIndex>47</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1647,22 +1656,23 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
                     <Value>=Parameters!SoTienBangChu.Value</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>13pt</FontSize>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>17.08714cm</Top>
-            <Left>9.6247cm</Left>
-            <Height>0.69672cm</Height>
-            <Width>6.0325cm</Width>
+            <Top>15.2527cm</Top>
+            <Left>6.86033cm</Left>
+            <Height>0.727cm</Height>
+            <Width>9.72375cm</Width>
             <ZIndex>48</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1670,10 +1680,14 @@ Ngày 22/12/2014 của Bộ Tài chính)</Value>
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>30.05553cm</Height>
-        <Style />
+        <Height>26.01372cm</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
       </Body>
-      <Width>21cm</Width>
+      <Width>16.74667cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
