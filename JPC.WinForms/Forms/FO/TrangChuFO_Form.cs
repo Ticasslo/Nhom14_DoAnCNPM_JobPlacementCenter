@@ -1,9 +1,12 @@
-﻿using JPC.WinForms;
+﻿using JPC.Business.Services.Implementations.FO;
+using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -27,12 +30,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             //CollapseMenu();
             this.Padding = new Padding(boderSize);//Border size
             this.BackColor = Color.FromArgb(50, 77, 168);//Border color
-
-            iconBtnThuPhiUngVien.AccessibleDescription = "CN_FO01";       // Thu phí ứng tuyển
-            iconBtnThuPhiDoanhNghiep.AccessibleDescription = "CN_FO02";   // Thu phí doanh nghiệp
-            iconBtnDanhSachHoaDon.AccessibleDescription = "CN_FO03";      // Danh sách hoá đơn
-            iconBtnBaoCaoDoanhThuThang.AccessibleDescription = "CN_FO04"; // Báo cáo doanh thu tháng
-            iconBtnDoiMatKhau.AccessibleDescription = "CN_DMK";          // Đổi mật khẩu
+            var uc = new ThuPhiUngVien_UC();
+            uc.BindService(BuildThuPhiUngVienService());
+            ShowControl(uc);
         }
         private void TrangChuFO_Form_Load(object sender, EventArgs e)
         {
@@ -164,19 +164,13 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void iconBtnExit_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show(
-                "Bạn có muốn thoát ứng dụng?",
-                "Thoát ứng dụng",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+            this.Hide();
+            Form login = new Login_Form();
+            login.ShowDialog();            
+            this.Close();
         }
-
         private void iconBtnManimize_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -213,7 +207,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
             else //Expand menu
             {
-                panelMenu.Width = 282;
+                panelMenu.Width = 327;
                 lblFOName.Visible = true;
                 iconBtnBar.Dock = DockStyle.None;
                 foreach (System.Windows.Forms.Button menuButton in panelMenu.Controls.OfType<System.Windows.Forms.Button>())
@@ -242,65 +236,70 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
             panelDesktop.ResumeLayout();
         }
+
+        private IThuPhiUngVienService BuildThuPhiUngVienService()
+            => new ThuPhiUngVienService(
+                new UngVienRepository(),
+                new UngTuyenRepository(),
+                new PhiDichVuRepository(),
+                new NhanVienRepository(),
+                new HoaDonRepository());
+
+        private IThuPhiDoanhNghiepService BuildThuPhiDoanhNghiepService()
+            => new ThuPhiDoanhNghiepService(
+                new TinTuyenDungRepository(),
+                new HoaDonRepository(),
+                new PhiDichVuRepository(),
+                new DoanhNghiepRepository(),
+                new NhanVienRepository());
+                
+                
+
+        private IQuanLyHoaDonService BuildQuanLyHoaDonService()
+            => new QuanLyHoaDonService(
+                new HoaDonRepository(),
+                new NhanVienRepository(),
+                new DoanhNghiepRepository(),
+                new UngVienRepository());
+
+
         private void iconBtnThuPhiUngVien_Click(object sender, EventArgs e)
         {
-            if (!PermissionGuard.EnsureEnabled(iconBtnThuPhiUngVien.AccessibleDescription)) return;
-            ShowControl(new ThuPhiUngVien_UC());
+            var uc = new ThuPhiUngVien_UC();
+            uc.BindService(BuildThuPhiUngVienService());
+            ShowControl(uc);
         }
 
         private void iconBtnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
         {
-            if (!PermissionGuard.EnsureEnabled(iconBtnThuPhiDoanhNghiep.AccessibleDescription)) return;
-            ShowControl(new ThuPhiDoanhNghiep_UC());
+            var uc = new ThuPhiDoanhNghiep_UC();
+            uc.BindService(BuildThuPhiDoanhNghiepService());
+            ShowControl(uc);
         }
 
         private void iconBtnDanhSachHoaDon_Click(object sender, EventArgs e)
         {
-            if (!PermissionGuard.EnsureEnabled(iconBtnDanhSachHoaDon.AccessibleDescription)) return;
-            ShowControl(new DanhSachHoaDon_UC());
+            var uc = new DanhSachHoaDon_UC();
+            uc.BindService(BuildQuanLyHoaDonService());
+            ShowControl(uc);
         }
 
         private void iconBtnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
         {
-            if (!PermissionGuard.EnsureEnabled(iconBtnBaoCaoDoanhThuThang.AccessibleDescription)) return;
-            ShowControl(new BaoCaoDoanhThuThang_UC());
+            var uc = new BaoCaoDoanhThuThang_UC();
+            
+            var svc = new ThongKeService(new HoaDonRepository());
+            uc.BindService(svc);
+
+            ShowControl(uc);
         }
 
         private void iconBtnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            if (!PermissionGuard.EnsureEnabled(iconBtnDoiMatKhau.AccessibleDescription)) return;
+
             ShowControl(new DoiMatKhau_UC());
+            
         }
 
-        private void iconBtnLogOut_Click(object sender, EventArgs e)
-        {
-            // Hỏi xác nhận trước khi đăng xuất
-            var result = MessageBox.Show(
-                "Bạn có muốn đăng xuất không?",
-                "Xác nhận đăng xuất",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.No)
-            {
-                return; // Hủy đăng xuất
-            }
-
-            JPC.Models.UserSession.Clear(); // Xóa session khi đăng xuất
-
-            Login_Form loginForm = new Login_Form();
-
-            // Set event để khi Login form đóng thì mới exit app
-            loginForm.FormClosed += (s, args) => {
-                if (!Equals(loginForm.Tag, "LoginSuccess"))
-                {
-                    Application.Exit();
-                }
-            };
-
-            loginForm.Show();
-            this.Hide();
-        }
     }
 }
