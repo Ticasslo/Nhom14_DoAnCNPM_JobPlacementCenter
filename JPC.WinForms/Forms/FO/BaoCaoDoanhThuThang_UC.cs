@@ -88,6 +88,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 dgvBangCaoDoanhThuThang.Columns["so_tien"].DefaultCellStyle.Alignment =
                     DataGridViewContentAlignment.MiddleRight;
             }
+            FixGridHeader(dgvBangCaoDoanhThuThang);
         }
 
         #endregion
@@ -239,6 +240,36 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             {
                 MessageBox.Show("Lỗi xuất Excel: " + ex.Message);
             }
+        }
+        //fix header guna datagridview
+        void FixGridHeader(Guna.UI2.WinForms.Guna2DataGridView dgv)
+        {
+            // 1) Bật header & set lại chiều cao, chế độ resize
+            dgv.ColumnHeadersVisible = true;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgv.ColumnHeadersHeight = 36;
+
+            // Đối với Guna2: set cả ThemeStyle để tránh nó ghi đè
+            dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgv.ThemeStyle.HeaderStyle.Height = 36;
+
+            // 2) Màu/định dạng (tránh chữ trùng nền)
+            dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
+            dgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            dgv.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+
+            // 3) Cột tự co giãn (nếu cần)
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // hoặc AllCells
+            dgv.AutoResizeColumns();
+
+            // 4) Ép layout + repaint để tránh lỗi chỉ hiện khi scroll
+            dgv.SuspendLayout();
+            dgv.ResumeLayout(true);
+            dgv.PerformLayout();
+            dgv.Invalidate();   // vẽ lại
+            dgv.Refresh();      // force repaint
         }
     }
 }

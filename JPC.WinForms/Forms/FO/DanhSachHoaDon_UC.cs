@@ -1,4 +1,5 @@
-﻿using JPC.Business.Services.Interfaces.FO;
+﻿using Guna.UI2.WinForms;
+using JPC.Business.Services.Interfaces.FO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,8 +106,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 if (c.Name == "ngay_lap_hoa_don") c.DefaultCellStyle.Format = "dd/MM/yyyy";
                 if (c.Name == "so_tien") c.DefaultCellStyle.Format = "#,0";
             }
-
-
+            FixGridHeader(dgvBangDanhSachHoaDon);
+            FitColumnsToFill(dgvBangDanhSachHoaDon);
         }
 
         private void SetReadWrite(string col)
@@ -134,6 +135,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
             _dtHoaDon = _svc.GetHoaDonFiltered(d, dnId, maNv);
             BindGrid(_dtHoaDon);
+            
 
         }
         private void ApplyHeadersFromCaptions(DataTable dt)
@@ -212,6 +214,83 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             };
 
             using (var f = new reportForm(ps)) f.ShowDialog();
+        }
+
+        //fix header guna datagridview
+        void FixGridHeader(Guna2DataGridView dgv)
+        {
+            dgv.ColumnHeadersVisible = true;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgv.ColumnHeadersHeight = 72;
+            dgv.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgv.ThemeStyle.HeaderStyle.Height = 72;
+
+            dgv.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgv.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgv.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+
+            // Tối ưu không gian
+            dgv.RowHeadersVisible = false;
+            dgv.ScrollBars = ScrollBars.Both; // hoặc Horizontal nếu bạn vẫn muốn kéo
+
+            dgv.Refresh();
+        }
+
+        /// 2-pass autosize: đo –> đổi sang Fill –> gán FillWeight
+        void FitColumnsToFill(Guna2DataGridView dgv)
+        {
+            if (dgv.Columns.Count == 0) return;
+
+            // PASS 1: để Grid tự đo bề rộng hợp lý theo ô đang hiển thị
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dgv.AutoResizeColumns();
+
+            // Lưu widths ưa thích
+            var widths = dgv.Columns.Cast<DataGridViewColumn>()
+                            .Select(c => new { Col = c, W = Math.Max(c.Width, c.MinimumWidth) })
+                            .ToList();
+
+            // Chặn min/max để không có cột quá nhỏ/quá to
+            const int MIN = 60;     // ID, STT…
+            const int MAX = 320;    // cột tên dài
+            foreach (var x in widths)
+                x.Col.Width = Math.Max(MIN, Math.Min(MAX, x.W));
+
+            float sum = widths.Sum(x => (float)x.Col.Width);
+            if (sum <= 0) sum = 1;
+
+            // PASS 2: chuyển sang Fill và phân bổ FillWeight theo tỷ lệ width đã đo
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (var x in widths)
+            {
+                // FillWeight ~ phần trăm, nhưng dùng số bất kỳ tỉ lệ thuận
+                x.Col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                x.Col.FillWeight = (x.Col.Width / sum) * 1000f; // 1000 để tăng độ phân giải
+                x.Col.MinimumWidth = MIN;
+            }
+
+            // Nếu có 1-2 cột cần ưu tiên, tăng FillWeight thủ công:
+            UpWeight(dgv, "Ten Ung vien", 1.25f); // tên cột hiển thị hoặc Name
+            UpWeight(dgv, "Ten khach hang", 1.25f);
+
+            dgv.Invalidate();
+            dgv.Refresh();
+        }
+
+        void UpWeight(DataGridView dgv, string headerTextOrName, float factor)
+        {
+            foreach (DataGridViewColumn c in dgv.Columns)
+            {
+                if (c.HeaderText.Equals(headerTextOrName, System.StringComparison.OrdinalIgnoreCase) ||
+                    c.Name.Equals(headerTextOrName, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    c.FillWeight *= factor;
+                }
+            }
         }
     }
 }
