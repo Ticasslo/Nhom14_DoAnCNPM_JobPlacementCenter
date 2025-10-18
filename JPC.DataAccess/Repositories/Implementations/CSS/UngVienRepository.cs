@@ -42,6 +42,22 @@ namespace JPC.DataAccess.Repositories.Implementations.CSS
 		return false;
 	}
 
+	public bool ExistsByEmail(string email)
+	{
+		string sql = "SELECT COUNT(1) FROM UngVien WHERE email=@email";
+		var parameters = new List<SqlParameter>
+		{
+			new SqlParameter("@email", SqlDbType.NVarChar, 100) { Value = email }
+		};
+		var dt = ExecuteQuery(sql, parameters);
+		if (dt.Rows.Count > 0)
+		{
+			int count = Convert.ToInt32(dt.Rows[0][0]);
+			return count > 0;
+		}
+		return false;
+	}
+
         public int Create(UngVien entity)
 		{
 			string sql = @"INSERT INTO UngVien(ho_ten, email, so_dien_thoai, cccd, ngay_sinh, que_quan, vt_id)

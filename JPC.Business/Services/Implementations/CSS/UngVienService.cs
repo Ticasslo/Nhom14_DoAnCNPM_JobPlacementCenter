@@ -95,6 +95,9 @@ namespace JPC.Business.Services.Implementations.CSS
             // Kiểm tra trùng số điện thoại
             if (repository.ExistsBySoDienThoai(ungVien.SoDienThoai)) throw new DomainValidationException("DUP_PHONE", "Số điện thoại đã được đăng ký.");
 
+            // Kiểm tra trùng email
+            if (repository.ExistsByEmail(ungVien.Email)) throw new DomainValidationException("DUP_EMAIL", "Email đã được đăng ký.");
+
             // Lưu
             repository.Create(ungVien);
         }
@@ -166,6 +169,10 @@ namespace JPC.Business.Services.Implementations.CSS
             // Kiểm tra trùng số điện thoại (trừ ứng viên hiện tại)
             if (existingUngVien.SoDienThoai != ungVien.SoDienThoai && repository.ExistsBySoDienThoai(ungVien.SoDienThoai))
                 throw new DomainValidationException("DUP_PHONE", "Số điện thoại đã được sử dụng bởi ứng viên khác.");
+
+            // Kiểm tra trùng email (trừ ứng viên hiện tại)
+            if (existingUngVien.Email != ungVien.Email && repository.ExistsByEmail(ungVien.Email))
+                throw new DomainValidationException("DUP_EMAIL", "Email đã được sử dụng bởi ứng viên khác.");
 
             // Cập nhật
             if (!repository.UpdateUngVien(ungVien))
