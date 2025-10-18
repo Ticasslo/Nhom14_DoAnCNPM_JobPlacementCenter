@@ -1,4 +1,6 @@
-﻿using JPC.Business.Services.Interfaces.FO;
+﻿using JPC.Business.Services.Implementations.FO;
+using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using JPC.Models;
 using System;
 using System.Collections.Generic;
@@ -23,10 +25,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         {
             InitializeComponent();
 
-            this.Load += ThuPhiUngVien_Load;
-            iconBtnReload.Click += (s, e) => ResetForm();
-            btnXuatPhieuThu.Click += btnXuatPhieuThu_Click;
-
             cbbIdUngVien.SelectedIndexChanged += cbbIdUngVien_SelectedIndexChanged;
             cbbIdUngTuyen.SelectedIndexChanged += (s, e2) =>
             {
@@ -39,16 +37,84 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
             txtSoTien.ReadOnly = true;
         }
-
-        // gọi ở nơi bạn khởi tạo UC này (giống phần DN)
-        public void BindService(IThuPhiUngVienService service)
+        private void EnsureService()
         {
-            _service = service;
-        }
+            if (_service != null) return;
+            var uvRepo = new UngVienRepository();
+            var utRepo = new UngTuyenRepository();    
+            var hdRepo = new HoaDonRepository();
+            var nvRepo = new NhanVienRepository();
+            var phiRepo = new PhiDichVuRepository();
 
+            _service = new ThuPhiUngVienService(uvRepo, utRepo, phiRepo , nvRepo, hdRepo);
+        }
         private void ThuPhiUngVien_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void ResetForm()
+        {
+            foreach (var tb in grpBoxLapHoaDon.Controls.OfType<Guna.UI2.WinForms.Guna2TextBox>())
+                tb.Text = string.Empty;
+
+            cbDaNhanDuSoTien.Checked = false;
+            txtSoTien.Text = string.Format("{0:#,0}", _donGiaCoDinh);
+            txtLyDo.Text = "Phí ứng tuyển (cố định)";
+
+            cbbIdUngVien.SelectedIndex = -1;
+            cbbIdUngTuyen.DataSource = null;
+
+
+            dtpNgayLapPhieu.Value = DateTime.Now;
+            dtpNgayKy.Value = DateTime.Now;
+        }
+
+        private void cbbIdUngVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_service == null || cbbIdUngVien.SelectedIndex < 0) return;
+            EnsureService();
+            var drv = cbbIdUngVien.SelectedItem as DataRowView;
+            if (drv == null) return;
+
+            var uvId = Convert.ToInt32(drv["uv_id"]);
+            var hoTen = drv["ho_ten"].ToString();
+            var diaChi = drv["dia_chi"].ToString();
+
+            txtHoVaTenNguoiNop.Text = hoTen;
+            txtDiaChi.Text = diaChi;
+
+            var ut = _service.GetHoSoUngTuyenChuaThuPhi(uvId);
+            cbbIdUngTuyen.ValueMember = "ut_id";
+            cbbIdUngTuyen.DisplayMember = "display";
+            cbbIdUngTuyen.DataSource = ut;
+
+            txtSoTien.Text = $"{_donGiaCoDinh:#,0}";
+            txtVietBangChu.Text = VietnameseNumber.ToCurrencyWords(_donGiaCoDinh) + " đồng";
+        }
+
+        private void btnXuatPhieuThu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtVietBangChu_Leave(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtSoTien.Text.Replace(",", ""), out var v) && v > 0)
+            {
+                txtSoTien.Text = $"{v:#,0}";
+                txtVietBangChu.Text = VietnameseNumber.ToCurrencyWords(v) + " đồng";
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+
+        private void ThuPhiUngVien_UC_Load(object sender, EventArgs e)
+        {
+            EnsureService();
             try
             {
                 // đơn giá cố định
@@ -71,9 +137,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                     cb.DisplayMember = "ho_ten";
                     cb.SelectedIndex = -1;
                 }
-                BindNV(cbbGiamDoc);
-                BindNV(cbbKeToanTruong);
-                BindNV(cbbThuQuy);
 
                 // tiền tệ
                 cbbDonViTien.Items.Clear();
@@ -90,55 +153,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
         }
 
-        private void ResetForm()
+        private void btnXuatPhieuThu_Click_1(object sender, EventArgs e)
         {
-            foreach (var tb in grpBoxLapHoaDon.Controls.OfType<Guna.UI2.WinForms.Guna2TextBox>())
-                tb.Text = string.Empty;
+            EnsureService();
 
-            cbDaNhanDuSoTien.Checked = false;
-            txtSoTien.Text = string.Format("{0:#,0}", _donGiaCoDinh);
-            txtLyDo.Text = "Phí ứng tuyển (cố định)";
-
-            cbbIdUngVien.SelectedIndex = -1;
-            cbbIdUngTuyen.DataSource = null;
-
-            cbbGiamDoc.SelectedIndex = -1;
-            cbbKeToanTruong.SelectedIndex = -1;
-            cbbThuQuy.SelectedIndex = -1;
-
-            dtpNgayLapPhieu.Value = DateTime.Now;
-            dtpNgayKy.Value = DateTime.Now;
-        }
-
-        private void cbbIdUngVien_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (_service == null || cbbIdUngVien.SelectedIndex < 0) return;
-
-            var drv = cbbIdUngVien.SelectedItem as DataRowView;
-            if (drv == null) return;
-
-            var uvId = Convert.ToInt32(drv["uv_id"]);
-            var hoTen = drv["ho_ten"].ToString();
-            var diaChi = drv["dia_chi"].ToString();
-
-            txtHoVaTenNguoiNop.Text = hoTen;
-            txtNguoiNopTien.Text = hoTen;
-            txtDiaChi.Text = diaChi;
-
-            var ut = _service.GetHoSoUngTuyenChuaThuPhi(uvId);
-            cbbIdUngTuyen.ValueMember = "ut_id";
-            cbbIdUngTuyen.DisplayMember = "display";
-            cbbIdUngTuyen.DataSource = ut;
-
-            txtSoTien.Text = $"{_donGiaCoDinh:#,0}";
-            txtVietBangChu.Text = VietnameseNumber.ToCurrencyWords(_donGiaCoDinh) + " đồng";
-        }
-
-        private void btnXuatPhieuThu_Click(object sender, EventArgs e)
-        {
-            if (_service == null) { MessageBox.Show("Chưa BindService."); return; }
-
-            var sb = new System.Text.StringBuilder();
+            var sb = new StringBuilder();
             if (cbbIdUngVien.SelectedIndex < 0) sb.AppendLine("• Chưa chọn Ứng viên.");
             if (cbbIdUngTuyen.SelectedIndex < 0) sb.AppendLine("• Chưa chọn hồ sơ Ứng tuyển.");
             if (sb.Length > 0) { MessageBox.Show(sb.ToString()); return; }
@@ -184,15 +203,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi lập hóa đơn: " + ex.Message);
-            }
-        }
-
-        private void txtVietBangChu_Leave(object sender, EventArgs e)
-        {
-            if (decimal.TryParse(txtSoTien.Text.Replace(",", ""), out var v) && v > 0)
-            {
-                txtSoTien.Text = $"{v:#,0}";
-                txtVietBangChu.Text = VietnameseNumber.ToCurrencyWords(v) + " đồng";
             }
         }
     }

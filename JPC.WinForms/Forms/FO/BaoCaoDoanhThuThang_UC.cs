@@ -1,5 +1,7 @@
 ﻿using ClosedXML.Excel;
+using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,25 +20,38 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
     public partial class BaoCaoDoanhThuThang_UC : UserControl
     {
         private bool _isInit = true;
+        private bool _suppressEvents = false;
         private DataTable _dtInvoices = new DataTable();
         private IThongKeService _svc;
-        public BaoCaoDoanhThuThang_UC()
-        {
-            InitializeComponent();
-            this.Load += BaoCaoDoanhThuThang_Load;
-            dtpTuNgay.ValueChanged += (_, __) => LoadInvoices();
-            dtpDenNgay.ValueChanged += (_, __) => LoadInvoices();
-            btnXuatPhieuThu.Click += (_, __) => ExportExcel();
-        }
 
-        #region Helpers
-        public void BindService(IThongKeService service)
-        {
-            _svc = service ?? throw new ArgumentNullException(nameof(service));
-        }
         private static DateTime FirstDayOfMonth(DateTime d) => new DateTime(d.Year, d.Month, 1);
         private static DateTime LastDayOfMonth(DateTime d) => new DateTime(d.Year, d.Month, DateTime.DaysInMonth(d.Year, d.Month));
 
+        public BaoCaoDoanhThuThang_UC()
+        {
+            InitializeComponent();
+        }
+        private void BaoCaoDoanhThuThang_UC_Load(object sender, EventArgs e)
+        {
+            _isInit = true;
+            EnsureService();
+
+            // Mặc định mở form: chốt theo tháng hiện tại
+            SnapToMonth(DateTime.Now);
+            txtNguoiLapBaoCao.Text = CurrentUserName();
+
+            _isInit = false;
+            LoadInvoices();
+        }
+        
+        #region Helpers
+        private void EnsureService()
+        {
+            if (_svc != null) return;
+            var hdRepo = new HoaDonRepository();
+            _svc = new ThongKeService(hdRepo);
+        }
+        
         private void BindGrid()
         {
             dgvBangCaoDoanhThuThang.AutoGenerateColumns = false;
@@ -102,26 +117,51 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
             catch { return string.Empty; }
         }
-        private void BaoCaoDoanhThuThang_Load(object sender, EventArgs e)
+        private void SnapToMonth(DateTime anchor)
         {
+            _suppressEvents = true;
+            dtpTuNgay.Value = FirstDayOfMonth(anchor);
+            dtpDenNgay.Value = LastDayOfMonth(anchor);
+            _suppressEvents = false;
+        }
+        private void dtpTuNgay_ValueChanged(object sender, EventArgs e)
+        {
+            if (_isInit || _suppressEvents) return;
 
-            _isInit = true;
-            var now = DateTime.Now;
-            dtpTuNgay.Value = FirstDayOfMonth(now);
-            dtpDenNgay.Value = LastDayOfMonth(now);
-            txtNguoiLapBaoCao.Text = CurrentUserName();
-            _isInit = false;
+            // Khóa theo tháng theo ngày người dùng chọn ở dtpTuNgay
+            SnapToMonth(dtpTuNgay.Value);
 
+            // Sau khi snap, nạp lại dữ liệu
             LoadInvoices();
         }
 
+        private void dtpDenNgay_ValueChanged(object sender, EventArgs e)
+        {
+            if (_isInit || _suppressEvents) return;
+
+            // Không cho “Đến ngày” < “Từ ngày” 
+            if (dtpDenNgay.Value.Date < dtpTuNgay.Value.Date)
+            {
+                _suppressEvents = true;
+                dtpDenNgay.Value = dtpTuNgay.Value.Date;
+                _suppressEvents = false;
+            }
+
+            LoadInvoices();
+        }
         private void LoadInvoices()
         {
-            if (_svc == null || _isInit) return;
+            EnsureService();
+            if (_isInit) return;
+
+            // Nếu set sai 
             if (dtpTuNgay.Value.Date > dtpDenNgay.Value.Date)
             {
-                MessageBox.Show("Từ ngày không được lớn hơn Đến ngày.");
-                return;
+                _suppressEvents = true;
+                dtpDenNgay.Value = dtpTuNgay.Value.Date;
+                _suppressEvents = false;
+                // Có thể báo nhẹ nếu bạn muốn:
+                ShowOwnedMessage("Từ ngày không được lớn hơn Đến ngày.");
             }
 
             _dtInvoices = _svc.LayHoaDon(dtpTuNgay.Value.Date, dtpDenNgay.Value.Date);
@@ -129,6 +169,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
             var tong = _svc.TinhTongTien(_dtInvoices);
             txtTongTien.Text = string.Format("{0:#,0}", tong);
+        }
+        private void ShowOwnedMessage(string text, string title = "Thông báo")
+        {
+            var owner = this.FindForm();
+            if (owner != null)
+                MessageBox.Show(owner, text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void ExportExcel()
@@ -236,6 +284,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 MessageBox.Show("Lỗi xuất Excel: " + ex.Message);
             }
         }
+        private void btnXuatBaoCao_Click(object sender, EventArgs e)
+        {
+            ExportExcel();
+        }
+
         //fix header guna datagridview
         void FixGridHeader(Guna.UI2.WinForms.Guna2DataGridView dgv)
         {
@@ -267,14 +320,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             dgv.Refresh();      // force repaint
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BaoCaoDoanhThuThang_UC_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

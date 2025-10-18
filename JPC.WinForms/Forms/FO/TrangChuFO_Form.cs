@@ -29,9 +29,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             btnBaoCaoDoanhThuThang.Tag = "CN_FO04";
             btnDoiMatKhau.Tag = "CN_DMK";
 
-            //var uc = new ThuPhiUngVien_UC();
-            //uc.BindService(BuildThuPhiUngVienService());
-            //ShowControl(uc);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -62,79 +59,44 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 }
             }
         }
-        private IThuPhiUngVienService BuildThuPhiUngVienService()
-            => new ThuPhiUngVienService(
-                new UngVienRepository(),
-                new UngTuyenRepository(),
-                new PhiDichVuRepository(),
-                new NhanVienRepository(),
-                new HoaDonRepository());
-
-        private IThuPhiDoanhNghiepService BuildThuPhiDoanhNghiepService()
-            => new ThuPhiDoanhNghiepService(
-                new TinTuyenDungRepository(),
-                new HoaDonRepository(),
-                new PhiDichVuRepository(),
-                new DoanhNghiepRepository(),
-                new NhanVienRepository());
-
-
-
-        private IQuanLyHoaDonService BuildQuanLyHoaDonService()
-            => new QuanLyHoaDonService(
-                new HoaDonRepository(),
-                new NhanVienRepository(),
-                new DoanhNghiepRepository(),
-                new UngVienRepository());
-
+        
         private void ShowControl(UserControl uc)
         {
-            // dọn panel trước khi nạp UC mới
-            pnlChinh.SuspendLayout();
-            pnlChinh.Controls.Clear();
-
-            // cấu hình UC để chiếm toàn vùng panel
+            if (uc == null) return;
             uc.Dock = DockStyle.Fill;
-
-            // nạp vào panel
-            pnlChinh.Controls.Add(uc);
-            uc.BringToFront();
-                
-            pnlChinh.ResumeLayout();
+            pnlChinh.SuspendLayout();
+            try
+            {
+                pnlChinh.Controls.Clear();
+                pnlChinh.Controls.Add(uc);
+            }
+            finally
+            {
+                pnlChinh.ResumeLayout();
+            }
         }
         private void btnThuPhiUngVien_Click(object sender, EventArgs e)
         {
-            if (!PermissionGuard.EnsureEnabled(btnThuPhiUngVien.AccessibleDescription)) return;
-            var uc = new ThuPhiUngVien_UC();
-            uc.BindService(BuildThuPhiUngVienService());
-            ShowControl(uc);
+            if (!PermissionGuard.EnsureEnabled((string)btnThuPhiUngVien.Tag)) return;
+            ShowControl(new ThuPhiUngVien_UC());        
         }
 
         private void btnThuPhiDoanhNghiep_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled((string)btnThuPhiDoanhNghiep.Tag)) return;
-            var uc = new ThuPhiDoanhNghiep_UC();
-            uc.BindService(BuildThuPhiDoanhNghiepService());
-            ShowControl(uc);
+            ShowControl(new ThuPhiDoanhNghiep_UC());
         }
 
         private void btnDanhSachHoaDon_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled((string)btnDanhSachHoaDon.Tag)) return;
-            var uc = new DanhSachHoaDon_UC();
-            uc.BindService(BuildQuanLyHoaDonService());
-            ShowControl(uc);
+            ShowControl(new DanhSachHoaDon_UC());
         }
 
         private void btnBaoCaoDoanhThuThang_Click(object sender, EventArgs e)
         {
             if (!PermissionGuard.EnsureEnabled((string)btnBaoCaoDoanhThuThang.Tag)) return;
-            var uc = new BaoCaoDoanhThuThang_UC();
-
-            var svc = new ThongKeService(new HoaDonRepository());
-            uc.BindService(svc);
-
-            ShowControl(uc);
+            ShowControl(new BaoCaoDoanhThuThang_UC());
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)

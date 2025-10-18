@@ -1,5 +1,7 @@
 ﻿using Guna.UI2.WinForms;
+using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +18,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
     public partial class DanhSachHoaDon_UC : UserControl
     {
-        private static string Cnn => ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
         private IQuanLyHoaDonService _svc;
         private DataTable _dtHoaDon;   // nguồn cho DGV
         private bool _ignoreDate = false;
@@ -28,30 +29,24 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             // Gắn event
             this.Load += DanhSachHoaDon_Load;
 
-            dtpThoiGian.ValueChanged += (_, __) => ReloadWithFilters();
-            cbbIdDoanhNghiep.SelectedIndexChanged += (_, __) => ReloadWithFilters();
-            cbbIdNhanVien.SelectedIndexChanged += (_, __) => ReloadWithFilters();
-
-            btnLocKhongCoThoiGian.Click += (_, __) => { _ignoreDate = true; ReloadWithFilters(); };
-            btnBoLoc.Click += (_, __) => ResetFilters();
-
-            btnCapNhatHoaDon.Click += BtnCapNhatHoaDon_Click;
-            btnXuaHoaDon.Click += BtnXuatHoaDon_Click;
-
             // DGV behaviour
             dgvBangDanhSachHoaDon.MultiSelect = false;
             dgvBangDanhSachHoaDon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvBangDanhSachHoaDon.AllowUserToAddRows = false;
             dgvBangDanhSachHoaDon.AutoGenerateColumns = true;
         }
-        public void BindService(IQuanLyHoaDonService service)
+        private void EnsureService()
         {
-            _svc = service ?? throw new ArgumentNullException(nameof(service));
+            if (_svc != null) return;
+            var hdRepo = new HoaDonRepository();
+            var dnRepo = new DoanhNghiepRepository();
+            var nvRepo = new NhanVienRepository();
+            var uvRepo = new UngVienRepository();
+            _svc = new QuanLyHoaDonService(hdRepo, nvRepo, dnRepo, uvRepo);
         }
-
         private void DanhSachHoaDon_Load(object sender, EventArgs e)
         {
-
+            EnsureService();
             LoadCombos();
             LoadAllHoaDon();
         }
@@ -62,20 +57,27 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             var dnList = _svc.GetDoanhNghiepBasic()
                              .Select(x => new { dn_id = x.dn_id, ten_doanh_nghiep = x.ten_doanh_nghiep })
                              .ToList();
+            dnList.Insert(0, new { dn_id = 0, ten_doanh_nghiep = "— Tất cả —" });
+
             cbbIdDoanhNghiep.DisplayMember = "ten_doanh_nghiep";
             cbbIdDoanhNghiep.ValueMember = "dn_id";
             cbbIdDoanhNghiep.DataSource = dnList;
             cbbIdDoanhNghiep.SelectedIndex = -1;
 
             // NV
-            var nv = _svc.GetNhanVienActive();
+            var nvList = _svc.GetNhanVienActive();  // DataTable: ma_nhan_vien, ho_ten
+            var nv = nvList.Copy();
+            var rAll = nv.NewRow();
+            rAll["ma_nhan_vien"] = 0;               // ⬅ sentinel
+            rAll["ho_ten"] = "— Tất cả —";
+            nv.Rows.InsertAt(rAll, 0);
+
             cbbIdNhanVien.DisplayMember = "ho_ten";
             cbbIdNhanVien.ValueMember = "ma_nhan_vien";
             cbbIdNhanVien.DataSource = nv;
             cbbIdNhanVien.SelectedIndex = -1;
 
             _ignoreDate = false;
-            dtpThoiGian.Value = DateTime.Now;
         }
 
         private void LoadAllHoaDon()
@@ -126,13 +128,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
         private void ReloadWithFilters()
         {
-            if (_svc == null) return;
+            EnsureService();
 
-            DateTime? d = _ignoreDate ? (DateTime?)null : dtpThoiGian.Value.Date;
             int? dnId = (cbbIdDoanhNghiep.SelectedIndex >= 0) ? (int?)Convert.ToInt32(cbbIdDoanhNghiep.SelectedValue) : null;
             int? maNv = (cbbIdNhanVien.SelectedIndex >= 0) ? (int?)Convert.ToInt32(cbbIdNhanVien.SelectedValue) : null;
 
-            _dtHoaDon = _svc.GetHoaDonFiltered(d, dnId, maNv);
+            _dtHoaDon = _svc.GetHoaDonFiltered(dnId, maNv);
             BindGrid(_dtHoaDon);
 
 
@@ -146,73 +147,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 if (dc != null && !string.IsNullOrEmpty(dc.Caption))
                     col.HeaderText = dc.Caption;
             }
-        }
-
-
-        private void BtnCapNhatHoaDon_Click(object sender, EventArgs e)
-        {
-            dgvBangDanhSachHoaDon.EndEdit();
-            if (_dtHoaDon == null) return;
-
-            int updated = 0;
-            foreach (DataRow r in _dtHoaDon.Rows)
-            {
-                if (r.RowState != DataRowState.Modified) continue;
-
-                int id = r.Field<int>("ma_hoa_don");
-                string tenKh = r.Field<string>("ten_khach_hang") ?? "";
-                decimal soTien = r.Field<decimal?>("so_tien") ?? 0m;
-                DateTime ngay = r.Field<DateTime>("ngay_lap_hoa_don");
-                int maNv = r.Field<int>("ma_nhan_vien_lap");
-
-
-                updated += _svc.UpdateHoaDonBasic(id, tenKh, soTien, ngay, maNv);
-                r.AcceptChanges();
-            }
-
-            MessageBox.Show(updated > 0 ? $"Đã cập nhật {updated} hóa đơn." : "Không có thay đổi.");
-            ReloadWithFilters();
-        }
-
-        private void BtnXuatHoaDon_Click(object sender, EventArgs e)
-        {
-            if (dgvBangDanhSachHoaDon.CurrentRow == null)
-            {
-                MessageBox.Show("Hãy chọn một dòng hóa đơn để xuất.");
-                return;
-            }
-
-            var r = ((DataRowView)dgvBangDanhSachHoaDon.CurrentRow.DataBoundItem).Row;
-            int maHd = (int)r["ma_hoa_don"];
-            string loai = r["loai_khach_hang"]?.ToString();
-            string tenNguoiNop = r["ten_khach_hang"]?.ToString() ?? "";
-            string diaChiNguoiNop = "";
-
-            if (loai == "doanh_nghiep" && r["dn_id"] != DBNull.Value)
-                diaChiNguoiNop = _svc.GetDiaChiDoanhNghiep(Convert.ToInt32(r["dn_id"]));
-            else if (loai == "ung_vien" && r["uv_id"] != DBNull.Value)
-                diaChiNguoiNop = _svc.GetDiaChiUngVien(Convert.ToInt32(r["uv_id"]));
-
-            decimal soTien = Convert.ToDecimal(r["so_tien"]);
-            var ps = new System.Collections.Generic.Dictionary<string, string>
-            {
-                ["DonVi"] = "Trung tâm Giới thiệu Việc làm SV",
-                ["DiaChiDonVi"] = "TP. HCM",
-                ["SoPhieu"] = "HD-" + maHd,
-                ["NgayLap"] = Convert.ToDateTime(r["ngay_lap_hoa_don"]).ToString("dd/MM/yyyy"),
-                ["TenNguoiNop"] = tenNguoiNop,
-                ["DiaChiNguoiNop"] = diaChiNguoiNop,
-                ["LyDoNop"] = loai == "doanh_nghiep" ? "Phí đăng tin tuyển dụng" : "Phí ứng tuyển",
-                ["SoTien"] = $"{soTien:#,0}",
-                ["SoTienBangChu"] = $"{soTien:#,0} đồng",
-                ["KemTheo"] = "",
-                ["ChungTuGoc"] = "",
-                ["QuyenSo"] = "",
-                ["No"] = "",
-                ["Co"] = ""
-            };
-
-            using (var f = new reportForm(ps)) f.ShowDialog();
         }
 
         //fix header guna datagridview
@@ -292,9 +226,119 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
         }
 
-        private void dgvBangDanhSachHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnCapNhatHoaDon_Click_1(object sender, EventArgs e)
         {
+            dgvBangDanhSachHoaDon.EndEdit();
+            if (_dtHoaDon == null) return;
 
+            int updated = 0;
+            foreach (DataRow r in _dtHoaDon.Rows)
+            {
+                if (r.RowState != DataRowState.Modified) continue;
+
+                int id = r.Field<int>("ma_hoa_don");
+                string tenKh = r.Field<string>("ten_khach_hang") ?? "";
+                decimal soTien = r.Field<decimal?>("so_tien") ?? 0m;
+                DateTime ngay = r.Field<DateTime>("ngay_lap_hoa_don");
+                int maNv = r.Field<int>("ma_nhan_vien_lap");
+
+
+                updated += _svc.UpdateHoaDonBasic(id, tenKh, soTien, ngay, maNv);
+                r.AcceptChanges();
+            }
+
+            MessageBox.Show(updated > 0 ? $"Đã cập nhật {updated} hóa đơn." : "Không có thay đổi.");
+            ReloadWithFilters();
+        }
+
+        private void btnXuaHoaDon_Click(object sender, EventArgs e)
+        {
+            if (dgvBangDanhSachHoaDon.CurrentRow == null)
+            {
+                MessageBox.Show("Hãy chọn một dòng hóa đơn để xuất.");
+                return;
+            }
+
+            var r = ((DataRowView)dgvBangDanhSachHoaDon.CurrentRow.DataBoundItem).Row;
+            int maHd = (int)r["ma_hoa_don"];
+            string loai = r["loai_khach_hang"]?.ToString();
+            string tenNguoiNop = r["ten_khach_hang"]?.ToString() ?? "";
+            string diaChiNguoiNop = "";
+
+            if (loai == "doanh_nghiep" && r["dn_id"] != DBNull.Value)
+                diaChiNguoiNop = _svc.GetDiaChiDoanhNghiep(Convert.ToInt32(r["dn_id"]));
+            else if (loai == "ung_vien" && r["uv_id"] != DBNull.Value)
+                diaChiNguoiNop = _svc.GetDiaChiUngVien(Convert.ToInt32(r["uv_id"]));
+
+            decimal soTien = Convert.ToDecimal(r["so_tien"]);
+            var ps = new System.Collections.Generic.Dictionary<string, string>
+            {
+                ["DonVi"] = "Trung tâm Giới thiệu Việc làm SV",
+                ["DiaChiDonVi"] = "TP. HCM",
+                ["SoPhieu"] = "HD-" + maHd,
+                ["NgayLap"] = Convert.ToDateTime(r["ngay_lap_hoa_don"]).ToString("dd/MM/yyyy"),
+                ["TenNguoiNop"] = tenNguoiNop,
+                ["DiaChiNguoiNop"] = diaChiNguoiNop,
+                ["LyDoNop"] = loai == "doanh_nghiep" ? "Phí đăng tin tuyển dụng" : "Phí ứng tuyển",
+                ["SoTien"] = $"{soTien:#,0}",
+                ["SoTienBangChu"] = $"{soTien:#,0} đồng",
+                ["KemTheo"] = "",
+                ["ChungTuGoc"] = "",
+                ["QuyenSo"] = "",
+                ["No"] = "",
+                ["Co"] = ""
+            };
+
+            using (var f = new reportForm(ps)) f.ShowDialog();
+        }
+
+        private void cbbIdNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ReloadWithFilters();
+        }
+
+        private void cbbIdDoanhNghiep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ReloadWithFilters();
+        }
+
+        private void btnBoLoc_Click(object sender, EventArgs e)
+        {
+            ResetFilters();
+        }
+
+        private void btnXoaHoaDon_Click(object sender, EventArgs e)
+        {
+            if (dgvBangDanhSachHoaDon.CurrentRow == null)
+            {
+                MessageBox.Show("Hãy chọn một hóa đơn để xóa.");
+                return;
+            }
+
+            var r = ((DataRowView)dgvBangDanhSachHoaDon.CurrentRow.DataBoundItem)?.Row;
+            if (r == null || !r.Table.Columns.Contains("ma_hoa_don"))
+            {
+                MessageBox.Show("Không đọc được mã hóa đơn.");
+                return;
+            }
+
+            int maHd = Convert.ToInt32(r["ma_hoa_don"]);
+            var confirm = MessageBox.Show(
+                $"Bạn có chắc muốn xóa hóa đơn #{maHd}?\nHệ thống sẽ tự khôi phục các cờ thanh toán/liên quan.",
+                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            var (ok, msg) = _svc.XoaHoaDonAnToan(maHd);
+            MessageBox.Show(msg, ok ? "Thành công" : "Thất bại",
+                            ok ? MessageBoxButtons.OK : MessageBoxButtons.OK,
+                            ok ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+
+            if (ok)
+            {
+                // reload lại lưới theo filter hiện tại
+                ReloadWithFilters();
+            }
         }
     }
 }
