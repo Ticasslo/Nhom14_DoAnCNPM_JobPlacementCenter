@@ -10,21 +10,37 @@ namespace JPC.DataAccess.Repositories.Implementations.CSS
 {
 	public class UngVienRepository : DBConnection.DBConnection, IUngVienRepository
 	{
-		public bool ExistsByCccd(string cccd)
+	public bool ExistsByCccd(string cccd)
+	{
+		string sql = "SELECT COUNT(1) FROM UngVien WHERE cccd=@cccd";
+		var parameters = new List<SqlParameter>
 		{
-			string sql = "SELECT COUNT(1) FROM UngVien WHERE cccd=@cccd";
-			var parameters = new List<SqlParameter>
-			{
-				new SqlParameter("@cccd", SqlDbType.VarChar, 12) { Value = cccd }
-			};
-			var dt = ExecuteQuery(sql, parameters);
-			if (dt.Rows.Count > 0)
-			{
-				int count = Convert.ToInt32(dt.Rows[0][0]);
-				return count > 0;
-			}
-			return false;
-        }
+			new SqlParameter("@cccd", SqlDbType.VarChar, 12) { Value = cccd }
+		};
+		var dt = ExecuteQuery(sql, parameters);
+		if (dt.Rows.Count > 0)
+		{
+			int count = Convert.ToInt32(dt.Rows[0][0]);
+			return count > 0;
+		}
+		return false;
+    }
+
+	public bool ExistsBySoDienThoai(string soDienThoai)
+	{
+		string sql = "SELECT COUNT(1) FROM UngVien WHERE so_dien_thoai=@soDienThoai";
+		var parameters = new List<SqlParameter>
+		{
+			new SqlParameter("@soDienThoai", SqlDbType.VarChar, 20) { Value = soDienThoai }
+		};
+		var dt = ExecuteQuery(sql, parameters);
+		if (dt.Rows.Count > 0)
+		{
+			int count = Convert.ToInt32(dt.Rows[0][0]);
+			return count > 0;
+		}
+		return false;
+	}
 
         public int Create(UngVien entity)
 		{

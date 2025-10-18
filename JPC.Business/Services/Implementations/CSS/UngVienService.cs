@@ -92,6 +92,9 @@ namespace JPC.Business.Services.Implementations.CSS
             // Kiểm tra trùng CCCD
             if (repository.ExistsByCccd(ungVien.Cccd)) throw new DomainValidationException("DUP_CCCD", "CCCD đã được đăng ký.");
 
+            // Kiểm tra trùng số điện thoại
+            if (repository.ExistsBySoDienThoai(ungVien.SoDienThoai)) throw new DomainValidationException("DUP_PHONE", "Số điện thoại đã được đăng ký.");
+
             // Lưu
             repository.Create(ungVien);
         }
@@ -159,6 +162,10 @@ namespace JPC.Business.Services.Implementations.CSS
 
             if (existingUngVien.Cccd != ungVien.Cccd && repository.ExistsByCccd(ungVien.Cccd))
                 throw new DomainValidationException("DUP_CCCD", "CCCD đã được sử dụng bởi ứng viên khác.");
+
+            // Kiểm tra trùng số điện thoại (trừ ứng viên hiện tại)
+            if (existingUngVien.SoDienThoai != ungVien.SoDienThoai && repository.ExistsBySoDienThoai(ungVien.SoDienThoai))
+                throw new DomainValidationException("DUP_PHONE", "Số điện thoại đã được sử dụng bởi ứng viên khác.");
 
             // Cập nhật
             if (!repository.UpdateUngVien(ungVien))

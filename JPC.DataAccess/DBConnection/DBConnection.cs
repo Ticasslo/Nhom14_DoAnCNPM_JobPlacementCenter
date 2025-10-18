@@ -16,15 +16,15 @@ namespace JPC.DataAccess.DBConnection
 
         public DBConnection()
         {
-            //string strCnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"]?.ConnectionString
-            //    ?? throw new InvalidOperationException("Missing connection string in App.config");
-            //this.sqlConn = new SqlConnection(strCnn);
-            string strCnn = @"Data Source=tcp:THANHNHAN\MSSQLSERVER01;
-              Initial Catalog=JobPlacementCenter;
-              User ID=sa;Password=123456;
-              Encrypt=False;TrustServerCertificate=True;
-              MultipleActiveResultSets=True";
+            string strCnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"]?.ConnectionString
+                ?? throw new InvalidOperationException("Missing connection string in App.config");
             this.sqlConn = new SqlConnection(strCnn);
+            //string strCnn = @"Data Source=tcp:THANHNHAN\MSSQLSERVER01;
+            //  Initial Catalog=JobPlacementCenter;
+            //  User ID=sa;Password=123456;
+            //  Encrypt=False;TrustServerCertificate=True;
+            //  MultipleActiveResultSets=True";
+            //this.sqlConn = new SqlConnection(strCnn);
         }
 
         // SELECT → DataTable

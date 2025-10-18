@@ -22,6 +22,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau
         private readonly Timer _debounce = new Timer { Interval = 300 }; // 300ms
         private readonly IPasswordStrengthService _pwdStrengthSvc = new PasswordStrengthService();
         private PasswordStrengthResult _lastStrength;
+
         public DoiMatKhau_UC()
         {
             InitializeComponent();
@@ -31,6 +32,19 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau
             //phandomanhmatkhau
             _debounce.Tick += (s, e) => { _debounce.Stop(); UpdateStrengthFromDb(); };
             txtNewPass.TextChanged += (s, e) => { _debounce.Stop(); _debounce.Start(); };
+
+            // Khởi tạo Show/Hide password
+            picBoxShowOld.Visible = false;
+            picBoxHideOld.Visible = true;
+            txtOldPass.PasswordChar = '*';
+
+            picBoxShowNew.Visible = false;
+            picBoxHideNew.Visible = true;
+            txtNewPass.PasswordChar = '*';
+
+            picBoxShowConfirm.Visible = false;
+            picBoxHideConfirm.Visible = true;
+            txtConfirm.PasswordChar = '*';
         }
 
         private void btnLuuThayDoi_Click(object sender, EventArgs e)
@@ -116,6 +130,54 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau
             if (score >= 40) return Color.DarkOrange;
             if (score >= 20) return Color.OrangeRed;
             return Color.Firebrick;
+        }
+
+        private void picBoxShowOld_Click(object sender, EventArgs e)
+        {
+            picBoxShowOld.Visible = false;
+            picBoxHideOld.Visible = true;
+
+            txtOldPass.PasswordChar = '*'; // Ẩn mật khẩu
+        }
+
+        private void picBoxHideOld_Click(object sender, EventArgs e)
+        {
+            picBoxHideOld.Visible = false;
+            picBoxShowOld.Visible = true;
+
+            txtOldPass.PasswordChar = '\0'; // Hiện lại mật khẩu
+        }
+
+        private void picBoxShowNew_Click(object sender, EventArgs e)
+        {
+            picBoxShowNew.Visible = false;
+            picBoxHideNew.Visible = true;
+
+            txtNewPass.PasswordChar = '*'; // Ẩn mật khẩu
+        }
+
+        private void picBoxHideNew_Click(object sender, EventArgs e)
+        {
+            picBoxShowNew.Visible = true;
+            picBoxHideNew.Visible = false;
+
+            txtNewPass.PasswordChar = '\0'; // Hiện lại mật khẩu
+        }
+
+        private void picBoxShowConfirm_Click(object sender, EventArgs e)
+        {
+            picBoxShowConfirm.Visible = false;
+            picBoxHideConfirm.Visible = true;
+
+            txtConfirm.PasswordChar = '*'; // Ẩn mật khẩu
+        }
+
+        private void picBoxHideConfirm_Click(object sender, EventArgs e)
+        {
+            picBoxShowConfirm.Visible = true;
+            picBoxHideConfirm.Visible = false;
+
+            txtConfirm.PasswordChar = '\0'; // Hiện lại mật khẩu
         }
     }
 }
