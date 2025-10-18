@@ -30,6 +30,12 @@ namespace JPC.Business.Services.Implementations.ERS
                 return (false, "Vui lòng nhập Email.", 0);
             if (string.IsNullOrWhiteSpace(dn.MaSoThue))
                 return (false, "Vui lòng nhập Mã số thuế.", 0);
+            if (string.IsNullOrWhiteSpace(dn.DiaChi))
+                return (false, "Vui lòng nhập Địa chỉ.", 0);
+            if (string.IsNullOrWhiteSpace(dn.LinhVuc))
+                return (false, "Vui lòng nhập Lĩnh vực hoạt động.", 0);
+            if (string.IsNullOrWhiteSpace(dn.SoDienThoai))
+                return (false, "Vui lòng nhập Số điện thoại.", 0);
 
             // 2) Validate định dạng
             if (!Regex.IsMatch(dn.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
@@ -72,6 +78,25 @@ namespace JPC.Business.Services.Implementations.ERS
                 old.Email == dn.Email &&
                 old.LinhVuc == dn.LinhVuc)
                 return (false, "Không có thay đổi để lưu.");
+
+            // kiểm tra nếu để trống
+            if (string.IsNullOrWhiteSpace(dn.TenDoanhNghiep))
+                return (false, "Vui lòng nhập Tên doanh nghiệp.");
+            if (string.IsNullOrWhiteSpace(dn.Email))
+                return (false, "Vui lòng nhập Email.");
+            if (string.IsNullOrWhiteSpace(dn.DiaChi))
+                return (false, "Vui lòng nhập Địa chỉ.");
+            if (string.IsNullOrWhiteSpace(dn.LinhVuc))
+                return (false, "Vui lòng nhập Lĩnh vực hoạt động.");
+            if (string.IsNullOrWhiteSpace(dn.SoDienThoai))
+                return (false, "Vui lòng nhập Số điện thoại.");
+            // kiểm tra định dạng
+            if (!Regex.IsMatch(dn.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                return (false, "Email không hợp lệ.");
+            if (!string.IsNullOrWhiteSpace(dn.SoDienThoai) &&
+                !Regex.IsMatch(dn.SoDienThoai, @"^\d{9,11}$"))
+                return (false, "Số điện thoại phải là 9–11 chữ số.");
+
 
             var rows = _repo.Update(dn);
             return rows > 0 ? (true, "Cập nhật thành công!") : (false, "Cập nhật thất bại!");

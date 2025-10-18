@@ -25,10 +25,19 @@ namespace JPC.DataAccess.DBConnection
             //  Encrypt=False;TrustServerCertificate=True;
             //  MultipleActiveResultSets=True";
             //this.sqlConn = new SqlConnection(strCnn);
+
+
             string strCnn = @"Data Source=tcp:LAPTOP-DEJAVU;Initial Catalog=JobPlacementCenter;
                                 Integrated Security = True; Encrypt=False;
                                 TrustServerCertificate=True; MultipleActiveResultSets=True";
             this.sqlConn = new SqlConnection(strCnn);
+
+            //string strCnn = @"Data Source=LAPTOP-TNT38BSB\KHAHP;Initial Catalog=JobPlacementCenter;
+            //                    Integrated Security = True; Encrypt=False;
+            //                    TrustServerCertificate=True; MultipleActiveResultSets=True";
+            //this.sqlConn = new SqlConnection(strCnn);
+
+
         }
 
         // SELECT → DataTable

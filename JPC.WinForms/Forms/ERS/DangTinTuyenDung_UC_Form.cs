@@ -79,8 +79,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
                 }
 
                 cbonhomnghe.DataSource = dt;
-                cbonhomnghe.DisplayMember = "ten_nhom";
-                cbonhomnghe.ValueMember = "nhom_id";
+                cbonhomnghe.DisplayMember = "Tên nhóm";
+                cbonhomnghe.ValueMember = "ID";
                 cbonhomnghe.SelectedIndex = -1;
             }
             catch (Exception ex)
@@ -202,80 +202,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
         }
 
 
-        //TROII OI LA TROI 
-        // ================== (CÁC PHẦN CÒN LẠI GIỮ NGUYÊN) ==================
-
-        //private void DangTinTuyenDung_UC_Form_Resize(object sender, EventArgs e)
-        //{
-        //    int centerX = guna2Panel1.Width / 2;
-
-        //    lbTitle.Left = centerX - (lbTitle.Width / 2);
-        //    lbWelcome.Left = centerX - (lbWelcome.Width / 2);
-
-        //    int marginLeft = 200;
-        //    int columnSpacing = 500;
-        //    int rowSpacing = 60;
-        //    int startY = 160;
-        //    int labelWidth = 160;
-        //    int controlWidth = 230;
-        //    int controlHeight = 35;
-
-        //    Label[] leftLabels = { label3, label1, label2, label4 };
-        //    Control[] leftControls = { txttieude, txtmota, numsoluong, txtmucluong };
-        //    Label[] rightLabels = { label5, label6, label7, label8 };
-        //    Control[] rightControls = { txtkynang, txtkhuvuc, cbohinhthuc, numkinhnghiem };
-
-        //    for (int i = 0; i < leftLabels.Length; i++)
-        //    {
-        //        leftLabels[i].AutoSize = true;
-        //        leftLabels[i].Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-        //        leftLabels[i].Location = new Point(marginLeft, startY + i * rowSpacing);
-
-        //        leftControls[i].Size = new Size(controlWidth, controlHeight);
-        //        leftControls[i].Location = new Point(marginLeft + labelWidth + 10, startY + i * rowSpacing - 3);
-        //    }
-
-        //    for (int i = 0; i < rightLabels.Length; i++)
-        //    {
-        //        rightLabels[i].AutoSize = true;
-        //        rightLabels[i].Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-        //        rightLabels[i].Location = new Point(marginLeft + columnSpacing, startY + i * rowSpacing);
-
-        //        rightControls[i].Size = new Size(controlWidth, controlHeight);
-        //        rightControls[i].Location = new Point(marginLeft + columnSpacing + labelWidth + 10, startY + i * rowSpacing - 3);
-        //    }
-
-        //    int lastRowY = startY + leftLabels.Length * rowSpacing + 10;
-        //    int lastRowOffsetX = -150;
-
-        //    label9.AutoSize = true;
-        //    label9.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-        //    label9.Location = new Point(marginLeft + lastRowOffsetX, lastRowY);
-
-        //    cbonhomnghe.Size = new Size(controlWidth, controlHeight);
-        //    cbonhomnghe.Location = new Point(marginLeft + labelWidth - 60 + lastRowOffsetX, lastRowY - 3);
-
-        //    label10.AutoSize = true;
-        //    label10.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-        //    label10.Location = new Point(marginLeft + labelWidth + controlWidth + 20 + lastRowOffsetX, lastRowY);
-
-        //    cbonghe.Size = new Size(controlWidth, controlHeight);
-        //    cbonghe.Location = new Point(marginLeft + labelWidth + controlWidth + 70 + lastRowOffsetX, lastRowY - 3);
-
-        //    label11.AutoSize = true;
-        //    label11.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-        //    label11.Location = new Point(marginLeft + labelWidth + controlWidth * 2 + 170 + lastRowOffsetX, lastRowY);
-
-        //    cbovitrichuyenmon.Size = new Size(controlWidth, controlHeight);
-        //    cbovitrichuyenmon.Location = new Point(marginLeft + labelWidth + controlWidth * 2 + 300 + lastRowOffsetX, lastRowY - 3);
-
-        //    dgvTinTuyenDung.Top = btndangtin.Bottom - 30;
-
-        //    btndangtin.Width = 130;
-        //    btndangtin.Height = 40;
-        //    btndangtin.Left = (100 + this.Width - btndangtin.Width) / 2;
-        //    btndangtin.Top = lastRowY + 70;
-        //}
+        
 
         private void btndangtin_Click(object sender, EventArgs e)
         {
@@ -296,7 +223,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
                     MucLuong = txtmucluong.Text.Trim(),
                     KhuVucLamViec = txtkhuvuc.Text.Trim(),
                     HinhThucLamViec = cbohinhthuc.Text.Trim(),
-                    KinhNghiemYeuCau = (int)numkinhnghiem.Value,
+                    KinhNghiemYeuCau = (int)numkinhnghiem1.Value,
                     HanNopHoSo = dtphannop.Value.Date
                 };
 
@@ -317,7 +244,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
                     {
                         foreach (DataGridViewRow row in dgvTinTuyenDung.Rows)
                         {
-                            if (Convert.ToInt32(row.Cells["MaTin"].Value) == newId)
+                            if (Convert.ToInt32(row.Cells["Mã tin"].Value) == newId)
                             {
                                 row.Selected = true;
                                 dgvTinTuyenDung.FirstDisplayedScrollingRowIndex = row.Index;
@@ -360,7 +287,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
             txtmucluong.Clear();
             txtkhuvuc.Clear();
             cbohinhthuc.SelectedIndex = -1;
-            numkinhnghiem.Value = 0;
+            numkinhnghiem1.Value = 0;
             dtphannop.Value = DateTime.Now;
         }
 
@@ -375,6 +302,16 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
                 var ucBack = new SelectDoanhNghiep_UC_Form();
                 mainForm.LoadUserControl(ucBack);
             }
+        }
+
+        private void cbonhomnghe_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

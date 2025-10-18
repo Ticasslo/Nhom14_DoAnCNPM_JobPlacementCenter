@@ -25,6 +25,20 @@ namespace JPC.Business.Services.Implementations.ERS
             if (string.IsNullOrWhiteSpace(tin.TieuDe)) return (false, "Thiếu tiêu đề.", 0);
             if (string.IsNullOrWhiteSpace(tin.HinhThucLamViec))
                 return (false, "Thiếu hình thức làm việc.", 0);
+            if (tin.SoLuongTuyen <= 0)
+                return (false, "Số lượng tuyển phải lớn hơn 0.", 0);
+           
+            if (string.IsNullOrWhiteSpace(tin.KhuVucLamViec))
+                return (false, "Thiếu khu vực làm việc.", 0);
+            if (string.IsNullOrWhiteSpace(tin.MoTaCongViec))
+                return (false, "Thiếu mô tả công việc.", 0);
+            if (string.IsNullOrWhiteSpace(tin.MucLuong))
+                return (false, "Thiếu lương.", 0);
+            //if (string.IsNullOrWhiteSpace(tin.KinhNghiemYeuCau))
+            //    return (false, "Thiếu kinh nghiệm yêu cầu.", 0);
+            if (tin.KinhNghiemYeuCau < 0)
+                return (false, "Kinh nghiệm yêu cầu không hợp lệ.", 0);
+
 
             // Theo constraint: hinh_thuc_lam_viec ∈ {Toàn thời gian, Bán thời gian, Thực tập}
             var ht = tin.HinhThucLamViec.Trim();
