@@ -51,7 +51,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
             // Anchor các nhãn mục và hình ảnh theo Top
             if (lblHoSo != null) lblHoSo.Anchor = AnchorStyles.Top;
-            if (lblTinTuyenDung != null) lblTinTuyenDung.Anchor = AnchorStyles.Top;
+            if (lblDoanhNghiep != null) lblDoanhNghiep.Anchor = AnchorStyles.Top;
             if (lblDanhSach != null) lblDanhSach.Anchor = AnchorStyles.Top;
 
             if (picTinTuyenDung != null) picTinTuyenDung.SizeMode = PictureBoxSizeMode.Zoom;
@@ -90,10 +90,10 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 lblHoSo.Left = col1X + (colW - lblHoSo.Width) / 2;
                 lblHoSo.Top = topStart;
             }
-            if (lblTinTuyenDung != null)
+            if (lblDoanhNghiep != null)
             {
-                lblTinTuyenDung.Left = col2X + (colW - lblTinTuyenDung.Width) / 2;
-                lblTinTuyenDung.Top = topStart;
+                lblDoanhNghiep.Left = col2X + (colW - lblDoanhNghiep.Width) / 2;
+                lblDoanhNghiep.Top = topStart;
             }
             if (lblDanhSach != null)
             {
@@ -160,7 +160,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         private void btnTimKiemTTD_Click(object sender, EventArgs e)
         {
             var uc = new SelectDoanhNghiep_UC_Form();
-            _host.LoadControlIntoPanelWithBack(uc, "Tra cứu tin tuyển dụng");
+            _host.LoadControlIntoPanelWithBack(uc, "Tra cứu hồ sơ doanh nghiệp");
         }
 
         private void btnTraCuuDanhSachUV_Click(object sender, EventArgs e)

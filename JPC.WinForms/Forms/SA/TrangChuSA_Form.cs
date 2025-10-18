@@ -18,6 +18,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
     {
         private bool isLoggingOut = false;
         private Guna2Button activeButton = null;
+        private readonly Dictionary<Guna2Button, (Color fill, Color fore)> _originalColors = new Dictionary<Guna2Button, (Color fill, Color fore)>();
+
 
         public TrangChuSA_Form()
         {
@@ -81,18 +83,25 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void SetActiveButton(Guna2Button button)
         {
-            // Reset button cũ về trạng thái bình thường
-            if (activeButton != null)
+            if (button == null) return;
+
+            // Lưu màu gốc của nút mới (nếu chưa lưu)
+            if (!_originalColors.ContainsKey(button))
+                _originalColors[button] = (button.FillColor, button.ForeColor);
+
+            // Trả nút cũ (nếu có) về đúng màu gốc của chính nó
+            if (activeButton != null && _originalColors.TryGetValue(activeButton, out var old))
             {
-                activeButton.FillColor = Color.Transparent; // Background trong suốt
-                activeButton.ForeColor = Color.White; // Chữ trắng
+                activeButton.FillColor = old.fill;
+                activeButton.ForeColor = old.fore;
             }
 
-            // Set button mới thành active
+            // Đánh dấu nút mới là active
             activeButton = button;
-            activeButton.FillColor = Color.FromArgb(52, 152, 219); // Background blue
-            activeButton.ForeColor = Color.White; // Chữ trắng
+            activeButton.FillColor = Color.FromArgb(52, 152, 219); // màu active
+            activeButton.ForeColor = Color.White;
         }
+
 
         private void TrangChuSA_Form_Load(object sender, EventArgs e)
         {
@@ -391,7 +400,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
                 {
                     timerMenu.Stop();
                     isSidebarExpanded = true;
-                    // Optionally: show label/text/icon
                 }
             }
         }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblHoSo = new System.Windows.Forms.Label();
-            this.lblTinTuyenDung = new System.Windows.Forms.Label();
+            this.lblDoanhNghiep = new System.Windows.Forms.Label();
             this.lblDanhSach = new System.Windows.Forms.Label();
             this.picHoSo = new System.Windows.Forms.PictureBox();
             this.picDanhSach = new System.Windows.Forms.PictureBox();
@@ -54,16 +54,16 @@
             this.lblHoSo.TabIndex = 89;
             this.lblHoSo.Text = "Hồ sơ ứng viên";
             // 
-            // lblTinTuyenDung
+            // lblDoanhNghiep
             // 
-            this.lblTinTuyenDung.AutoSize = true;
-            this.lblTinTuyenDung.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTinTuyenDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
-            this.lblTinTuyenDung.Location = new System.Drawing.Point(500, 124);
-            this.lblTinTuyenDung.Name = "lblTinTuyenDung";
-            this.lblTinTuyenDung.Size = new System.Drawing.Size(192, 35);
-            this.lblTinTuyenDung.TabIndex = 90;
-            this.lblTinTuyenDung.Text = "Tin tuyển dụng";
+            this.lblDoanhNghiep.AutoSize = true;
+            this.lblDoanhNghiep.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhNghiep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
+            this.lblDoanhNghiep.Location = new System.Drawing.Point(471, 124);
+            this.lblDoanhNghiep.Name = "lblDoanhNghiep";
+            this.lblDoanhNghiep.Size = new System.Drawing.Size(250, 35);
+            this.lblDoanhNghiep.TabIndex = 90;
+            this.lblDoanhNghiep.Text = "Hồ sơ doanh nghiệp";
             // 
             // lblDanhSach
             // 
@@ -143,7 +143,7 @@
             this.btnTimKiemTTD.Name = "btnTimKiemTTD";
             this.btnTimKiemTTD.Size = new System.Drawing.Size(360, 85);
             this.btnTimKiemTTD.TabIndex = 99;
-            this.btnTimKiemTTD.Text = "Tìm kiếm tin tuyển dụng";
+            this.btnTimKiemTTD.Text = "Tra cứu hồ sơ doanh nghiệp";
             this.btnTimKiemTTD.Click += new System.EventHandler(this.btnTimKiemTTD_Click);
             // 
             // btnTraCuuDanhSachUV
@@ -192,7 +192,7 @@
             this.Controls.Add(this.picDanhSach);
             this.Controls.Add(this.picTinTuyenDung);
             this.Controls.Add(this.lblDanhSach);
-            this.Controls.Add(this.lblTinTuyenDung);
+            this.Controls.Add(this.lblDoanhNghiep);
             this.Controls.Add(this.lblHoSo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -209,7 +209,7 @@
 
         #endregion
         private System.Windows.Forms.Label lblHoSo;
-        private System.Windows.Forms.Label lblTinTuyenDung;
+        private System.Windows.Forms.Label lblDoanhNghiep;
         private System.Windows.Forms.Label lblDanhSach;
         private System.Windows.Forms.PictureBox picTinTuyenDung;
         private System.Windows.Forms.PictureBox picDanhSach;
