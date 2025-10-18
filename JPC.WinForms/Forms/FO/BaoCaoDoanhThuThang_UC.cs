@@ -14,7 +14,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 {
     public partial class BaoCaoDoanhThuThang_UC : UserControl
@@ -22,7 +21,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private bool _isInit = true;
         private bool _suppressEvents = false;
         private DataTable _dtInvoices = new DataTable();
-        private IThongKeService _svc;
+        private readonly IBaoCaoDoanhThuThangService _svc;
 
         private static DateTime FirstDayOfMonth(DateTime d) => new DateTime(d.Year, d.Month, 1);
         private static DateTime LastDayOfMonth(DateTime d) => new DateTime(d.Year, d.Month, DateTime.DaysInMonth(d.Year, d.Month));
@@ -30,28 +29,28 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         public BaoCaoDoanhThuThang_UC()
         {
             InitializeComponent();
+            _svc = new BaoCaoDoanhThuThangService();   // Service tự new Repo bên trong
+            this.Load += BaoCaoDoanhThuThang_UC_Load;
+
+            dtpTuNgay.ValueChanged += dtpTuNgay_ValueChanged;
+            dtpDenNgay.ValueChanged += dtpDenNgay_ValueChanged;
+            btnXuatBaoCao.Click += (_, __) => ExportExcel();
         }
+
         private void BaoCaoDoanhThuThang_UC_Load(object sender, EventArgs e)
         {
             _isInit = true;
-            EnsureService();
 
-            // Mặc định mở form: chốt theo tháng hiện tại
+            // Mặc định khóa theo tháng hiện tại
             SnapToMonth(DateTime.Now);
             txtNguoiLapBaoCao.Text = CurrentUserName();
 
             _isInit = false;
             LoadInvoices();
         }
-        
+
         #region Helpers
-        private void EnsureService()
-        {
-            if (_svc != null) return;
-            var hdRepo = new HoaDonRepository();
-            _svc = new ThongKeService(hdRepo);
-        }
-        
+
         private void BindGrid()
         {
             dgvBangCaoDoanhThuThang.AutoGenerateColumns = false;
@@ -99,24 +98,18 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             dgvBangCaoDoanhThuThang.DataSource = _dtInvoices;
 
             if (dgvBangCaoDoanhThuThang.Columns["so_tien"] != null)
-            {
                 dgvBangCaoDoanhThuThang.Columns["so_tien"].DefaultCellStyle.Alignment =
                     DataGridViewContentAlignment.MiddleRight;
-            }
+
             FixGridHeader(dgvBangCaoDoanhThuThang);
         }
 
-        #endregion
         private static string CurrentUserName()
         {
-            try
-            {
-                return (JPC.Models.UserSession.NhanVien != null)
-                       ? JPC.Models.UserSession.NhanVien.HoTen
-                       : string.Empty;
-            }
+            try { return JPC.Models.UserSession.NhanVien?.HoTen ?? string.Empty; }
             catch { return string.Empty; }
         }
+
         private void SnapToMonth(DateTime anchor)
         {
             _suppressEvents = true;
@@ -124,14 +117,13 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             dtpDenNgay.Value = LastDayOfMonth(anchor);
             _suppressEvents = false;
         }
+
+        #endregion
+
         private void dtpTuNgay_ValueChanged(object sender, EventArgs e)
         {
             if (_isInit || _suppressEvents) return;
-
-            // Khóa theo tháng theo ngày người dùng chọn ở dtpTuNgay
-            SnapToMonth(dtpTuNgay.Value);
-
-            // Sau khi snap, nạp lại dữ liệu
+            SnapToMonth(dtpTuNgay.Value);   // khóa theo tháng của “Từ ngày”
             LoadInvoices();
         }
 
@@ -139,44 +131,39 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         {
             if (_isInit || _suppressEvents) return;
 
-            // Không cho “Đến ngày” < “Từ ngày” 
             if (dtpDenNgay.Value.Date < dtpTuNgay.Value.Date)
             {
                 _suppressEvents = true;
                 dtpDenNgay.Value = dtpTuNgay.Value.Date;
                 _suppressEvents = false;
             }
-
             LoadInvoices();
         }
+
         private void LoadInvoices()
         {
-            EnsureService();
             if (_isInit) return;
 
-            // Nếu set sai 
             if (dtpTuNgay.Value.Date > dtpDenNgay.Value.Date)
             {
                 _suppressEvents = true;
                 dtpDenNgay.Value = dtpTuNgay.Value.Date;
                 _suppressEvents = false;
-                // Có thể báo nhẹ nếu bạn muốn:
                 ShowOwnedMessage("Từ ngày không được lớn hơn Đến ngày.");
             }
 
-            _dtInvoices = _svc.LayHoaDon(dtpTuNgay.Value.Date, dtpDenNgay.Value.Date);
+            _dtInvoices = _svc.GetBaoCao(dtpTuNgay.Value.Date, dtpDenNgay.Value.Date);
             BindGrid();
 
             var tong = _svc.TinhTongTien(_dtInvoices);
-            txtTongTien.Text = string.Format("{0:#,0}", tong);
+            txtTongTien.Text = $"{tong:#,0}";
         }
+
         private void ShowOwnedMessage(string text, string title = "Thông báo")
         {
             var owner = this.FindForm();
-            if (owner != null)
-                MessageBox.Show(owner, text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-                MessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (owner != null) MessageBox.Show(owner, text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else MessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void ExportExcel()
@@ -200,17 +187,14 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 using (var wb = new XLWorkbook())
                 {
                     var ws = wb.AddWorksheet("BaoCao");
-
                     int row = 1;
 
-                    // Tiêu đề
                     ws.Cell(row, 1).Value = "BÁO CÁO DOANH THU THEO THÁNG";
                     ws.Range(row, 1, row, 5).Merge().Style
                         .Font.SetBold().Font.SetFontSize(16)
                         .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                     row += 2;
 
-                    // Dòng thời gian (in nghiêng)
                     var timeLine = $"Từ ngày {dtpTuNgay.Value:dd/MM/yyyy} đến ngày {dtpDenNgay.Value:dd/MM/yyyy}";
                     ws.Cell(row, 1).Value = timeLine;
                     ws.Range(row, 1, row, 5).Merge().Style
@@ -218,7 +202,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                         .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                     row += 2;
 
-                    // Header bảng
                     ws.Cell(row, 1).Value = "Mã hóa đơn";
                     ws.Cell(row, 2).Value = "Tên người đóng";
                     ws.Cell(row, 3).Value = "Sinh viên / Doanh nghiệp";
@@ -230,14 +213,12 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                         .Border.OutsideBorder = XLBorderStyleValues.Thin;
                     ws.Range(row, 1, row, 5).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
 
-                    // Dữ liệu
                     int startDataRow = ++row;
                     foreach (DataRow dr in _dtInvoices.Rows)
                     {
-                        ws.Cell(row, 1).Value = dr["ma_hoa_don"]?.ToString();                 // hoặc Convert.ToInt32(...)
+                        ws.Cell(row, 1).Value = dr["ma_hoa_don"]?.ToString();
                         ws.Cell(row, 2).Value = dr["ten_khach_hang"]?.ToString();
                         ws.Cell(row, 3).Value = dr["doi_tuong"]?.ToString();
-
                         ws.Cell(row, 4).Value = dr.Field<decimal>("so_tien");
                         ws.Cell(row, 4).Style.NumberFormat.Format = "#,##0";
                         ws.Cell(row, 5).Value = Convert.ToDateTime(dr["ngay_thu"]);
@@ -245,11 +226,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                         row++;
                     }
 
-                    // Kẻ bảng
                     ws.Range(startDataRow - 1, 1, row - 1, 5).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                     ws.Range(startDataRow - 1, 1, row - 1, 5).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
 
-                    // Tổng tiền
                     decimal total = _dtInvoices.AsEnumerable().Sum(r => r.Field<decimal>("so_tien"));
                     ws.Cell(row, 1).Value = "Tổng tiền:";
                     ws.Range(row, 1, row, 3).Merge().Style
@@ -260,7 +239,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                     ws.Range(row, 4, row, 5).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                     row += 2;
 
-                    // Người lập báo cáo
                     ws.Cell(row, 4).Value = "Người lập báo cáo";
                     ws.Cell(row, 4).Style.Font.SetBold();
                     row++;
@@ -271,9 +249,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                         ? CurrentUserName()
                         : txtNguoiLapBaoCao.Text.Trim();
 
-                    // Auto fit
                     ws.Columns(1, 5).AdjustToContents();
-
                     wb.SaveAs(sfd.FileName);
                 }
 
@@ -284,42 +260,30 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 MessageBox.Show("Lỗi xuất Excel: " + ex.Message);
             }
         }
-        private void btnXuatBaoCao_Click(object sender, EventArgs e)
-        {
-            ExportExcel();
-        }
 
-        //fix header guna datagridview
+        // fix header guna datagridview
         void FixGridHeader(Guna.UI2.WinForms.Guna2DataGridView dgv)
         {
-            // 1) Bật header & set lại chiều cao, chế độ resize
             dgv.ColumnHeadersVisible = true;
             dgv.EnableHeadersVisualStyles = false;
-
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgv.ColumnHeadersHeight = 36;
 
-            // Đối với Guna2: set cả ThemeStyle để tránh nó ghi đè
             dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgv.ThemeStyle.HeaderStyle.Height = 36;
 
-            // 2) Màu/định dạng (tránh chữ trùng nền)
-            dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            dgv.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgv.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgv.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
 
-            // 3) Cột tự co giãn (nếu cần)
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // hoặc AllCells
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.AutoResizeColumns();
 
-            // 4) Ép layout + repaint để tránh lỗi chỉ hiện khi scroll
             dgv.SuspendLayout();
             dgv.ResumeLayout(true);
             dgv.PerformLayout();
-            dgv.Invalidate();   // vẽ lại
-            dgv.Refresh();      // force repaint
+            dgv.Invalidate();
+            dgv.Refresh();
         }
-
-        
     }
 }

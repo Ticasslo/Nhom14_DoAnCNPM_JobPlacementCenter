@@ -1,4 +1,5 @@
 ﻿using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using JPC.DataAccess.Repositories.Interfaces.FO;
 using System;
 using System.Collections.Generic;
@@ -11,45 +12,49 @@ namespace JPC.Business.Services.Implementations.FO
 {
     public class QuanLyHoaDonService : IQuanLyHoaDonService
     {
-        private readonly IHoaDonRepository _hoaDonRepo;
-        private readonly INhanVienRepository _nhanVienRepo;
-        private readonly IDoanhNghiepRepository _doanhNghiepRepo;
-        private readonly IUngVienRepository _ungVienRepo;
+        private readonly IHoaDonRepository _hdRepo;
+        private readonly INhanVienRepository _nvRepo;
+        private readonly IDoanhNghiepRepository _dnRepo;
+        private readonly IUngVienRepository _uvRepo;
 
-        public QuanLyHoaDonService(
-            IHoaDonRepository hoaDonRepo,
-            INhanVienRepository nhanVienRepo,
-            IDoanhNghiepRepository doanhNghiepRepo,
-            IUngVienRepository ungVienRepo)
+        // ctor KHÔNG tham số: tự new repo, không cần service factory
+        public QuanLyHoaDonService()
         {
-            _hoaDonRepo = hoaDonRepo;
-            _nhanVienRepo = nhanVienRepo;
-            _doanhNghiepRepo = doanhNghiepRepo;
-            _ungVienRepo = ungVienRepo;
+            _hdRepo = new HoaDonRepository();
+            _nvRepo = new NhanVienRepository();
+            _dnRepo = new DoanhNghiepRepository();
+            _uvRepo = new UngVienRepository();
         }
 
-        public DataTable GetNhanVienActive() => _nhanVienRepo.GetNhanViensActive();
-        public IEnumerable<(int dn_id, string ten_doanh_nghiep, string dia_chi)> GetDoanhNghiepBasic() => _doanhNghiepRepo.GetAllBasic();
+        // --- Combos ---
+        public DataTable GetNhanVienActive() => _nvRepo.GetNhanViensActive();
 
-        public DataTable GetAllHoaDon() => _hoaDonRepo.GetAll();
-        public DataTable GetHoaDonFiltered(int? dnId, int? maNvLap) => _hoaDonRepo.GetList(dnId, maNvLap);
+        public IEnumerable<(int dn_id, string ten_doanh_nghiep, string dia_chi)> GetDoanhNghiepBasic()
+            => _dnRepo.GetAllBasic();
+
+        // --- Grid ---
+        public DataTable GetAllHoaDon() => _hdRepo.GetAll();
+
+        public DataTable GetHoaDonFiltered(int? dnId, int? maNvLap)
+        {
+            // UI dùng 0 = “Tất cả” → chuyển thành null
+            if (dnId.HasValue && dnId.Value == 0) dnId = null;
+            if (maNvLap.HasValue && maNvLap.Value == 0) maNvLap = null;
+            return _hdRepo.GetList(dnId, maNvLap);
+        }
+
         public int UpdateHoaDonBasic(int id, string tenKh, decimal soTien, DateTime ngay, int maNvLap)
-            => _hoaDonRepo.UpdateBasic(id, tenKh, soTien, ngay, maNvLap);
+            => _hdRepo.UpdateBasic(id, tenKh, soTien, ngay, maNvLap);
 
-        public string GetDiaChiDoanhNghiep(int dnId) => _doanhNghiepRepo.GetDiaChiById(dnId);
-        public string GetDiaChiUngVien(int uvId) => _ungVienRepo.GetDiaChiById(uvId);
+        // --- Hỗ trợ in report ---
+        public string GetDiaChiDoanhNghiep(int dnId) => _dnRepo.GetDiaChiById(dnId);
+        public string GetDiaChiUngVien(int uvId) => _uvRepo.GetDiaChiById(uvId);
+
+        // --- Xóa an toàn ---
         public (bool ok, string message) XoaHoaDonAnToan(int maHoaDon)
         {
-            if (maHoaDon <= 0) return (false, "Mã hóa đơn không hợp lệ.");
-            try
-            {
-                var (rows, msg) = _hoaDonRepo.DeleteHoaDonAnToan(maHoaDon);
-                return (rows > 0, msg);
-            }
-            catch (Exception ex)
-            {
-                return (false, "Lỗi xóa hóa đơn: " + ex.Message);
-            }
+            var (rows, msg) = _hdRepo.DeleteHoaDonAnToan(maHoaDon);
+            return (rows > 0, msg);
         }
     }
 }

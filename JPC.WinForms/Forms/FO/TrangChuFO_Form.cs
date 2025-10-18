@@ -1,7 +1,4 @@
-﻿using JPC.Business.Services.Implementations.FO;
-using JPC.Business.Services.Interfaces.FO;
-using JPC.DataAccess.Repositories.Implementations.FO;
-using JPC.WinForms;
+﻿using JPC.WinForms;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.DoiMatKhau;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login;
 using System;
@@ -29,6 +26,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             btnBaoCaoDoanhThuThang.Tag = "CN_FO04";
             btnDoiMatKhau.Tag = "CN_DMK";
 
+            ShowControl(new ThuPhiUngVien_UC());
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

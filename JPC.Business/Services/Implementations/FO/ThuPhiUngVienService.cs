@@ -21,18 +21,13 @@ namespace JPC.Business.Services.Implementations.FO
 
         private const int PHI_UNG_TUYEN_ID = 1;
 
-        public ThuPhiUngVienService(
-            IUngVienRepository uvRepo,
-            IUngTuyenRepository utRepo,
-            IPhiDichVuRepository phiRepo,
-            INhanVienRepository nvRepo,
-            IHoaDonRepository hdRepo)
+        public ThuPhiUngVienService()
         {
-            _uvRepo = uvRepo;
-            _utRepo = utRepo;
-            _phiRepo = phiRepo;
-            _nvRepo = nvRepo;
-            _hdRepo = hdRepo;
+            _uvRepo = new UngVienRepository();
+            _utRepo = new UngTuyenRepository();
+            _phiRepo = new PhiDichVuRepository();
+            _nvRepo = new NhanVienRepository();
+            _hdRepo = new HoaDonRepository();
         }
 
         public decimal GetDonGiaCoDinh()

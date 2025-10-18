@@ -1,5 +1,6 @@
 ﻿using JPC.Business.Services.Interfaces.FO;
 using JPC.DataAccess.Repositories.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using JPC.Models.DoanhNghiep;
 using JPC.Models.TaiChinh;
 using System;
@@ -21,19 +22,15 @@ namespace JPC.Business.Services.Implementations.FO
         private readonly IDoanhNghiepRepository _dnRepo;
         private readonly INhanVienRepository _nvRepo;
 
-        public ThuPhiDoanhNghiepService(
-            ITinTuyenDungRepository tinRepo,
-            IHoaDonRepository hoaDonRepo,
-            IPhiDichVuRepository phiRepo,
-            IDoanhNghiepRepository dnRepo,
-            INhanVienRepository nvRepo)
+        public ThuPhiDoanhNghiepService()
         {
-            _tinRepo = tinRepo;
-            _hdRepo = hoaDonRepo;
-            _phiRepo = phiRepo;
-            _dnRepo = dnRepo;
-            _nvRepo = nvRepo;
+            _tinRepo = new TinTuyenDungRepository();
+            _hdRepo = new HoaDonRepository();
+            _phiRepo = new PhiDichVuRepository();
+            _dnRepo = new DoanhNghiepRepository();
+            _nvRepo = new NhanVienRepository();
         }
+
         public IEnumerable<(int tin_id, string display, DateTime ngay_dang, DateTime han_nop_ho_so)>
             GetTinChuaThanhToanByDoanhNghiep(int dnId)
             => _tinRepo.GetUnpaidByDoanhNghiep(dnId);

@@ -109,7 +109,7 @@
             this.txtNguoiLapBaoCao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNguoiLapBaoCao.ForeColor = System.Drawing.Color.Black;
             this.txtNguoiLapBaoCao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNguoiLapBaoCao.Location = new System.Drawing.Point(1405, 733);
+            this.txtNguoiLapBaoCao.Location = new System.Drawing.Point(1405, 735);
             this.txtNguoiLapBaoCao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNguoiLapBaoCao.Name = "txtNguoiLapBaoCao";
             this.txtNguoiLapBaoCao.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -132,7 +132,7 @@
             this.txtTongTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.ForeColor = System.Drawing.Color.Black;
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTongTien.Location = new System.Drawing.Point(1407, 608);
+            this.txtTongTien.Location = new System.Drawing.Point(1407, 613);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -146,7 +146,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1457, 693);
+            this.label7.Location = new System.Drawing.Point(1457, 695);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 23);
             this.label7.TabIndex = 51;
@@ -157,7 +157,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1413, 658);
+            this.label6.Location = new System.Drawing.Point(1413, 660);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 23);
             this.label6.TabIndex = 52;
@@ -256,7 +256,6 @@
             this.btnXuatBaoCao.Size = new System.Drawing.Size(282, 45);
             this.btnXuatBaoCao.TabIndex = 71;
             this.btnXuatBaoCao.Text = "XUẤT/ IN BÁO CÁO";
-            this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
             // 
             // BaoCaoDoanhThuThang_UC
             // 

@@ -78,7 +78,6 @@
     <Compile Include="Services\Implementations\ERS\UngTuyenService_ERS.cs" />
     <Compile Include="Services\Implementations\FO\BaoCaoDoanhThuThangService.cs" />
     <Compile Include="Services\Implementations\FO\QuanLyHoaDonService.cs" />
-    <Compile Include="Services\Implementations\FO\ThongKeService.cs" />
     <Compile Include="Services\Implementations\FO\ThuPhiDoanhNghiepService.cs" />
     <Compile Include="Services\Implementations\FO\ThuPhiUngVienService.cs" />
     <Compile Include="Services\Implementations\Login\DangNhapService.cs" />
@@ -100,7 +99,6 @@
     <Compile Include="Services\Interfaces\ERS\IUngTuyenService_ERS.cs" />
     <Compile Include="Services\Interfaces\FO\IBaoCaoDoanhThuThangService.cs" />
     <Compile Include="Services\Interfaces\FO\IQuanLyHoaDonService.cs" />
-    <Compile Include="Services\Interfaces\FO\IThongKeService.cs" />
     <Compile Include="Services\Interfaces\FO\IThuPhiDoanhNghiepService.cs" />
     <Compile Include="Services\Interfaces\FO\IThuPhiUngVienService.cs" />
     <Compile Include="Services\Interfaces\Login\IDangNhapService.cs" />

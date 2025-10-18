@@ -1,6 +1,5 @@
 ﻿using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
-using JPC.DataAccess.Repositories.Implementations.FO;
 using JPC.Models;
 using System;
 using System.Collections.Generic;
@@ -36,21 +35,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             };
 
             txtSoTien.ReadOnly = true;
-        }
-        private void EnsureService()
-        {
-            if (_service != null) return;
-            var uvRepo = new UngVienRepository();
-            var utRepo = new UngTuyenRepository();    
-            var hdRepo = new HoaDonRepository();
-            var nvRepo = new NhanVienRepository();
-            var phiRepo = new PhiDichVuRepository();
-
-            _service = new ThuPhiUngVienService(uvRepo, utRepo, phiRepo , nvRepo, hdRepo);
-        }
-        private void ThuPhiUngVien_Load(object sender, EventArgs e)
-        {
-            
+            _service = new ThuPhiUngVienService();
         }
 
         private void ResetForm()
@@ -73,7 +58,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private void cbbIdUngVien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (_service == null || cbbIdUngVien.SelectedIndex < 0) return;
-            EnsureService();
+            
             var drv = cbbIdUngVien.SelectedItem as DataRowView;
             if (drv == null) return;
 
@@ -107,7 +92,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
         private void ThuPhiUngVien_UC_Load(object sender, EventArgs e)
         {
-            EnsureService();
             try
             {
                 // đơn giá cố định
@@ -148,8 +132,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
         private void btnXuatPhieuThu_Click(object sender, EventArgs e)
         {
-            EnsureService();
-
             var sb = new StringBuilder();
             if (cbbIdUngVien.SelectedIndex < 0) sb.AppendLine("• Chưa chọn Ứng viên.");
             if (cbbIdUngTuyen.SelectedIndex < 0) sb.AppendLine("• Chưa chọn hồ sơ Ứng tuyển.");

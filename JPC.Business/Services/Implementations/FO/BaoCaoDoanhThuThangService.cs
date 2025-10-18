@@ -1,4 +1,5 @@
 ﻿using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
 using JPC.DataAccess.Repositories.Interfaces.FO;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,13 @@ namespace JPC.Business.Services.Implementations.FO
     public class BaoCaoDoanhThuThangService : IBaoCaoDoanhThuThangService
     {
         private readonly IHoaDonRepository _hoaDonRepo;
+        public BaoCaoDoanhThuThangService()
+        {
+            _hoaDonRepo = new HoaDonRepository();
+        }
         public BaoCaoDoanhThuThangService(IHoaDonRepository hoaDonRepo)
         {
-            _hoaDonRepo = hoaDonRepo;
+            _hoaDonRepo = hoaDonRepo ?? throw new ArgumentNullException(nameof(hoaDonRepo));
         }
 
         public DataTable GetBaoCao(DateTime tuNgay, DateTime denNgay)

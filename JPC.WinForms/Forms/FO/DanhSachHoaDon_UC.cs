@@ -1,7 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
-using JPC.DataAccess.Repositories.Implementations.FO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,12 +36,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void EnsureService()
         {
-            if (_svc != null) return;
-            var hdRepo = new HoaDonRepository();
-            var dnRepo = new DoanhNghiepRepository();
-            var nvRepo = new NhanVienRepository();
-            var uvRepo = new UngVienRepository();
-            _svc = new QuanLyHoaDonService(hdRepo, nvRepo, dnRepo, uvRepo);
+            if (_svc == null)
+                _svc = new QuanLyHoaDonService();
         }
         private void DanhSachHoaDon_Load(object sender, EventArgs e)
         {
@@ -54,30 +49,28 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private void LoadCombos()
         {
             // DN
-            var dnList = _svc.GetDoanhNghiepBasic()
-                             .Select(x => new { dn_id = x.dn_id, ten_doanh_nghiep = x.ten_doanh_nghiep })
-                             .ToList();
-            dnList.Insert(0, new { dn_id = 0, ten_doanh_nghiep = "— Tất cả —" });
+            var dnList = _svc.GetDoanhNghiepBasic();
+            var dn = dnList != null
+                ? new List<dynamic>(dnList.Select(x => new { dn_id = x.dn_id, ten_doanh_nghiep = x.ten_doanh_nghiep }))
+                : new List<dynamic>();
+            dn.Insert(0, new { dn_id = 0, ten_doanh_nghiep = "— Tất cả —" });
 
             cbbIdDoanhNghiep.DisplayMember = "ten_doanh_nghiep";
             cbbIdDoanhNghiep.ValueMember = "dn_id";
-            cbbIdDoanhNghiep.DataSource = dnList;
-            cbbIdDoanhNghiep.SelectedIndex = -1;
+            cbbIdDoanhNghiep.DataSource = dn;
+            cbbIdDoanhNghiep.SelectedIndex = 0;   // mặc định “Tất cả”
 
             // NV
-            var nvList = _svc.GetNhanVienActive();  // DataTable: ma_nhan_vien, ho_ten
-            var nv = nvList.Copy();
+            var nv = _svc.GetNhanVienActive().Copy();
             var rAll = nv.NewRow();
-            rAll["ma_nhan_vien"] = 0;               // ⬅ sentinel
+            rAll["ma_nhan_vien"] = 0;
             rAll["ho_ten"] = "— Tất cả —";
             nv.Rows.InsertAt(rAll, 0);
 
             cbbIdNhanVien.DisplayMember = "ho_ten";
             cbbIdNhanVien.ValueMember = "ma_nhan_vien";
             cbbIdNhanVien.DataSource = nv;
-            cbbIdNhanVien.SelectedIndex = -1;
-
-            _ignoreDate = false;
+            cbbIdNhanVien.SelectedIndex = 0;      // mặc định “Tất cả”
         }
 
         private void LoadAllHoaDon()
@@ -130,13 +123,20 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         {
             EnsureService();
 
-            int? dnId = (cbbIdDoanhNghiep.SelectedIndex >= 0) ? (int?)Convert.ToInt32(cbbIdDoanhNghiep.SelectedValue) : null;
-            int? maNv = (cbbIdNhanVien.SelectedIndex >= 0) ? (int?)Convert.ToInt32(cbbIdNhanVien.SelectedValue) : null;
+            int? dnId = null, maNv = null;
+            if (cbbIdDoanhNghiep.SelectedIndex >= 0)
+            {
+                var v = Convert.ToInt32(cbbIdDoanhNghiep.SelectedValue);
+                if (v != 0) dnId = v;
+            }
+            if (cbbIdNhanVien.SelectedIndex >= 0)
+            {
+                var v = Convert.ToInt32(cbbIdNhanVien.SelectedValue);
+                if (v != 0) maNv = v;
+            }
 
             _dtHoaDon = _svc.GetHoaDonFiltered(dnId, maNv);
             BindGrid(_dtHoaDon);
-
-
         }
         private void ApplyHeadersFromCaptions(DataTable dt)
         {
@@ -281,7 +281,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 ["DiaChiNguoiNop"] = diaChiNguoiNop,
                 ["LyDoNop"] = loai == "doanh_nghiep" ? "Phí đăng tin tuyển dụng" : "Phí ứng tuyển",
                 ["SoTien"] = $"{soTien:#,0}",
-                ["SoTienBangChu"] = $"{soTien:#,0} đồng",
+                ["SoTienBangChu"] = VietnameseNumber.ToCurrencyWords(soTien) + " đồng",
                 ["KemTheo"] = "",
                 ["ChungTuGoc"] = "",
                 ["QuyenSo"] = "",

@@ -1,6 +1,5 @@
 ﻿using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
-using JPC.DataAccess.Repositories.Implementations.FO;
 using JPC.Models;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
@@ -37,16 +36,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
             };
-        }
-        private void EnsureService()
-        {
-            if (_service != null) return;
-            var tinRepo = new TinTuyenDungRepository();
-            var hdRepo = new HoaDonRepository();
-            var phiRepo = new PhiDichVuRepository();
-            var dnRepo = new DoanhNghiepRepository();
-            var nvRepo = new NhanVienRepository();
-            _service = new ThuPhiDoanhNghiepService(tinRepo, hdRepo, phiRepo, dnRepo, nvRepo);
+            _service = new ThuPhiDoanhNghiepService();
         }
         public void BindService()
         {
@@ -55,7 +45,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             cbbIdDoanhNghiep.ValueMember = "dn_id";
             cbbIdDoanhNghiep.DisplayMember = "ten_doanh_nghiep";
             cbbIdDoanhNghiep.DataSource = dn;
-            cbbIdDoanhNghiep.SelectedIndex = -1;
+            cbbIdDoanhNghiep.SelectedIndex = 0;
 
             // Tiền tệ + reset
             cbbDonViTien.Items.Clear();
@@ -87,7 +77,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void ThuPhiDoanhNghiep_Load(object sender, EventArgs e)
         {
-            EnsureService();
             BindService();
         }
         private bool ValidateInput(out string msg)
@@ -102,7 +91,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void cbbIdDoanhNghiep_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            EnsureService();
             if (cbbIdDoanhNghiep.SelectedIndex < 0) return;
             int dnId = Convert.ToInt32((cbbIdDoanhNghiep.SelectedItem as DataRowView)["dn_id"]);
 
@@ -118,7 +106,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void cbbIdTinTuyenDung_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            EnsureService();
             if (cbbIdTinTuyenDung.SelectedIndex < 0) return;
 
             var r = (DataRowView)cbbIdTinTuyenDung.SelectedItem;
@@ -182,7 +169,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private void btnXuatPhieuThu_Click(object sender, EventArgs e)
         {
             if (!ValidateInput(out var msg)) { MessageBox.Show(msg); return; }
-            EnsureService();
+            
             var rTin = (DataRowView)cbbIdTinTuyenDung.SelectedItem;
             int tinId = (int)rTin["tin_id"];
             int maNv = UserSession.NhanVien.MaNhanVien;
