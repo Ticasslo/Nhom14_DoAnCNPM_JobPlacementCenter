@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.grpBoxLapHoaDon = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnXuatPhieuThu = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLamMoi = new Guna.UI2.WinForms.Guna2Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtVietBangChu = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLyDo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiaChi2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -83,7 +81,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnXuatPhieuThu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLamMoi = new Guna.UI2.WinForms.Guna2Button();
             this.grpBoxLapHoaDon.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,52 +149,15 @@
             this.grpBoxLapHoaDon.TabIndex = 67;
             this.grpBoxLapHoaDon.TabStop = false;
             // 
-            // label1
+            // label13
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
-            this.label1.Location = new System.Drawing.Point(548, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 38);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "THU PHÍ DOANH NGHIỆP";
-            // 
-            // btnXuatPhieuThu
-            // 
-            this.btnXuatPhieuThu.BackColor = System.Drawing.Color.Transparent;
-            this.btnXuatPhieuThu.BorderRadius = 10;
-            this.btnXuatPhieuThu.BorderThickness = 2;
-            this.btnXuatPhieuThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuatPhieuThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuatPhieuThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXuatPhieuThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXuatPhieuThu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
-            this.btnXuatPhieuThu.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnXuatPhieuThu.ForeColor = System.Drawing.Color.White;
-            this.btnXuatPhieuThu.Location = new System.Drawing.Point(1199, 20);
-            this.btnXuatPhieuThu.Name = "btnXuatPhieuThu";
-            this.btnXuatPhieuThu.Size = new System.Drawing.Size(180, 45);
-            this.btnXuatPhieuThu.TabIndex = 36;
-            this.btnXuatPhieuThu.Text = "XUẤT PHIẾU THU";
-            this.btnXuatPhieuThu.Click += new System.EventHandler(this.btnXuatPhieuThu_Click_1);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BorderRadius = 20;
-            this.btnLamMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLamMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLamMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLamMoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLamMoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
-            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(1068, 20);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(125, 45);
-            this.btnLamMoi.TabIndex = 169;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label13.Location = new System.Drawing.Point(33, 4);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 23);
+            this.label13.TabIndex = 122;
+            this.label13.Text = "LẬP HÓA ĐƠN";
             // 
             // txtVietBangChu
             // 
@@ -510,7 +473,7 @@
             this.cbbIdTinTuyenDung.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbIdTinTuyenDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbIdTinTuyenDung.ItemHeight = 30;
-            this.cbbIdTinTuyenDung.Location = new System.Drawing.Point(598, 131);
+            this.cbbIdTinTuyenDung.Location = new System.Drawing.Point(606, 131);
             this.cbbIdTinTuyenDung.Name = "cbbIdTinTuyenDung";
             this.cbbIdTinTuyenDung.Size = new System.Drawing.Size(232, 36);
             this.cbbIdTinTuyenDung.TabIndex = 103;
@@ -525,10 +488,11 @@
             this.cbbIdDoanhNghiep.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbIdDoanhNghiep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbIdDoanhNghiep.ItemHeight = 30;
-            this.cbbIdDoanhNghiep.Location = new System.Drawing.Point(214, 133);
+            this.cbbIdDoanhNghiep.Location = new System.Drawing.Point(223, 133);
             this.cbbIdDoanhNghiep.Name = "cbbIdDoanhNghiep";
-            this.cbbIdDoanhNghiep.Size = new System.Drawing.Size(198, 36);
+            this.cbbIdDoanhNghiep.Size = new System.Drawing.Size(234, 36);
             this.cbbIdDoanhNghiep.TabIndex = 99;
+            this.cbbIdDoanhNghiep.SelectedIndexChanged += new System.EventHandler(this.cbbIdDoanhNghiep_SelectedIndexChanged_1);
             // 
             // label26
             // 
@@ -780,11 +744,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(432, 144);
+            this.label10.Location = new System.Drawing.Point(463, 144);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 23);
+            this.label10.Size = new System.Drawing.Size(137, 23);
             this.label10.TabIndex = 80;
-            this.label10.Text = "ID Tin tuyển dụng:";
+            this.label10.Text = "Tin tuyển dụng:";
             // 
             // label19
             // 
@@ -802,9 +766,9 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label12.Location = new System.Drawing.Point(57, 146);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(151, 23);
+            this.label12.Size = new System.Drawing.Size(160, 23);
             this.label12.TabIndex = 75;
-            this.label12.Text = "ID Doanh nghiệp:";
+            this.label12.Text = "Tên Doanh nghiệp:";
             // 
             // label16
             // 
@@ -867,15 +831,52 @@
             this.label7.TabIndex = 66;
             this.label7.Text = "Đơn vị:";
             // 
-            // label13
+            // label1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label13.Location = new System.Drawing.Point(33, 4);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 23);
-            this.label13.TabIndex = 122;
-            this.label13.Text = "LẬP HÓA ĐƠN";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.label1.Location = new System.Drawing.Point(548, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 38);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "THU PHÍ DOANH NGHIỆP";
+            // 
+            // btnXuatPhieuThu
+            // 
+            this.btnXuatPhieuThu.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuatPhieuThu.BorderRadius = 10;
+            this.btnXuatPhieuThu.BorderThickness = 2;
+            this.btnXuatPhieuThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatPhieuThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatPhieuThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXuatPhieuThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXuatPhieuThu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
+            this.btnXuatPhieuThu.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnXuatPhieuThu.ForeColor = System.Drawing.Color.White;
+            this.btnXuatPhieuThu.Location = new System.Drawing.Point(1199, 20);
+            this.btnXuatPhieuThu.Name = "btnXuatPhieuThu";
+            this.btnXuatPhieuThu.Size = new System.Drawing.Size(180, 45);
+            this.btnXuatPhieuThu.TabIndex = 36;
+            this.btnXuatPhieuThu.Text = "XUẤT PHIẾU THU";
+            this.btnXuatPhieuThu.Click += new System.EventHandler(this.btnXuatPhieuThu_Click);
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BorderRadius = 20;
+            this.btnLamMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLamMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLamMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLamMoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLamMoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(1068, 20);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(125, 45);
+            this.btnLamMoi.TabIndex = 169;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // ThuPhiDoanhNghiep_UC
             // 

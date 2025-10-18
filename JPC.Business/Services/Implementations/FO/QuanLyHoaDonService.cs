@@ -32,11 +32,24 @@ namespace JPC.Business.Services.Implementations.FO
         public IEnumerable<(int dn_id, string ten_doanh_nghiep, string dia_chi)> GetDoanhNghiepBasic() => _doanhNghiepRepo.GetAllBasic();
 
         public DataTable GetAllHoaDon() => _hoaDonRepo.GetAll();
-        public DataTable GetHoaDonFiltered(DateTime? ngay, int? dnId, int? maNvLap) => _hoaDonRepo.GetList(ngay, dnId, maNvLap);
+        public DataTable GetHoaDonFiltered(int? dnId, int? maNvLap) => _hoaDonRepo.GetList(dnId, maNvLap);
         public int UpdateHoaDonBasic(int id, string tenKh, decimal soTien, DateTime ngay, int maNvLap)
             => _hoaDonRepo.UpdateBasic(id, tenKh, soTien, ngay, maNvLap);
 
         public string GetDiaChiDoanhNghiep(int dnId) => _doanhNghiepRepo.GetDiaChiById(dnId);
         public string GetDiaChiUngVien(int uvId) => _ungVienRepo.GetDiaChiById(uvId);
+        public (bool ok, string message) XoaHoaDonAnToan(int maHoaDon)
+        {
+            if (maHoaDon <= 0) return (false, "Mã hóa đơn không hợp lệ.");
+            try
+            {
+                var (rows, msg) = _hoaDonRepo.DeleteHoaDonAnToan(maHoaDon);
+                return (rows > 0, msg);
+            }
+            catch (Exception ex)
+            {
+                return (false, "Lỗi xóa hóa đơn: " + ex.Message);
+            }
+        }
     }
 }

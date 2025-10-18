@@ -48,10 +48,6 @@ namespace JPC.Business.Services.Implementations.FO
             return t;
         }
 
-        public DataTable GetNhanViens()
-        {
-            return _nvRepo.GetNhanViensActive();
-        }
 
         public DataTable GetTinByDoanhNghiep_ForCbb(int dnId)
         {

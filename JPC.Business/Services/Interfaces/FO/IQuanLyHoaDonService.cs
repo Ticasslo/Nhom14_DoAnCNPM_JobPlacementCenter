@@ -15,11 +15,14 @@ namespace JPC.Business.Services.Interfaces.FO
 
         // Grid
         DataTable GetAllHoaDon();
-        DataTable GetHoaDonFiltered(DateTime? ngay, int? dnId, int? maNvLap);
+        DataTable GetHoaDonFiltered(int? dnId, int? maNvLap);
         int UpdateHoaDonBasic(int id, string tenKh, decimal soTien, DateTime ngay, int maNvLap);
 
         // Hỗ trợ in report
         string GetDiaChiDoanhNghiep(int dnId);
         string GetDiaChiUngVien(int uvId);
+
+        (bool ok, string message) XoaHoaDonAnToan(int maHoaDon);
+
     }
 }

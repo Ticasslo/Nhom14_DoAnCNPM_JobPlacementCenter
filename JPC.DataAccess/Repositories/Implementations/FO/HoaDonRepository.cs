@@ -83,8 +83,11 @@ ORDER BY h.ma_hoa_don DESC";
             return dt;
         }
 
-        public DataTable GetList(DateTime? ngay, int? dnId, int? maNvLap)
+        public DataTable GetList(int? dnId, int? maNvLap)
         {
+            if (dnId.HasValue && dnId.Value <= 0) dnId = null;
+            if (maNvLap.HasValue && maNvLap.Value <= 0) maNvLap = null;
+
             var sb = new System.Text.StringBuilder(@"
 SELECT h.ma_hoa_don, h.loai_khach_hang, h.dn_id, dn.ten_doanh_nghiep,
        h.uv_id, uv.ho_ten AS ten_ung_vien,
@@ -98,11 +101,6 @@ LEFT JOIN NhanVien nv ON nv.ma_nhan_vien = h.ma_nhan_vien_lap
 WHERE 1=1");
 
             var prms = new List<SqlParameter>();
-            if (ngay.HasValue)
-            {
-                sb.Append(" AND CAST(h.ngay_lap_hoa_don AS DATE) = @d");
-                prms.Add(new SqlParameter("@d", SqlDbType.Date) { Value = ngay.Value.Date });
-            }
             if (dnId.HasValue)
             {
                 sb.Append(" AND h.dn_id=@dn");
@@ -114,6 +112,7 @@ WHERE 1=1");
                 prms.Add(new SqlParameter("@nv", maNvLap.Value));
             }
             sb.Append(" ORDER BY h.ma_hoa_don DESC");
+
             var dt = ExecuteQuery(sb.ToString(), prms);
             ApplyCaptions(dt);
             return dt;
@@ -206,6 +205,126 @@ ORDER BY ma_hoa_don DESC";
             foreach (var kv in map)
                 if (dt.Columns.Contains(kv.Key))
                     dt.Columns[kv.Key].Caption = kv.Value;
+        }
+        //Xóa hoa đơn an toàn
+        public int Delete(int maHoaDon, SqlTransaction tran)
+        {
+            const string sql = "DELETE FROM HoaDon WHERE ma_hoa_don=@id";
+            using (var cmd = new SqlCommand(sql, tran.Connection, tran))
+            {
+                cmd.Parameters.AddWithValue("@id", maHoaDon);
+                return cmd.ExecuteNonQuery();
+            }
+        }
+        // HoaDonRepository.cs
+        public (int rows, string message) DeleteHoaDonAnToan(int maHoaDon)
+        {
+            // Lấy lại hóa đơn để biết loại và link (tin_id/ut_id)
+            var hd = GetById(maHoaDon);
+            if (hd == null) return (0, "Không tìm thấy hóa đơn.");
+
+            try
+            {
+                if (this.sqlConn.State != ConnectionState.Open)
+                    this.sqlConn.Open();
+
+                using (var tran = this.sqlConn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Xóa hóa đơn
+                        int affected = Delete(maHoaDon, tran);
+
+                        // Nếu là DN: nếu không còn hóa đơn nào của tin → reset paid/inactive
+                        if (hd.LoaiKhachHang == "doanh_nghiep" && hd.TinId.HasValue)
+                        {
+                            var remain = CountByTinId(hd.TinId.Value, tran);
+                            if (remain == 0)
+                            {
+                                // đặt lại cờ thanh toán & trạng thái tin
+                                SetTinPaidActive(hd.TinId.Value, false, "inactive", tran);
+                            }
+                        }
+
+                        // Nếu là UV: nếu không còn hóa đơn nào của hồ sơ ứng tuyển → reset paid
+                        if (hd.LoaiKhachHang == "ung_vien" && hd.UtId.HasValue)
+                        {
+                            var remain = CountByUtId(hd.UtId.Value, tran);
+                            if (remain == 0)
+                            {
+                                SetUtPaid(hd.UtId.Value, false, tran);
+                            }
+                        }
+
+                        tran.Commit();
+                        return (affected, affected > 0 ? "Đã xóa hóa đơn và cập nhật trạng thái liên quan." : "Không có gì để xóa.");
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        return (0, "Lỗi khi xóa hóa đơn: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (this.sqlConn.State == ConnectionState.Open)
+                            this.sqlConn.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Phòng hờ
+                if (this.sqlConn.State == ConnectionState.Open)
+                    this.sqlConn.Close();
+                return (0, "Lỗi kết nối khi xóa hóa đơn: " + ex.Message);
+            }
+        }
+
+        public int CountByTinId(int tinId, SqlTransaction tran)
+        {
+            const string sql = "SELECT COUNT(*) FROM HoaDon WHERE tin_id=@id";
+            using (var cmd = new SqlCommand(sql, tran.Connection, tran))
+            {
+                cmd.Parameters.AddWithValue("@id", tinId);
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        public int CountByUtId(int utId, SqlTransaction tran)
+        {
+            const string sql = "SELECT COUNT(*) FROM HoaDon WHERE ut_id=@id";
+            using (var cmd = new SqlCommand(sql, tran.Connection, tran))
+            {
+                cmd.Parameters.AddWithValue("@id", utId);
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        public int SetTinPaidActive(int tinId, bool paid, string trangThai, SqlTransaction tran)
+        {
+            const string sql = @"UPDATE TinTuyenDung 
+                                 SET da_thanh_toan=@paid, trang_thai=@st
+                                 WHERE tin_id=@id";
+            using (var cmd = new SqlCommand(sql, tran.Connection, tran))
+            {
+                cmd.Parameters.AddWithValue("@paid", paid ? 1 : 0);
+                cmd.Parameters.AddWithValue("@st", trangThai ?? (paid ? "active" : "inactive"));
+                cmd.Parameters.AddWithValue("@id", tinId);
+                return cmd.ExecuteNonQuery();
+            }
+        }
+
+        public int SetUtPaid(int utId, bool paid, SqlTransaction tran)
+        {
+            const string sql = @"UPDATE UngTuyen 
+                                 SET da_thanh_toan_phi=@paid
+                                 WHERE ut_id=@id";
+            using (var cmd = new SqlCommand(sql, tran.Connection, tran))
+            {
+                cmd.Parameters.AddWithValue("@paid", paid ? 1 : 0);
+                cmd.Parameters.AddWithValue("@id", utId);
+                return cmd.ExecuteNonQuery();
+            }
         }
     }
 }

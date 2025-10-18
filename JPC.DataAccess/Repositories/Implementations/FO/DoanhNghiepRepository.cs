@@ -28,7 +28,7 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
             }
             return list;
         }
-
+        
         public (int dn_id, string ten_doanh_nghiep, string dia_chi) GetById(int dnId)
         {
             const string sql = @"

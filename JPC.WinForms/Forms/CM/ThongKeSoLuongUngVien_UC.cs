@@ -77,7 +77,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
+                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
         private void SetupGrid()
@@ -218,23 +218,29 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                 // 3) TRUY VẤN         
                 var dt = _svc.ThongKeSoLuong(from, to, group);
                 _cache = dt;
+
                 //kiemtra du lieu
                 if (dt == null || dt.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không có dữ liệu ứng viên cho kỳ đã chọn.");
-                   
-                }
+                    MessageBox.Show("Không có dữ liệu cho kỳ đã chọn.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvThongKe.DataSource = null;
+                    txtTongUngVien.Text = "0";
+                    txtNoiBatNhat.Text = "";
 
-                // BIND LƯỚI (đã khai báo cột sẵn ở SetupGrid)
-                dgvThongKe.DataSource = dt;
+                }
+                else
+                {
+                    // BIND LƯỚI (đã khai báo cột sẵn ở SetupGrid)
+                    dgvThongKe.DataSource = dt;
               
                 // 4) Tổng quan
                 txtTongUngVien.Text = dt.Rows.Count == 0 ? "0"
                     : Convert.ToString(dt.Compute("SUM(SoLuong)", null));
                 txtNoiBatNhat.Text = dt.Rows.Count == 0 ? ""
                     : dt.Rows[0]["DanhMuc"].ToString();
-                //checkmacdinh
-                //rdOnDinh.Checked = true;
+                    //checkmacdinh
+                    //rdOnDinh.Checked = true;
+                }
             }
             catch (Exception ex)
             {
@@ -274,7 +280,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             var dt = (_cache != null && _cache.Rows.Count > 0) ? _cache : QueryCurrent();
             if (dt == null || dt.Rows.Count == 0)
             {
-                MessageBox.Show("Không có dữ liệu ứng viên cho kỳ đã chọn.");
+                MessageBox.Show("Không có dữ liệu ứng viên cho kỳ đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -342,7 +348,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             var dt = (_cache != null && _cache.Rows.Count > 0) ? _cache : QueryCurrent();
             if (dt == null || dt.Rows.Count == 0)
             {
-                MessageBox.Show("Không có dữ liệu để xuất báo cáo.");
+                MessageBox.Show("Không có dữ liệu để xuất báo cáo.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             _cache = dt;
@@ -421,7 +427,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                         //ExportExcel(dtReport, sfd.FileName, "THỐNG KÊ SỐ LƯỢNG ỨNG VIÊN", sub1, sub2);
                     }
 
-                    MessageBox.Show("Xuất báo cáo thành công!");
+                    MessageBox.Show("Xuất báo cáo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (TypeInitializationException ex) when (ex.TypeName?.Contains("SixLabors.Fonts") == true)
                 {
@@ -430,7 +436,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi xuất báo cáo: " + ex.Message);
+                    MessageBox.Show("Lỗi xuất báo cáo: " + ex.Message, "Lỗi",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

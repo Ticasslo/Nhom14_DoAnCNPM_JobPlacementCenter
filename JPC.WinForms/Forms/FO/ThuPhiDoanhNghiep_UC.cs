@@ -26,7 +26,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         public ThuPhiDoanhNghiep_UC()
         {
             InitializeComponent();
-            cbbIdDoanhNghiep.SelectedIndexChanged += cbbIdDoanhNghiep_SelectedIndexChanged;
+            this.Load += ThuPhiDoanhNghiep_Load;
+            btnLamMoi.Click += (_, __) => ResetForm();
+            btnXuatPhieuThu.Click += btnXuatPhieuThu_Click;
+
+            cbbIdDoanhNghiep.SelectedIndexChanged += cbbIdDoanhNghiep_SelectedIndexChanged_1;
             cbbIdTinTuyenDung.SelectedIndexChanged += cbbIdTinTuyenDung_SelectedIndexChanged_1;
 
             txtSoTien.KeyPress += (s, e) =>
@@ -44,27 +48,20 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             var nvRepo = new NhanVienRepository();
             _service = new ThuPhiDoanhNghiepService(tinRepo, hdRepo, phiRepo, dnRepo, nvRepo);
         }
-        public void BindService(IThuPhiDoanhNghiepService service)
+        public void BindService()
         {
-            
-            // Doanh nghiệp
-            var dn = _service.GetDoanhNghieps(); // DataTable
+
+            var dn = _service.GetDoanhNghieps(); // DataTable: dn_id, ten_doanh_nghiep, dia_chi
             cbbIdDoanhNghiep.ValueMember = "dn_id";
             cbbIdDoanhNghiep.DisplayMember = "ten_doanh_nghiep";
             cbbIdDoanhNghiep.DataSource = dn;
-
-            // Nhân viên
-            var nv = _service.GetNhanViens(); // DataTable
-            void BindNV(ComboBox cb)
-            {
-                cb.DataSource = nv.Copy();
-                cb.ValueMember = "ma_nhan_vien";
-                cb.DisplayMember = "ho_ten";
-                cb.SelectedIndex = -1;
-            }
+            cbbIdDoanhNghiep.SelectedIndex = -1;
 
             // Tiền tệ + reset
-            cbbDonViTien.Items.Clear(); cbbDonViTien.Items.Add("VND"); cbbDonViTien.SelectedIndex = 0;
+            cbbDonViTien.Items.Clear();
+            cbbDonViTien.Items.Add("VND");
+            cbbDonViTien.SelectedIndex = 0;
+
             ResetForm();
         }
 
@@ -91,6 +88,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private void ThuPhiDoanhNghiep_Load(object sender, EventArgs e)
         {
             EnsureService();
+            BindService();
         }
         private bool ValidateInput(out string msg)
         {
@@ -102,8 +100,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             msg = sb.ToString();
             return msg.Length == 0;
         }
-
-        private void cbbIdDoanhNghiep_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbIdDoanhNghiep_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             EnsureService();
             if (cbbIdDoanhNghiep.SelectedIndex < 0) return;
@@ -119,7 +116,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             txtSoNgayDangTin.Text = ""; txtSoTien.Text = ""; txtVietBangChu.Text = "";
             _soNgay = 0; _soTien = 0;
         }
-
         private void cbbIdTinTuyenDung_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             EnsureService();
@@ -153,6 +149,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private Dictionary<string, string> BuildReportParams(int maHd, int soNgay, decimal soTien)
         {
             var ngayLap = DateTime.Now;
+
             return new Dictionary<string, string>
             {
                 ["DonVi"] = txtDonVi.Text,
@@ -166,7 +163,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 ["DiaChiNguoiNop"] = txtDiaChi2.Text,
                 ["LyDoNop"] = string.IsNullOrWhiteSpace(txtLyDo.Text) ? $"Phí đăng tin tuyển dụng ({soNgay} ngày)" : txtLyDo.Text.Trim(),
                 ["SoTien"] = string.Format("{0:#,0}", soTien),
-                ["SoTienBangChu"] = string.Format("{0:#,0} đồng", soTien),
+                ["SoTienBangChu"] = VietnameseNumber.ToCurrencyWords(soTien) + " đồng",
                 ["KemTheo"] = txtKemTheo.Text,
                 ["ChungTuGoc"] = txtChungTuGoc.Text
 
@@ -182,7 +179,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
         }
 
-        private void btnXuatPhieuThu_Click_1(object sender, EventArgs e)
+        private void btnXuatPhieuThu_Click(object sender, EventArgs e)
         {
             if (!ValidateInput(out var msg)) { MessageBox.Show(msg); return; }
             EnsureService();
@@ -232,5 +229,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         {
             ResetForm();
         }
+
+        
     }
 }

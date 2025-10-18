@@ -38,7 +38,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             rdNam.CheckedChanged += (s, e) => { if (rdNam.Checked) BindYearWhole(); };
 
             // Nút tải lại
-            btnTaiLai.Click += btnTaiLai_Click;
+            //btnTaiLai.Click += btnTaiLai_Click;
         }
         private void SetupGrid()
         {
@@ -203,9 +203,23 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                 _cache = dt;
                 dgvTyLe.DataSource = dt;
 
-                // 4) Tổng quan
-                int tong = dt.Rows.Count == 0 ? 0
-                    : Convert.ToInt32(dt.Compute("SUM(TongUngVien)", ""));
+                //kiemtra du lieu
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu cho kỳ đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Xoá số liệu tổng quan
+                    txtTongUngVien.Text = "0";
+                    txtCoViecLam.Text = "0";
+                    txtTyLeThanhCong.Text = "0 %";
+                  ;
+                    rdoCanCaiThien.Checked = false;
+                    rdoKha.Checked = false;
+                    rdoTot.Checked = false;
+                }
+                else {
+                    // 4) Tổng quan
+                    int tong = dt.Rows.Count == 0 ? 0
+                        : Convert.ToInt32(dt.Compute("SUM(TongUngVien)", ""));
                 int ok = dt.Rows.Count == 0 ? 0
                     : Convert.ToInt32(dt.Compute("SUM(SoTrungTuyen)", ""));
                 decimal tyle = tong == 0 ? 0 : Math.Round(100m * ok / tong, 2);
@@ -218,10 +232,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                 rdoTot.Checked = tyle >= 60;
                 rdoKha.Checked = tyle >= 30 && tyle < 60;
                 rdoCanCaiThien.Checked = tyle < 30;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
+                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message, "Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -349,7 +364,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             var dt = QueryCurrent_BM2();
             if (dt == null || dt.Rows.Count == 0)
             {
-                MessageBox.Show("Không có dữ liệu cho kỳ đã chọn.");
+                MessageBox.Show("Không có dữ liệu cho kỳ đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -393,7 +408,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
         private void btnXuatBaoCao_Click(object sender, EventArgs e)
         {
             var dt = QueryCurrent_BM2();
-            if (dt == null || dt.Rows.Count == 0) { MessageBox.Show("Không có dữ liệu để xuất báo cáo."); return; }
+            if (dt == null || dt.Rows.Count == 0) { MessageBox.Show("Không có dữ liệu để xuất báo cáo.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return; }
 
             var (bucket, per, year, _) = GetCurrentFilters();
             var groupKey = CurrentGroupKey();
@@ -428,30 +443,37 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
             {
                 if (sfd.ShowDialog() != DialogResult.OK) return;
 
-                if (sfd.FilterIndex == 1)
+                try
                 {
-                    var lr = new LocalReport();
-                    var asm = typeof(ThongKeSoLuongUngVien_UC).Assembly;
-                    var res = asm.GetManifestResourceNames()
-                                 .FirstOrDefault(n => n.EndsWith("CM_BM2_TyLeKetNoi.rdlc", StringComparison.OrdinalIgnoreCase));
-                    if (res == null) { MessageBox.Show("Không tìm thấy RDLC BM2."); return; }
-                    using (var st = asm.GetManifestResourceStream(res)) lr.LoadReportDefinition(st);
+                    if (sfd.FilterIndex == 1)
+                    {
+                        var lr = new LocalReport();
+                        var asm = typeof(ThongKeSoLuongUngVien_UC).Assembly;
+                        var res = asm.GetManifestResourceNames()
+                                     .FirstOrDefault(n => n.EndsWith("CM_BM2_TyLeKetNoi.rdlc", StringComparison.OrdinalIgnoreCase));
+                        if (res == null) { MessageBox.Show("Không tìm thấy RDLC BM2."); return; }
+                        using (var st = asm.GetManifestResourceStream(res)) lr.LoadReportDefinition(st);
 
-                    lr.DataSources.Clear();
-                    lr.DataSources.Add(new ReportDataSource("dsTyLe", dtReport));
-                    lr.SetParameters(ps);
+                        lr.DataSources.Clear();
+                        lr.DataSources.Add(new ReportDataSource("dsTyLe", dtReport));
+                        lr.SetParameters(ps);
 
-                    string mime, enc, ext; Warning[] warn; string[] streams;
-                    var bytes = lr.Render("PDF", null, out mime, out enc, out ext, out streams, out warn);
-                    lr.ReleaseSandboxAppDomain();
-                    System.IO.File.WriteAllBytes(sfd.FileName, bytes);
+                        string mime, enc, ext; Warning[] warn; string[] streams;
+                        var bytes = lr.Render("PDF", null, out mime, out enc, out ext, out streams, out warn);
+                        lr.ReleaseSandboxAppDomain();
+                        System.IO.File.WriteAllBytes(sfd.FileName, bytes);
+                    }
+                    else
+                    {
+                        // (Tuỳ bạn) Xuất Excel bằng ClosedXML – bỏ AutoFit để tránh lỗi SixLabors.Fonts
+                    }
+
+                    MessageBox.Show("Xuất báo cáo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
+                catch (Exception ex)
                 {
-                    // (Tuỳ bạn) Xuất Excel bằng ClosedXML – bỏ AutoFit để tránh lỗi SixLabors.Fonts
+                    MessageBox.Show("Lỗi xuất báo cáo: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                MessageBox.Show("Xuất báo cáo thành công!");
             }
 
         }

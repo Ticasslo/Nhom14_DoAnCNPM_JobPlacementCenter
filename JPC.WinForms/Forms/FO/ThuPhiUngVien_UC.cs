@@ -93,10 +93,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             txtVietBangChu.Text = VietnameseNumber.ToCurrencyWords(_donGiaCoDinh) + " đồng";
         }
 
-        private void btnXuatPhieuThu_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void txtVietBangChu_Leave(object sender, EventArgs e)
         {
@@ -107,10 +104,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-        }
 
         private void ThuPhiUngVien_UC_Load(object sender, EventArgs e)
         {
@@ -153,7 +146,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             }
         }
 
-        private void btnXuatPhieuThu_Click_1(object sender, EventArgs e)
+        private void btnXuatPhieuThu_Click(object sender, EventArgs e)
         {
             EnsureService();
 
@@ -187,7 +180,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                     ["DiaChiNguoiNop"] = diaChi,
                     ["LyDoNop"] = string.IsNullOrWhiteSpace(txtLyDo.Text) ? "Phí ứng tuyển (cố định)" : txtLyDo.Text.Trim(),
                     ["SoTien"] = string.Format("{0:#,0}", result.soTien),
-                    ["SoTienBangChu"] = string.Format("{0:#,0} đồng", result.soTien),
+                    ["SoTienBangChu"] = VietnameseNumber.ToCurrencyWords(result.soTien) + " đồng",
 
                     ["KemTheo"] = txtKemTheo.Text,
                     ["ChungTuGoc"] = txtChungTuGoc.Text,
@@ -204,6 +197,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             {
                 MessageBox.Show("Lỗi lập hóa đơn: " + ex.Message);
             }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            ResetForm();
         }
     }
 }

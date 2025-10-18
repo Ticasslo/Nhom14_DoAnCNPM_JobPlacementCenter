@@ -178,20 +178,20 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                                   NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out var giaMoi)
                 && !decimal.TryParse(txtGiaMoi.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out giaMoi))
             {
-                MessageBox.Show("Giá mới phải >0 và là số nguyên."); return;
+                MessageBox.Show("Giá mới phải >0 và là số nguyên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); return;
             }
             if (giaMoi <= 0) { MessageBox.Show("Giá mới phải > 0."); return; }
 
             // nếu không đổi giá, bỏ qua
             if (decimal.TryParse(txtGiaHT.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out var giaHT) && giaMoi == giaHT)
             {
-                MessageBox.Show("Giá không thay đổi."); SetEditMode(false); return;
+                MessageBox.Show("Giá không thay đổi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); SetEditMode(false); return;
             }
 
             try
             {
                 _svc.UpdatePrice(id, giaMoi);
-                MessageBox.Show("Cập nhật thành công!");
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadGrid();               // reload dữ liệu + giữ trạng thái view
                 // đưa con trỏ về dòng vừa sửa
                 var row = dgvPhi.Rows.Cast<DataGridViewRow>().FirstOrDefault(r => (int)r.Cells["PhiId"].Value == id);

@@ -13,7 +13,6 @@ namespace JPC.Business.Services.Interfaces.FO
     {
         IEnumerable<(int tin_id, string display, DateTime ngay_dang, DateTime han_nop_ho_so)> GetTinChuaThanhToanByDoanhNghiep(int dnId);
         DataTable GetDoanhNghieps();
-        DataTable GetNhanViens();
         DataTable GetTinByDoanhNghiep_ForCbb(int dnId);
         TinTuyenDung GetTinById(int tinId);
         HoaDon GetHoaDonGanNhatCuaTin(int tinId);
