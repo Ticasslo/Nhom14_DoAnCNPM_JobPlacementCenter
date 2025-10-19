@@ -363,8 +363,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
                               : "VITRI";
 
             string trendKey = rdTang.Checked ? "TANG"
-                            : rdOnDinh.Checked ? "ONDINH"
-                            : "GIAM";
+                               : rdGiam.Checked ? "GIAM"
+                               : "ONDINH"; // mặc định
             var createdBy = CurrentCreatedBy();
             // 3) Tạo bộ tham số cho RDLC
             var ps = new[]

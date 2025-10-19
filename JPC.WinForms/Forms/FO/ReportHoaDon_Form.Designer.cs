@@ -48,6 +48,7 @@
             this.Controls.Add(this.reportViewerHoaDon);
             this.Name = "reportForm";
             this.Text = "Phiếu thu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.reportForm_Load);
             this.ResumeLayout(false);
 
