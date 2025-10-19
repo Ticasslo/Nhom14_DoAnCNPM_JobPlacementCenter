@@ -20,6 +20,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         {
             InitializeComponent();
             _ps = parameters ?? new Dictionary<string, string>();
+            this.reportViewerHoaDon.ReportExport += reportViewerHoaDon_ReportExport;
+
         }
 
         private void reportForm_Load(object sender, EventArgs e)
@@ -50,6 +52,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 reportViewerHoaDon.LocalReport.SetParameters(rp);
 
                 reportViewerHoaDon.RefreshReport();
+
             }
             catch (LocalProcessingException ex)
             {
@@ -64,5 +67,18 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 MessageBox.Show("Lỗi khi tải báo cáo: " + ex.Message);
             }
         }
+        private void reportViewerHoaDon_ReportExport(object sender, ReportExportEventArgs e)
+        {
+            // Kiểm tra loại file (PDF, Word, Excel, ...)
+            string ext = Path.GetExtension(e.Extension?.Name ?? "").ToLower();
+
+            // Bạn có thể kiểm soát định dạng ở đây nếu muốn
+            if (ext == ".pdf" || ext == ".doc" || ext == ".docx")
+            {
+                MessageBox.Show("Báo cáo đã được xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // đóng form sau khi export
+            }
+        }
+
     }
 }

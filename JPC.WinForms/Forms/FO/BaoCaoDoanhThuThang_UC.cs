@@ -1,6 +1,8 @@
 ﻿using ClosedXML.Excel;
 using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +11,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -165,101 +168,220 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             else MessageBox.Show(text, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        //private void ExportExcel()
+        //{
+        //    if (_dtInvoices == null || _dtInvoices.Rows.Count == 0)
+        //    {
+        //        MessageBox.Show("Không có dữ liệu để xuất.");
+        //        return;
+        //    }
+
+        //    var sfd = new SaveFileDialog
+        //    {
+        //        Title = "Lưu báo cáo doanh thu",
+        //        Filter = "Excel Workbook (*.xlsx)|*.xlsx",
+        //        FileName = $"BaoCaoDoanhThu_{dtpTuNgay.Value:yyyyMMdd}_{dtpDenNgay.Value:yyyyMMdd}.xlsx"
+        //    };
+        //    if (sfd.ShowDialog() != DialogResult.OK) return;
+
+        //    try
+        //    {
+        //        using (var wb = new XLWorkbook())
+        //        {
+        //            var ws = wb.AddWorksheet("BaoCao");
+        //            int row = 1;
+
+        //            ws.Cell(row, 1).Value = "BÁO CÁO DOANH THU THEO THÁNG";
+        //            ws.Range(row, 1, row, 5).Merge().Style
+        //                .Font.SetBold().Font.SetFontSize(16)
+        //                .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+        //            row += 2;
+
+        //            var timeLine = $"Từ ngày {dtpTuNgay.Value:dd/MM/yyyy} đến ngày {dtpDenNgay.Value:dd/MM/yyyy}";
+        //            ws.Cell(row, 1).Value = timeLine;
+        //            ws.Range(row, 1, row, 5).Merge().Style
+        //                .Font.SetItalic()
+        //                .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+        //            row += 2;
+
+        //            ws.Cell(row, 1).Value = "Mã hóa đơn";
+        //            ws.Cell(row, 2).Value = "Tên người đóng";
+        //            ws.Cell(row, 3).Value = "Sinh viên / Doanh nghiệp";
+        //            ws.Cell(row, 4).Value = "Số tiền";
+        //            ws.Cell(row, 5).Value = "Ngày thu";
+        //            ws.Range(row, 1, row, 5).Style
+        //                .Font.SetBold()
+        //                .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
+        //                .Border.OutsideBorder = XLBorderStyleValues.Thin;
+        //            ws.Range(row, 1, row, 5).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+
+        //            int startDataRow = ++row;
+        //            foreach (DataRow dr in _dtInvoices.Rows)
+        //            {
+        //                ws.Cell(row, 1).Value = dr["ma_hoa_don"]?.ToString();
+        //                ws.Cell(row, 2).Value = dr["ten_khach_hang"]?.ToString();
+        //                ws.Cell(row, 3).Value = dr["doi_tuong"]?.ToString();
+        //                ws.Cell(row, 4).Value = dr.Field<decimal>("so_tien");
+        //                ws.Cell(row, 4).Style.NumberFormat.Format = "#,##0";
+        //                ws.Cell(row, 5).Value = Convert.ToDateTime(dr["ngay_thu"]);
+        //                ws.Cell(row, 5).Style.DateFormat.Format = "dd/MM/yyyy";
+        //                row++;
+        //            }
+
+        //            ws.Range(startDataRow - 1, 1, row - 1, 5).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+        //            ws.Range(startDataRow - 1, 1, row - 1, 5).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+
+        //            decimal total = _dtInvoices.AsEnumerable().Sum(r => r.Field<decimal>("so_tien"));
+        //            ws.Cell(row, 1).Value = "Tổng tiền:";
+        //            ws.Range(row, 1, row, 3).Merge().Style
+        //                .Font.SetBold()
+        //                .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
+        //            ws.Cell(row, 4).Value = total;
+        //            ws.Cell(row, 4).Style.NumberFormat.Format = "#,##0";
+        //            ws.Range(row, 4, row, 5).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+        //            row += 2;
+
+        //            ws.Cell(row, 4).Value = "Người lập báo cáo";
+        //            ws.Cell(row, 4).Style.Font.SetBold();
+        //            row++;
+        //            ws.Cell(row, 4).Value = "(Ký tên)";
+        //            ws.Cell(row, 4).Style.Font.SetItalic();
+        //            row += 2;
+        //            ws.Cell(row, 4).Value = string.IsNullOrWhiteSpace(txtNguoiLapBaoCao.Text)
+        //                ? CurrentUserName()
+        //                : txtNguoiLapBaoCao.Text.Trim();
+
+        //            ws.Columns(1, 5).AdjustToContents();
+        //            wb.SaveAs(sfd.FileName);
+        //        }
+
+        //        MessageBox.Show("Đã xuất báo cáo thành công!");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Lỗi xuất Excel: " + ex.Message);
+        //    }
+        //}
         private void ExportExcel()
         {
             if (_dtInvoices == null || _dtInvoices.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu để xuất.");
-                return;
-            }
+            { MessageBox.Show("Không có dữ liệu để xuất."); return; }
 
-            var sfd = new SaveFileDialog
+            using (var sfd = new SaveFileDialog
             {
                 Title = "Lưu báo cáo doanh thu",
                 Filter = "Excel Workbook (*.xlsx)|*.xlsx",
                 FileName = $"BaoCaoDoanhThu_{dtpTuNgay.Value:yyyyMMdd}_{dtpDenNgay.Value:yyyyMMdd}.xlsx"
-            };
-            if (sfd.ShowDialog() != DialogResult.OK) return;
-
-            try
+            })
             {
-                using (var wb = new XLWorkbook())
+                if (sfd.ShowDialog() != DialogResult.OK) return;
+                try
                 {
-                    var ws = wb.AddWorksheet("BaoCao");
-                    int row = 1;
-
-                    ws.Cell(row, 1).Value = "BÁO CÁO DOANH THU THEO THÁNG";
-                    ws.Range(row, 1, row, 5).Merge().Style
-                        .Font.SetBold().Font.SetFontSize(16)
-                        .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-                    row += 2;
-
-                    var timeLine = $"Từ ngày {dtpTuNgay.Value:dd/MM/yyyy} đến ngày {dtpDenNgay.Value:dd/MM/yyyy}";
-                    ws.Cell(row, 1).Value = timeLine;
-                    ws.Range(row, 1, row, 5).Merge().Style
-                        .Font.SetItalic()
-                        .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-                    row += 2;
-
-                    ws.Cell(row, 1).Value = "Mã hóa đơn";
-                    ws.Cell(row, 2).Value = "Tên người đóng";
-                    ws.Cell(row, 3).Value = "Sinh viên / Doanh nghiệp";
-                    ws.Cell(row, 4).Value = "Số tiền";
-                    ws.Cell(row, 5).Value = "Ngày thu";
-                    ws.Range(row, 1, row, 5).Style
-                        .Font.SetBold()
-                        .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center)
-                        .Border.OutsideBorder = XLBorderStyleValues.Thin;
-                    ws.Range(row, 1, row, 5).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
-
-                    int startDataRow = ++row;
-                    foreach (DataRow dr in _dtInvoices.Rows)
+                    using (var package = new ExcelPackage())
                     {
-                        ws.Cell(row, 1).Value = dr["ma_hoa_don"]?.ToString();
-                        ws.Cell(row, 2).Value = dr["ten_khach_hang"]?.ToString();
-                        ws.Cell(row, 3).Value = dr["doi_tuong"]?.ToString();
-                        ws.Cell(row, 4).Value = dr.Field<decimal>("so_tien");
-                        ws.Cell(row, 4).Style.NumberFormat.Format = "#,##0";
-                        ws.Cell(row, 5).Value = Convert.ToDateTime(dr["ngay_thu"]);
-                        ws.Cell(row, 5).Style.DateFormat.Format = "dd/MM/yyyy";
+                        var ws = package.Workbook.Worksheets.Add("BaoCao");
+                        int row = 1;
+
+                        // Tiêu đề
+                        ws.Cells[row, 1].Value = "BÁO CÁO DOANH THU THEO THÁNG";
+                        ws.Cells[row, 1, row, 5].Merge = true;
+                        ws.Cells[row, 1, row, 5].Style.Font.Bold = true;
+                        ws.Cells[row, 1, row, 5].Style.Font.Size = 16;
+                        ws.Cells[row, 1, row, 5].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        row += 2;
+
+                        // Dòng thời gian
+                        ws.Cells[row, 1].Value =
+                            $"Từ ngày {dtpTuNgay.Value:dd/MM/yyyy} đến ngày {dtpDenNgay.Value:dd/MM/yyyy}";
+                        ws.Cells[row, 1, row, 5].Merge = true;
+                        ws.Cells[row, 1, row, 5].Style.Font.Italic = true;
+                        ws.Cells[row, 1, row, 5].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        row += 2;
+
+                        // Header
+                        string[] headers = { "Mã hóa đơn", "Tên người đóng", "Sinh viên / Doanh nghiệp", "Số tiền", "Ngày thu" };
+                        for (int c = 0; c < headers.Length; c++)
+                            ws.Cells[row, c + 1].Value = headers[c];
+
+                        ws.Cells[row, 1, row, 5].Style.Font.Bold = true;
+                        ws.Cells[row, 1, row, 5].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[row, 1, row, 5].Style.Border.Top.Style =
+                        ws.Cells[row, 1, row, 5].Style.Border.Bottom.Style =
+                        ws.Cells[row, 1, row, 5].Style.Border.Left.Style =
+                        ws.Cells[row, 1, row, 5].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+
+                        int startDataRow = ++row;
+
+                        // Dữ liệu
+                        foreach (DataRow dr in _dtInvoices.Rows)
+                        {
+                            ws.Cells[row, 1].Value = dr["ma_hoa_don"]?.ToString();
+                            ws.Cells[row, 2].Value = dr["ten_khach_hang"]?.ToString();
+                            ws.Cells[row, 3].Value = dr["doi_tuong"]?.ToString();
+
+                            decimal money = 0;
+                            if (dr["so_tien"] != DBNull.Value)
+                                decimal.TryParse(Convert.ToString(dr["so_tien"]), out money);
+                            ws.Cells[row, 4].Value = money;
+                            ws.Cells[row, 4].Style.Numberformat.Format = "#,##0";
+
+                            if (dr["ngay_thu"] != DBNull.Value &&
+                                DateTime.TryParse(Convert.ToString(dr["ngay_thu"]), out var d))
+                            {
+                                ws.Cells[row, 5].Value = d;
+                                ws.Cells[row, 5].Style.Numberformat.Format = "dd/MM/yyyy";
+                            }
+                            row++;
+                        }
+
+                        // Khung dữ liệu
+                        var dataRange = ws.Cells[startDataRow - 1, 1, row - 1, 5];
+                        dataRange.Style.Border.Top.Style =
+                        dataRange.Style.Border.Bottom.Style =
+                        dataRange.Style.Border.Left.Style =
+                        dataRange.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+
+                        // Tổng tiền
+                        decimal total = _dtInvoices.AsEnumerable()
+                            .Where(r => r["so_tien"] != DBNull.Value)
+                            .Sum(r => decimal.TryParse(Convert.ToString(r["so_tien"]), out var x) ? x : 0);
+
+                        ws.Cells[row, 1].Value = "Tổng tiền:";
+                        ws.Cells[row, 1, row, 3].Merge = true;
+                        ws.Cells[row, 1, row, 3].Style.Font.Bold = true;
+                        ws.Cells[row, 1, row, 3].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+
+                        ws.Cells[row, 4].Value = total;
+                        ws.Cells[row, 4].Style.Numberformat.Format = "#,##0";
+                        ws.Cells[row, 4, row, 5].Style.Border.BorderAround(ExcelBorderStyle.Thin);
+
+                        row += 2;
+                        ws.Cells[row, 4].Value = "Người lập báo cáo";
+                        ws.Cells[row, 4].Style.Font.Bold = true;
                         row++;
+                        ws.Cells[row, 4].Value = "(Ký tên)";
+                        ws.Cells[row, 4].Style.Font.Italic = true;
+                        row += 2;
+                        ws.Cells[row, 4].Value = string.IsNullOrWhiteSpace(txtNguoiLapBaoCao.Text)
+                            ? CurrentUserName()
+                            : txtNguoiLapBaoCao.Text.Trim();
+
+                        // AutoFit + Freeze header
+                        ws.Cells[1, 1, row, 5].AutoFitColumns();
+                        ws.View.FreezePanes(5, 1); // cố định sau dòng header
+
+                        // Lưu
+                        package.SaveAs(new FileInfo(sfd.FileName));
                     }
 
-                    ws.Range(startDataRow - 1, 1, row - 1, 5).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
-                    ws.Range(startDataRow - 1, 1, row - 1, 5).Style.Border.InsideBorder = XLBorderStyleValues.Thin;
-
-                    decimal total = _dtInvoices.AsEnumerable().Sum(r => r.Field<decimal>("so_tien"));
-                    ws.Cell(row, 1).Value = "Tổng tiền:";
-                    ws.Range(row, 1, row, 3).Merge().Style
-                        .Font.SetBold()
-                        .Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
-                    ws.Cell(row, 4).Value = total;
-                    ws.Cell(row, 4).Style.NumberFormat.Format = "#,##0";
-                    ws.Range(row, 4, row, 5).Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
-                    row += 2;
-
-                    ws.Cell(row, 4).Value = "Người lập báo cáo";
-                    ws.Cell(row, 4).Style.Font.SetBold();
-                    row++;
-                    ws.Cell(row, 4).Value = "(Ký tên)";
-                    ws.Cell(row, 4).Style.Font.SetItalic();
-                    row += 2;
-                    ws.Cell(row, 4).Value = string.IsNullOrWhiteSpace(txtNguoiLapBaoCao.Text)
-                        ? CurrentUserName()
-                        : txtNguoiLapBaoCao.Text.Trim();
-
-                    ws.Columns(1, 5).AdjustToContents();
-                    wb.SaveAs(sfd.FileName);
+                    MessageBox.Show("Đã xuất báo cáo thành công!");
                 }
-
-                MessageBox.Show("Đã xuất báo cáo thành công!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi xuất Excel: " + ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi xuất Excel (EPPlus): " + ex.Message);
+                }
             }
         }
-
         // fix header guna datagridview
         void FixGridHeader(Guna.UI2.WinForms.Guna2DataGridView dgv)
         {

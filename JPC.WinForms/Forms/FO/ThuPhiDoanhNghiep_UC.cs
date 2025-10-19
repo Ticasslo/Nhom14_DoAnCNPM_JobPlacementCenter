@@ -135,7 +135,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private Dictionary<string, string> BuildReportParams(int maHd, int soNgay, decimal soTien)
         {
-            var ngayLap = DateTime.Now;
+            var ngayLap = dtpNgayLapPhieu.Value;
 
             return new Dictionary<string, string>
             {

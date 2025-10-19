@@ -141,7 +141,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
             var uvId = (int)rUv["uv_id"];
             var tenUv = rUv["ho_ten"].ToString();
             var diaChi = txtDiaChi.Text?.Trim() ?? "";
-
+            var ngayLap = dtpNgayLapPhieu.Value;
             var rUt = (DataRowView)cbbIdUngTuyen.SelectedItem;
             var utId = (int)rUt["ut_id"];
 
@@ -156,7 +156,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                     ["DonVi"] = "Trung tâm Giới thiệu Việc làm SV",
                     ["DiaChiDonVi"] = "TP. HCM",
                     ["SoPhieu"] = string.IsNullOrWhiteSpace(txtSo.Text) ? "HD-" + result.maHoaDon : txtSo.Text.Trim(),
-                    ["NgayLap"] = dtpNgayLapPhieu.Value.ToString("dd/MM/yyyy"),
+                    ["NgayLap"] = $"Ngày {ngayLap.Day} tháng {ngayLap.Month} năm {ngayLap.Year}",
 
                     ["TenNguoiNop"] = tenUv,
                     ["DiaChiNguoiNop"] = diaChi,
