@@ -51,42 +51,49 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            if (_selected == null)
+            try
             {
-                MessageBox.Show("⚠️ Hãy chọn doanh nghiệp trước!");
-                return;
+                if (_selected == null)
+                {
+                    MessageBox.Show("⚠️ Hãy chọn doanh nghiệp trước!");
+                    return;
+                }
+
+                var updated = new DoanhNghiep
+                {
+                    DnId = _selected.DnId,
+                    TenDoanhNghiep = txttendoanhnghiep.Text.Trim(),
+                    DiaChi = txtdiachi.Text.Trim(),
+                    SoDienThoai = txtSDT.Text.Trim(),
+                    Email = txtemail.Text.Trim(),
+                    LinhVuc = txtlinhvuc.Text.Trim(),
+                    MaSoThue = _selected.MaSoThue
+                };
+
+                if (MessageBox.Show("Bạn chắc chắn muốn cập nhật?", "Xác nhận",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    return;
+
+                (bool ok, string msg) = _service.CapNhat(updated);
+
+                MessageBox.Show(
+                    msg,
+                    ok ? "Thành công" : "Thông báo",
+                    MessageBoxButtons.OK,
+                    ok ? MessageBoxIcon.Information : MessageBoxIcon.Warning
+                );
+
+
+                if (ok)
+                {
+                    _selected = null;
+                    dgvDoanhNghiep.DataSource = null;
+                    LoadDoanhNghiepList();
+                }
             }
-
-            var updated = new DoanhNghiep
+            catch (Exception ex)
             {
-                DnId = _selected.DnId,
-                TenDoanhNghiep = txttendoanhnghiep.Text.Trim(),
-                DiaChi = txtdiachi.Text.Trim(),
-                SoDienThoai = txtSDT.Text.Trim(),
-                Email = txtemail.Text.Trim(),
-                LinhVuc = txtlinhvuc.Text.Trim(),
-                MaSoThue = _selected.MaSoThue
-            };
-
-            if (MessageBox.Show("Bạn chắc chắn muốn cập nhật?", "Xác nhận",
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                return;
-
-            (bool ok, string msg) = _service.CapNhat(updated);
-
-            MessageBox.Show(
-                msg,
-                ok ? "Thành công" : "Thông báo",
-                MessageBoxButtons.OK,
-                ok ? MessageBoxIcon.Information : MessageBoxIcon.Warning
-            );
-
-
-            if (ok)
-            {
-                _selected = null;
-                dgvDoanhNghiep.DataSource = null;
-                LoadDoanhNghiepList();
+                MessageBox.Show($"❌ Đã có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

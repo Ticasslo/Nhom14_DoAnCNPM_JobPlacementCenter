@@ -71,28 +71,35 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            var dn = new DoanhNghiep
+            try
             {
-                TenDoanhNghiep = txttendoanhnghiep.Text.Trim(),
-                DiaChi = txtdiachi.Text.Trim(),
-                SoDienThoai = txtSDT.Text.Trim(),
-                Email = txtemail.Text.Trim(),
-                LinhVuc = txtlinhvuc.Text.Trim(),
-                MaSoThue = txtMST.Text.Trim()
-            };
+                var dn = new DoanhNghiep
+                {
+                    TenDoanhNghiep = txttendoanhnghiep.Text.Trim(),
+                    DiaChi = txtdiachi.Text.Trim(),
+                    SoDienThoai = txtSDT.Text.Trim(),
+                    Email = txtemail.Text.Trim(),
+                    LinhVuc = txtlinhvuc.Text.Trim(),
+                    MaSoThue = txtMST.Text.Trim()
+                };
 
-            var (ok, msg, newId) = _service.DangKy(dn);
+                var (ok, msg, newId) = _service.DangKy(dn);
 
-            if (ok)
-            {
-                MessageBox.Show($"✅ {msg}\nMã DN mới: {newId}", "Thành công");
-                ClearForm();
-                LoadDoanhNghiepList();
+                if (ok)
+                {
+                    MessageBox.Show($"✅ {msg}\nMã DN mới: {newId}", "Thành công");
+                    ClearForm();
+                    LoadDoanhNghiepList();
+                }
+                else
+                {
+                    MessageBox.Show("❌ " + msg, "Không hợp lệ");
+                    // Bạn có thể focus vào control tương ứng tùy theo message
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("❌ " + msg, "Không hợp lệ");
-                // Bạn có thể focus vào control tương ứng tùy theo message
+                MessageBox.Show($"❌ Đã có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

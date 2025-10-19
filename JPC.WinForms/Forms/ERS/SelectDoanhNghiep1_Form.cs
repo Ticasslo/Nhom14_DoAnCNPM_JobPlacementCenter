@@ -108,16 +108,23 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            if (dgvUngVien.SelectedRows.Count == 0)
+            try
             {
-                MessageBox.Show("⚠️ Vui lòng chọn 1 tin tuyển dụng để xem danh sách ứng viên!");
-                return;
+                if (dgvUngVien.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("⚠️ Vui lòng chọn 1 tin tuyển dụng để xem danh sách ứng viên!");
+                    return;
+                }
+
+                int tinId = Convert.ToInt32(dgvUngVien.SelectedRows[0].Cells["tin_id"].Value);
+                System.Data.DataTable dtUngVien = _ungTuyenService.GetUngVienByTin(tinId);
+
+                dgvUngVien.DataSource = dtUngVien;
             }
-
-            int tinId = Convert.ToInt32(dgvUngVien.SelectedRows[0].Cells["tin_id"].Value);
-            System.Data.DataTable dtUngVien = _ungTuyenService.GetUngVienByTin(tinId);
-
-            dgvUngVien.DataSource = dtUngVien;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách ứng viên: {ex.Message}", "Lỗi");
+            }
 
         }
 
@@ -167,58 +174,66 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            if (dgvUngVien.SelectedRows.Count == 0)
+            try
             {
-                MessageBox.Show("⚠️ Vui lòng chọn 1 tin tuyển dụng để xuất danh sách ứng viên!");
-                return;
-            }
+                if (dgvUngVien.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("⚠️ Vui lòng chọn 1 tin tuyển dụng để xuất danh sách ứng viên!");
+                    return;
+                }
 
-            int tinId = Convert.ToInt32(dgvUngVien.SelectedRows[0].Cells["tin_id"].Value);
-            System.Data.DataTable dtUngVien = _ungTuyenService.GetUngVienByTin(tinId);
+                int tinId = Convert.ToInt32(dgvUngVien.SelectedRows[0].Cells["tin_id"].Value);
+                System.Data.DataTable dtUngVien = _ungTuyenService.GetUngVienByTin(tinId);
 
-            if (dtUngVien.Rows.Count == 0)
-            {
-                MessageBox.Show("❌ Tin tuyển dụng này chưa có ứng viên nào.");
-                return;
-            }
+                if (dtUngVien.Rows.Count == 0)
+                {
+                    MessageBox.Show("❌ Tin tuyển dụng này chưa có ứng viên nào.");
+                    return;
+                }
 
-            // 📝 Tạo file Word
-            var app = new Microsoft.Office.Interop.Word.Application();
-            Document doc = app.Documents.Add();
+                // 📝 Tạo file Word
+                var app = new Microsoft.Office.Interop.Word.Application();
+                Document doc = app.Documents.Add();
 
-            Paragraph header = doc.Content.Paragraphs.Add();
-            header.Range.Text = "DANH SÁCH ỨNG VIÊN ỨNG TUYỂN";
-            header.Range.Font.Bold = 1;
-            header.Range.Font.Size = 16;
-            header.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-            header.Range.InsertParagraphAfter();
+                Paragraph header = doc.Content.Paragraphs.Add();
+                header.Range.Text = "DANH SÁCH ỨNG VIÊN ỨNG TUYỂN";
+                header.Range.Font.Bold = 1;
+                header.Range.Font.Size = 16;
+                header.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                header.Range.InsertParagraphAfter();
 
-            // 🔹 Tạo bảng
-            Microsoft.Office.Interop.Word.Table table = doc.Tables.Add(doc.Bookmarks.get_Item("\\endofdoc").Range, dtUngVien.Rows.Count + 1, dtUngVien.Columns.Count);
-            table.Borders.Enable = 1;
+                // 🔹 Tạo bảng
+                Microsoft.Office.Interop.Word.Table table = doc.Tables.Add(doc.Bookmarks.get_Item("\\endofdoc").Range, dtUngVien.Rows.Count + 1, dtUngVien.Columns.Count);
+                table.Borders.Enable = 1;
 
-            // Header
-            for (int c = 0; c < dtUngVien.Columns.Count; c++)
-            {
-                table.Cell(1, c + 1).Range.Text = dtUngVien.Columns[c].ColumnName;
-                table.Cell(1, c + 1).Range.Bold = 1;
-            }
-
-            // Rows
-            for (int r = 0; r < dtUngVien.Rows.Count; r++)
-            {
+                // Header
                 for (int c = 0; c < dtUngVien.Columns.Count; c++)
                 {
-                    table.Cell(r + 2, c + 1).Range.Text = dtUngVien.Rows[r][c].ToString();
+                    table.Cell(1, c + 1).Range.Text = dtUngVien.Columns[c].ColumnName;
+                    table.Cell(1, c + 1).Range.Bold = 1;
                 }
+
+                // Rows
+                for (int r = 0; r < dtUngVien.Rows.Count; r++)
+                {
+                    for (int c = 0; c < dtUngVien.Columns.Count; c++)
+                    {
+                        table.Cell(r + 2, c + 1).Range.Text = dtUngVien.Rows[r][c].ToString();
+                    }
+                }
+
+                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"UngVien_Tin{tinId}.docx");
+                doc.SaveAs2(path);
+                doc.Close();
+                app.Quit();
+
+                MessageBox.Show($"✅ Đã xuất danh sách ứng viên ra file:\n{path}", "Thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi xuất file: {ex.Message}", "Lỗi");
             }
 
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"UngVien_Tin{tinId}.docx");
-            doc.SaveAs2(path);
-            doc.Close();
-            app.Quit();
-
-            MessageBox.Show($"✅ Đã xuất danh sách ứng viên ra file:\n{path}", "Thành công");
         }
 
         private void btnlammoi_Click(object sender, EventArgs e)

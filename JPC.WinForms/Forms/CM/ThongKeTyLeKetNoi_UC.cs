@@ -268,9 +268,15 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM
         // Xếp hạng chất lượng theo tỷ lệ %
         private string GradeKey(decimal pct)
         {
-            if (pct >= 70m) return "TOT";      // Tốt
-            if (pct >= 50m) return "KHA";      // Khá
-            return "CAITHIEN";                 // Cần cải thiện
+            // Ưu tiên lựa chọn thủ công
+            if (rdoTot.Checked) return "TOT";
+            if (rdoKha.Checked) return "KHA";
+            if (rdoCanCaiThien.Checked) return "CAITHIEN";
+
+            // Chưa chọn -> tự tính theo ngưỡng rồi tự tick
+            var key = (pct >= 70m) ? "TOT" : (pct >= 50m) ? "KHA" : "CAITHIEN";
+
+            return key;
         }
 
         // An toàn cộng cột số (int/long/double/decimal chuỗi…)

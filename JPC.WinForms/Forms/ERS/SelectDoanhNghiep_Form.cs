@@ -93,42 +93,49 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            if (UserSession.NhanVien != null && UserSession.NhanVien.VaiTroId == "SA")
+            try
             {
-                MessageBox.Show("Chế độ tra cứu (chỉ đọc). SA không thể thực hiện thao tác này.",
-                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (UserSession.NhanVien != null && UserSession.NhanVien.VaiTroId == "SA")
+                {
+                    MessageBox.Show("Chế độ tra cứu (chỉ đọc). SA không thể thực hiện thao tác này.",
+                                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (dgvDoanhNghiep.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("⚠️ Vui lòng chọn doanh nghiệp trước!");
+                    return;
+                }
+
+                var row = dgvDoanhNghiep.SelectedRows[0];
+
+                int dnId = Convert.ToInt32(row.Cells[0].Value);
+                string tenDn = row.Cells[1].Value.ToString();
+
+
+                if (dnId == 0)
+                {
+                    MessageBox.Show("⚠️ Không tìm thấy mã doanh nghiệp trong bảng!");
+                    return;
+                }
+
+                var dn = new DoanhNghiep
+                {
+                    DnId = dnId,
+                    TenDoanhNghiep = tenDn
+                };
+
+                var formDangTin = new DangTinTuyenDung_UC_Form(dn);
+                var parentForm = this.FindForm();
+                if (parentForm is TrangChuERS_Form mainForm)
+                {
+                    mainForm.LoadUserControl(formDangTin);
+                }
             }
-
-            if (dgvDoanhNghiep.SelectedRows.Count == 0)
+            catch (Exception ex)
             {
-                MessageBox.Show("⚠️ Vui lòng chọn doanh nghiệp trước!");
-                return;
-            }
-
-            var row = dgvDoanhNghiep.SelectedRows[0];
-
-            int dnId = Convert.ToInt32(row.Cells[0].Value);
-            string tenDn = row.Cells[1].Value.ToString();
-
-
-            if (dnId == 0)
-            {
-                MessageBox.Show("⚠️ Không tìm thấy mã doanh nghiệp trong bảng!");
-                return;
-            }
-
-            var dn = new DoanhNghiep
-            {
-                DnId = dnId,
-                TenDoanhNghiep = tenDn
-            };
-
-            var formDangTin = new DangTinTuyenDung_UC_Form(dn);
-            var parentForm = this.FindForm();
-            if (parentForm is TrangChuERS_Form mainForm)
-            {
-                mainForm.LoadUserControl(formDangTin);
+                MessageBox.Show($"❌ Đã có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
