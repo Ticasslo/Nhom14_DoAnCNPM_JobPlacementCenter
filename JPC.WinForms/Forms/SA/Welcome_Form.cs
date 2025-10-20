@@ -24,8 +24,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
         {
             InitializeComponent();
             InitializeServices();
-            SetupResponsiveLayout();
-            this.Resize += (s, e) => AdjustLayout();
+          //  SetupResponsiveLayout();
+           //this.Resize += (s, e) => AdjustLayout();
         }
 
         private void InitializeServices()
@@ -36,82 +36,82 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             _nhanVienService = new NhanVienService();
         }
 
-        private void SetupResponsiveLayout()
-        {
-            // Header panel dock top
-            panelHeader.Dock = DockStyle.Top;
-            panelHeader.Height = 135;
+        //private void SetupResponsiveLayout()
+        //{
+        //    // Header panel dock top
+        //    panelHeader.Dock = DockStyle.Top;
+        //    panelHeader.Height = 135;
 
-            // Setup panel
-            panelTongNhomNghe.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            panelTongNghe.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            panelTongViTriChuyenMon.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            panelTongNhanVien.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            panelPhanBoVaiTro.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pic1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pic2.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
-            pic3.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+        //    // Setup panel
+        //    panelTongNhomNghe.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+        //    panelTongNghe.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+        //    panelTongViTriChuyenMon.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+        //    panelTongNhanVien.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+        //    panelPhanBoVaiTro.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+        //    pic1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        //    pic2.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+        //    pic3.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
 
-            // Đảm bảo tất cả PictureBox có cùng SizeMode để hiển thị đều
-            pic1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic3.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    // Đảm bảo tất cả PictureBox có cùng SizeMode để hiển thị đều
+        //    pic1.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    pic2.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    pic3.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            // Double buffer for smooth rendering
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);
-            this.UpdateStyles();
-        }
+        //    // Double buffer for smooth rendering
+        //    this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);
+        //    this.UpdateStyles();
+        //}
 
-        private void AdjustLayout()
-        {
-            if (this.Width < 1200) return; // Minimum width
-            int padding = 12;
-            int cardWidth = 394;
-            int cardHeight = 150;
-            int gap = 12;
-            // Tính tổng chiều cao của 4 KPI cards
-            int totalLeftHeight = (cardHeight + gap) * 4 - gap;
-            // Left column (4 KPI cards) - căn chỉnh đều
-            panelTongNhomNghe.Location = new Point(padding, padding);
-            panelTongNhomNghe.Size = new Size(cardWidth, cardHeight);
+        //private void AdjustLayout()
+        //{
+        //    if (this.Width < 1200) return; // Minimum width
+        //    int padding = 12;
+        //    int cardWidth = 394;
+        //    int cardHeight = 150;
+        //    int gap = 12;
+        //    // Tính tổng chiều cao của 4 KPI cards
+        //    int totalLeftHeight = (cardHeight + gap) * 4 - gap;
+        //    // Left column (4 KPI cards) - căn chỉnh đều
+        //    panelTongNhomNghe.Location = new Point(padding, padding);
+        //    panelTongNhomNghe.Size = new Size(cardWidth, cardHeight);
             
-            panelTongNghe.Location = new Point(padding, padding + cardHeight + gap);
-            panelTongNghe.Size = new Size(cardWidth, cardHeight);
+        //    panelTongNghe.Location = new Point(padding, padding + cardHeight + gap);
+        //    panelTongNghe.Size = new Size(cardWidth, cardHeight);
             
-            panelTongViTriChuyenMon.Location = new Point(padding, padding + (cardHeight + gap) * 2);
-            panelTongViTriChuyenMon.Size = new Size(cardWidth, cardHeight);
+        //    panelTongViTriChuyenMon.Location = new Point(padding, padding + (cardHeight + gap) * 2);
+        //    panelTongViTriChuyenMon.Size = new Size(cardWidth, cardHeight);
             
-            panelTongNhanVien.Location = new Point(padding, padding + (cardHeight + gap) * 3);
-            panelTongNhanVien.Size = new Size(cardWidth, cardHeight);
+        //    panelTongNhanVien.Location = new Point(padding, padding + (cardHeight + gap) * 3);
+        //    panelTongNhanVien.Size = new Size(cardWidth, cardHeight);
 
-            // Middle column (Phân bố vai trò) - cùng chiều cao với cột trái
-            int middleX = padding + cardWidth + gap;
-            int middleWidth = 386;
-            panelPhanBoVaiTro.Location = new Point(middleX, padding);
-            panelPhanBoVaiTro.Size = new Size(middleWidth, totalLeftHeight);
+        //    // Middle column (Phân bố vai trò) - cùng chiều cao với cột trái
+        //    int middleX = padding + cardWidth + gap;
+        //    int middleWidth = 386;
+        //    panelPhanBoVaiTro.Location = new Point(middleX, padding);
+        //    panelPhanBoVaiTro.Size = new Size(middleWidth, totalLeftHeight);
 
-            // Right column (Images) pic1, pic2 trên, pic3 dưới panel chart
-            int rightX = middleX + middleWidth + gap;
-            int rightWidth = this.Width - rightX - padding;
+        //    // Right column (Images) pic1, pic2 trên, pic3 dưới panel chart
+        //    int rightX = middleX + middleWidth + gap;
+        //    int rightWidth = this.Width - rightX - padding;
             
-            // pic1 và pic2 chia đều phần trên
-            int topHeight = totalLeftHeight / 2;
-            int imageHeight = topHeight;
+        //    // pic1 và pic2 chia đều phần trên
+        //    int topHeight = totalLeftHeight / 2;
+        //    int imageHeight = topHeight;
             
-            pic1.Location = new Point(rightX, padding);
-            pic1.Size = new Size(rightWidth, imageHeight);
+        //    pic1.Location = new Point(rightX, padding);
+        //    pic1.Size = new Size(rightWidth, imageHeight);
             
-            pic2.Location = new Point(rightX, padding + imageHeight);
-            pic2.Size = new Size(rightWidth, imageHeight);
+        //    pic2.Location = new Point(rightX, padding + imageHeight);
+        //    pic2.Size = new Size(rightWidth, imageHeight);
             
-            // pic3 ở dưới panel chart
-            pic3.Location = new Point(rightX, padding + totalLeftHeight);
-            pic3.Size = new Size(rightWidth, imageHeight);
-        }
+        //    // pic3 ở dưới panel chart
+        //    pic3.Location = new Point(rightX, padding + totalLeftHeight);
+        //    pic3.Size = new Size(rightWidth, imageHeight);
+        //}
 
         private void Welcome_Form_Load(object sender, EventArgs e)
         {
-            AdjustLayout();
+         //  AdjustLayout();
             LoadDashboardData();
             UpdateUserInfo();
         }

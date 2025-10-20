@@ -1,0 +1,34 @@
+﻿using JPC.Business.Services.Interfaces.FO;
+using JPC.DataAccess.Repositories.Implementations.FO;
+using JPC.DataAccess.Repositories.Interfaces.FO;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JPC.Business.Services.Implementations.FO
+{
+    public class BaoCaoDoanhThuThangService : IBaoCaoDoanhThuThangService
+    {
+        private readonly IHoaDonRepository _hoaDonRepo;
+        public BaoCaoDoanhThuThangService()
+        {
+            _hoaDonRepo = new HoaDonRepository();
+        }
+        public BaoCaoDoanhThuThangService(IHoaDonRepository hoaDonRepo)
+        {
+            _hoaDonRepo = hoaDonRepo ?? throw new ArgumentNullException(nameof(hoaDonRepo));
+        }
+
+        public DataTable GetBaoCao(DateTime tuNgay, DateTime denNgay)
+            => _hoaDonRepo.GetBaoCaoDoanhThu(tuNgay, denNgay);
+
+        public decimal TinhTongTien(DataTable dt)
+        {
+            if (dt == null || dt.Rows.Count == 0) return 0m;
+            return dt.AsEnumerable().Sum(r => r.Field<decimal>("so_tien"));
+        }
+    }
+}

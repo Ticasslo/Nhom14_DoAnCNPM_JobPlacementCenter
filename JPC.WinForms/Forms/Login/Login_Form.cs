@@ -14,18 +14,22 @@ using System.Windows.Forms;
 using JPC.Business.Exceptions;
 using JPC.Models;
 using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA;
-//using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CSS;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS;
+
 
 namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
 {
     public partial class Login_Form : Form
     {
         public static bool IsAppExiting { get; set; } = false;
-        private bool isShowPassword = true;
+        private bool isShowPassword = false;
         public Login_Form()
         {
             InitializeComponent();
-            this.ClientSize = new Size(340, 530);
+           // this.ClientSize = new Size(340, 530);
             this.AcceptButton = btnLogin;
         }
 
@@ -36,8 +40,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             txtPassword.Text = "password";
             txtPassword.ForeColor = Color.Gray;
 
-            picBoxShow.BringToFront();
-            txtPassword.PasswordChar = '\0';
+            picBoxHide.Visible = true;
+            picBoxShow.Visible = false;
+            //txtPassword.PasswordChar = '*';
 
             radioBtnCSS.Checked = true;
             this.ActiveControl = txtUsername;
@@ -105,6 +110,30 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             isShowPassword = true;
         }
 
+
+
+        private void Login_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!IsAppExiting && e.CloseReason == CloseReason.UserClosing)
+            {
+                var result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No) 
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    IsAppExiting = true;
+                    Application.Exit(); // Đảm bảo thoát hoàn toàn
+                }
+            }
+            else if (IsAppExiting)
+            {
+                Application.Exit(); // Đảm bảo thoát hoàn toàn
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -170,32 +199,81 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
                 else if (string.Equals(nv.VaiTroId, "CSS", StringComparison.OrdinalIgnoreCase))
                 {
                     this.Hide();
-                    //var main = new TrangChuCSS_Form();
-                    //main.FormClosed += (s, args) =>
-                    //{
-                    //    // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
-                    //    if (Equals(main.Tag, "Logout"))
-                    //    {
-                    //        this.Show();
-                    //        Login_Form_Load(sender, e);
-                    //    }
-                    //    else
-                    //        this.Close();
-                    //};
+                    var main = new TrangChuCSS_Form();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                            this.Close();
+                    };
 
-                    //main.Show();
+                    main.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "ERS", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Màn hình chính cho vai trò ERS đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    var main = new TrangChuERS_Form();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                            this.Close();
+                    };
+
+                    main.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "FO", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Màn hình chính cho vai trò FO đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    var mainfo = new TrangChuFO_Form();
+                    mainfo.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng vì ĐĂNG XUẤT, CounselorMainForm sẽ đặt Tag = "Logout"
+                        if (Equals(mainfo.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);
+                        }
+                        else
+                        {
+                            IsAppExiting = true;
+                            this.Close();
+                        }
+                    };
+
+                    mainfo.Show();
                 }
                 else if (string.Equals(nv.VaiTroId, "CM", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Màn hình chính cho vai trò CM đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+
+                    var main = new TrangChuCM_Form();
+                    main.FormClosed += (s, args) =>
+                    {
+                        // Nếu main đóng do ĐĂNG XUẤT, form chính sẽ đặt Tag = "Logout"
+                        if (Equals(main.Tag, "Logout"))
+                        {
+                            this.Show();
+                            Login_Form_Load(sender, e);   // reset UI đăng nhập (placeholder, clear text,…)
+                        }
+                        else
+                        {
+                            IsAppExiting = true;          // đánh dấu thoát hẳn app
+                            this.Close();
+                        }
+                    };
+
+                    main.Show();
                 }
                 else
                 {
@@ -205,28 +283,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.Login
             catch (BusinessException dae)
             {
                 MessageBox.Show(dae.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void Login_Form_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!IsAppExiting && e.CloseReason == CloseReason.UserClosing)
-            {
-                var result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No) 
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    IsAppExiting = true;
-                    Application.Exit(); // Đảm bảo thoát hoàn toàn
-                }
-            }
-            else if (IsAppExiting)
-            {
-                Application.Exit(); // Đảm bảo thoát hoàn toàn
             }
         }
     }

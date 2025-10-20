@@ -15,12 +15,11 @@ namespace JPC.DataAccess.DBConnection
 
         private static string GetConnectionString()
         {
-            var cs = ConfigurationManager.ConnectionStrings["SkylineDb"];
+            var cs = ConfigurationManager.ConnectionStrings["JobPlacementCenter"];
             if (cs == null || string.IsNullOrWhiteSpace(cs.ConnectionString))
-                throw new InvalidOperationException("Không tìm thấy connectionStrings['SkylineDb'] trong App.config của startup project.");
+                throw new InvalidOperationException("Không tìm thấy connectionStrings['JobPlacementCenter'] trong App.config của startup project.");
             return cs.ConnectionString;
         }
-
 
         // SP trả DataTable (dùng với sp có SELECT), có thể kèm OUTPUT và RETURN VALUE
         public static (DataTable Data, int ReturnValue) ExecuteStoredProcedureWithOutput(
@@ -159,6 +158,22 @@ namespace JPC.DataAccess.DBConnection
             }
 
             return dataTable;
+        }
+
+        public static DataTable ExecuteTableFunctionDirect(string sql, SqlParameter[] parameters = null)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                if (parameters != null)
+                    cmd.Parameters.AddRange(parameters);
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            return dt;
         }
     }
 }

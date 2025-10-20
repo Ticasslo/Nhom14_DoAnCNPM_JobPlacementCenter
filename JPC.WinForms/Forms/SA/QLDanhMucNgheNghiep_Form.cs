@@ -61,12 +61,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
 
         private void SetupResponsiveLayout()
         {
-            // Title căn giữa và dock top
-            lblTieuDe.TextAlign = ContentAlignment.MiddleCenter;
-            lblTieuDe.Dock = DockStyle.Top;
-            lblTieuDe.Height = 60;
-            lblTieuDe.AutoSize = false;
-
             // TabControl fill phần còn lại
             tabControlDanhMucNghe.Dock = DockStyle.Fill;
 

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.lblTieuDe = new System.Windows.Forms.Label();
             this.lblXinChao = new System.Windows.Forms.Label();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblThoiGian = new System.Windows.Forms.Label();
@@ -50,10 +49,12 @@
             this.lblTongNhomNghe = new System.Windows.Forms.Label();
             this.panelPhanBoVaiTro = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.chartPhanBoVaiTro = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lblTieuDe = new System.Windows.Forms.Label();
             this.pic3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pic1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pic2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelHeader.SuspendLayout();
             this.panelTongNhanVien.SuspendLayout();
             this.panelTongNghe.SuspendLayout();
@@ -66,46 +67,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTieuDe
-            // 
-            this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTieuDe.Location = new System.Drawing.Point(365, 0);
-            this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(600, 41);
-            this.lblTieuDe.TabIndex = 80;
-            this.lblTieuDe.Text = "          CHÀO MỪNG ĐẾN VỚI HỆ THỐNG";
-            // 
             // lblXinChao
             // 
             this.lblXinChao.AutoSize = true;
-            this.lblXinChao.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXinChao.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblXinChao.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXinChao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
             this.lblXinChao.Location = new System.Drawing.Point(3, 53);
             this.lblXinChao.Name = "lblXinChao";
-            this.lblXinChao.Size = new System.Drawing.Size(172, 38);
+            this.lblXinChao.Size = new System.Drawing.Size(120, 28);
             this.lblXinChao.TabIndex = 86;
             this.lblXinChao.Text = "Xin chào: ...";
             // 
             // panelHeader
             // 
-            this.panelHeader.Controls.Add(this.lblThoiGian);
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
             this.panelHeader.Controls.Add(this.lblTieuDe);
+            this.panelHeader.Controls.Add(this.lblThoiGian);
             this.panelHeader.Controls.Add(this.lblXinChao);
-            this.panelHeader.Location = new System.Drawing.Point(12, 12);
+            this.panelHeader.Location = new System.Drawing.Point(54, 12);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1158, 135);
+            this.panelHeader.Size = new System.Drawing.Size(1697, 135);
             this.panelHeader.TabIndex = 87;
             // 
             // lblThoiGian
             // 
             this.lblThoiGian.AutoSize = true;
-            this.lblThoiGian.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThoiGian.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblThoiGian.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
             this.lblThoiGian.Location = new System.Drawing.Point(3, 91);
             this.lblThoiGian.Name = "lblThoiGian";
-            this.lblThoiGian.Size = new System.Drawing.Size(211, 38);
+            this.lblThoiGian.Size = new System.Drawing.Size(148, 28);
             this.lblThoiGian.TabIndex = 87;
             this.lblThoiGian.Text = "Hôm nay là: ...";
             // 
@@ -114,15 +105,15 @@
             this.panelTongNhanVien.BackColor = System.Drawing.Color.Transparent;
             this.panelTongNhanVien.Controls.Add(this.lblSLNhanVien);
             this.panelTongNhanVien.Controls.Add(this.lblTongNhanVien);
-            this.panelTongNhanVien.FillColor = System.Drawing.Color.AliceBlue;
-            this.panelTongNhanVien.Location = new System.Drawing.Point(12, 621);
+            this.panelTongNhanVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.panelTongNhanVien.Location = new System.Drawing.Point(44, 711);
             this.panelTongNhanVien.Name = "panelTongNhanVien";
             this.panelTongNhanVien.Radius = 15;
             this.panelTongNhanVien.ShadowColor = System.Drawing.Color.DimGray;
             this.panelTongNhanVien.ShadowDepth = 120;
             this.panelTongNhanVien.ShadowShift = 10;
             this.panelTongNhanVien.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.panelTongNhanVien.Size = new System.Drawing.Size(394, 146);
+            this.panelTongNhanVien.Size = new System.Drawing.Size(386, 154);
             this.panelTongNhanVien.TabIndex = 88;
             // 
             // lblSLNhanVien
@@ -152,15 +143,15 @@
             this.panelTongNghe.BackColor = System.Drawing.Color.Transparent;
             this.panelTongNghe.Controls.Add(this.lblSLNghe);
             this.panelTongNghe.Controls.Add(this.lblTongNghe);
-            this.panelTongNghe.FillColor = System.Drawing.Color.AliceBlue;
-            this.panelTongNghe.Location = new System.Drawing.Point(12, 309);
+            this.panelTongNghe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.panelTongNghe.Location = new System.Drawing.Point(44, 369);
             this.panelTongNghe.Name = "panelTongNghe";
             this.panelTongNghe.Radius = 15;
             this.panelTongNghe.ShadowColor = System.Drawing.Color.DimGray;
             this.panelTongNghe.ShadowDepth = 120;
             this.panelTongNghe.ShadowShift = 10;
             this.panelTongNghe.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.panelTongNghe.Size = new System.Drawing.Size(394, 150);
+            this.panelTongNghe.Size = new System.Drawing.Size(386, 158);
             this.panelTongNghe.TabIndex = 89;
             // 
             // lblSLNghe
@@ -190,15 +181,15 @@
             this.panelTongViTriChuyenMon.BackColor = System.Drawing.Color.Transparent;
             this.panelTongViTriChuyenMon.Controls.Add(this.lblSLViTriChuyenMon);
             this.panelTongViTriChuyenMon.Controls.Add(this.lblTongViTriChuyenMon);
-            this.panelTongViTriChuyenMon.FillColor = System.Drawing.Color.AliceBlue;
-            this.panelTongViTriChuyenMon.Location = new System.Drawing.Point(12, 465);
+            this.panelTongViTriChuyenMon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.panelTongViTriChuyenMon.Location = new System.Drawing.Point(44, 540);
             this.panelTongViTriChuyenMon.Name = "panelTongViTriChuyenMon";
             this.panelTongViTriChuyenMon.Radius = 15;
             this.panelTongViTriChuyenMon.ShadowColor = System.Drawing.Color.DimGray;
             this.panelTongViTriChuyenMon.ShadowDepth = 120;
             this.panelTongViTriChuyenMon.ShadowShift = 10;
             this.panelTongViTriChuyenMon.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.panelTongViTriChuyenMon.Size = new System.Drawing.Size(394, 150);
+            this.panelTongViTriChuyenMon.Size = new System.Drawing.Size(386, 158);
             this.panelTongViTriChuyenMon.TabIndex = 90;
             // 
             // lblSLViTriChuyenMon
@@ -206,7 +197,7 @@
             this.lblSLViTriChuyenMon.AutoSize = true;
             this.lblSLViTriChuyenMon.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSLViTriChuyenMon.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.lblSLViTriChuyenMon.Location = new System.Drawing.Point(191, 51);
+            this.lblSLViTriChuyenMon.Location = new System.Drawing.Point(191, 52);
             this.lblSLViTriChuyenMon.Name = "lblSLViTriChuyenMon";
             this.lblSLViTriChuyenMon.Size = new System.Drawing.Size(105, 81);
             this.lblSLViTriChuyenMon.TabIndex = 96;
@@ -228,15 +219,15 @@
             this.panelTongNhomNghe.BackColor = System.Drawing.Color.Transparent;
             this.panelTongNhomNghe.Controls.Add(this.lblSLNhomNghe);
             this.panelTongNhomNghe.Controls.Add(this.lblTongNhomNghe);
-            this.panelTongNhomNghe.FillColor = System.Drawing.Color.AliceBlue;
-            this.panelTongNhomNghe.Location = new System.Drawing.Point(12, 153);
+            this.panelTongNhomNghe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.panelTongNhomNghe.Location = new System.Drawing.Point(44, 196);
             this.panelTongNhomNghe.Name = "panelTongNhomNghe";
             this.panelTongNhomNghe.Radius = 15;
             this.panelTongNhomNghe.ShadowColor = System.Drawing.Color.DimGray;
             this.panelTongNhomNghe.ShadowDepth = 120;
             this.panelTongNhomNghe.ShadowShift = 10;
             this.panelTongNhomNghe.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.panelTongNhomNghe.Size = new System.Drawing.Size(396, 150);
+            this.panelTongNhomNghe.Size = new System.Drawing.Size(388, 158);
             this.panelTongNhomNghe.TabIndex = 91;
             // 
             // lblSLNhomNghe
@@ -265,8 +256,8 @@
             // 
             this.panelPhanBoVaiTro.BackColor = System.Drawing.Color.Transparent;
             this.panelPhanBoVaiTro.Controls.Add(this.chartPhanBoVaiTro);
-            this.panelPhanBoVaiTro.FillColor = System.Drawing.Color.AliceBlue;
-            this.panelPhanBoVaiTro.Location = new System.Drawing.Point(414, 153);
+            this.panelPhanBoVaiTro.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.panelPhanBoVaiTro.Location = new System.Drawing.Point(457, 192);
             this.panelPhanBoVaiTro.Name = "panelPhanBoVaiTro";
             this.panelPhanBoVaiTro.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panelPhanBoVaiTro.Radius = 15;
@@ -274,12 +265,12 @@
             this.panelPhanBoVaiTro.ShadowDepth = 120;
             this.panelPhanBoVaiTro.ShadowShift = 10;
             this.panelPhanBoVaiTro.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.panelPhanBoVaiTro.Size = new System.Drawing.Size(386, 412);
+            this.panelPhanBoVaiTro.Size = new System.Drawing.Size(732, 503);
             this.panelPhanBoVaiTro.TabIndex = 92;
             // 
             // chartPhanBoVaiTro
             // 
-            this.chartPhanBoVaiTro.BackColor = System.Drawing.Color.AliceBlue;
+            this.chartPhanBoVaiTro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
             chartArea1.Name = "ChartArea1";
             this.chartPhanBoVaiTro.ChartAreas.Add(chartArea1);
             this.chartPhanBoVaiTro.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -292,17 +283,38 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartPhanBoVaiTro.Series.Add(series1);
-            this.chartPhanBoVaiTro.Size = new System.Drawing.Size(346, 412);
+            this.chartPhanBoVaiTro.Size = new System.Drawing.Size(692, 503);
             this.chartPhanBoVaiTro.TabIndex = 96;
             this.chartPhanBoVaiTro.Text = "Phân bổ ";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.chartPhanBoVaiTro;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.panelHeader;
+            // 
+            // lblTieuDe
+            // 
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(109)))), ((int)(((byte)(121)))));
+            this.lblTieuDe.Location = new System.Drawing.Point(533, 15);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(550, 38);
+            this.lblTieuDe.TabIndex = 88;
+            this.lblTieuDe.Text = "          CHÀO MỪNG ĐẾN VỚI HỆ THỐNG";
             // 
             // pic3
             // 
             this.pic3.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.SA02;
             this.pic3.ImageRotate = 0F;
-            this.pic3.Location = new System.Drawing.Point(202, 571);
+            this.pic3.Location = new System.Drawing.Point(502, 711);
             this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(600, 219);
+            this.pic3.Size = new System.Drawing.Size(617, 183);
             this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic3.TabIndex = 95;
             this.pic3.TabStop = false;
@@ -312,9 +324,9 @@
             this.pic1.BorderRadius = 15;
             this.pic1.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.SA03;
             this.pic1.ImageRotate = 0F;
-            this.pic1.Location = new System.Drawing.Point(806, 153);
+            this.pic1.Location = new System.Drawing.Point(1248, 192);
             this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(366, 230);
+            this.pic1.Size = new System.Drawing.Size(485, 295);
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 94;
             this.pic1.TabStop = false;
@@ -323,24 +335,19 @@
             // 
             this.pic2.Image = global::Nhom14_DoAnCNPM_JobPlacementCenter_Code.Properties.Resources.SA01;
             this.pic2.ImageRotate = 0F;
-            this.pic2.Location = new System.Drawing.Point(806, 389);
+            this.pic2.Location = new System.Drawing.Point(1236, 531);
             this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(366, 378);
+            this.pic2.Size = new System.Drawing.Size(453, 378);
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic2.TabIndex = 93;
             this.pic2.TabStop = false;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this.chartPhanBoVaiTro;
             // 
             // Welcome_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1182, 800);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1766, 915);
             this.ControlBox = false;
             this.Controls.Add(this.pic3);
             this.Controls.Add(this.pic1);
@@ -376,8 +383,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Label lblXinChao;
         private Guna.UI2.WinForms.Guna2Panel panelHeader;
         private System.Windows.Forms.Label lblThoiGian;
@@ -399,5 +404,7 @@
         private System.Windows.Forms.Label lblSLViTriChuyenMon;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPhanBoVaiTro;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.Label lblTieuDe;
     }
 }

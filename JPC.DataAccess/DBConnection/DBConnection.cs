@@ -19,6 +19,27 @@ namespace JPC.DataAccess.DBConnection
             string strCnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"]?.ConnectionString
                 ?? throw new InvalidOperationException("Missing connection string in App.config");
             this.sqlConn = new SqlConnection(strCnn);
+
+
+            //string strCnn = @"Data Source=tcp:THANHNHAN\MSSQLSERVER01;
+            //  Initial Catalog=JobPlacementCenter;
+            //  User ID=sa;Password=123456;
+            //  Encrypt=False;TrustServerCertificate=True;
+            //  MultipleActiveResultSets=True";
+            //this.sqlConn = new SqlConnection(strCnn);
+
+
+            //string strCnn = @"Data Source=tcp:LAPTOP-DEJAVU;Initial Catalog=JobPlacementCenter;
+            //                    Integrated Security = True; Encrypt=False;
+            //                    TrustServerCertificate=True; MultipleActiveResultSets=True";
+            //this.sqlConn = new SqlConnection(strCnn);
+
+            //string strCnn = @"Data Source=LAPTOP-TNT38BSB\KHAHP;Initial Catalog=JobPlacementCenter;
+            //                    Integrated Security = True; Encrypt=False;
+            //                    TrustServerCertificate=True; MultipleActiveResultSets=True";
+            //this.sqlConn = new SqlConnection(strCnn);
+
+
         }
 
         // SELECT → DataTable
@@ -106,6 +127,11 @@ namespace JPC.DataAccess.DBConnection
                 if (this.sqlConn.State == ConnectionState.Open)
                     this.sqlConn.Close();
             }
+        }
+
+        public DBConnection(string connectionString)
+        {
+            sqlConn = new SqlConnection(connectionString);
         }
     }
 }

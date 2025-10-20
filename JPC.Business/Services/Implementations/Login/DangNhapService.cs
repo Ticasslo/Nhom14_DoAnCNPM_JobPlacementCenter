@@ -59,7 +59,7 @@ namespace JPC.Business.Services.Implementations.Login
                 var sb = new StringBuilder(hashBytes.Length * 2);
                 foreach (var b in hashBytes)
                 {
-                    sb.Append(b.ToString("x2"));
+                    sb.Append(b.ToString("X2"));
                 }
                 return sb.ToString();
             }

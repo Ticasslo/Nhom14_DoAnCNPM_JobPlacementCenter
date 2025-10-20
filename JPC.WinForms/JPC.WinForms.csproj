@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,40 +35,145 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.6.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.Framework.3.3.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=8.2.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.8.2.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.1.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.8.1.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=7.7.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.System.Drawing.7.7.0\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="MailKit, Version=4.14.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>packages\MailKit.4.14.0\lib\net48\MailKit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.9, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.9\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.9, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.9.0.9\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MimeKit, Version=4.14.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>packages\MimeKit.4.14.0\lib\net48\MimeKit.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
     </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.1\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
-    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -73,7 +181,9 @@
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,19 +193,176 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CSS\ChinhSuaThongTinUngVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\ChinhSuaThongTinUngVien_UC.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinUngVien_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\DKHoSoUngVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\DKHoSoUngVien_UC.Designer.cs">
+      <DependentUpon>DKHoSoUngVien_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\GhiNhanUngTuyen_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\GhiNhanUngTuyen_UC.Designer.cs">
+      <DependentUpon>GhiNhanUngTuyen_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\PhieuUngTuyenData.cs">
+      <DependentUpon>PhieuUngTuyenData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\PhieuUngTuyenData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuUngTuyenData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\PhieuUngTuyen_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\PhieuUngTuyen_Form.Designer.cs">
+      <DependentUpon>PhieuUngTuyen_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CSS\TrangChuCSS_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CSS\TrangChuCSS_Form.Designer.cs">
+      <DependentUpon>TrangChuCSS_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_UC.Designer.cs">
+      <DependentUpon>DoiMatKhau_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\DateRangeHelper.cs" />
+    <Compile Include="Forms\CM\DieuChinhGiaDV_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CM\DieuChinhGiaDV_UC.Designer.cs">
+      <DependentUpon>DieuChinhGiaDV_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\Reports\FrmReportPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CM\Reports\FrmReportPreview.Designer.cs">
+      <DependentUpon>FrmReportPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\RptCM.cs">
+      <DependentUpon>RptCM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\RptCM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\ThongKeSoLuongUngVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CM\ThongKeSoLuongUngVien_UC.Designer.cs">
+      <DependentUpon>ThongKeSoLuongUngVien_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\ThongKeTyLeKetNoi_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CM\ThongKeTyLeKetNoi_UC.Designer.cs">
+      <DependentUpon>ThongKeTyLeKetNoi_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CM\TrangChuCM_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CM\TrangChuCM_Form.Designer.cs">
+      <DependentUpon>TrangChuCM_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\CapNhatKetQua_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\CapNhatKetQua_UC_Form.Designer.cs">
+      <DependentUpon>CapNhatKetQua_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\ChinhSuaHoSo_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\ChinhSuaHoSo_UC_Form.Designer.cs">
+      <DependentUpon>ChinhSuaHoSo_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\DangKyHoSo_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\DangKyHoSo_UC_Form.Designer.cs">
+      <DependentUpon>DangKyHoSo_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\DangTinTuyenDung_UC_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\DangTinTuyenDung_UC_Form.Designer.cs">
+      <DependentUpon>DangTinTuyenDung_UC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep1_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep1_Form.Designer.cs">
+      <DependentUpon>SelectDoanhNghiep1_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\SelectDoanhNghiep_Form.Designer.cs">
+      <DependentUpon>SelectDoanhNghiep_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ERS\TrangChuERS_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ERS\TrangChuERS_Form.Designer.cs">
+      <DependentUpon>TrangChuERS_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\BaoCaoDoanhThuThang_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FO\BaoCaoDoanhThuThang_UC.Designer.cs">
+      <DependentUpon>BaoCaoDoanhThuThang_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\DanhSachHoaDon_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FO\DanhSachHoaDon_UC.Designer.cs">
+      <DependentUpon>DanhSachHoaDon_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\ReportHoaDon_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FO\ReportHoaDon_Form.Designer.cs">
+      <DependentUpon>ReportHoaDon_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\ThuPhiDoanhNghiep_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FO\ThuPhiDoanhNghiep_UC.Designer.cs">
+      <DependentUpon>ThuPhiDoanhNghiep_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\ThuPhiUngVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\FO\ThuPhiUngVien_UC.Designer.cs">
+      <DependentUpon>ThuPhiUngVien_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\TrangChuFO_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FO\TrangChuFO_Form.Designer.cs">
+      <DependentUpon>TrangChuFO_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FO\VietnameseNumber.cs" />
     <Compile Include="Forms\Login\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Login\Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DoiMatKhau\DoiMatKhau_Form.Designer.cs">
-      <DependentUpon>DoiMatKhau_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SA\QLDanhMucNgheNghiep_Form.cs">
       <SubType>Form</SubType>
@@ -133,17 +400,140 @@
     <Compile Include="Forms\SA\Welcome_Form.Designer.cs">
       <DependentUpon>Welcome_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobPlacementCenterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobPlacementCenterDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PermissionGaurd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <None Include="Resources\note.png" />
+    <None Include="Resources\personal-folder.png" />
+    <None Include="Resources\personal-folder1.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\padlock1.png" />
+    <None Include="Resources\logout %281%291.png" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\note1.png" />
+    <None Include="Resources\to-do-list.png" />
+    <None Include="Resources\updated.png" />
+    <None Include="Resources\padlock2.png" />
+    <None Include="Resources\logout %281%292.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\job-seeker.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\updated1.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\padlock3.png" />
+    <None Include="Resources\logout %281%293.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\data-analysis.png" />
+    <None Include="Resources\ThuPhiUngVien.png" />
+    <None Include="Resources\ThuPhiDoanhNghiep.png" />
+    <None Include="Resources\DanhSachHoaDon.png" />
+    <None Include="Resources\BaoCaoDoanhThuThang.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Forms\CSS\ChinhSuaThongTinUngVien_UC.resx">
+      <DependentUpon>ChinhSuaThongTinUngVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSS\DKHoSoUngVien_UC.resx">
+      <DependentUpon>DKHoSoUngVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSS\GhiNhanUngTuyen_UC.resx">
+      <DependentUpon>GhiNhanUngTuyen_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSS\PhieuUngTuyen.rdlc" />
+    <EmbeddedResource Include="Forms\CSS\PhieuUngTuyen_Form.resx">
+      <DependentUpon>PhieuUngTuyen_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSS\TrangChuCSS_Form.resx">
+      <DependentUpon>TrangChuCSS_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoiMatKhau\DoiMatKhau_UC.resx">
+      <DependentUpon>DoiMatKhau_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CM\DieuChinhGiaDV_UC.resx">
+      <DependentUpon>DieuChinhGiaDV_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CM\Reports\CM_BM1_ThongKeSoLuong.rdlc" />
+    <EmbeddedResource Include="Forms\CM\Reports\CM_BM2_TyLeKetNoi.rdlc" />
+    <EmbeddedResource Include="Forms\CM\Reports\FrmReportPreview.resx">
+      <DependentUpon>FrmReportPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CM\ThongKeSoLuongUngVien_UC.resx">
+      <DependentUpon>ThongKeSoLuongUngVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CM\ThongKeTyLeKetNoi_UC.resx">
+      <DependentUpon>ThongKeTyLeKetNoi_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CM\TrangChuCM_Form.resx">
+      <DependentUpon>TrangChuCM_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\CapNhatKetQua_UC_Form.resx">
+      <DependentUpon>CapNhatKetQua_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\ChinhSuaHoSo_UC_Form.resx">
+      <DependentUpon>ChinhSuaHoSo_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\DangKyHoSo_UC_Form.resx">
+      <DependentUpon>DangKyHoSo_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\DangTinTuyenDung_UC_Form.resx">
+      <DependentUpon>DangTinTuyenDung_UC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\SelectDoanhNghiep1_Form.resx">
+      <DependentUpon>SelectDoanhNghiep1_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\SelectDoanhNghiep_Form.resx">
+      <DependentUpon>SelectDoanhNghiep_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ERS\TrangChuERS_Form.resx">
+      <DependentUpon>TrangChuERS_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FO\BaoCaoDoanhThuThang_UC.resx">
+      <DependentUpon>BaoCaoDoanhThuThang_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FO\DanhSachHoaDon_UC.resx">
+      <DependentUpon>DanhSachHoaDon_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Forms\FO\ReportHoaDon.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Forms\FO\ReportHoaDon_Form.resx">
+      <DependentUpon>ReportHoaDon_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FO\ThuPhiDoanhNghiep_UC.resx">
+      <DependentUpon>ThuPhiDoanhNghiep_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FO\ThuPhiUngVien_UC.resx">
+      <DependentUpon>ThuPhiUngVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FO\TrangChuFO_Form.resx">
+      <DependentUpon>TrangChuFO_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DoiMatKhau\DoiMatKhau_Form.resx">
-      <DependentUpon>DoiMatKhau_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SA\QLDanhMucNgheNghiep_Form.resx">
       <DependentUpon>QLDanhMucNgheNghiep_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SA\QLQuyenHan_Form.resx">
       <DependentUpon>QLQuyenHan_Form.cs</DependentUpon>
@@ -170,7 +560,45 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Forms\CSS\PhieuUngTuyenData.xsc">
+      <DependentUpon>PhieuUngTuyenData.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\CSS\PhieuUngTuyenData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuUngTuyenData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\CSS\PhieuUngTuyenData.xss">
+      <DependentUpon>PhieuUngTuyenData.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\CM\RptCM.xsc">
+      <DependentUpon>RptCM.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\CM\RptCM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RptCM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\CM\RptCM.xss">
+      <DependentUpon>RptCM.xsd</DependentUpon>
+    </None>
+    <None Include="JobPlacementCenterDataSet.xsc">
+      <DependentUpon>JobPlacementCenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JobPlacementCenterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JobPlacementCenterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JobPlacementCenterDataSet.xss">
+      <DependentUpon>JobPlacementCenterDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM.RptCM+ThongKeSoLuongDataTable.datasource" />
+    <None Include="Properties\DataSources\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM.RptCM+ThongKeSoLuongRow.datasource" />
+    <None Include="Properties\DataSources\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM.RptCM+ThongKeSoLuongRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM.RptCM+ThongKeSoLuongRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.CM.ThongKeSoLuongUngVien_UC.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -220,6 +648,10 @@
     <None Include="Resources\AnPasswordIcon.png" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
     <None Include="Resources\SA01.png" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +659,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SA02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-symbol %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ebc8e6b73e8681d1a157711168a76ff2.jpg" />
+    <None Include="Resources\ebc8e6b73e8681d1a157711168a76ff21.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

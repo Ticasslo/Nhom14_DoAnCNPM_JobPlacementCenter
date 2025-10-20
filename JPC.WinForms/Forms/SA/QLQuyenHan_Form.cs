@@ -46,6 +46,13 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.SA
             catch { }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            TrangChuSA_Form next = new TrangChuSA_Form();
+            next.Show();
+            this.Hide();
+        }
+
         private void QLQuyenHan_Form_Load(object sender, EventArgs e)
         {
             LoadMatrix();
