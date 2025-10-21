@@ -601,12 +601,6 @@ BEGIN
     END
 END;
 
-
-
-
-
-
-
 -- Procedure đơn giản chỉ inactive tin hết hạn
 GO
 CREATE PROCEDURE SP_KiemTraTinHetHan
@@ -621,12 +615,6 @@ BEGIN
       
     SELECT @@ROWCOUNT as SoTinDaInactive;
 END;
-
-
-
-
-
-
 
 -- =============================================
 -- FUNCTION TÍNH TỔNG TIỀN
@@ -703,9 +691,6 @@ BEGIN
     END
     RETURN @so_tien;
 END;
-
-
-
 
 
 -- Trigger: Kiểm tra số tiền hóa đơn theo quy định tính phí, đặt sau để sử dụng function FN_TinhTongTienHoaDon
