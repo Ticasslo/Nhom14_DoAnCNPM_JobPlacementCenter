@@ -158,6 +158,43 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
             }
         }
 
+        //private void btncapnhat_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (dgvUngVien.Rows.Count == 0)
+        //        {
+        //            MessageBox.Show("Không có dữ liệu để cập nhật!");
+        //            return;
+        //        }
+
+        //        int tinId = Convert.ToInt32(txtmatin.Text);
+        //        var updates = new List<(int uvId, int tinId, string trangThai)>();
+
+        //        foreach (DataGridViewRow row in dgvUngVien.Rows)
+        //        {
+        //            if (row.Cells["Mã Ứng Viên"].Value != null && row.Cells["Trạng thái"].Value != null)
+        //            {
+        //                int uvId = Convert.ToInt32(row.Cells["Mã Ứng Viên"].Value);
+        //                string trangThai = row.Cells["Trạng thái"].Value.ToString();
+        //                updates.Add((uvId, tinId, trangThai));
+        //            }
+        //        }
+
+        //        bool result = _ungTuyenService.CapNhatKetQuaTuyenDung(updates);
+
+        //        if (result)
+        //            MessageBox.Show("✅ Cập nhật kết quả tuyển dụng thành công!");
+        //        else
+        //            MessageBox.Show("⚠️ Có một số bản ghi không cập nhật được!");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Lỗi khi cập nhật: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+
         private void btncapnhat_Click(object sender, EventArgs e)
         {
             try
@@ -169,6 +206,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
                 }
 
                 int tinId = Convert.ToInt32(txtmatin.Text);
+                int dnId = Convert.ToInt32(txtmadoanhnghiep.Text);
                 var updates = new List<(int uvId, int tinId, string trangThai)>();
 
                 foreach (DataGridViewRow row in dgvUngVien.Rows)
@@ -184,13 +222,31 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
                 bool result = _ungTuyenService.CapNhatKetQuaTuyenDung(updates);
 
                 if (result)
+                {
                     MessageBox.Show("✅ Cập nhật kết quả tuyển dụng thành công!");
+                }
                 else
-                    MessageBox.Show("⚠️ Có một số bản ghi không cập nhật được!");
+                {
+                    MessageBox.Show("⚠️ Một số ứng viên không được cập nhật do vi phạm điều kiện!");
+                }
+
+                // ✅ Sau mỗi cập nhật (thành công hoặc thất bại) => refresh lại dữ liệu thật từ DB
+                DataTable refreshed = _ungTuyenService.LayUngVienTheoDoanhNghiepVaTin(dnId, tinId);
+                dgvUngVien.DataSource = refreshed;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi cập nhật: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // 🔁 Nếu lỗi -> tải lại dữ liệu thật từ DB để khôi phục trạng thái cũ
+                try
+                {
+                    int tinId = Convert.ToInt32(txtmatin.Text);
+                    int dnId = Convert.ToInt32(txtmadoanhnghiep.Text);
+                    DataTable refreshed = _ungTuyenService.LayUngVienTheoDoanhNghiepVaTin(dnId, tinId);
+                    dgvUngVien.DataSource = refreshed;
+                }
+                catch { }
             }
         }
 

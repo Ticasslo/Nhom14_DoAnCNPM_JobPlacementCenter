@@ -202,7 +202,68 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
         }
 
 
-        
+
+
+        //private void btndangtin_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (cbonhomnghe.SelectedIndex < 0 || cbonghe.SelectedIndex < 0 || cbovitrichuyenmon.SelectedIndex < 0)
+        //        {
+        //            MessageBox.Show("⚠️ Vui lòng chọn đầy đủ Nhóm nghề, Nghề và Vị trí chuyên môn!", "Thiếu thông tin");
+        //            return;
+        //        }
+
+        //        var tin = new JPC.Models.DoanhNghiep.TinTuyenDung
+        //        {
+        //            DnId = _dn.DnId,
+        //            TieuDe = txttieude.Text.Trim(),
+        //            MoTaCongViec = txtmota.Text.Trim(),
+        //            SoLuongTuyen = (int)numsoluong.Value,
+        //            MucLuong = txtmucluong.Text.Trim(),
+        //            KhuVucLamViec = txtkhuvuc.Text.Trim(),
+        //            HinhThucLamViec = cbohinhthuc.Text.Trim(),
+        //            KinhNghiemYeuCau = (int)numkinhnghiem1.Value,
+        //            HanNopHoSo = dtphannop.Value.Date
+        //        };
+
+        //        var (ok, msg, newId) = _tinTuyenDungService.InsertTinTuyenDung(tin);
+
+        //        if (ok)
+        //        {
+        //            MessageBox.Show($"✅ {msg}\nMã tin mới: {newId}", "Thành công",
+        //                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            // ✅ Xoá trắng các ô nhập
+        //            ClearForm();
+
+        //            // ✅ Tải lại danh sách tin
+        //            LoadTinTuyenDung();
+
+        //            // ✅ Tự động chọn tin mới vừa đăng (nếu muốn)
+        //            if (dgvTinTuyenDung.Rows.Count > 0)
+        //            {
+        //                foreach (DataGridViewRow row in dgvTinTuyenDung.Rows)
+        //                {
+        //                    if (Convert.ToInt32(row.Cells["Mã tin"].Value) == newId)
+        //                    {
+        //                        row.Selected = true;
+        //                        dgvTinTuyenDung.FirstDisplayedScrollingRowIndex = row.Index;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show($"❌ {msg}", "Thất bại",
+        //                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Lỗi khi đăng tin: {ex.Message}");
+        //    }
+        //}
 
         private void btndangtin_Click(object sender, EventArgs e)
         {
@@ -231,32 +292,21 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.ERS
 
                 if (ok)
                 {
+                    int vtId = Convert.ToInt32(cbovitrichuyenmon.SelectedValue);
+                    var (okViTri, msgViTri) = _tinTuyenDungService.InsertViTriChoTin(newId, vtId);
+
+                    if (!okViTri)
+                        MessageBox.Show($"⚠️ {msgViTri}", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     MessageBox.Show($"✅ {msg}\nMã tin mới: {newId}", "Thành công",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // ✅ Xoá trắng các ô nhập
+
                     ClearForm();
-
-                    // ✅ Tải lại danh sách tin
                     LoadTinTuyenDung();
-
-                    // ✅ Tự động chọn tin mới vừa đăng (nếu muốn)
-                    if (dgvTinTuyenDung.Rows.Count > 0)
-                    {
-                        foreach (DataGridViewRow row in dgvTinTuyenDung.Rows)
-                        {
-                            if (Convert.ToInt32(row.Cells["Mã tin"].Value) == newId)
-                            {
-                                row.Selected = true;
-                                dgvTinTuyenDung.FirstDisplayedScrollingRowIndex = row.Index;
-                                break;
-                            }
-                        }
-                    }
                 }
                 else
                 {
-                    MessageBox.Show($"❌ {msg}", "Thất bại",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"❌ {msg}", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
