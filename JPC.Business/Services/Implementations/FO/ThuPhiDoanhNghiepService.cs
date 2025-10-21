@@ -87,48 +87,31 @@ namespace JPC.Business.Services.Implementations.FO
 
         public decimal GetDonGiaNgay() => _phiRepo.GetSoTienById(2);
 
-        public (int maHoaDon, int soNgay, decimal soTien) LapHoaDonThuPhiDN(int tinId, int maNhanVienLap, decimal? soTienOverride)
+        public (int maHoaDon, int soNgay, decimal soTien) LapHoaDonThuPhiDN(int tinId, int maNhanVienLap, decimal? soTienOverride, bool markPaid)
         {
-            // lấy info tin
+            // 1) Tính nghiệp vụ: số ngày, số tiền
             var info = _tinRepo.GetCoreInfo(tinId); // (ngay_dang, han_nop_ho_so, dn_id, ten_dn)
             var soNgay = Math.Max(1, (info.han_nop_ho_so.Date - info.ngay_dang.Date).Days + 1);
             var donGia = GetDonGiaNgay();
             var soTien = soTienOverride ?? (soNgay * donGia);
 
+            // 2) Chuẩn bị entity hóa đơn
             var hd = new HoaDon
             {
                 LoaiKhachHang = "doanh_nghiep",
                 DnId = info.dn_id,
                 TinId = tinId,
                 TenKhachHang = info.ten_dn ?? "",
-                PhiId = 2,
+                PhiId = 2, // phí đăng tin theo ngày
                 SoTien = soTien,
                 NgayLapHoaDon = DateTime.Now,
                 MaNhanVienLap = maNhanVienLap
             };
 
-            // MỞ TRANSACTION và truyền xuống cả 2 repo
-            var cnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
-            using (var con = new SqlConnection(cnn))
-            {
-                con.Open();
-                using (var tran = con.BeginTransaction())
-                {
-                    try
-                    {
-                        var maHd = _hdRepo.Insert(hd, tran);
-                        _tinRepo.MarkPaidAndActivate(tinId, tran);
+            // 3) Giao toàn bộ thao tác DB cho DataAccess (atomic trong 1 transaction)
+            var maHd = _hdRepo.InsertForTinAndSetStatus(hd, markPaid);
 
-                        tran.Commit();
-                        return (maHd, soNgay, soTien);
-                    }
-                    catch
-                    {
-                        tran.Rollback();
-                        throw;
-                    }
-                }
-            }
+            return (maHd, soNgay, soTien);
         }
     }
 }

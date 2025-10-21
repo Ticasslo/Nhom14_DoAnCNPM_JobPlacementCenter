@@ -272,18 +272,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(391, 80);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.Location = new System.Drawing.Point(391, 78);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 16);
+            this.label11.Size = new System.Drawing.Size(52, 23);
             this.label11.TabIndex = 186;
             this.label11.Text = "Ngày";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label25.Location = new System.Drawing.Point(748, 429);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(40, 16);
+            this.label25.Size = new System.Drawing.Size(52, 23);
             this.label25.TabIndex = 187;
             this.label25.Text = "Ngày";
             // 
@@ -434,10 +436,10 @@
             // cbDaNhanDuSoTien
             // 
             this.cbDaNhanDuSoTien.AutoSize = true;
-            this.cbDaNhanDuSoTien.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbDaNhanDuSoTien.Location = new System.Drawing.Point(395, 399);
+            this.cbDaNhanDuSoTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbDaNhanDuSoTien.Location = new System.Drawing.Point(395, 396);
             this.cbDaNhanDuSoTien.Name = "cbDaNhanDuSoTien";
-            this.cbDaNhanDuSoTien.Size = new System.Drawing.Size(178, 27);
+            this.cbDaNhanDuSoTien.Size = new System.Drawing.Size(182, 27);
             this.cbDaNhanDuSoTien.TabIndex = 201;
             this.cbDaNhanDuSoTien.Text = "Đã nhận đủ số tiền";
             this.cbDaNhanDuSoTien.UseVisualStyleBackColor = true;
@@ -450,7 +452,7 @@
             this.cbbIdUngVien.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbIdUngVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbIdUngVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbIdUngVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbIdUngVien.ForeColor = System.Drawing.Color.Black;
             this.cbbIdUngVien.ItemHeight = 30;
             this.cbbIdUngVien.Location = new System.Drawing.Point(166, 124);
             this.cbbIdUngVien.Name = "cbbIdUngVien";
@@ -465,7 +467,7 @@
             this.cbbIdUngTuyen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbIdUngTuyen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbIdUngTuyen.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbIdUngTuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbIdUngTuyen.ForeColor = System.Drawing.Color.Black;
             this.cbbIdUngTuyen.ItemHeight = 30;
             this.cbbIdUngTuyen.Location = new System.Drawing.Point(553, 124);
             this.cbbIdUngTuyen.Name = "cbbIdUngTuyen";

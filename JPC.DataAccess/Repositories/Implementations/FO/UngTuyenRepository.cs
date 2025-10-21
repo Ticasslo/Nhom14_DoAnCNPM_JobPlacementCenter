@@ -25,7 +25,7 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
                   AND ISNULL(ut.da_thanh_toan_phi,0)=0
                   AND ISNULL(t.da_thanh_toan,0)=1
                 ORDER BY ut.ut_id DESC";
-            return ExecuteQuery(sql, new System.Collections.Generic.List<SqlParameter>
+            return ExecuteQuery(sql, new List<SqlParameter>
             {
                 new SqlParameter("@uv", uvId)
             });
@@ -34,7 +34,7 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
         public void MarkPaid(int utId)
         {
             const string sql = "UPDATE UngTuyen SET da_thanh_toan_phi=1 WHERE ut_id=@id";
-            ExecuteNonQuery(sql, new System.Collections.Generic.List<SqlParameter>
+            ExecuteNonQuery(sql, new List<SqlParameter>
             {
                 new SqlParameter("@id", utId)
             });
@@ -43,7 +43,7 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
         public bool HasInvoice(int utId)
         {
             const string sql = "SELECT 1 FROM HoaDon WHERE loai_khach_hang='ung_vien' AND ut_id=@u";
-            var o = ExecuteScalar(sql, new System.Collections.Generic.List<SqlParameter>
+            var o = ExecuteScalar(sql, new List<SqlParameter>
             {
                 new SqlParameter("@u", utId)
             });
@@ -57,7 +57,7 @@ namespace JPC.DataAccess.Repositories.Implementations.FO
                 FROM HoaDon 
                 WHERE loai_khach_hang='ung_vien' AND ut_id=@u
                 ORDER BY ma_hoa_don DESC";
-            var o = ExecuteScalar(sql, new System.Collections.Generic.List<SqlParameter>
+            var o = ExecuteScalar(sql, new List<SqlParameter>
             {
                 new SqlParameter("@u", utId)
             });

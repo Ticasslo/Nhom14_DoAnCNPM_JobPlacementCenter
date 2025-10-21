@@ -29,5 +29,6 @@ namespace JPC.DataAccess.Repositories.Interfaces.FO
 
         int SetTinPaidActive(int tinId, bool paid, string trangThai, SqlTransaction tran);
         int SetUtPaid(int utId, bool paid, SqlTransaction tran);
+        int InsertForTinAndSetStatus(HoaDon hd, bool markPaid);
     }
 }

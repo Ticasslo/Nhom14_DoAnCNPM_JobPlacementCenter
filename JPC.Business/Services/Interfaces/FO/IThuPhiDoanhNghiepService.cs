@@ -19,6 +19,6 @@ namespace JPC.Business.Services.Interfaces.FO
 
         decimal GetDonGiaNgay(); // phi_id=2
 
-        (int maHoaDon, int soNgay, decimal soTien) LapHoaDonThuPhiDN(int tinId, int maNhanVienLap, decimal? soTienOverride);
+        (int maHoaDon, int soNgay, decimal soTien) LapHoaDonThuPhiDN(int tinId, int maNhanVienLap, decimal? soTienOverride, bool markPaid);
     }
 }

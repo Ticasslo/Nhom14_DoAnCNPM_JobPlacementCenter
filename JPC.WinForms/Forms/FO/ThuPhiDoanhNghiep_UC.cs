@@ -21,7 +21,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private IThuPhiDoanhNghiepService _service;
         private int _soNgay = 0;
         private decimal _soTien = 0;
-
+        private bool _binding = false;
         public ThuPhiDoanhNghiep_UC()
         {
             InitializeComponent();
@@ -40,40 +40,52 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         public void BindService()
         {
+            ResetForm(keepCombos: true);   // chỉ clear textbox, giữ combobox
 
-            var dn = _service.GetDoanhNghieps(); // DataTable: dn_id, ten_doanh_nghiep, dia_chi
+            _binding = true;
+            var dn = _service.GetDoanhNghieps(); // dn_id, ten_doanh_nghiep, dia_chi
             cbbIdDoanhNghiep.ValueMember = "dn_id";
             cbbIdDoanhNghiep.DisplayMember = "ten_doanh_nghiep";
             cbbIdDoanhNghiep.DataSource = dn;
-            cbbIdDoanhNghiep.SelectedIndex = 0;
+            _binding = false;
 
-            // Tiền tệ + reset
+            // KHÔNG auto-select
+            cbbIdDoanhNghiep.SelectedIndex = -1;
+
+            // tiền tệ
             cbbDonViTien.Items.Clear();
             cbbDonViTien.Items.Add("VND");
             cbbDonViTien.SelectedIndex = 0;
 
-            ResetForm();
+            // rỗng combobox tin
+            cbbIdTinTuyenDung.DataSource = null;
         }
 
-        private void ResetForm()
+        private void ResetForm(bool keepCombos = false)
         {
-            // Clear textboxes trong group
-            foreach (var tb in this.grpBoxLapHoaDon.Controls.OfType<Guna.UI2.WinForms.Guna2TextBox>())
+            _binding = true;
+
+            foreach (var tb in grpBoxLapHoaDon.Controls.OfType<Guna.UI2.WinForms.Guna2TextBox>())
                 tb.Text = string.Empty;
 
-            // dates
             dtpNgayLapPhieu.Value = DateTime.Now;
             dtpNgayKy.Value = DateTime.Now;
 
-            // default
             txtLyDo.Text = "Phí đăng tin tuyển dụng theo số ngày tồn tại tin";
             cbDaNhanDuSoTien.Checked = false;
 
-            // combos
-            cbbIdDoanhNghiep.SelectedIndex = -1;
-            cbbIdTinTuyenDung.DataSource = null;
+            if (!keepCombos)
+            {
+                cbbIdDoanhNghiep.SelectedIndex = -1;
+                cbbIdTinTuyenDung.DataSource = null;
+            }
 
             _soNgay = 0; _soTien = 0;
+            txtSoNgayDangTin.Text = "";
+            txtSoTien.Text = "";
+            txtVietBangChu.Text = "";
+
+            _binding = false;
         }
         private void ThuPhiDoanhNghiep_Load(object sender, EventArgs e)
         {
@@ -91,22 +103,45 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         }
         private void cbbIdDoanhNghiep_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (cbbIdDoanhNghiep.SelectedIndex < 0) return;
-            int dnId = Convert.ToInt32((cbbIdDoanhNghiep.SelectedItem as DataRowView)["dn_id"]);
+            if (_binding || cbbIdDoanhNghiep.SelectedIndex < 0) return;
 
-            var tins = _service.GetTinByDoanhNghiep_ForCbb(dnId); // DataTable: tin_id, ngay_dang, han_nop_ho_so, ma_hoa_don, so_tien_hd, display
+            var drv = (DataRowView)cbbIdDoanhNghiep.SelectedItem;
+            int dnId = (int)drv["dn_id"];
+            txtDonVi.Text = drv["ten_doanh_nghiep"].ToString();
+            txtDiaChi1.Text = drv["dia_chi"].ToString();
+            txtHoVaTenNguoiNop.Text = txtDonVi.Text;
+            txtDiaChi2.Text = txtDiaChi1.Text;
+
+            _binding = true;
+            var tins = _service.GetTinByDoanhNghiep_ForCbb(dnId);
             cbbIdTinTuyenDung.DataSource = null;
             cbbIdTinTuyenDung.ValueMember = "tin_id";
             cbbIdTinTuyenDung.DisplayMember = "display";
             cbbIdTinTuyenDung.DataSource = tins;
+            _binding = false;
 
-            // clear
-            txtSoNgayDangTin.Text = ""; txtSoTien.Text = ""; txtVietBangChu.Text = "";
+            // KHÔNG auto-select tin
+            cbbIdTinTuyenDung.SelectedIndex = -1;
+
+            // clear khu tính tiền
+            txtSoNgayDangTin.Text = "";
+            txtSoTien.Text = "";
+            txtVietBangChu.Text = "";
             _soNgay = 0; _soTien = 0;
+
+            if (tins.Rows.Count == 0)
+            {
+                MessageBox.Show("Doanh nghiệp này không có tin tuyển dụng chưa thanh toán phí.");
+            }
+            else
+            {
+                if (cbbIdTinTuyenDung.Items.Count > 0)
+                    cbbIdTinTuyenDung.SelectedIndex = 0;
+            }
         }
         private void cbbIdTinTuyenDung_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (cbbIdTinTuyenDung.SelectedIndex < 0) return;
+            if (_binding || cbbIdTinTuyenDung.SelectedIndex < 0) return;
 
             var r = (DataRowView)cbbIdTinTuyenDung.SelectedItem;
             var ngayDang = Convert.ToDateTime(r["ngay_dang"]);
@@ -168,7 +203,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
 
         private void btnXuatPhieuThu_Click(object sender, EventArgs e)
         {
-            if (!ValidateInput(out var msg)) { MessageBox.Show(msg); return; }
+            if (!ValidateInput(out var msg)) { MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
             
             var rTin = (DataRowView)cbbIdTinTuyenDung.SelectedItem;
             int tinId = (int)rTin["tin_id"];
@@ -196,7 +231,8 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                     var result = _service.LapHoaDonThuPhiDN(
                         tinId,
                         maNv,
-                        soTienNhap != _soTien ? (decimal?)soTienNhap : null
+                        soTienNhap != _soTien ? (decimal?)soTienNhap : null,
+                        cbDaNhanDuSoTien.Checked
                     );
                     maHd = result.maHoaDon; soNgay = result.soNgay; soTien = result.soTien;
                 }
@@ -215,8 +251,6 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             ResetForm();
-        }
-
-        
+        }        
     }
 }

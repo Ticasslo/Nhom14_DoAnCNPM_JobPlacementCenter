@@ -3,6 +3,7 @@ using JPC.DataAccess.Repositories.Interfaces.FO;
 using JPC.Models.TaiChinh;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -324,6 +325,41 @@ ORDER BY ma_hoa_don DESC";
                 cmd.Parameters.AddWithValue("@paid", paid ? 1 : 0);
                 cmd.Parameters.AddWithValue("@id", utId);
                 return cmd.ExecuteNonQuery();
+            }
+        }
+        public int InsertForTinAndSetStatus(HoaDon hd, bool markPaid)
+        {
+            if (!hd.TinId.HasValue)
+                throw new ArgumentException("TinId bắt buộc với hóa đơn doanh nghiệp.");
+
+            // Lấy chuỗi kết nối từ DBConnection (nếu bạn có field sẵn) hoặc ConfigurationManager
+            var cnn = ConfigurationManager.ConnectionStrings["JobPlacementCenter"].ConnectionString;
+
+            using (var con = new SqlConnection(cnn))
+            {
+                con.Open();
+                using (var tran = con.BeginTransaction())
+                {
+                    try
+                    {
+                        // 1) Insert hóa đơn
+                        var newId = Insert(hd, tran);
+
+                        // 2) Cập nhật trạng thái Tin theo cờ markPaid
+                        //    paid=true  -> active
+                        //    paid=false -> inactive (hoặc "pending" tùy bạn)
+                        var trangThai = markPaid ? "active" : "inactive";
+                        SetTinPaidActive(hd.TinId.Value, markPaid, trangThai, tran);
+
+                        tran.Commit();
+                        return newId;
+                    }
+                    catch
+                    {
+                        tran.Rollback();
+                        throw;
+                    }
+                }
             }
         }
     }
