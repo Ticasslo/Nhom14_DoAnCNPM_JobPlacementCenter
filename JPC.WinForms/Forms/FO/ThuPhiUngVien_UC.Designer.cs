@@ -115,7 +115,6 @@
             this.btnLamMoi.Size = new System.Drawing.Size(125, 45);
             this.btnLamMoi.TabIndex = 225;
             this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // label1
             // 

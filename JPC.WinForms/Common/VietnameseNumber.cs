@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
+namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Common
 {
     public static class VietnameseNumber
     {

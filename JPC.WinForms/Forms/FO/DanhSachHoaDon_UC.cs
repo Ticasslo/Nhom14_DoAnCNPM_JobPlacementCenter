@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
 using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
+using JPC.WinForms.Common.UI;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +26,9 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         public DanhSachHoaDon_UC()
         {
             InitializeComponent();
+
+            UiKit.TuneCombo(cbbIdDoanhNghiep);
+            UiKit.TuneCombo(cbbIdNhanVien);
 
             // Gắn event
             this.Load += DanhSachHoaDon_Load;

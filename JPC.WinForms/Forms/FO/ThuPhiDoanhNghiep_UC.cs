@@ -1,7 +1,9 @@
 ﻿using JPC.Business.Services.Implementations.FO;
 using JPC.Business.Services.Interfaces.FO;
 using JPC.Models;
+using JPC.WinForms.Common.UI;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using Nhom14_DoAnCNPM_JobPlacementCenter_Code.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +27,11 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
         public ThuPhiDoanhNghiep_UC()
         {
             InitializeComponent();
+
+            UiKit.TuneCombo(cbbIdDoanhNghiep);
+            UiKit.TuneCombo(cbbIdTinTuyenDung);
+            UiKit.TuneCombo(cbbDonViTien, visibleItems: 6);
+
             this.Load += ThuPhiDoanhNghiep_Load;
             btnLamMoi.Click += (_, __) => ResetForm();
             btnXuatPhieuThu.Click += btnXuatPhieuThu_Click;
@@ -37,6 +44,7 @@ namespace Nhom14_DoAnCNPM_JobPlacementCenter_Code.Forms.FO
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
             };
             _service = new ThuPhiDoanhNghiepService();
+
         }
         public void BindService()
         {
